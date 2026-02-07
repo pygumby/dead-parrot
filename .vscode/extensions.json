@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        // Python
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+
+        // Type checking
+        "ms-python.mypy-type-checker",
+
+        // Linting and formatting
+        "charliermarsh.ruff",
+
+        // Various
+        "jeanluc243.neokiro-theme",
+        "github.copilot",
+    ]
+}

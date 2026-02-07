@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# dotenv
+.env
+
+# Virtual environments
+.venv/
+
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# ruff
+.ruff_cache/
+
+# mypy
+.mypy_cache/

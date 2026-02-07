@@ -1,0 +1,7 @@
+target-version = "py313"
+line-length = 88
+fix = true
+
+[format]
+indent-style = "space"
+quote-style = "double"
