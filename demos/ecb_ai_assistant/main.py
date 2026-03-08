@@ -16,10 +16,12 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     lm="openai/gpt-4o-mini",
     embedder="openai/text-embedding-3-small",
     corpus=dp.utils.load_corpus_from_pdf(
-        "European Central Bank Staff Rules",
-        "context/ecb_staff_rules.pdf",
+        name="European Central Bank Staff Rules",
+        path="context/ecb_staff_rules.pdf",
     ),
-    examples=dp.utils.load_examples_from_json("examples/ecb_staff_rules.json"),
+    examples=dp.utils.load_examples_from_json(
+        path="examples/ecb_staff_rules.json",
+    ),
 )
 print(ecb_ai_assistant.ask("How long is the probationary period?"))
 print(ecb_ai_assistant.eval())
