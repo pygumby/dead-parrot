@@ -1,10 +1,13 @@
-<div style="text-align: center">
-<div style="font-size: 48px">😵🦜</div>
-<h1>dead-parrot</h1>
-<h2>A Framework for Scalable AI Assistants</h2>
+<div align="center">
+
+# 😵🦜 dead-parrot
+## Framework for Scalable AI Assistants
+
 </div>
 
 **dead-parrot** is a Python package authored by Lucas Konstantin Bärenfänger ([@pygumby](https://github.com/pygumby)) in the context of his thesis for the master's program "Data Analytics & Management" at Frankfurt School of Finance & Management.
+
+----
 
 ## Usage
 
