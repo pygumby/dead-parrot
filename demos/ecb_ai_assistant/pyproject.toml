@@ -2,6 +2,7 @@
 name = "ecb-ai-assistant"
 version = "0.1.0"
 dependencies = [
+    "python-dotenv",
     "dead-parrot",
 ]
 
