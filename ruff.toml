@@ -2,6 +2,12 @@ target-version = "py313"
 line-length = 88
 fix = true
 
+[lint]
+select = ["D"]
+
+[lint.pydocstyle]
+convention = "pep257"
+
 [format]
 indent-style = "space"
 quote-style = "double"

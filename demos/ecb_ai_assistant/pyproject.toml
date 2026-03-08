@@ -1,0 +1,9 @@
+[project]
+name = "ecb-ai-assistant"
+version = "0.1.0"
+dependencies = [
+    "dead-parrot",
+]
+
+[tool.uv.sources]
+dead-parrot = { workspace = true }

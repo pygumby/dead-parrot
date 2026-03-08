@@ -20,3 +20,6 @@ wheels/
 
 # mypy
 .mypy_cache/
+
+# dead-parrot
+demos/ecb_ai_assistant/embeddings/

@@ -12,7 +12,7 @@
         "charliermarsh.ruff",
 
         // Various
-        "jeanluc243.neokiro-theme",
-        "github.copilot",
+        "github.github-vscode-theme",
+        "github.copilot-chat",
     ]
 }
