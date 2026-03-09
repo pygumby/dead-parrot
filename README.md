@@ -1,17 +1,47 @@
 <div align="center">
 
 # 😵🦜 dead-parrot
-## Framework for Scalable AI Assistants
+## A Framework for Scalable AI Assistants
+
+[🐱 GitHub](https://github.com/pygumby/dead-parrot/) |
+[🐍 PyPI](https://pypi.org/project/dead-parrot/)
 
 </div>
 
-**dead-parrot** is a Python package authored by Lucas Konstantin Bärenfänger ([@pygumby](https://github.com/pygumby)) in the context of his thesis for the master's program "Data Analytics & Management" at Frankfurt School of Finance & Management.
-
 ----
+
+## About
+
+dead-parrot is a Python package created by Lucas Konstantin Bärenfänger ([@pygumby](https://github.com/pygumby)) as part of his thesis for the master's program "Data Analytics & Management" at Frankfurt School of Finance & Management.
+The thesis addresses the challenges of maintaining AI assistants at scale, as experienced at the European Central Bank (ECB).
+These challenges include heterogenous technology stacks, sensitivity to the choice of underlying LMs and more.
+dead-parrot implements the approaches identified to address these challenges.
 
 ## Usage
 
-Please refer to the self-contained usage examples provided in the [demos](demos/) folder.
+dead-parrot is available on [PyPI](https://pypi.org/project/dead-parrot/) and can be installed via `uv add dead-parrot` or `pip install dead-parrot`.
+
+dead-parrot enables the creation of a simple AI assistant in as little as ten lines of code:
+
+```python
+import dead_parrot as dp
+
+ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
+    lm="openai/gpt-4o-mini",
+    embedder="openai/text-embedding-3-small",
+    corpus=dp.utils.load_corpus_from_pdf(
+        name="European Central Bank Staff Rules",
+        path="context/ecb_staff_rules.pdf",
+    ),
+    examples=dp.utils.load_examples_from_json(
+        path="examples/ecb_staff_rules.json",
+    ),
+)
+
+print(ecb_ai_assistant.ask("How long is the probationary period?"))
+```
+
+Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder in the repository for fully self-contained usage examples.
 
 ## Development
 
@@ -22,4 +52,4 @@ Please refer to the self-contained usage examples provided in the [demos](demos/
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](https://github.com/pygumby/dead-parrot/blob/main/LICENSE)
