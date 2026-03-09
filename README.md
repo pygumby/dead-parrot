@@ -8,16 +8,14 @@
 
 </div>
 
-----
-
-## About
-
 dead-parrot is a Python package created by Lucas Konstantin Bärenfänger ([@pygumby](https://github.com/pygumby)) as part of his thesis for the master's program "Data Analytics & Management" at Frankfurt School of Finance & Management.
 The thesis addresses the challenges of maintaining AI assistants at scale, as experienced at the European Central Bank (ECB).
 These challenges include heterogenous technology stacks, sensitivity to the choice of underlying LMs and more.
 dead-parrot implements the approaches identified to address these challenges.
 
-## Usage
+----
+
+### Usage
 
 dead-parrot is available on [PyPI](https://pypi.org/project/dead-parrot/) and can be installed via `uv add dead-parrot` or `pip install dead-parrot`.
 
@@ -43,13 +41,13 @@ print(ecb_ai_assistant.ask("How long is the probationary period?"))
 
 Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder in the repository for fully self-contained usage examples.
 
-## Development
+### Development
 
 - Install dependencies: `uv sync`
 - Type-check: `uv run mypy .`
 - Lint: `uv run ruff check . --fix`
 - Format: `uv run ruff format .`
 
-## License
+### License
 
 [MIT License](https://github.com/pygumby/dead-parrot/blob/main/LICENSE)
