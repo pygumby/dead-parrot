@@ -74,19 +74,19 @@ class Recall(dspy.Module):
 
 
 class AiAssistant(Protocol):
-    """Protocol for an AI Assistant."""
+    """Protocol for an AI assistant."""
 
     def ask(self, question: str) -> str:
-        """Answer the question based on the AI Assistant's knowledge."""
+        """Answer the question based on the AI assistant's knowledge."""
         ...
 
     def eval(self, testset: bool = False, display_progress: bool = True) -> float:
-        """Evaluate the AI Assistant based on the devset or testset."""
+        """Evaluate the AI assistant based on the devset or testset."""
         ...
 
 
 class AiAssistantType(Protocol):
-    """Protocol for the instantiation of an AI Assistant."""
+    """Protocol for the instantiation of an AI assistant."""
 
     def __call__(
         self,
@@ -96,12 +96,12 @@ class AiAssistantType(Protocol):
         examples: list[tuple[str, str]],
         metric: Callable[[str, str], float] | None = None,
     ) -> AiAssistant:
-        """Instantiate an AI Assistant."""
+        """Instantiate an AI assistant."""
         ...
 
 
 class DspyAiAssistant:
-    """Implementation of the protocol for an AI Assistant using dspy."""
+    """Implementation of the protocol for an AI assistant using dspy."""
 
     def __init__(
         self,
@@ -111,7 +111,7 @@ class DspyAiAssistant:
         examples: list[tuple[str, str]],
         metric: Callable[[str, str], float] | None = None,
     ):
-        """Instantiate an AI Assistant."""
+        """Instantiate an AI assistant."""
         self._lm: dspy.LM = dspy.LM(model=lm)
         self._embedder: dspy.Embedder = dspy.Embedder(model=embedder, dimensions=512)
         self._corpus: list[str] = corpus
@@ -188,12 +188,12 @@ class DspyAiAssistant:
         return dspy_metric
 
     def ask(self, question: str) -> str:
-        """Answer the question based on the AI Assistant's knowledge."""
+        """Answer the question based on the AI assistant's knowledge."""
         pred: dspy.Prediction = self._rag(question)
         return str(pred.answer)
 
     def eval(self, testset: bool = False, display_progress: bool = True) -> float:
-        """Evaluate the AI Assistant based on the devset or testset."""
+        """Evaluate the AI assistant based on the devset or testset."""
         evaluate = dspy.Evaluate(
             devset=self._devset if not testset else self._testset,
             metric=self._metric,
