@@ -9,6 +9,7 @@
     "terminal.integrated.fontSize": 12.5,
     "editor.fontLigatures": true,
     "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.gpuAcceleration": "off",
 
     // Indentation
     "editor.detectIndentation": false,
@@ -40,7 +41,7 @@
             "source.organizeImports": "always"
         },
     },
-    "mypy-type-checker.path": ["mypy"],
+    "mypy-type-checker.importStrategy": "fromEnvironment",
 
     // Markdown
     "[markdown]": {

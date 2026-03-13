@@ -3,7 +3,7 @@ line-length = 88
 fix = true
 
 [lint]
-select = ["D"]
+extend-select = ["D"]
 
 [lint.pydocstyle]
 convention = "pep257"
