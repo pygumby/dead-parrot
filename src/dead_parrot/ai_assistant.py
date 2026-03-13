@@ -65,7 +65,7 @@ class DspyAiAssistant(AiAssistant):
         self._init_rag()
 
     def _init_name(self, name: str) -> None:
-        if not re.search(pattern=r"[a-z0-9]", string=name):
+        if not re.search(pattern=r"[a-zA-Z0-9]", string=name):
             raise ValueError(
                 f"Name must contain letters or numbers, but {name} does not."
             )
