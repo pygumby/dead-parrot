@@ -1,48 +1,113 @@
 """Metrics."""
 
+import functools
+import textwrap
+from collections.abc import Callable
+from typing import TYPE_CHECKING, Protocol
+
 import dspy
 
+from dead_parrot.protocols import Metric, MetricResult
 
-class ExtractKeyStatements(dspy.Signature):
-    # TODO DSPy assigns meaning to signature docstrings -> review
-    """Signature for extracting key statements from an example answer."""
 
+class _DspyMetric(Protocol):
+    def __call__(
+        self,
+        question: str,
+        example_answer: str,
+        prediction_answer: str,
+    ) -> MetricResult: ...
+
+
+def _as_metric[**P](
+    dspy_metric_class: Callable[P, _DspyMetric],
+) -> Callable[P, Metric]:
+    class WrappedMetric:
+        def __init__(self, *args: P.args, **kwargs: P.kwargs) -> None:
+            self._dspy_metric: _DspyMetric = dspy_metric_class(*args, **kwargs)
+
+        def score(
+            self,
+            question: str,
+            example_answer: str,
+            prediction_answer: str,
+        ) -> MetricResult:
+            result: MetricResult = self._dspy_metric(
+                question=question,
+                example_answer=example_answer,
+                prediction_answer=prediction_answer,
+            )
+            score = float(result["score"])
+            rationale: str | None = result["rationale"]
+
+            indent = " " * 2
+
+            def wrap(text: str) -> str:
+                return textwrap.fill(text=text, subsequent_indent=indent)
+
+            print(
+                f"Question: {wrap(question)}\n"
+                f"Example answer: {wrap(example_answer)}\n"
+                f"Predicted answer: {wrap(prediction_answer)}\n"
+                f"Rationale: {wrap(rationale) if rationale else 'None given.'}\n"
+                f"Recall score: {score}\n"
+            )
+
+            return {
+                "score": score,
+                "rationale": rationale,
+            }
+
+    functools.update_wrapper(
+        wrapper=WrappedMetric,
+        wrapped=dspy_metric_class,
+        updated=[],
+    )
+
+    return WrappedMetric
+
+
+class _ComputeRecallScore(dspy.Signature):
+    # In DSPy, the signature docstring is used as the instruction for the LM.
+    """Compute recall of prediction answer, given question and example answer."""
+
+    question: str = dspy.InputField()
     example_answer: str = dspy.InputField()
-    key_statements: list[str] = dspy.OutputField()
-
-
-class AssessCoverage(dspy.Signature):
-    # TODO DSPy assigns meaning to signature docstrings -> review
-    """Signature for assessing the coverage of key statements in a prediction answer."""
-
     prediction_answer: str = dspy.InputField()
-    ratio_of_key_statements_covered: float = dspy.OutputField()
+
+    recall_score: float = dspy.OutputField()
+    recall_score_rationale: str = dspy.OutputField()
 
 
-class Recall(dspy.Module):
-    """Module for a simple recall metric."""
+@_as_metric
+class SimpleRecall(dspy.Module):
+    """Simple recall metric."""
 
-    def __init__(self, lm: dspy.LM) -> None:
-        """Initialize the module."""
-        self._extract_key_statements = dspy.ChainOfThought(
-            signature=ExtractKeyStatements
-        )
-        self._extract_key_statements.set_lm(lm=lm)
-        self._assess_coverage = dspy.ChainOfThought(signature=AssessCoverage)
-        self._assess_coverage.set_lm(lm=lm)
+    def __init__(self, judge_model: str) -> None:
+        """Initialize the metric."""
+        self._compute_recall_score = dspy.ChainOfThought(signature=_ComputeRecallScore)
+        self._compute_recall_score.set_lm(lm=dspy.LM(judge_model))
 
-    def forward(self, example_answer: str, prediction_answer: str) -> float:
-        """Compute the recall metric for a given example and prediction."""
-        key_statements: list[str] = self._extract_key_statements(
-            example_answer=example_answer
-        ).key_statements
-
-        coverage: float = self._assess_coverage(
-            key_statements=key_statements,
+    def forward(
+        self,
+        question: str,
+        example_answer: str,
+        prediction_answer: str,
+    ) -> MetricResult:
+        """Compute recall of prediction answer, given question and example answer."""
+        prediction: dspy.Prediction = self._compute_recall_score(
+            question=question,
+            example_answer=example_answer,
             prediction_answer=prediction_answer,
-        ).ratio_of_key_statements_covered
+        )
 
-        if not 0 <= coverage <= 1:
-            raise ValueError(f"Coverage must be between 0 and 1, but got {coverage}.")
+        return {
+            "score": prediction.recall_score,
+            "rationale": prediction.recall_score_rationale,
+        }
 
-        return coverage
+
+# Verify that protocols are correctly implemented
+if TYPE_CHECKING:
+    _1: Callable[..., _DspyMetric] = SimpleRecall.__wrapped__  # Not enforced by mypy.
+    _2: Callable[..., Metric] = SimpleRecall

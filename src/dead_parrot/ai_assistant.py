@@ -10,8 +10,7 @@ from typing import TYPE_CHECKING, Any, Literal
 import dspy
 
 from . import utils
-from .metrics import Recall
-from .protocols import AiAssistant, AiAssistantType
+from .protocols import AiAssistant, AiAssistantClass, Metric
 from .rag import Rag
 
 
@@ -26,7 +25,7 @@ class DspyAiAssistant(AiAssistant):
         embedding_model: str,
         corpus: list[str],
         examples: list[tuple[str, str]],
-        metric: Callable[[str, str], float] | None = None,
+        metric: Metric,
         optimization_effort: Literal["light", "medium", "heavy"] = "light",
     ):
         """Initialize the AI assistant."""
@@ -129,28 +128,24 @@ class DspyAiAssistant(AiAssistant):
         self._devset = dspy_examples[i:j]
         self._testset = dspy_examples[j:]
 
-    def _init_metric(self, metric: Callable[[str, str], float] | None) -> None:
+    def _init_metric(self, metric: Metric) -> None:
         self._log(msg="Initializing metric")
-        self._log(msg=f"Metric: {'Recall' if not metric else 'Custom'}", sub=True)
-
-        if metric is None:
-            recall = Recall(lm=self._teacher_model)
+        self._log(msg=f"Metric: {metric.__class__.__name__}", sub=True)
 
         def dspy_metric(
             example: dspy.Example,
             prediction: dspy.Prediction,
             trace: Any = None,
         ) -> float | bool:
-            score: float = (
-                metric(example.answer, prediction.answer)
-                if metric
-                else float(
-                    recall(
-                        example_answer=example.answer,
-                        prediction_answer=prediction.answer,
-                    )
-                )
+            result = metric.score(
+                question=example.question,
+                example_answer=example.answer,
+                prediction_answer=prediction.answer,
             )
+            score: float = result["score"]
+
+            if not 0 <= score <= 1:
+                raise ValueError(f"Score must be between 0 and 1, but got {score}.")
 
             if trace is not None:
                 return score >= 0.95
@@ -327,6 +322,6 @@ class DspyAiAssistant(AiAssistant):
         self._rag = optimized_rag
 
 
-# Verify that DspyAiAssistant conforms to the AiAssistantType protocol
+# Verify that protocols are correctly implemented
 if TYPE_CHECKING:
-    _: AiAssistantType = DspyAiAssistant
+    _1: AiAssistantClass = DspyAiAssistant

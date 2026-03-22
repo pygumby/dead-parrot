@@ -36,11 +36,15 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     examples=dp.utils.load_examples_from_json(
         path="examples/ecb_staff_rules.json",
     ),
+    metric=dp.metrics.SimpleRecall(
+        judge_model="openai/gpt-4o",
+    ),
 )
 
 ecb_ai_assistant.ask(question="How long is the probationary period?")
 ecb_ai_assistant.evaluate()
 ecb_ai_assistant.optimize()
+ecb_ai_assistant.evaluate()
 ```
 
 Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder in the repository for fully self-contained usage examples.

@@ -1,7 +1,26 @@
 """Protocols."""
 
-from collections.abc import Callable
-from typing import Literal, Protocol
+from typing import Literal, Protocol, TypedDict
+
+
+class MetricResult(TypedDict):
+    """TypedDict for the result of a metric's scoring."""
+
+    score: float
+    rationale: str | None
+
+
+class Metric(Protocol):
+    """Protocol for a metric."""
+
+    def score(
+        self,
+        question: str,
+        example_answer: str,
+        prediction_answer: str,
+    ) -> MetricResult:
+        """Score the predicted answer given the question and example answer."""
+        ...
 
 
 class AiAssistant(Protocol):
@@ -25,7 +44,7 @@ class AiAssistant(Protocol):
         ...
 
 
-class AiAssistantType(Protocol):
+class AiAssistantClass(Protocol):
     """Protocol for the instantiation of an AI assistant."""
 
     def __call__(
@@ -36,7 +55,7 @@ class AiAssistantType(Protocol):
         embedding_model: str,
         corpus: list[str],
         examples: list[tuple[str, str]],
-        metric: Callable[[str, str], float] | None = None,
+        metric: Metric,
         optimization_effort: Literal["light", "medium", "heavy"] = "light",
     ) -> AiAssistant:
         """Instantiate the AI assistant."""
