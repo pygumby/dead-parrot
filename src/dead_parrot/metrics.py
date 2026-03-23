@@ -50,7 +50,7 @@ def _as_metric[**P](
                 f"Example answer: {wrap(example_answer)}\n"
                 f"Predicted answer: {wrap(prediction_answer)}\n"
                 f"Rationale: {wrap(rationale) if rationale else 'None given.'}\n"
-                f"Recall score: {score}\n"
+                f"Score: {score}\n"
             )
 
             return {
@@ -67,9 +67,9 @@ def _as_metric[**P](
     return WrappedMetric
 
 
-class _ComputeRecallScore(dspy.Signature):
+class _GetRecallScore(dspy.Signature):
     # In DSPy, the signature docstring is used as the instruction for the LM.
-    """Compute recall of prediction answer, given question and example answer."""
+    """Get recall of prediction answer, given question and example answer."""
 
     question: str = dspy.InputField()
     example_answer: str = dspy.InputField()
@@ -85,8 +85,8 @@ class SimpleRecall(dspy.Module):
 
     def __init__(self, judge_model: str) -> None:
         """Initialize the metric."""
-        self._compute_recall_score = dspy.ChainOfThought(signature=_ComputeRecallScore)
-        self._compute_recall_score.set_lm(lm=dspy.LM(judge_model))
+        self._get_recall_score = dspy.ChainOfThought(signature=_GetRecallScore)
+        self._get_recall_score.set_lm(lm=dspy.LM(judge_model))
 
     def forward(
         self,
@@ -94,8 +94,8 @@ class SimpleRecall(dspy.Module):
         example_answer: str,
         prediction_answer: str,
     ) -> MetricResult:
-        """Compute recall of prediction answer, given question and example answer."""
-        prediction: dspy.Prediction = self._compute_recall_score(
+        """Get recall of prediction answer, given question and example answer."""
+        prediction: dspy.Prediction = self._get_recall_score(
             question=question,
             example_answer=example_answer,
             prediction_answer=prediction_answer,
@@ -104,6 +104,46 @@ class SimpleRecall(dspy.Module):
         return {
             "score": prediction.recall_score,
             "rationale": prediction.recall_score_rationale,
+        }
+
+
+class _GetSourcesCoverage(dspy.Signature):
+    # In DSPy, the signature docstring is used as the instruction for the LM.
+    """Get ratio of sources in example answer also cited in prediction answer."""
+
+    example_answer: str = dspy.InputField()
+    prediction_answer: str = dspy.InputField()
+
+    sources_ratio: float = dspy.OutputField()
+    sources_ratio_rationale: str = dspy.OutputField()
+
+
+@_as_metric
+class SimpleSourcesCoverage(dspy.Module):
+    """Simple sources coverage metric."""
+
+    def __init__(self, judge_model: str) -> None:
+        """Initialize the metric."""
+        self._get_sources_coverage = dspy.ChainOfThought(
+            signature=_GetSourcesCoverage,
+        )
+        self._get_sources_coverage.set_lm(lm=dspy.LM(judge_model))
+
+    def forward(
+        self,
+        question: str,
+        example_answer: str,
+        prediction_answer: str,
+    ) -> MetricResult:
+        """Get ratio of sources in example answer also cited in prediction answer."""
+        prediction: dspy.Prediction = self._get_sources_coverage(
+            example_answer=example_answer,
+            prediction_answer=prediction_answer,
+        )
+
+        return {
+            "score": prediction.sources_ratio,
+            "rationale": prediction.sources_ratio_rationale,
         }
 
 
