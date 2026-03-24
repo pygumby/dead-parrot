@@ -32,7 +32,6 @@ def load_examples_from_json(path: str) -> list[tuple[str, str]]:
     """Load examples from a JSON file."""
     with open(file=path, mode="r") as file:
         examples: list[list[str]] = json.load(fp=file)
-
     return [(example[0], example[1]) for example in examples]
 
 
@@ -41,16 +40,16 @@ def create_timestamp() -> str:
     return datetime.now().strftime("%Y%m%d_%H%M%S%f")
 
 
-def get_latest_directory(path: str, prefix: str) -> str | None:
-    """Get the latest directory in the given path that starts with the given prefix."""
+def get_latest_subpath(path: str, suffix: str) -> str | None:
+    """Get the latest directory or file in the path that ends with the suffix."""
     datetime_strs: list[str] = [
-        dir_name[len(prefix) :]
+        dir_name.removesuffix(suffix)
         for dir_name in os.listdir(path=path)
-        if dir_name.startswith(prefix)
+        if dir_name.endswith(suffix)
     ]
 
     if not datetime_strs:
         return None
 
     latest_datetime_str: str = max(datetime_strs)
-    return f"{prefix}{latest_datetime_str}"
+    return f"{latest_datetime_str}{suffix}"

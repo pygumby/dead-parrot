@@ -55,11 +55,9 @@ class DspyAiAssistant(AiAssistant):
         self._optimizer: dspy.MIPROv2
         self._init_optimizer(effort=optimization_effort)
 
-        self._embeddings_id: str
         self._retriever: dspy.retrievers.Embeddings
-        self._init_retriever(k=3)
+        self._init_retriever()
 
-        self._rag_id: str
         self._rag: Rag
         self._init_rag()
 
@@ -68,6 +66,7 @@ class DspyAiAssistant(AiAssistant):
             raise ValueError(
                 f"Name must contain letters or numbers, but '{name}' does not."
             )
+
         self._name = re.sub(
             pattern=r"[^a-z0-9_]",
             repl="",
@@ -97,7 +96,6 @@ class DspyAiAssistant(AiAssistant):
 
     def _init_corpus(self, corpus: list[str]) -> None:
         self._log(msg="Initializing corpus")
-
         self._log(msg=f"Total chunks: {len(corpus)}", sub=True)
         self._corpus = corpus
 
@@ -105,12 +103,10 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg="Initializing examples")
 
         n = len(examples)
-
         if n < 4:
             raise ValueError(
                 f"At least 4 examples are required, but only {n} were provided."
             )
-
         i = n // 2
         j = n * 3 // 4
 
@@ -143,7 +139,6 @@ class DspyAiAssistant(AiAssistant):
                 prediction_answer=prediction.answer,
             )
             score: float = result["score"]
-
             if not 0 <= score <= 1:
                 raise ValueError(f"Score must be between 0 and 1, but got {score}.")
 
@@ -168,67 +163,52 @@ class DspyAiAssistant(AiAssistant):
             auto=effort,
         )
 
-    def _init_retriever(self, k: int) -> None:
+    def _init_retriever(self) -> None:
         self._log(msg="Initializing retriever")
 
         if os.path.exists(path=self.name):
-            latest_embeddings_id: str | None = utils.get_latest_directory(
+            latest_embeddings_dir: str | None = utils.get_latest_subpath(
                 path=self.name,
-                prefix="embeddings_",
+                suffix="_embeddings",
             )
-
-            path = f"{self.name}/{latest_embeddings_id}"
-            self._log(msg=f"Loading from: {path}", sub=True)
-
-            assert latest_embeddings_id is not None
-
+            assert latest_embeddings_dir is not None
+            latest_embeddings_dir_path = f"{self.name}/{latest_embeddings_dir}"
+            self._log(msg=f"Loading from: {latest_embeddings_dir_path}", sub=True)
             retriever = dspy.retrievers.Embeddings.from_saved(
-                path=f"{self.name}/{latest_embeddings_id}",
+                path=latest_embeddings_dir_path,
                 embedder=self._embedding_model,
             )
-            self._embeddings_id = latest_embeddings_id
         else:
-            new_embeddings_id = f"embeddings_{utils.create_timestamp()}"
-            path = f"{self.name}/{new_embeddings_id}"
-            self._log(msg=f"Saving to: {path}", sub=True)
-
             retriever = dspy.retrievers.Embeddings(
                 embedder=self._embedding_model,
                 corpus=self._corpus,
-                k=k,
             )
+            new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
+            new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
+            self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
             os.makedirs(name=self.name)
-            retriever.save(path=path)
-            self._embeddings_id = new_embeddings_id
+            retriever.save(path=new_embeddings_dir_path)
 
         self._retriever = retriever
 
     def _init_rag(self) -> None:
         self._log(msg="Initializing RAG pipeline")
-
         assert os.path.exists(path=self.name)
-
         rag = Rag(lm=self._task_model, retriever=self._retriever)
 
-        latest_rag_id: str | None = utils.get_latest_directory(
+        latest_rag_file: str | None = utils.get_latest_subpath(
             path=self.name,
-            prefix="rag_",
+            suffix="_rag.json",
         )
-
-        if latest_rag_id is not None:
-            path = f"{self.name}/{latest_rag_id}/rag.json"
-            self._log(msg=f"Loading from: {path}", sub=True)
-
-            rag.load(path=path)
-            self._rag_id = latest_rag_id
+        if latest_rag_file is not None:
+            latest_rag_file_path = f"{self.name}/{latest_rag_file}"
+            self._log(msg=f"Loading from: {latest_rag_file_path}", sub=True)
+            rag.load(path=latest_rag_file_path)
         else:
-            new_rag_id = f"rag_{utils.create_timestamp()}"
-            path = f"{self.name}/{new_rag_id}"
-            self._log(msg=f"Saving to: {path}/rag.json", sub=True)
-
-            os.makedirs(name=path)
-            rag.save(path=f"{path}/rag.json")
-            self._rag_id = new_rag_id
+            new_rag_file = f"{utils.create_timestamp()}_rag.json"
+            new_rag_file_path = f"{self.name}/{new_rag_file}"
+            self._log(msg=f"Saving to: {new_rag_file_path}", sub=True)
+            rag.save(path=new_rag_file_path)
 
         self._rag = rag
 
@@ -247,16 +227,6 @@ class DspyAiAssistant(AiAssistant):
         """Return the name of the AI assistant."""
         return self._name
 
-    @property
-    def embeddings_id(self) -> str:
-        """Return the ID of the embeddings."""
-        return self._embeddings_id
-
-    @property
-    def rag_id(self) -> str:
-        """Return the ID of the RAG pipeline."""
-        return self._rag_id
-
     def ask(self, question: str) -> str:
         """Answer the question using the RAG pipeline."""
         self._log(msg="Performing inference")
@@ -272,19 +242,20 @@ class DspyAiAssistant(AiAssistant):
         """Evaluate the RAG pipeline based on the devset or testset."""
         self._log(msg="Evaluating RAG pipeline")
 
-        evaluate = dspy.Evaluate(
+        dspy_evaluate = dspy.Evaluate(
             devset=self._devset if not use_testset else self._testset,
             metric=self._metric,
         )
 
-        path = f"{self.name}/{self.rag_id}/evaluation_{utils.create_timestamp()}.log"
-        self._log(msg=f"Logging to: {path}", sub=True)
+        evaluation_log_file = f"{utils.create_timestamp()}_evaluation.log"
+        evaluation_log_file_path = f"{self.name}/{evaluation_log_file}"
+        self._log(msg=f"Logging to: {evaluation_log_file_path}", sub=True)
         with (
-            open(file=path, mode="w") as log,
+            open(file=evaluation_log_file_path, mode="w") as log,
             contextlib.redirect_stdout(new_target=log),
             contextlib.redirect_stderr(new_target=log),
         ):
-            result: dspy.EvaluationResult = evaluate(program=self._rag)
+            result: dspy.EvaluationResult = dspy_evaluate(program=self._rag)
 
         score = float(result.score)
         self._log(msg=f"Score: {score}", sub=True)
@@ -295,13 +266,11 @@ class DspyAiAssistant(AiAssistant):
         """Optimize the RAG pipeline based on the trainset."""
         self._log(msg="Optimizing RAG pipeline")
 
-        optimized_rag_id = f"rag_{utils.create_timestamp()}"
-        path = f"{self.name}/{optimized_rag_id}"
-
-        self._log(msg=f"Logging to: {path}/optimization.log", sub=True)
-        os.makedirs(name=path)
+        optimization_log_file = f"{utils.create_timestamp()}_optimization.log"
+        optimization_log_file_path = f"{self.name}/{optimization_log_file}"
+        self._log(msg=f"Logging to: {optimization_log_file_path}", sub=True)
         with (
-            open(file=f"{path}/optimization.log", mode="w") as log,
+            open(file=optimization_log_file_path, mode="w") as log,
             contextlib.redirect_stdout(new_target=log),
             contextlib.redirect_stderr(new_target=log),
         ):
@@ -311,14 +280,16 @@ class DspyAiAssistant(AiAssistant):
                 valset=self._devset,
             )
 
-        with open(file=f"{path}/optimization.log", mode="r") as log:
-            last_log = log.readlines()[-1].strip()
-        self._log(msg=f"Last log: {last_log}", sub=True)
+        with open(file=optimization_log_file_path, mode="r") as log:
+            lines = log.readlines()
+            last_line = lines.pop().strip() if lines else "None"
+        self._log(msg=f"Last log: {last_line}", sub=True)
 
-        self._log(msg=f"Saving to: {path}/rag.json", sub=True)
-        optimized_rag.save(path=f"{path}/rag.json")
+        optimized_rag_file = f"{utils.create_timestamp()}_rag.json"
+        optimized_rag_file_path = f"{self.name}/{optimized_rag_file}"
+        self._log(msg=f"Saving to: {optimized_rag_file_path}", sub=True)
+        optimized_rag.save(path=optimized_rag_file_path)
 
-        self._rag_id = optimized_rag_id
         self._rag = optimized_rag
 
 
