@@ -24,6 +24,7 @@ def _as_metric[**P](
 ) -> Callable[P, Metric]:
     class WrappedMetric:
         def __init__(self, *args: P.args, **kwargs: P.kwargs) -> None:
+            """Initialize the metric."""
             self._dspy_metric: _DspyMetric = dspy_metric_class(*args, **kwargs)
 
         def score(
@@ -32,6 +33,7 @@ def _as_metric[**P](
             example_answer: str,
             prediction_answer: str,
         ) -> MetricResult:
+            """Score the prediction answer against the example answer."""
             result: MetricResult = self._dspy_metric(
                 question=question,
                 example_answer=example_answer,
@@ -69,12 +71,11 @@ def _as_metric[**P](
 
 class _GetRecallScore(dspy.Signature):
     # In DSPy, the signature docstring is used as the instruction for the LM.
-    """Get recall of prediction answer, given question and example answer."""
+    """Score recall of prediction answer against example answer given question."""
 
     question: str = dspy.InputField()
     example_answer: str = dspy.InputField()
     prediction_answer: str = dspy.InputField()
-
     recall_score: float = dspy.OutputField()
     recall_score_rationale: str = dspy.OutputField()
 
@@ -94,13 +95,12 @@ class SimpleRecall(dspy.Module):
         example_answer: str,
         prediction_answer: str,
     ) -> MetricResult:
-        """Get recall of prediction answer, given question and example answer."""
+        """Score the prediction answer against the example answer."""
         prediction: dspy.Prediction = self._get_recall_score(
             question=question,
             example_answer=example_answer,
             prediction_answer=prediction_answer,
         )
-
         return {
             "score": prediction.recall_score,
             "rationale": prediction.recall_score_rationale,
@@ -109,11 +109,10 @@ class SimpleRecall(dspy.Module):
 
 class _GetSourcesCoverage(dspy.Signature):
     # In DSPy, the signature docstring is used as the instruction for the LM.
-    """Get ratio of sources in example answer also cited in prediction answer."""
+    """Compute ratio of sources from example answer also cited in prediction answer."""
 
     example_answer: str = dspy.InputField()
     prediction_answer: str = dspy.InputField()
-
     sources_ratio: float = dspy.OutputField()
     sources_ratio_rationale: str = dspy.OutputField()
 
@@ -135,12 +134,11 @@ class SimpleSourcesCoverage(dspy.Module):
         example_answer: str,
         prediction_answer: str,
     ) -> MetricResult:
-        """Get ratio of sources in example answer also cited in prediction answer."""
+        """Score the prediction answer against the example answer."""
         prediction: dspy.Prediction = self._get_sources_coverage(
             example_answer=example_answer,
             prediction_answer=prediction_answer,
         )
-
         return {
             "score": prediction.sources_ratio,
             "rationale": prediction.sources_ratio_rationale,
