@@ -26,7 +26,7 @@
     "files.insertFinalNewline": true,
 
     // Various
-    "explorer.sortOrder": "type",
+    // "explorer.sortOrder": "type",
     "files.autoSave": "onFocusChange",
     "files.exclude": {
         "**/.git": false,
