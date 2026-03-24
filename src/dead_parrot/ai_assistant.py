@@ -11,7 +11,28 @@ import dspy
 
 from . import utils
 from .protocols import AiAssistant, AiAssistantClass, Metric
-from .rag import Rag
+
+
+class _AnswerGroundedInContext(dspy.Signature):
+    # In DSPy, the signature docstring is used as the instruction for the LM.
+    """Answer the question based on retrieved context."""
+
+    context: list[str] = dspy.InputField()
+    question: str = dspy.InputField()
+    answer: str = dspy.OutputField()
+
+
+class _Rag(dspy.Module):
+    def __init__(self, lm: dspy.LM, retriever: dspy.retrievers.Embeddings) -> None:
+        self._retriever: dspy.retrievers.Embeddings = retriever
+        self._answer_grounded_in_context: dspy.ChainOfThought = dspy.ChainOfThought(
+            signature=_AnswerGroundedInContext,
+        )
+        self._answer_grounded_in_context.set_lm(lm=lm)
+
+    def forward(self, question: str) -> dspy.Prediction:
+        context: list[str] = self._retriever(query=question).passages
+        return self._answer_grounded_in_context(context=context, question=question)
 
 
 class DspyAiAssistant(AiAssistant):
@@ -58,7 +79,7 @@ class DspyAiAssistant(AiAssistant):
         self._retriever: dspy.retrievers.Embeddings
         self._init_retriever()
 
-        self._rag: Rag
+        self._rag: _Rag
         self._init_rag()
 
     def _init_name(self, name: str) -> None:
@@ -194,7 +215,7 @@ class DspyAiAssistant(AiAssistant):
     def _init_rag(self) -> None:
         self._log(msg="Initializing RAG pipeline")
         assert os.path.exists(path=self.name)
-        rag = Rag(lm=self._task_model, retriever=self._retriever)
+        rag = _Rag(lm=self._task_model, retriever=self._retriever)
 
         latest_rag_file: str | None = utils.get_latest_subpath(
             path=self.name,
@@ -274,7 +295,7 @@ class DspyAiAssistant(AiAssistant):
             contextlib.redirect_stdout(new_target=log),
             contextlib.redirect_stderr(new_target=log),
         ):
-            optimized_rag: Rag = self._optimizer.compile(
+            optimized_rag: _Rag = self._optimizer.compile(
                 student=self._rag,
                 trainset=self._trainset,
                 valset=self._devset,
