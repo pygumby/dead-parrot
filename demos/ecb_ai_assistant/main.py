@@ -29,12 +29,12 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     examples=dp.utils.load_examples_from_json(
         path="examples/ecb_staff_rules.json",
     ),
-    metric=dp.metrics.SimpleRecall(
-        judge_model="openai/gpt-4o",
-    ),
+    metrics={
+        "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-4o"),
+        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="openai/gpt-4o"),
+    },
 )
 
 ecb_ai_assistant.ask(question="How long is the probationary period?")
-ecb_ai_assistant.evaluate()
-ecb_ai_assistant.optimize()
-ecb_ai_assistant.evaluate()
+ecb_ai_assistant.evaluate(metric="recall")
+ecb_ai_assistant.optimize(metric="recall", effort="light")

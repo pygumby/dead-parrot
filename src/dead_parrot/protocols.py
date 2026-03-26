@@ -35,11 +35,15 @@ class AiAssistant(Protocol):
         """Answer the question using the RAG pipeline."""
         ...
 
-    def evaluate(self, use_testset: bool = False) -> float:
+    def evaluate(self, metric: str, use_testset: bool = False) -> float:
         """Evaluate the RAG pipeline based on the devset or testset."""
         ...
 
-    def optimize(self) -> None:
+    def optimize(
+        self,
+        metric: str,
+        effort: Literal["light", "medium", "heavy"],
+    ) -> None:
         """Optimize the RAG pipeline based on the trainset."""
         ...
 
@@ -55,8 +59,7 @@ class AiAssistantClass(Protocol):
         embedding_model: str,
         corpus: list[str],
         examples: list[tuple[str, str]],
-        metric: Metric,
-        optimization_effort: Literal["light", "medium", "heavy"] = "light",
+        metrics: dict[str, Metric],
     ) -> AiAssistant:
         """Instantiate the AI assistant."""
         ...

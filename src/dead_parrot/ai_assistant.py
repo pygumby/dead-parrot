@@ -46,9 +46,8 @@ class DspyAiAssistant(AiAssistant):
         embedding_model: str,
         corpus: list[str],
         examples: list[tuple[str, str]],
-        metric: Metric,
-        optimization_effort: Literal["light", "medium", "heavy"] = "light",
-    ):
+        metrics: dict[str, Metric],
+    ) -> None:
         """Initialize the AI assistant."""
         self._name: str
         self._init_name(name=name)
@@ -70,11 +69,11 @@ class DspyAiAssistant(AiAssistant):
         self._testset: list[dspy.Example]
         self._init_examples(examples=examples)
 
-        self._metric: Callable[[dspy.Example, dspy.Prediction, Any], float | bool]
-        self._init_metric(metric=metric)
-
-        self._optimizer: dspy.MIPROv2
-        self._init_optimizer(effort=optimization_effort)
+        self._metrics: dict[
+            str,
+            Callable[[dspy.Example, dspy.Prediction, Any], float | bool],
+        ]
+        self._init_metrics(metrics=metrics)
 
         self._retriever: dspy.retrievers.Embeddings
         self._init_retriever()
@@ -145,44 +144,38 @@ class DspyAiAssistant(AiAssistant):
         self._devset = dspy_examples[i:j]
         self._testset = dspy_examples[j:]
 
-    def _init_metric(self, metric: Metric) -> None:
-        self._log(msg="Initializing metric")
-        self._log(msg=f"Metric: {metric.__class__.__name__}", sub=True)
+    def _init_metrics(self, metrics: dict[str, Metric]) -> None:
+        self._log(msg="Initializing metrics")
 
-        def dspy_metric(
-            example: dspy.Example,
-            prediction: dspy.Prediction,
-            trace: Any = None,
-        ) -> float | bool:
-            result = metric.score(
-                question=example.question,
-                example_answer=example.answer,
-                prediction_answer=prediction.answer,
-            )
-            score: float = result["score"]
-            if not 0 <= score <= 1:
-                raise ValueError(f"Score must be between 0 and 1, but got {score}.")
+        def make_dspy_metric(
+            metric: Metric,
+        ) -> Callable[[dspy.Example, dspy.Prediction, Any], float | bool]:
+            def dspy_metric(
+                example: dspy.Example,
+                prediction: dspy.Prediction,
+                trace: Any = None,
+            ) -> float | bool:
+                result = metric.score(
+                    question=example.question,
+                    example_answer=example.answer,
+                    prediction_answer=prediction.answer,
+                )
+                score: float = result["score"]
 
-            if trace is not None:
-                return score >= 0.95
-            else:
-                return score
+                if not 0 <= score <= 1:
+                    raise ValueError(f"Score must be between 0 and 1, but got {score}.")
 
-        self._metric = dspy_metric
+                if trace is not None:
+                    return score >= 0.95
+                else:
+                    return score
 
-    def _init_optimizer(
-        self,
-        effort: Literal["light", "medium", "heavy"],
-    ) -> None:
-        self._log(msg="Initializing optimizer")
-        self._log(msg=f"Effort: {effort}", sub=True)
+            return dspy_metric
 
-        self._optimizer = dspy.MIPROv2(
-            metric=self._metric,
-            prompt_model=self._teacher_model,
-            task_model=self._task_model,
-            auto=effort,
-        )
+        self._metrics = {}
+        for name, metric in metrics.items():
+            self._log(msg=f"Metric: {name}", sub=True)
+            self._metrics[name] = make_dspy_metric(metric=metric)
 
     def _init_retriever(self) -> None:
         self._log(msg="Initializing retriever")
@@ -259,13 +252,19 @@ class DspyAiAssistant(AiAssistant):
 
         return str(pred.answer)
 
-    def evaluate(self, use_testset: bool = False) -> float:
+    def evaluate(self, metric: str, use_testset: bool = False) -> float:
         """Evaluate the RAG pipeline based on the devset or testset."""
         self._log(msg="Evaluating RAG pipeline")
+        self._log(msg=f"Metric: {metric}", sub=True)
+
+        if metric not in self._metrics:
+            raise ValueError(
+                f"Metric '{metric}' not found in metrics:\n{list(self._metrics.keys())}"
+            )
 
         dspy_evaluate = dspy.Evaluate(
             devset=self._devset if not use_testset else self._testset,
-            metric=self._metric,
+            metric=self._metrics[metric],
         )
 
         evaluation_log_file = f"{utils.create_timestamp()}_evaluation.log"
@@ -283,9 +282,27 @@ class DspyAiAssistant(AiAssistant):
 
         return score
 
-    def optimize(self) -> None:
+    def optimize(
+        self,
+        metric: str,
+        effort: Literal["light", "medium", "heavy"],
+    ) -> None:
         """Optimize the RAG pipeline based on the trainset."""
         self._log(msg="Optimizing RAG pipeline")
+        self._log(msg=f"Metric: {metric}", sub=True)
+        self._log(msg=f"Effort: {effort}", sub=True)
+
+        if metric not in self._metrics:
+            raise ValueError(
+                f"Metric '{metric}' not found in metrics:\n{list(self._metrics.keys())}"
+            )
+
+        optimizer = dspy.MIPROv2(
+            metric=self._metrics[metric],
+            prompt_model=self._teacher_model,
+            task_model=self._task_model,
+            auto=effort,
+        )
 
         optimization_log_file = f"{utils.create_timestamp()}_optimization.log"
         optimization_log_file_path = f"{self.name}/{optimization_log_file}"
@@ -295,7 +312,7 @@ class DspyAiAssistant(AiAssistant):
             contextlib.redirect_stdout(new_target=log),
             contextlib.redirect_stderr(new_target=log),
         ):
-            optimized_rag: _Rag = self._optimizer.compile(
+            optimized_rag: _Rag = optimizer.compile(
                 student=self._rag,
                 trainset=self._trainset,
                 valset=self._devset,
