@@ -144,10 +144,10 @@ class DspyAiAssistant(AiAssistant):
         i = n // 2
         j = n * 3 // 4
 
-        self._log(msg=f"Total pairs: {n}", sub=True)
         self._log(msg=f"Train pairs: {i}", sub=True)
         self._log(msg=f"Dev pairs: {j - i}", sub=True)
         self._log(msg=f"Test pairs: {n - j}", sub=True)
+        self._log(msg=f"Total pairs: {n}", sub=True)
 
         dspy_examples = [
             dspy.Example(question=example[0], answer=example[1]).with_inputs("question")
