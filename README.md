@@ -33,7 +33,7 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     ),
     corpus=dp.Corpus(
         name="European Central Bank Staff Rules",
-        texts=dp.utils.load_pages_from_pdf(path="context/ecb_staff_rules.pdf"),
+        texts=dp.utils.load_pages_from_pdf(path="corpus/ecb_staff_rules.pdf"),
         chunk_size=500,
         retriever_k=3,
     ),
