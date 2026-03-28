@@ -6,7 +6,6 @@ import os
 import dotenv
 
 import dead_parrot as dp
-from dead_parrot.protocols import Corpus
 
 dotenv.load_dotenv()
 
@@ -23,15 +22,15 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     task_model="together_ai/google/gemma-3n-e4b-it",
     teacher_model="openai/gpt-4o",
     embedding_model="openai/text-embedding-3-small",
-    corpus=Corpus(
+    corpus=dp.Corpus(
         name="European Central Bank Staff Rules",
-        pages=dp.utils.get_pages_from_pdf("context/ecb_staff_rules.pdf"),
+        texts=dp.utils.load_pages_from_pdf(path="context/ecb_staff_rules.pdf"),
         chunk_size=500,
     ),
-    examples=dp.utils.load_examples_from_json(
-        path="examples/ecb_staff_rules.json",
-        # input_key="question",
-        # output_key="answer",
+    dataset=dp.Dataset(
+        examples=dp.utils.load_dicts_from_json(path="dataset/examples.json"),
+        question_key="question",
+        answer_key="answer",
     ),
     metrics={
         "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-4o"),

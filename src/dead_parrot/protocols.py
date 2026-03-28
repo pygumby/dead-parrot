@@ -54,8 +54,17 @@ class Corpus:
     """Dataclass for the corpus of an AI assistant."""
 
     name: str
-    pages: list[str]
+    texts: list[str]
     chunk_size: int
+
+
+@dataclass
+class Dataset:
+    """Dataclass for the dataset of an AI assistant."""
+
+    examples: list[dict[str, str]]
+    question_key: str
+    answer_key: str
 
 
 class AiAssistantClass(Protocol):
@@ -68,7 +77,7 @@ class AiAssistantClass(Protocol):
         teacher_model: str,
         embedding_model: str,
         corpus: Corpus,
-        examples: list[tuple[str, str]],
+        dataset: Dataset,
         metrics: dict[str, Metric],
     ) -> AiAssistant:
         """Instantiate the AI assistant."""

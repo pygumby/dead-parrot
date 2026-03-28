@@ -10,7 +10,13 @@ from typing import TYPE_CHECKING, Any, Literal
 import dspy
 
 from . import utils
-from .protocols import AiAssistant, AiAssistantClass, Corpus, Metric
+from .protocols import (
+    AiAssistant,
+    AiAssistantClass,
+    Corpus,
+    Dataset,
+    Metric,
+)
 
 
 class _AnswerGroundedInContext(dspy.Signature):
@@ -45,7 +51,7 @@ class DspyAiAssistant(AiAssistant):
         teacher_model: str,
         embedding_model: str,
         corpus: Corpus,
-        examples: list[tuple[str, str]],
+        dataset: Dataset,
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI assistant."""
@@ -67,7 +73,7 @@ class DspyAiAssistant(AiAssistant):
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
         self._testset: list[dspy.Example]
-        self._init_examples(examples=examples)
+        self._init_dataset(dataset=dataset)
 
         self._metrics: dict[
             str,
@@ -117,14 +123,14 @@ class DspyAiAssistant(AiAssistant):
     def _init_chunks(self, corpus: Corpus) -> None:
         self._log(msg="Initializing corpus")
         self._log(msg=f"Name: {corpus.name}", sub=True)
-        self._log(msg=f"Pages: {len(corpus.pages)}", sub=True)
+        self._log(msg=f"Pages: {len(corpus.texts)}", sub=True)
 
         chunk_overlap: int = corpus.chunk_size // 5
         self._log(msg=f"Chunk size: {corpus.chunk_size}", sub=True)
         self._log(msg=f"Chunk overlap: {chunk_overlap}", sub=True)
 
         chunks: list[str] = []
-        for i, page_text in enumerate(corpus.pages):
+        for i, page_text in enumerate(corpus.texts):
             page_metadata = f"Document: {corpus.name}\nPage: {i + 1}\n"
             for j in range(0, len(page_text), corpus.chunk_size - chunk_overlap):
                 chunk = f"{page_metadata}{page_text[j : j + corpus.chunk_size].strip()}"
@@ -133,10 +139,10 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Total chunks: {len(chunks)}", sub=True)
         self._chunks = chunks
 
-    def _init_examples(self, examples: list[tuple[str, str]]) -> None:
+    def _init_dataset(self, dataset: Dataset) -> None:
         self._log(msg="Initializing examples")
 
-        n = len(examples)
+        n = len(dataset.examples)
         if n < 4:
             raise ValueError(
                 f"At least 4 examples are required, but only {n} were provided."
@@ -144,14 +150,17 @@ class DspyAiAssistant(AiAssistant):
         i = n // 2
         j = n * 3 // 4
 
-        self._log(msg=f"Train pairs: {i}", sub=True)
-        self._log(msg=f"Dev pairs: {j - i}", sub=True)
-        self._log(msg=f"Test pairs: {n - j}", sub=True)
-        self._log(msg=f"Total pairs: {n}", sub=True)
+        self._log(msg=f"Train examples: {i}", sub=True)
+        self._log(msg=f"Dev examples: {j - i}", sub=True)
+        self._log(msg=f"Test examples: {n - j}", sub=True)
+        self._log(msg=f"Total examples: {n}", sub=True)
 
         dspy_examples = [
-            dspy.Example(question=example[0], answer=example[1]).with_inputs("question")
-            for example in examples
+            dspy.Example(
+                question=example[dataset.question_key],
+                answer=example[dataset.answer_key],
+            ).with_inputs("question")
+            for example in dataset.examples
         ]
 
         self._trainset = dspy_examples[:i]
