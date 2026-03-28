@@ -50,6 +50,15 @@ class AiAssistant(Protocol):
 
 
 @dataclass
+class Models:
+    """Dataclass for the models of an AI assistant."""
+
+    task: str
+    teacher: str
+    embedding: str
+
+
+@dataclass
 class Corpus:
     """Dataclass for the corpus of an AI assistant."""
 
@@ -74,9 +83,7 @@ class AiAssistantClass(Protocol):
     def __call__(
         self,
         name: str,
-        task_model: str,
-        teacher_model: str,
-        embedding_model: str,
+        models: Models,
         corpus: Corpus,
         dataset: Dataset,
         metrics: dict[str, Metric],

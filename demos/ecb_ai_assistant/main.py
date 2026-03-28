@@ -19,9 +19,11 @@ if not os.environ.get("TOGETHER_API_KEY"):
 
 ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     name="ECB AI Assistant",
-    task_model="together_ai/google/gemma-3n-e4b-it",
-    teacher_model="openai/gpt-4o",
-    embedding_model="openai/text-embedding-3-small",
+    models=dp.Models(
+        task="together_ai/google/gemma-3n-e4b-it",
+        teacher="openai/gpt-4o",
+        embedding="openai/text-embedding-3-small",
+    ),
     corpus=dp.Corpus(
         name="European Central Bank Staff Rules",
         texts=dp.utils.load_pages_from_pdf(path="context/ecb_staff_rules.pdf"),
@@ -40,5 +42,5 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
 )
 
 ecb_ai_assistant.ask(question="How long is the probationary period?")
-# ecb_ai_assistant.evaluate(metric="recall")
-# ecb_ai_assistant.optimize(metric="recall", effort="light")
+ecb_ai_assistant.evaluate(metric="recall")
+ecb_ai_assistant.optimize(metric="recall", effort="light")

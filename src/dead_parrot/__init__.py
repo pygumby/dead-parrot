@@ -8,6 +8,7 @@ from dead_parrot.protocols import (
     Corpus,
     Dataset,
     Metric,
+    Models,
 )
 
 __all__ = [
@@ -17,6 +18,7 @@ __all__ = [
     "Corpus",
     "Dataset",
     "Metric",
+    "Models",
     "metrics",
     "utils",
 ]

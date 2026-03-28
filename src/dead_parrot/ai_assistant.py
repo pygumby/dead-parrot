@@ -16,6 +16,7 @@ from .protocols import (
     Corpus,
     Dataset,
     Metric,
+    Models,
 )
 
 
@@ -47,9 +48,7 @@ class DspyAiAssistant(AiAssistant):
     def __init__(
         self,
         name: str,
-        task_model: str,
-        teacher_model: str,
-        embedding_model: str,
+        models: Models,
         corpus: Corpus,
         dataset: Dataset,
         metrics: dict[str, Metric],
@@ -61,11 +60,7 @@ class DspyAiAssistant(AiAssistant):
         self._task_model: dspy.LM
         self._teacher_model: dspy.LM
         self._embedding_model: dspy.Embedder
-        self._init_models(
-            task_model=task_model,
-            teacher_model=teacher_model,
-            embedding_model=embedding_model,
-        )
+        self._init_models(models=models)
 
         self._chunks: list[str]
         self._retriever_k: int
@@ -106,20 +101,15 @@ class DspyAiAssistant(AiAssistant):
 
     def _init_models(
         self,
-        task_model: str,
-        teacher_model: str,
-        embedding_model: str,
+        models: Models,
     ) -> None:
         self._log(msg="Initializing models")
-
-        self._log(msg=f"Task model: {task_model}", sub=True)
-        self._task_model = dspy.LM(model=task_model)
-
-        self._log(msg=f"Teacher model: {teacher_model}", sub=True)
-        self._teacher_model = dspy.LM(model=teacher_model)
-
-        self._log(msg=f"Embedding model: {embedding_model}", sub=True)
-        self._embedding_model = dspy.Embedder(model=embedding_model)
+        self._log(msg=f"Task model: {models.task}", sub=True)
+        self._task_model = dspy.LM(model=models.task)
+        self._log(msg=f"Teacher model: {models.teacher}", sub=True)
+        self._teacher_model = dspy.LM(model=models.teacher)
+        self._log(msg=f"Embedding model: {models.embedding}", sub=True)
+        self._embedding_model = dspy.Embedder(model=models.embedding)
 
     def _init_corpus(self, corpus: Corpus) -> None:
         self._log(msg="Initializing corpus")
@@ -270,12 +260,9 @@ class DspyAiAssistant(AiAssistant):
     def ask(self, question: str) -> str:
         """Answer the question using the RAG pipeline."""
         self._log(msg="Performing inference")
-
         pred: dspy.Prediction = self._rag(question=question)
-
         self._log(msg=f"Question: {question}", sub=True)
         self._log(msg=f"Answer: {pred.answer}", sub=True)
-
         return str(pred.answer)
 
     def evaluate(self, metric: str, use_testset: bool = False) -> float:
