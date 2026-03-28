@@ -1,5 +1,6 @@
 """Protocols."""
 
+from dataclasses import dataclass
 from typing import Literal, Protocol, TypedDict
 
 
@@ -48,6 +49,15 @@ class AiAssistant(Protocol):
         ...
 
 
+@dataclass
+class Corpus:
+    """Dataclass for the corpus of an AI assistant."""
+
+    name: str
+    pages: list[str]
+    chunk_size: int
+
+
 class AiAssistantClass(Protocol):
     """Protocol for the instantiation of an AI assistant."""
 
@@ -57,7 +67,7 @@ class AiAssistantClass(Protocol):
         task_model: str,
         teacher_model: str,
         embedding_model: str,
-        corpus: list[str],
+        corpus: Corpus,
         examples: list[tuple[str, str]],
         metrics: dict[str, Metric],
     ) -> AiAssistant:

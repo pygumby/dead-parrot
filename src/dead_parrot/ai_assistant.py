@@ -10,7 +10,7 @@ from typing import TYPE_CHECKING, Any, Literal
 import dspy
 
 from . import utils
-from .protocols import AiAssistant, AiAssistantClass, Metric
+from .protocols import AiAssistant, AiAssistantClass, Corpus, Metric
 
 
 class _AnswerGroundedInContext(dspy.Signature):
@@ -44,7 +44,7 @@ class DspyAiAssistant(AiAssistant):
         task_model: str,
         teacher_model: str,
         embedding_model: str,
-        corpus: list[str],
+        corpus: Corpus,
         examples: list[tuple[str, str]],
         metrics: dict[str, Metric],
     ) -> None:
@@ -61,8 +61,8 @@ class DspyAiAssistant(AiAssistant):
             embedding_model=embedding_model,
         )
 
-        self._corpus: list[str]
-        self._init_corpus(corpus=corpus)
+        self._chunks: list[str]
+        self._init_chunks(corpus=corpus)
 
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
@@ -114,10 +114,24 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {embedding_model}", sub=True)
         self._embedding_model = dspy.Embedder(model=embedding_model)
 
-    def _init_corpus(self, corpus: list[str]) -> None:
+    def _init_chunks(self, corpus: Corpus) -> None:
         self._log(msg="Initializing corpus")
-        self._log(msg=f"Total chunks: {len(corpus)}", sub=True)
-        self._corpus = corpus
+        self._log(msg=f"Name: {corpus.name}", sub=True)
+        self._log(msg=f"Pages: {len(corpus.pages)}", sub=True)
+
+        chunk_overlap: int = corpus.chunk_size // 5
+        self._log(msg=f"Chunk size: {corpus.chunk_size}", sub=True)
+        self._log(msg=f"Chunk overlap: {chunk_overlap}", sub=True)
+
+        chunks: list[str] = []
+        for i, page_text in enumerate(corpus.pages):
+            page_metadata = f"Document: {corpus.name}\nPage: {i + 1}\n"
+            for j in range(0, len(page_text), corpus.chunk_size - chunk_overlap):
+                chunk = f"{page_metadata}{page_text[j : j + corpus.chunk_size].strip()}"
+                chunks.append(chunk)
+
+        self._log(msg=f"Total chunks: {len(chunks)}", sub=True)
+        self._chunks = chunks
 
     def _init_examples(self, examples: list[tuple[str, str]]) -> None:
         self._log(msg="Initializing examples")
@@ -195,7 +209,7 @@ class DspyAiAssistant(AiAssistant):
         else:
             retriever = dspy.retrievers.Embeddings(
                 embedder=self._embedding_model,
-                corpus=self._corpus,
+                corpus=self._chunks,
             )
             new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"

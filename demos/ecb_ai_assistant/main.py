@@ -6,6 +6,7 @@ import os
 import dotenv
 
 import dead_parrot as dp
+from dead_parrot.protocols import Corpus
 
 dotenv.load_dotenv()
 
@@ -22,12 +23,15 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     task_model="together_ai/google/gemma-3n-e4b-it",
     teacher_model="openai/gpt-4o",
     embedding_model="openai/text-embedding-3-small",
-    corpus=dp.utils.load_corpus_from_pdf(
+    corpus=Corpus(
         name="European Central Bank Staff Rules",
-        path="context/ecb_staff_rules.pdf",
+        pages=dp.utils.get_pages_from_pdf("context/ecb_staff_rules.pdf"),
+        chunk_size=500,
     ),
     examples=dp.utils.load_examples_from_json(
         path="examples/ecb_staff_rules.json",
+        # input_key="question",
+        # output_key="answer",
     ),
     metrics={
         "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-4o"),
@@ -36,5 +40,5 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
 )
 
 ecb_ai_assistant.ask(question="How long is the probationary period?")
-ecb_ai_assistant.evaluate(metric="recall")
-ecb_ai_assistant.optimize(metric="recall", effort="light")
+# ecb_ai_assistant.evaluate(metric="recall")
+# ecb_ai_assistant.optimize(metric="recall", effort="light")
