@@ -26,6 +26,7 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
         name="European Central Bank Staff Rules",
         texts=dp.utils.load_pages_from_pdf(path="context/ecb_staff_rules.pdf"),
         chunk_size=500,
+        retriever_k=5,
     ),
     dataset=dp.Dataset(
         examples=dp.utils.load_dicts_from_json(path="dataset/examples.json"),

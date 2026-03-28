@@ -56,6 +56,7 @@ class Corpus:
     name: str
     texts: list[str]
     chunk_size: int
+    retriever_k: int
 
 
 @dataclass

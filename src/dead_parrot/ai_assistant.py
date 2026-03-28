@@ -68,7 +68,8 @@ class DspyAiAssistant(AiAssistant):
         )
 
         self._chunks: list[str]
-        self._init_chunks(corpus=corpus)
+        self._retriever_k: int
+        self._init_corpus(corpus=corpus)
 
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
@@ -120,11 +121,10 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {embedding_model}", sub=True)
         self._embedding_model = dspy.Embedder(model=embedding_model)
 
-    def _init_chunks(self, corpus: Corpus) -> None:
+    def _init_corpus(self, corpus: Corpus) -> None:
         self._log(msg="Initializing corpus")
         self._log(msg=f"Name: {corpus.name}", sub=True)
         self._log(msg=f"Pages: {len(corpus.texts)}", sub=True)
-
         chunk_overlap: int = corpus.chunk_size // 5
         self._log(msg=f"Chunk size: {corpus.chunk_size}", sub=True)
         self._log(msg=f"Chunk overlap: {chunk_overlap}", sub=True)
@@ -138,9 +138,11 @@ class DspyAiAssistant(AiAssistant):
 
         self._log(msg=f"Total chunks: {len(chunks)}", sub=True)
         self._chunks = chunks
+        self._log(msg=f"Retriever k: {corpus.retriever_k}", sub=True)
+        self._retriever_k = corpus.retriever_k
 
     def _init_dataset(self, dataset: Dataset) -> None:
-        self._log(msg="Initializing examples")
+        self._log(msg="Initializing dataset")
 
         n = len(dataset.examples)
         if n < 4:
@@ -219,6 +221,7 @@ class DspyAiAssistant(AiAssistant):
             retriever = dspy.retrievers.Embeddings(
                 embedder=self._embedding_model,
                 corpus=self._chunks,
+                k=self._retriever_k,
             )
             new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
