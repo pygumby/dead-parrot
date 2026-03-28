@@ -10,18 +10,16 @@ import dead_parrot as dp
 dotenv.load_dotenv()
 
 if not os.environ.get("OPENAI_API_KEY"):
-    os.environ["OPENAI_API_KEY"] = getpass.getpass(prompt="Enter API key for OpenAI: ")
+    os.environ["OPENAI_API_KEY"] = getpass.getpass(prompt="Enter OpenAI API key: ")
 
 if not os.environ.get("TOGETHER_API_KEY"):
-    os.environ["TOGETHER_API_KEY"] = getpass.getpass(
-        prompt="Enter API key for Together: "
-    )
+    os.environ["TOGETHER_API_KEY"] = getpass.getpass(prompt="Enter Together API key: ")
 
 ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     name="ECB AI Assistant",
     models=dp.Models(
         task="together_ai/google/gemma-3n-e4b-it",
-        teacher="openai/gpt-4o",
+        teacher="openai/gpt-5",
         embedding="openai/text-embedding-3-small",
     ),
     corpus=dp.Corpus(
@@ -36,8 +34,8 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
         answer_key="a",
     ),
     metrics={
-        "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-4o"),
-        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="openai/gpt-4o"),
+        "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-5"),
+        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="openai/gpt-5"),
     },
 )
 
