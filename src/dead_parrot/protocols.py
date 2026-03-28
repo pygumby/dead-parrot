@@ -64,8 +64,8 @@ class Corpus:
 
     name: str
     texts: list[str]
-    chunk_size: int
-    retriever_k: int
+    chunk_size: int = 1000
+    retriever_k: int = 5
 
 
 @dataclass
@@ -73,8 +73,8 @@ class Dataset:
     """Dataclass for the dataset of an AI assistant."""
 
     examples: list[dict[str, str]]
-    question_key: str
-    answer_key: str
+    question_key: str = "question"
+    answer_key: str = "answer"
 
 
 class AiAssistantClass(Protocol):
