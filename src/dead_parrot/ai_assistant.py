@@ -2,6 +2,7 @@
 
 import contextlib
 import os
+import random
 import re
 import textwrap
 from collections.abc import Callable
@@ -13,8 +14,8 @@ from . import utils
 from .protocols import (
     AiAssistant,
     AiAssistantClass,
-    Dataset,
     Document,
+    Examples,
     Metric,
     Models,
 )
@@ -50,7 +51,7 @@ class DspyAiAssistant(AiAssistant):
         name: str,
         models: Models,
         corpus: list[Document],
-        dataset: Dataset,
+        dataset: list[Examples],
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI assistant."""
@@ -151,33 +152,44 @@ class DspyAiAssistant(AiAssistant):
 
         self._retriever = retriever
 
-    def _init_dataset(self, dataset: Dataset) -> None:
+    def _init_dataset(self, dataset: list[Examples]) -> None:
         self._log(msg="Initializing dataset")
+        self._trainset = []
+        self._devset = []
+        self._testset = []
 
-        n = len(dataset.examples)
-        if n < 4:
-            raise ValueError(
-                f"At least 4 examples are required, but only {n} were provided."
-            )
-        i = n // 2
-        j = n * 3 // 4
+        for idx, examples in enumerate(dataset):
+            self._log(msg=f"Ingesting examples: Set {idx + 1}", sub=True)
+            n = len(examples.dicts)
 
-        self._log(msg=f"Train examples: {i}", sub=True)
-        self._log(msg=f"Dev examples: {j - i}", sub=True)
-        self._log(msg=f"Test examples: {n - j}", sub=True)
-        self._log(msg=f"Total examples: {n}", sub=True)
+            if n < 4:
+                raise ValueError(
+                    f"At least 4 examples are required, but only {n} were provided."
+                )
 
-        dspy_examples = [
-            dspy.Example(
-                question=example[dataset.question_key],
-                answer=example[dataset.answer_key],
-            ).with_inputs("question")
-            for example in dataset.examples
-        ]
+            dspy_examples = [
+                dspy.Example(
+                    question=example[examples.question_key],
+                    answer=example[examples.answer_key],
+                ).with_inputs("question")
+                for example in examples.dicts
+            ]
+            random.shuffle(dspy_examples)
 
-        self._trainset = dspy_examples[:i]
-        self._devset = dspy_examples[i:j]
-        self._testset = dspy_examples[j:]
+            i = n // 2
+            j = n * 3 // 4
+            self._trainset.extend(dspy_examples[:i])
+            self._devset.extend(dspy_examples[i:j])
+            self._testset.extend(dspy_examples[j:])
+
+        n_train = len(self._trainset)
+        n_dev = len(self._devset)
+        n_test = len(self._testset)
+        n_total = n_train + n_dev + n_test
+        self._log(msg=f"Train examples: {n_train}", sub=True)
+        self._log(msg=f"Dev examples: {n_dev}", sub=True)
+        self._log(msg=f"Test examples: {n_test}", sub=True)
+        self._log(msg=f"Total examples: {n_total}", sub=True)
 
     def _init_metrics(self, metrics: dict[str, Metric]) -> None:
         self._log(msg="Initializing metrics")
@@ -324,7 +336,7 @@ class DspyAiAssistant(AiAssistant):
 
         with open(file=optimization_log_file_path, mode="r") as log:
             lines = log.readlines()
-            last_line = lines.pop().strip() if lines else "None"
+            last_line = lines.pop().strip() if lines else "Empty log"
         self._log(msg=f"Last log: {last_line}", sub=True)
 
         optimized_rag_file = f"{utils.create_timestamp()}_rag.json"

@@ -34,20 +34,21 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     corpus=[
         dp.Document(
             name="European Central Bank Staff Rules",
-            texts=dp.utils.load_texts_from_pdf(path="corpus/ecb_rules.pdf"),
-            chunk_size=500,
+            texts=dp.utils.load_texts_from_pdf(path="documents/ecb_rules.pdf"),
         ),
         dp.Document(
             name="European Central Bank Conditions of Employment",
-            texts=dp.utils.load_texts_from_pdf(path="corpus/ecb_conditions.pdf"),
-            chunk_size=500,
+            texts=dp.utils.load_texts_from_pdf(path="documents/ecb_conditions.pdf"),
         ),
     ],
-    dataset=dp.Dataset(
-        examples=dp.utils.load_dicts_from_json(path="dataset/examples.json"),
-        question_key="q",
-        answer_key="a",
-    ),
+    dataset=[
+        dp.Examples(
+            dicts=dp.utils.load_dicts_from_json(path="examples/ecb_rules.json")
+        ),
+        dp.Examples(
+            dicts=dp.utils.load_dicts_from_json(path="examples/ecb_conditions.json")
+        ),
+    ],
     metrics={
         "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-5"),
         "sources": dp.metrics.SimpleSourcesCoverage(judge_model="openai/gpt-5"),

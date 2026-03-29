@@ -5,8 +5,8 @@ from dead_parrot.ai_assistant import DspyAiAssistant
 from dead_parrot.protocols import (
     AiAssistant,
     AiAssistantClass,
-    Dataset,
     Document,
+    Examples,
     Metric,
     Models,
 )
@@ -16,7 +16,7 @@ __all__ = [
     "AiAssistantClass",
     "DspyAiAssistant",
     "Document",
-    "Dataset",
+    "Examples",
     "Metric",
     "Models",
     "metrics",

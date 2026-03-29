@@ -60,7 +60,7 @@ class Models:
 
 @dataclass
 class Document:
-    """Dataclass for the document of an AI assistant."""
+    """Dataclass for a document in the corpus of an AI assistant."""
 
     name: str
     texts: list[str]
@@ -68,10 +68,10 @@ class Document:
 
 
 @dataclass
-class Dataset:
-    """Dataclass for the dataset of an AI assistant."""
+class Examples:
+    """Dataclass for examples in the dataset of an AI assistant."""
 
-    examples: list[dict[str, str]]
+    dicts: list[dict[str, str]]
     question_key: str = "question"
     answer_key: str = "answer"
 
@@ -84,7 +84,7 @@ class AiAssistantClass(Protocol):
         name: str,
         models: Models,
         corpus: list[Document],
-        dataset: Dataset,
+        dataset: list[Examples],
         metrics: dict[str, Metric],
     ) -> AiAssistant:
         """Instantiate the AI assistant."""
