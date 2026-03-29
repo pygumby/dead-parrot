@@ -13,8 +13,8 @@ from . import utils
 from .protocols import (
     AiAssistant,
     AiAssistantClass,
-    Corpus,
     Dataset,
+    Document,
     Metric,
     Models,
 )
@@ -49,7 +49,7 @@ class DspyAiAssistant(AiAssistant):
         self,
         name: str,
         models: Models,
-        corpus: Corpus,
+        corpus: list[Document],
         dataset: Dataset,
         metrics: dict[str, Metric],
     ) -> None:
@@ -63,7 +63,6 @@ class DspyAiAssistant(AiAssistant):
         self._init_models(models=models)
 
         self._chunks: list[str]
-        self._retriever_k: int
         self._init_corpus(corpus=corpus)
 
         self._trainset: list[dspy.Example]
@@ -111,25 +110,27 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {models.embedding}", sub=True)
         self._embedding_model = dspy.Embedder(model=models.embedding)
 
-    def _init_corpus(self, corpus: Corpus) -> None:
+    def _init_corpus(self, corpus: list[Document]) -> None:
         self._log(msg="Initializing corpus")
-        self._log(msg=f"Name: {corpus.name}", sub=True)
-        self._log(msg=f"Pages: {len(corpus.texts)}", sub=True)
-        chunk_overlap: int = corpus.chunk_size // 5
-        self._log(msg=f"Chunk size: {corpus.chunk_size}", sub=True)
-        self._log(msg=f"Chunk overlap: {chunk_overlap}", sub=True)
 
-        chunks: list[str] = []
-        for i, page_text in enumerate(corpus.texts):
-            page_metadata = f"Document: {corpus.name}\nPage: {i + 1}\n"
-            for j in range(0, len(page_text), corpus.chunk_size - chunk_overlap):
-                chunk = f"{page_metadata}{page_text[j : j + corpus.chunk_size].strip()}"
-                chunks.append(chunk)
+        self._chunks = []
+        for doc in corpus:
+            self._log(msg=f"Name: {doc.name}", sub=True)
+            self._log(msg=f"Pages: {len(doc.texts)}", sub=True)
+            self._log(msg=f"Chunk size: {doc.chunk_size}", sub=True)
 
-        self._log(msg=f"Total chunks: {len(chunks)}", sub=True)
-        self._chunks = chunks
-        self._log(msg=f"Retriever k: {corpus.retriever_k}", sub=True)
-        self._retriever_k = corpus.retriever_k
+            chunk_overlap: int = doc.chunk_size // 5
+            chunks: list[str] = []
+            for i, page in enumerate(doc.texts):
+                page_metadata = f"Document: {doc.name}\nPage: {i + 1}\n"
+                for j in range(0, len(page), doc.chunk_size - chunk_overlap):
+                    chunk = f"{page_metadata}{page[j : j + doc.chunk_size]}"
+                    chunks.append(chunk)
+
+            self._log(msg=f"Chunks: {len(chunks)}", sub=True)
+            self._chunks.extend(chunks)
+
+        self._log(msg=f"Total chunks: {len(self._chunks)}", sub=True)
 
     def _init_dataset(self, dataset: Dataset) -> None:
         self._log(msg="Initializing dataset")
@@ -211,7 +212,6 @@ class DspyAiAssistant(AiAssistant):
             retriever = dspy.retrievers.Embeddings(
                 embedder=self._embedding_model,
                 corpus=self._chunks,
-                k=self._retriever_k,
             )
             new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"

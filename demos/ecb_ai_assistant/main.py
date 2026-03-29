@@ -22,12 +22,18 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
         teacher="openai/gpt-5",
         embedding="openai/text-embedding-3-small",
     ),
-    corpus=dp.Corpus(
-        name="European Central Bank Staff Rules",
-        texts=dp.utils.load_pages_from_pdf(path="corpus/ecb_staff_rules.pdf"),
-        chunk_size=500,
-        retriever_k=3,
-    ),
+    corpus=[
+        dp.Document(
+            name="European Central Bank Staff Rules",
+            texts=dp.utils.load_texts_from_pdf(path="corpus/ecb_rules.pdf"),
+            chunk_size=500,
+        ),
+        dp.Document(
+            name="European Central Bank Conditions of Employment",
+            texts=dp.utils.load_texts_from_pdf(path="corpus/ecb_conditions.pdf"),
+            chunk_size=500,
+        ),
+    ],
     dataset=dp.Dataset(
         examples=dp.utils.load_dicts_from_json(path="dataset/examples.json"),
         question_key="q",

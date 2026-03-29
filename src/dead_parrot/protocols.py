@@ -59,13 +59,12 @@ class Models:
 
 
 @dataclass
-class Corpus:
-    """Dataclass for the corpus of an AI assistant."""
+class Document:
+    """Dataclass for the document of an AI assistant."""
 
     name: str
     texts: list[str]
     chunk_size: int = 1000
-    retriever_k: int = 5
 
 
 @dataclass
@@ -84,7 +83,7 @@ class AiAssistantClass(Protocol):
         self,
         name: str,
         models: Models,
-        corpus: Corpus,
+        corpus: list[Document],
         dataset: Dataset,
         metrics: dict[str, Metric],
     ) -> AiAssistant:

@@ -7,8 +7,8 @@ from datetime import datetime
 import pypdf
 
 
-def load_pages_from_pdf(path: str) -> list[str]:
-    """Load the text of each page from a PDF file."""
+def load_texts_from_pdf(path: str) -> list[str]:
+    """Load the texts from a PDF file."""
     reader = pypdf.PdfReader(stream=path)
     return [reader.pages[i].extract_text() for i in range(len(reader.pages))]
 
