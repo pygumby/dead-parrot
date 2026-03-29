@@ -5,8 +5,8 @@
     // Font
     "editor.fontFamily": "JetBrains Mono, Menlo, Monaco",
     "terminal.integrated.fontFamily": "JetBrains Mono, Menlo, Monaco",
-    "editor.fontSize": 12.5,
-    "terminal.integrated.fontSize": 12.5,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
     "editor.fontLigatures": true,
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.gpuAcceleration": "off",
