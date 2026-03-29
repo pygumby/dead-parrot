@@ -62,8 +62,8 @@ class DspyAiAssistant(AiAssistant):
         self._embedding_model: dspy.Embedder
         self._init_models(models=models)
 
-        self._chunks: list[str]
-        self._init_corpus(corpus=corpus)
+        self._retriever: dspy.retrievers.Embeddings
+        self._init_retriever(corpus=corpus)
 
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
@@ -75,9 +75,6 @@ class DspyAiAssistant(AiAssistant):
             Callable[[dspy.Example, dspy.Prediction, Any], float | bool],
         ]
         self._init_metrics(metrics=metrics)
-
-        self._retriever: dspy.retrievers.Embeddings
-        self._init_retriever()
 
         self._rag: _Rag
         self._init_rag()
@@ -110,27 +107,49 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {models.embedding}", sub=True)
         self._embedding_model = dspy.Embedder(model=models.embedding)
 
-    def _init_corpus(self, corpus: list[Document]) -> None:
-        self._log(msg="Initializing corpus")
+    def _init_retriever(self, corpus: list[Document]) -> None:
+        self._log(msg="Initializing retriever")
 
-        self._chunks = []
-        for doc in corpus:
-            self._log(msg=f"Name: {doc.name}", sub=True)
-            self._log(msg=f"Pages: {len(doc.texts)}", sub=True)
-            self._log(msg=f"Chunk size: {doc.chunk_size}", sub=True)
-
-            chunk_overlap: int = doc.chunk_size // 5
+        def make_chunks(corpus: list[Document]) -> list[str]:
             chunks: list[str] = []
-            for i, page in enumerate(doc.texts):
-                page_metadata = f"Document: {doc.name}\nPage: {i + 1}\n"
-                for j in range(0, len(page), doc.chunk_size - chunk_overlap):
-                    chunk = f"{page_metadata}{page[j : j + doc.chunk_size]}"
-                    chunks.append(chunk)
+            for doc in corpus:
+                self._log(msg=f"Chunking document: {doc.name}", sub=True)
+                chunk_overlap: int = doc.chunk_size // 5
+                doc_chunks: list[str] = []
+                for i, page in enumerate(doc.texts):
+                    page_metadata = f"Document: {doc.name}\nPage: {i + 1}\n"
+                    for j in range(0, len(page), doc.chunk_size - chunk_overlap):
+                        chunk = f"{page_metadata}{page[j : j + doc.chunk_size]}"
+                        doc_chunks.append(chunk)
+                chunks.extend(doc_chunks)
+            return chunks
 
-            self._log(msg=f"Chunks: {len(chunks)}", sub=True)
-            self._chunks.extend(chunks)
+        if os.path.exists(path=self.name):
+            latest_embeddings_dir: str | None = utils.get_latest_subpath(
+                path=self.name,
+                suffix="_embeddings",
+            )
+            assert latest_embeddings_dir is not None
+            latest_embeddings_dir_path = f"{self.name}/{latest_embeddings_dir}"
+            self._log(msg=f"Loading from: {latest_embeddings_dir_path}", sub=True)
+            retriever = dspy.retrievers.Embeddings.from_saved(
+                path=latest_embeddings_dir_path,
+                embedder=self._embedding_model,
+            )
+        else:
+            chunks: list[str] = make_chunks(corpus=corpus)
+            self._log(msg=f"Total chunks to embed: {len(chunks)}", sub=True)
+            retriever = dspy.retrievers.Embeddings(
+                embedder=self._embedding_model,
+                corpus=chunks,
+            )
+            new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
+            new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
+            self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
+            os.makedirs(name=self.name)
+            retriever.save(path=new_embeddings_dir_path)
 
-        self._log(msg=f"Total chunks: {len(self._chunks)}", sub=True)
+        self._retriever = retriever
 
     def _init_dataset(self, dataset: Dataset) -> None:
         self._log(msg="Initializing dataset")
@@ -192,34 +211,6 @@ class DspyAiAssistant(AiAssistant):
         for name, metric in metrics.items():
             self._log(msg=f"Metric: {name}", sub=True)
             self._metrics[name] = make_dspy_metric(metric=metric)
-
-    def _init_retriever(self) -> None:
-        self._log(msg="Initializing retriever")
-
-        if os.path.exists(path=self.name):
-            latest_embeddings_dir: str | None = utils.get_latest_subpath(
-                path=self.name,
-                suffix="_embeddings",
-            )
-            assert latest_embeddings_dir is not None
-            latest_embeddings_dir_path = f"{self.name}/{latest_embeddings_dir}"
-            self._log(msg=f"Loading from: {latest_embeddings_dir_path}", sub=True)
-            retriever = dspy.retrievers.Embeddings.from_saved(
-                path=latest_embeddings_dir_path,
-                embedder=self._embedding_model,
-            )
-        else:
-            retriever = dspy.retrievers.Embeddings(
-                embedder=self._embedding_model,
-                corpus=self._chunks,
-            )
-            new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
-            new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
-            self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
-            os.makedirs(name=self.name)
-            retriever.save(path=new_embeddings_dir_path)
-
-        self._retriever = retriever
 
     def _init_rag(self) -> None:
         self._log(msg="Initializing RAG pipeline")
