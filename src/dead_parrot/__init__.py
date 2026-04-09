@@ -1,4 +1,4 @@
-"""API of dead-parrot."""
+"""dead-parrot."""
 
 from dead_parrot import metrics, utils
 from dead_parrot.ai_assistant import DspyAiAssistant
