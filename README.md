@@ -19,48 +19,7 @@ dead-parrot implements the approaches identified to address these challenges.
 
 dead-parrot is available on [PyPI](https://pypi.org/project/dead-parrot/) and can be installed via `uv add dead-parrot` or `pip install dead-parrot`.
 
-dead-parrot enables the creation of a simple AI assistant a few lines of code:
-
-```python
-import dead_parrot as dp
-
-ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
-    name="ECB AI Assistant",
-    models=dp.Models(
-        task="together_ai/google/gemma-3n-e4b-it",
-        teacher="openai/gpt-5",
-        embedding="openai/text-embedding-3-small",
-    ),
-    corpus=[
-        dp.Document(
-            name="European Central Bank Staff Rules",
-            texts=dp.utils.load_texts_from_pdf(path="documents/ecb_rules.pdf"),
-        ),
-        dp.Document(
-            name="European Central Bank Conditions of Employment",
-            texts=dp.utils.load_texts_from_pdf(path="documents/ecb_conditions.pdf"),
-        ),
-    ],
-    dataset=[
-        dp.Examples(
-            dicts=dp.utils.load_dicts_from_json(path="examples/ecb_rules.json")
-        ),
-        dp.Examples(
-            dicts=dp.utils.load_dicts_from_json(path="examples/ecb_conditions.json")
-        ),
-    ],
-    metrics={
-        "recall": dp.metrics.SimpleRecall(judge_model="openai/gpt-5"),
-        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="openai/gpt-5"),
-    },
-)
-
-ecb_ai_assistant.ask(question="How long is the probationary period?")
-ecb_ai_assistant.evaluate(metric="recall")
-ecb_ai_assistant.optimize(metric="recall", effort="light")
-```
-
-Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder in the repository for fully self-contained usage examples.
+Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder for fully self-contained usage examples.
 
 ### Development
 

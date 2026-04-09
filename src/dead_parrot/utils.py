@@ -7,13 +7,13 @@ from datetime import datetime
 import pypdf
 
 
-def load_texts_from_pdf(path: str) -> list[str]:
+def load_pdf(path: str) -> list[str]:
     """Load the texts from a PDF file."""
     reader = pypdf.PdfReader(stream=path)
     return [reader.pages[i].extract_text() for i in range(len(reader.pages))]
 
 
-def load_dicts_from_json(path: str) -> list[dict[str, str]]:
+def load_json(path: str) -> list[dict[str, str]]:
     """Load a list of dicts from a JSON file."""
     with open(file=path) as file:
         data = json.load(fp=file)

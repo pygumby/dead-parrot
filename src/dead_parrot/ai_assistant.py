@@ -117,7 +117,7 @@ class DspyAiAssistant(AiAssistant):
                 self._log(msg=f"Chunking document: {doc.name}", sub=True)
                 chunk_overlap: int = doc.chunk_size // 5
                 doc_chunks: list[str] = []
-                for i, page in enumerate(doc.texts):
+                for i, page in enumerate(doc.pages):
                     page_metadata = f"Document: {doc.name}\nPage: {i + 1}\n"
                     for j in range(0, len(page), doc.chunk_size - chunk_overlap):
                         chunk = f"{page_metadata}{page[j : j + doc.chunk_size]}"
@@ -160,7 +160,7 @@ class DspyAiAssistant(AiAssistant):
 
         for idx, examples in enumerate(dataset):
             self._log(msg=f"Ingesting examples: Set {idx + 1}", sub=True)
-            n = len(examples.dicts)
+            n = len(examples.qa_pairs)
 
             if n < 4:
                 raise ValueError(
@@ -172,7 +172,7 @@ class DspyAiAssistant(AiAssistant):
                     question=example[examples.question_key],
                     answer=example[examples.answer_key],
                 ).with_inputs("question")
-                for example in examples.dicts
+                for example in examples.qa_pairs
             ]
             random.shuffle(dspy_examples)
 

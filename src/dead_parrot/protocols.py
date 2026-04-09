@@ -63,7 +63,7 @@ class Document:
     """Dataclass for a document in the corpus of an AI assistant."""
 
     name: str
-    texts: list[str]
+    pages: list[str]
     chunk_size: int = 1000
 
 
@@ -71,7 +71,7 @@ class Document:
 class Examples:
     """Dataclass for examples in the dataset of an AI assistant."""
 
-    dicts: list[dict[str, str]]
+    qa_pairs: list[dict[str, str]]
     question_key: str = "question"
     answer_key: str = "answer"
 
