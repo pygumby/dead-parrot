@@ -1,0 +1,15 @@
+[project]
+name = "ecb-hr-ai-assistant"
+version = "0.0.0"
+requires-python = ">=3.13"
+dependencies = [
+    "dead-parrot",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+dead-parrot = { workspace = true }

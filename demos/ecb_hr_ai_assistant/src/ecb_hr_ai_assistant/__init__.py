@@ -1,0 +1,1 @@
+"""ecb-hr-ai-assistant."""

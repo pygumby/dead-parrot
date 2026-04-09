@@ -13,7 +13,7 @@ resolution-markers = [
 [manifest]
 members = [
     "dead-parrot",
-    "ecb-ai-assistant",
+    "ecb-hr-ai-assistant",
 ]
 
 [[package]]
@@ -350,9 +350,9 @@ wheels = [
 ]
 
 [[package]]
-name = "ecb-ai-assistant"
-version = "0.1.0"
-source = { virtual = "demos/ecb_ai_assistant" }
+name = "ecb-hr-ai-assistant"
+version = "0.0.0"
+source = { editable = "demos/ecb_hr_ai_assistant" }
 dependencies = [
     { name = "dead-parrot" },
     { name = "python-dotenv" },

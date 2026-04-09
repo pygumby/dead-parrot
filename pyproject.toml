@@ -33,5 +33,5 @@ build-backend = "hatchling.build"
 
 [tool.uv.workspace]
 members = [
-    "demos/ecb_ai_assistant",
+    "demos/*",
 ]

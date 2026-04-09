@@ -15,8 +15,8 @@ if not os.environ.get("OPENAI_API_KEY"):
 if not os.environ.get("TOGETHER_API_KEY"):
     os.environ["TOGETHER_API_KEY"] = getpass.getpass(prompt="Enter Together API key: ")
 
-ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
-    name="ECB AI Assistant",
+ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
+    name="ECB HR AI Assistant",
     models=dp.Models(
         task="together_ai/google/gemma-3n-e4b-it",
         teacher="openai/gpt-5",
@@ -42,6 +42,6 @@ ecb_ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     },
 )
 
-ecb_ai_assistant.ask(question="How long is the probationary period?")
-ecb_ai_assistant.evaluate(metric="recall")
-ecb_ai_assistant.optimize(metric="recall", effort="light")
+ai_assistant.ask(question="How long is the probationary period?")
+ai_assistant.evaluate(metric="recall")
+ai_assistant.optimize(metric="recall", effort="light")
