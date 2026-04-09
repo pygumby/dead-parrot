@@ -50,8 +50,8 @@ class DspyAiAssistant(AiAssistant):
         self,
         name: str,
         models: Models,
-        corpus: list[Document],
-        dataset: list[Examples],
+        corpus: Document | list[Document],
+        dataset: Examples | list[Examples],
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI assistant."""
@@ -108,8 +108,9 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {models.embedding}", sub=True)
         self._embedding_model = dspy.Embedder(model=models.embedding)
 
-    def _init_retriever(self, corpus: list[Document]) -> None:
+    def _init_retriever(self, corpus: Document | list[Document]) -> None:
         self._log(msg="Initializing retriever")
+        corpus = corpus if isinstance(corpus, list) else [corpus]
 
         def make_chunks(corpus: list[Document]) -> list[str]:
             chunks: list[str] = []
@@ -152,8 +153,10 @@ class DspyAiAssistant(AiAssistant):
 
         self._retriever = retriever
 
-    def _init_dataset(self, dataset: list[Examples]) -> None:
+    def _init_dataset(self, dataset: Examples | list[Examples]) -> None:
         self._log(msg="Initializing dataset")
+        dataset = dataset if isinstance(dataset, list) else [dataset]
+
         self._trainset = []
         self._devset = []
         self._testset = []

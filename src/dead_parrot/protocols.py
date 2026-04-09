@@ -83,8 +83,8 @@ class AiAssistantClass(Protocol):
         self,
         name: str,
         models: Models,
-        corpus: list[Document],
-        dataset: list[Examples],
+        corpus: Document | list[Document],
+        dataset: Examples | list[Examples],
         metrics: dict[str, Metric],
     ) -> AiAssistant:
         """Instantiate the AI assistant."""
