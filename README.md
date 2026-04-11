@@ -23,7 +23,7 @@ Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/dem
 
 ### Development
 
-- Install dependencies: `uv sync`
+- Install dependencies: `uv sync --all-packages`
 - Type-check: `uv run mypy .`
 - Lint: `uv run ruff check . --fix`
 - Format: `uv run ruff format .`
