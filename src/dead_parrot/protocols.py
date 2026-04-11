@@ -1,7 +1,7 @@
 """Protocols."""
 
 from dataclasses import dataclass
-from typing import Literal, Protocol, TypedDict
+from typing import Any, Literal, Protocol, TypedDict
 
 
 class MetricResult(TypedDict):
@@ -32,7 +32,7 @@ class AiAssistant(Protocol):
         """Return the name of the AI assistant."""
         ...
 
-    def ask(self, question: str) -> str:
+    def ask(self, question: str) -> dict[str, Any]:
         """Answer the question using the RAG pipeline."""
         ...
 

@@ -1,4 +1,4 @@
-"""Demo script showcasing how to create, query and evaluate an AI Assistant."""
+"""AI Assistant."""
 
 import getpass
 import os
@@ -15,8 +15,8 @@ if not os.environ.get("OPENAI_API_KEY"):
 if not os.environ.get("TOGETHER_API_KEY"):
     os.environ["TOGETHER_API_KEY"] = getpass.getpass(prompt="Enter Together API key: ")
 
-ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
-    name="ECB HR AI Assistant",
+ai_assistant = dp.DspyAiAssistant(
+    name="ecb_hr_ai_assistant",
     models=dp.Models(
         task="together_ai/google/gemma-3n-e4b-it",
         teacher="openai/gpt-5",
@@ -42,6 +42,7 @@ ai_assistant: dp.AiAssistant = dp.DspyAiAssistant(
     },
 )
 
-ai_assistant.ask(question="How long is the probationary period?")
-ai_assistant.evaluate(metric="recall")
-ai_assistant.optimize(metric="recall", effort="light")
+if __name__ == "__main__":
+    ai_assistant.ask(question="How long is the probationary period?")
+    ai_assistant.evaluate(metric="recall")
+    ai_assistant.optimize(metric="recall", effort="light")

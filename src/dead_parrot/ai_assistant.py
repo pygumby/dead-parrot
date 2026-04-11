@@ -9,6 +9,7 @@ from collections.abc import Callable
 from typing import TYPE_CHECKING, Any, Literal
 
 import dspy
+from dspy_temporal import TemporalModule, TemporalTool
 
 from . import utils
 from .protocols import (
@@ -31,16 +32,41 @@ class _AnswerGroundedInContext(dspy.Signature):
 
 
 class _Rag(dspy.Module):
-    def __init__(self, lm: dspy.LM, retriever: dspy.retrievers.Embeddings) -> None:
-        self._retriever: dspy.retrievers.Embeddings = retriever
+    def __init__(
+        self,
+        name: str,
+        lm: dspy.LM,
+        retriever: Callable[[str], list[str]],
+    ) -> None:
+        self._name: str = name
+        self._lm: dspy.LM = lm
+        self._retriever: Callable[[str], list[str]] = retriever
+        self._temporal_retriever: TemporalTool = TemporalTool(
+            func=retriever,
+            name=f"{name}_retriever",
+        )
         self._answer_grounded_in_context: dspy.ChainOfThought = dspy.ChainOfThought(
             signature=_AnswerGroundedInContext,
         )
-        self._answer_grounded_in_context.set_lm(lm=lm)
+
+    @property
+    def temporal_retriever(self) -> TemporalTool:
+        return self._temporal_retriever
 
     def forward(self, question: str) -> dspy.Prediction:
-        context: list[str] = self._retriever(query=question).passages
-        return self._answer_grounded_in_context(context=context, question=question)
+        context: list[str] = self._retriever(question)
+        with dspy.context(lm=self._lm):
+            return self._answer_grounded_in_context(
+                context=context,
+                question=question,
+            )
+
+    async def aforward(self, question: str) -> dspy.Prediction:
+        context: list[str] = await self._temporal_retriever.run(question)
+        return await self._answer_grounded_in_context.acall(
+            context=context,
+            question=question,
+        )
 
 
 class DspyAiAssistant(AiAssistant):
@@ -63,8 +89,8 @@ class DspyAiAssistant(AiAssistant):
         self._embedding_model: dspy.Embedder
         self._init_models(models=models)
 
-        self._retriever: dspy.retrievers.Embeddings
-        self._init_retriever(corpus=corpus)
+        self._embeddings: dspy.retrievers.Embeddings
+        self._init_embeddings(corpus=corpus)
 
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
@@ -79,6 +105,8 @@ class DspyAiAssistant(AiAssistant):
 
         self._rag: _Rag
         self._init_rag()
+
+        self._log(msg="Ready...")
 
     def _init_name(self, name: str) -> None:
         if not re.search(pattern=r"[a-zA-Z0-9]", string=name):
@@ -108,8 +136,8 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg=f"Embedding model: {models.embedding}", sub=True)
         self._embedding_model = dspy.Embedder(model=models.embedding)
 
-    def _init_retriever(self, corpus: Document | list[Document]) -> None:
-        self._log(msg="Initializing retriever")
+    def _init_embeddings(self, corpus: Document | list[Document]) -> None:
+        self._log(msg="Initializing embeddings")
         corpus = corpus if isinstance(corpus, list) else [corpus]
 
         def make_chunks(corpus: list[Document]) -> list[str]:
@@ -134,14 +162,14 @@ class DspyAiAssistant(AiAssistant):
             assert latest_embeddings_dir is not None
             latest_embeddings_dir_path = f"{self.name}/{latest_embeddings_dir}"
             self._log(msg=f"Loading from: {latest_embeddings_dir_path}", sub=True)
-            retriever = dspy.retrievers.Embeddings.from_saved(
+            embeddings = dspy.retrievers.Embeddings.from_saved(
                 path=latest_embeddings_dir_path,
                 embedder=self._embedding_model,
             )
         else:
             chunks: list[str] = make_chunks(corpus=corpus)
             self._log(msg=f"Total chunks to embed: {len(chunks)}", sub=True)
-            retriever = dspy.retrievers.Embeddings(
+            embeddings = dspy.retrievers.Embeddings(
                 embedder=self._embedding_model,
                 corpus=chunks,
             )
@@ -149,9 +177,9 @@ class DspyAiAssistant(AiAssistant):
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
             self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
             os.makedirs(name=self.name)
-            retriever.save(path=new_embeddings_dir_path)
+            embeddings.save(path=new_embeddings_dir_path)
 
-        self._retriever = retriever
+        self._embeddings = embeddings
 
     def _init_dataset(self, dataset: Examples | list[Examples]) -> None:
         self._log(msg="Initializing dataset")
@@ -230,7 +258,11 @@ class DspyAiAssistant(AiAssistant):
     def _init_rag(self) -> None:
         self._log(msg="Initializing RAG pipeline")
         assert os.path.exists(path=self.name)
-        rag = _Rag(lm=self._task_model, retriever=self._retriever)
+        rag = _Rag(
+            name=self.name,
+            lm=self._task_model,
+            retriever=lambda query: self._embeddings(query=query).passages,
+        )
 
         latest_rag_file: str | None = utils.get_latest_subpath(
             path=self.name,
@@ -263,13 +295,13 @@ class DspyAiAssistant(AiAssistant):
         """Return the name of the AI assistant."""
         return self._name
 
-    def ask(self, question: str) -> str:
+    def ask(self, question: str) -> dict[str, Any]:
         """Answer the question using the RAG pipeline."""
         self._log(msg="Performing inference")
-        pred: dspy.Prediction = self._rag(question=question)
         self._log(msg=f"Question: {question}", sub=True)
-        self._log(msg=f"Answer: {pred.answer}", sub=True)
-        return str(pred.answer)
+        pred_dict: dict[str, Any] = self._rag(question=question).toDict()
+        self._log(msg=f"Answer: {pred_dict['answer']}", sub=True)
+        return pred_dict
 
     def evaluate(self, metric: str, use_testset: bool = False) -> float:
         """Evaluate the RAG pipeline based on the devset or testset."""
@@ -348,6 +380,15 @@ class DspyAiAssistant(AiAssistant):
         optimized_rag.save(path=optimized_rag_file_path)
 
         self._rag = optimized_rag
+
+    def to_temporal(self) -> tuple[TemporalModule[dspy.Prediction], TemporalTool]:
+        """Wrap the RAG pipeline for use in Temporal workflows."""
+        temporal_rag: TemporalModule[dspy.Prediction] = TemporalModule(
+            module=self._rag,
+            name=f"{self.name}_rag",
+            lm=self._task_model,
+        )
+        return temporal_rag, self._rag.temporal_retriever
 
 
 # Verify that protocols are correctly implemented

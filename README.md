@@ -19,7 +19,7 @@ dead-parrot implements the approaches identified to address these challenges.
 
 dead-parrot is available on [PyPI](https://pypi.org/project/dead-parrot/) and can be installed via `uv add dead-parrot` or `pip install dead-parrot`.
 
-Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder for fully self-contained usage examples.
+Please refer to the [demos](https://github.com/pygumby/dead-parrot/tree/main/demos/) folder for fully self-contained usage examples and templates.
 
 ### Development
 
