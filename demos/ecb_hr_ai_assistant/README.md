@@ -2,14 +2,14 @@
 
 This is a demo that showcases how to build an AI assistant with [dead-parrot](https://github.com/pygumby/dead-parrot/).
 It implements an AI assistant that answers questions on ECB HR matters.
-At the same time, it is a template that serves as a starting point for your own AI assistant.
+At the same time, it is a template that serves as a starting point for building your own AI assistant.
 
 The structure is simple:
 - [documents/](documents/) contains the corpus for context retrieval.
-- [examples/](examples/) contains the question-answer pairs for evaluation and retrieval.
+- [examples/](examples/) contains the dataset for evaluation and optimization.
 - [constants.py](src/ecb_hr_ai_assistant/constants.py) defines names and other constants.
 - [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py) defines the AI assistant using dead-parrot.
-- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py) defines a Temporal workflow that calls AI assistant.
+- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py) defines a Temporal workflow that calls the AI assistant.
 - [temporal_worker.py](src/ecb_hr_ai_assistant/temporal_worker.py) defines and runs a Temporal worker for the Temporal workflow.
 - [rest_api.py](src/ecb_hr_ai_assistant/rest_api.py) defines and runs a FastAPI REST API that calls the Temporal workflow.
 ----
@@ -24,7 +24,7 @@ Then, run the following commands from the repository's root.
     ```
     uv sync --all-packages
     ```
-2. Initialize, query, evaluate and optimize the AI assistant (can be skipped):
+2. Optionally, query, evaluate and optimize the AI assistant:
     ```
     uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.ai_assistant
     ```
