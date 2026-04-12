@@ -22,4 +22,5 @@ wheels/
 .mypy_cache/
 
 # dead-parrot
+demos/ecb_bs_ai_assistant/ecb_bs_ai_assistant/
 demos/ecb_hr_ai_assistant/ecb_hr_ai_assistant/
