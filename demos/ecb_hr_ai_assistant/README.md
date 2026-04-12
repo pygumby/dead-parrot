@@ -1,6 +1,6 @@
 # ecb-hr-ai-assistant
 
-This is a demo that showcases how to build an AI assistant with [dead-parrot](https://github.com/pygumby/dead-parrot/).
+This is a demo that showcases how to build an AI assistant with [dead-parrot](https://github.com/pygumby/dead-parrot).
 It implements an AI assistant that answers questions on ECB HR matters.
 At the same time, it is a template that serves as a starting point for building your own AI assistant.
 
@@ -16,10 +16,12 @@ The structure is simple:
 
 ### Usage
 
-Ensure that a [Temporal](https://temporal.io) Service is available.
-You can quickly install Temporal locally by running `brew install temporal`.
-Then, run the following commands from the repository's root.
+Prerequisites:
+- Create an .env file based on the [.env.example](.env.example) file, containing:
+  - API keys, e.g., [OpenAI](https://platform.openai.com)
+  - Service URLs, e.g., [Temporal](https://temporal.io)
 
+Run the following commands from the repository's root:
 1. Install dependencies:
     ```
     uv sync --all-packages
@@ -59,6 +61,7 @@ Then, run the following commands from the repository's root.
 ### Development
 
 To create your own AI assistant, change the following files:
-- [constants.py](src/ecb_hr_ai_assistant/constants.py): Update values such as the AI assistant's name
-- [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py): Customize the AI assistant's configuration
-- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py): Change the Temporal worklow's name (use VS Code's "Rename Symbol" to avoid stale references)
+- [pyproject.toml](pyproject.toml): Update the package name.
+- [constants.py](src/ecb_hr_ai_assistant/constants.py): Update the constants.
+- [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py): Customize the AI assistant's definition.
+- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py): Change the Temporal worklow's name (use VS Code's "Rename Symbol" to avoid stale references).
