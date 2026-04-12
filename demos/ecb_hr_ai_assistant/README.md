@@ -1,7 +1,7 @@
 # ecb-hr-ai-assistant
 
 This is a demo that showcases how to build an AI assistant with [dead-parrot](https://github.com/pygumby/dead-parrot).
-It implements an AI assistant that answers questions on ECB HR matters.
+It implements an AI assistant that answers questions on ECB Human Resources matters.
 At the same time, it is a template that serves as a starting point for building your own AI assistant.
 
 The structure is simple:
@@ -40,21 +40,21 @@ Run the following commands from the repository's root:
     ```
 5. Start the REST API:
     ```
-    uv run --directory demos/ecb_hr_ai_assistant uvicorn ecb_hr_ai_assistant.rest_api:app --port 8001
+    uv run --directory demos/ecb_hr_ai_assistant uvicorn ecb_hr_ai_assistant.rest_api:app --port 8002
     ```
 6. Call the `/card` endpoint to get the AI assistant's card:
     ```
     curl --request GET \
-    --url http://localhost:8001/card \
+    --url http://localhost:8002/card \
     --header 'content-type: application/json'
     ```
 7. Call the `/ask` endpoint to ask a question to the AI assistant:
     ```
     curl --request POST \
-    --url http://localhost:8001/ask \
+    --url http://localhost:8002/ask \
     --header 'content-type: application/json' \
     --data '{
-        "question": "What is a fixed-term contract?"
+        "question": "How long is the probationary period?"
     }'
     ```
 

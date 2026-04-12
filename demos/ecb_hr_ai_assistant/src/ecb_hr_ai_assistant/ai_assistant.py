@@ -7,6 +7,8 @@ import dotenv
 
 import dead_parrot as dp
 
+from .constants import AI_ASSISTANT_NAME
+
 dotenv.load_dotenv()
 
 if not os.environ.get("OPENAI_API_KEY"):
@@ -16,7 +18,7 @@ if not os.environ.get("TOGETHER_API_KEY"):
     os.environ["TOGETHER_API_KEY"] = getpass.getpass(prompt="Enter Together API key: ")
 
 ai_assistant = dp.DspyAiAssistant(
-    name="ecb_hr_ai_assistant",
+    name=AI_ASSISTANT_NAME,
     models=dp.Models(
         task="together_ai/google/gemma-3n-e4b-it",
         teacher="openai/gpt-5",
