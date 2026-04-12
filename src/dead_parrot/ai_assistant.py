@@ -205,7 +205,7 @@ class DspyAiAssistant(AiAssistant):
                 ).with_inputs("question")
                 for example in examples.qa_pairs
             ]
-            random.shuffle(dspy_examples)
+            random.Random(self._name).shuffle(dspy_examples)
 
             i = n // 2
             j = n * 3 // 4
