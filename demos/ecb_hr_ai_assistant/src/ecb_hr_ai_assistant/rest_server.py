@@ -48,7 +48,7 @@ async def ask(body: AskRequest, request: Request) -> dict[str, Any]:
     response: dict[str, Any] = await request.app.state.temporal_client.execute_workflow(
         workflow="EcbHrAiAssistantWorkflow",
         arg=body.question,
-        id=f"{AI_ASSISTANT_NAME}-{uuid.uuid4().hex[:8]}",
+        id=f"{AI_ASSISTANT_NAME}-rest-{uuid.uuid4().hex[:8]}",
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
     )
     return response

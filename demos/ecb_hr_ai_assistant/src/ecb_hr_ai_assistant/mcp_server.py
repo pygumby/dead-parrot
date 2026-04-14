@@ -40,7 +40,7 @@ async def ask(ctx: Context, question: str) -> dict[str, Any]:
     response: dict[str, Any] = await temporal_client.execute_workflow(
         workflow="EcbHrAiAssistantWorkflow",
         arg=question,
-        id=f"{AI_ASSISTANT_NAME}-{uuid.uuid4().hex[:8]}",
+        id=f"{AI_ASSISTANT_NAME}-mcp-{uuid.uuid4().hex[:8]}",
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
     )
     return response
