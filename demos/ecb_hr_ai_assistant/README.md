@@ -11,7 +11,9 @@ The structure is simple:
 - [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py) defines the AI assistant using dead-parrot.
 - [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py) defines a Temporal workflow that calls the AI assistant.
 - [temporal_worker.py](src/ecb_hr_ai_assistant/temporal_worker.py) defines and runs a Temporal worker for the Temporal workflow.
-- [rest_api.py](src/ecb_hr_ai_assistant/rest_api.py) defines and runs a FastAPI REST API that calls the Temporal workflow.
+- [rest_server.py](src/ecb_hr_ai_assistant/rest_server.py) defines and runs a REST server that exposes the Temporal workflow.
+- [mcp_server.py](src/ecb_hr_ai_assistant/rest_server.py) defines and runs an MCP server that exposes the Temporal workflow.
+
 ----
 
 ### Usage
@@ -38,17 +40,17 @@ Run the following commands from the repository's root:
     ```
     uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.temporal_worker
     ```
-5. Start the REST API:
+5. Start the REST server:
     ```
-    uv run --directory demos/ecb_hr_ai_assistant uvicorn ecb_hr_ai_assistant.rest_api:app --port 8002
+    uv run --directory demos/ecb_hr_ai_assistant uvicorn ecb_hr_ai_assistant.rest_server:app --port 8002
     ```
-6. Call the `/card` endpoint to get the AI assistant's card:
+    Call the `/card` REST endpoint to get the AI assistant's card:
     ```
     curl --request GET \
     --url http://localhost:8002/card \
     --header 'content-type: application/json'
     ```
-7. Call the `/ask` endpoint to ask a question to the AI assistant:
+    Call the `/ask` REST endpoint to ask a question to the AI assistant:
     ```
     curl --request POST \
     --url http://localhost:8002/ask \
@@ -56,6 +58,14 @@ Run the following commands from the repository's root:
     --data '{
         "question": "How long is the probationary period?"
     }'
+    ```
+8. Optionally, start the MCP server:
+    ```
+    uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.mcp_server
+    ```
+    Call the MCP tool via the MCP Inspector (requires npm to be installed, as URL provide `http://localhost:9002/mcp`):
+    ```
+    npx @modelcontextprotocol/inspector
     ```
 
 ### Development
