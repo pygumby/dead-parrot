@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 from typing import Any
 
 import dotenv
+import uvicorn
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from temporalio.client import Client
@@ -49,3 +50,9 @@ async def ask(body: AskRequest, request: Request) -> dict[str, Any]:
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
     )
     return response
+
+
+if __name__ == "__main__":
+    host = os.getenv("REST_HOST", "localhost")
+    port = int(os.getenv("REST_PORT", "8001"))
+    uvicorn.run(app, host=host, port=port)

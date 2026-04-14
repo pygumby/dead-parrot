@@ -42,7 +42,7 @@ Run the following commands from the repository's root:
     ```
 5. Start the REST server:
     ```
-    uv run --directory demos/ecb_bs_ai_assistant uvicorn ecb_bs_ai_assistant.rest_server:app --port 8001
+    uv run --directory demos/ecb_bs_ai_assistant python -m ecb_bs_ai_assistant.rest_server
     ```
     Call the `/card` REST endpoint to get the AI assistant's card:
     ```

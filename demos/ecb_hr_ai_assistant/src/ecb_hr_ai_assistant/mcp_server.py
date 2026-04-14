@@ -5,11 +5,14 @@ import uuid
 from collections.abc import AsyncGenerator
 from typing import Any
 
+import dotenv
 import temporalio.client
 from fastmcp import Context, FastMCP
 from fastmcp.server.lifespan import lifespan
 
 from .constants import AI_ASSISTANT_DESCRIPTION, AI_ASSISTANT_NAME
+
+dotenv.load_dotenv()
 
 
 @lifespan
@@ -42,4 +45,6 @@ async def ask(ctx: Context, question: str) -> dict[str, Any]:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="localhost", port=9002)
+    host = os.getenv("MCP_HOST", "localhost")
+    port = int(os.getenv("MCP_PORT", "9002"))
+    mcp.run(transport="http", host=host, port=port)
