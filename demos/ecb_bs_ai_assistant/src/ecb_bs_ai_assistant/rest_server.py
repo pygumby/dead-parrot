@@ -26,8 +26,10 @@ class AskRequest(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """Lifespan context manager."""
-    temporal_service_url = os.getenv("TEMPORAL_SERVICE_URL", "localhost:7233")
-    app.state.temporal_client = await Client.connect(temporal_service_url)
+    temporal_host = os.getenv("TEMPORAL_HOST", "localhost")
+    temporal_port = os.getenv("TEMPORAL_PORT", "7233")
+    temporal_url = f"{temporal_host}:{temporal_port}"
+    app.state.temporal_client = await Client.connect(temporal_url)
     yield
 
 

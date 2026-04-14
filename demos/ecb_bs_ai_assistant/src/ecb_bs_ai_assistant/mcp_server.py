@@ -20,8 +20,10 @@ async def app_lifespan(
     mcp: FastMCP,
 ) -> AsyncGenerator[dict[str, temporalio.client.Client], None]:
     """Lifespan context manager."""
-    temporal_service_url = os.getenv("TEMPORAL_SERVICE_URL", "localhost:7233")
-    temporal_client = await temporalio.client.Client.connect(temporal_service_url)
+    temporal_host = os.getenv("TEMPORAL_HOST", "localhost")
+    temporal_port = os.getenv("TEMPORAL_PORT", "7233")
+    temporal_url = f"{temporal_host}:{temporal_port}"
+    temporal_client = await temporalio.client.Client.connect(temporal_url)
     yield {"temporal_client": temporal_client}
 
 

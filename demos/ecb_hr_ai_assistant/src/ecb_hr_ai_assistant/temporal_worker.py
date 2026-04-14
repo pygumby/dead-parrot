@@ -18,12 +18,14 @@ from .temporal_workflow import EcbHrAiAssistantWorkflow, rag, retriever
 dotenv.load_dotenv()
 
 
-async def run_worker() -> None:
+async def run_temporal_worker() -> None:
     """Run the Temporal worker."""
-    url: str = os.getenv("TEMPORAL_SERVICE_URL", "localhost:7233")
-    client: Client = await Client.connect(url)
-    worker: Worker = Worker(
-        client,
+    temporal_host = os.getenv("TEMPORAL_HOST", "localhost")
+    temporal_port = os.getenv("TEMPORAL_PORT", "7233")
+    temporal_url = f"{temporal_host}:{temporal_port}"
+    temporal_client: Client = await Client.connect(temporal_url)
+    temporal_worker: Worker = Worker(
+        temporal_client,
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
         workflows=[EcbHrAiAssistantWorkflow],
         plugins=[DSPyPlugin(rag, retriever)],
@@ -34,8 +36,8 @@ async def run_worker() -> None:
             ),
         ),
     )
-    await worker.run()
+    await temporal_worker.run()
 
 
 if __name__ == "__main__":
-    asyncio.run(run_worker())
+    asyncio.run(run_temporal_worker())
