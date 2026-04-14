@@ -12,7 +12,6 @@ from pydantic import BaseModel
 from temporalio.client import Client
 
 from .constants import AI_ASSISTANT_DESCRIPTION, AI_ASSISTANT_NAME
-from .temporal_workflow import EcbBsAiAssistantWorkflow
 
 dotenv.load_dotenv()
 
@@ -44,8 +43,8 @@ async def card() -> dict[str, str]:
 async def ask(body: AskRequest, request: Request) -> dict[str, Any]:
     """Ask a question to the AI assistant."""
     response: dict[str, Any] = await request.app.state.temporal_client.execute_workflow(
-        EcbBsAiAssistantWorkflow.run,
-        body.question,
+        workflow="EcbBsAiAssistantWorkflow",
+        arg=body.question,
         id=f"{AI_ASSISTANT_NAME}-{uuid.uuid4().hex[:8]}",
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
     )

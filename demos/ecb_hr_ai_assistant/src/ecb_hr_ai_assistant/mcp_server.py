@@ -10,7 +10,6 @@ from fastmcp import Context, FastMCP
 from fastmcp.server.lifespan import lifespan
 
 from .constants import AI_ASSISTANT_DESCRIPTION, AI_ASSISTANT_NAME
-from .temporal_workflow import EcbHrAiAssistantWorkflow
 
 
 @lifespan
@@ -34,8 +33,8 @@ async def ask(ctx: Context, question: str) -> dict[str, Any]:
     """Ask a question to the AI assistant."""
     temporal_client: temporalio.client.Client = ctx.lifespan_context["temporal_client"]
     response: dict[str, Any] = await temporal_client.execute_workflow(
-        EcbHrAiAssistantWorkflow.run,
-        question,
+        workflow="EcbHrAiAssistantWorkflow",
+        arg=question,
         id=f"{AI_ASSISTANT_NAME}-{uuid.uuid4().hex[:8]}",
         task_queue=f"{AI_ASSISTANT_NAME}-queue",
     )

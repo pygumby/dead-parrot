@@ -71,7 +71,14 @@ Run the following commands from the repository's root:
 ### Development
 
 To create your own AI assistant, change the following files:
-- [pyproject.toml](pyproject.toml): Update the package name.
-- [constants.py](src/ecb_hr_ai_assistant/constants.py): Update the constants.
-- [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py): Customize the AI assistant's definition.
-- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py): Change the Temporal worklow's name (use VS Code's "Rename Symbol" to avoid stale references).
+- [pyproject.toml](pyproject.toml)
+  Update the package name.
+- [constants.py](src/ecb_hr_ai_assistant/constants.py)
+  Update the constants.
+- [ai_assistant.py](src/ecb_hr_ai_assistant/ai_assistant.py)
+  Customize the AI assistant's definition.
+- [temporal_workflow.py](src/ecb_hr_ai_assistant/temporal_workflow.py)
+  Change the Temporal worklow's name and update references accordingly in:
+  - [temporal_worker.py](src/ecb_hr_ai_assistant/temporal_worker.py)
+  - [rest_server.py](src/ecb_hr_ai_assistant/rest_server.py)
+  - [mcp_server.py](src/ecb_hr_ai_assistant/mcp_server.py)
