@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 from datetime import datetime
 
 import pypdf
@@ -24,12 +25,30 @@ def load_json(path: str) -> list[dict[str, str]]:
     return data
 
 
-def create_timestamp() -> str:
+def _normalize_name(name: str) -> str:
+    """Normalize a name to a lowercase, underscore-separated, alphanumeric string."""
+    if not re.search(pattern=r"[a-zA-Z0-9]", string=name):
+        raise ValueError(
+            f"Name must contain letters or numbers, but '{name}' does not."
+        )
+
+    return re.sub(
+        pattern=r"[^a-z0-9_]",
+        repl="",
+        string=re.sub(
+            pattern=r"[ -]",
+            repl="_",
+            string=name.lower(),
+        ),
+    )
+
+
+def _create_timestamp() -> str:
     """Create a lexically sortable timestamp string."""
     return datetime.now().strftime("%Y%m%d_%H%M%S%f")
 
 
-def get_latest_subpath(path: str, suffix: str) -> str | None:
+def _get_latest_subpath(path: str, suffix: str) -> str | None:
     """Get the latest directory or file in the path that ends with the suffix."""
     datetime_strs: list[str] = [
         dir_name.removesuffix(suffix)

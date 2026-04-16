@@ -3,7 +3,6 @@
 import contextlib
 import os
 import random
-import re
 import textwrap
 from collections.abc import Callable
 from typing import TYPE_CHECKING, Any, Literal
@@ -109,20 +108,7 @@ class DspyAiAssistant(AiAssistant):
         self._log(msg="Ready...")
 
     def _init_name(self, name: str) -> None:
-        if not re.search(pattern=r"[a-zA-Z0-9]", string=name):
-            raise ValueError(
-                f"Name must contain letters or numbers, but '{name}' does not."
-            )
-
-        self._name = re.sub(
-            pattern=r"[^a-z0-9_]",
-            repl="",
-            string=re.sub(
-                pattern=r"[ -]",
-                repl="_",
-                string=name.lower(),
-            ),
-        )
+        self._name = utils._normalize_name(name=name)
 
     def _init_models(
         self,
@@ -155,7 +141,7 @@ class DspyAiAssistant(AiAssistant):
             return chunks
 
         if os.path.exists(path=self.name):
-            latest_embeddings_dir: str | None = utils.get_latest_subpath(
+            latest_embeddings_dir: str | None = utils._get_latest_subpath(
                 path=self.name,
                 suffix="_embeddings",
             )
@@ -173,7 +159,7 @@ class DspyAiAssistant(AiAssistant):
                 embedder=self._embedding_model,
                 corpus=chunks,
             )
-            new_embeddings_dir = f"{utils.create_timestamp()}_embeddings"
+            new_embeddings_dir = f"{utils._create_timestamp()}_embeddings"
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
             self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
             os.makedirs(name=self.name)
@@ -264,7 +250,7 @@ class DspyAiAssistant(AiAssistant):
             retriever=lambda query: self._embeddings(query=query).passages,
         )
 
-        latest_rag_file: str | None = utils.get_latest_subpath(
+        latest_rag_file: str | None = utils._get_latest_subpath(
             path=self.name,
             suffix="_rag.json",
         )
@@ -273,7 +259,7 @@ class DspyAiAssistant(AiAssistant):
             self._log(msg=f"Loading from: {latest_rag_file_path}", sub=True)
             rag.load(path=latest_rag_file_path)
         else:
-            new_rag_file = f"{utils.create_timestamp()}_rag.json"
+            new_rag_file = f"{utils._create_timestamp()}_rag.json"
             new_rag_file_path = f"{self.name}/{new_rag_file}"
             self._log(msg=f"Saving to: {new_rag_file_path}", sub=True)
             rag.save(path=new_rag_file_path)
@@ -318,7 +304,7 @@ class DspyAiAssistant(AiAssistant):
             metric=self._metrics[metric],
         )
 
-        evaluation_log_file = f"{utils.create_timestamp()}_evaluation.log"
+        evaluation_log_file = f"{utils._create_timestamp()}_evaluation.log"
         evaluation_log_file_path = f"{self.name}/{evaluation_log_file}"
         self._log(msg=f"Logging to: {evaluation_log_file_path}", sub=True)
         with (
@@ -355,7 +341,7 @@ class DspyAiAssistant(AiAssistant):
             auto=effort,
         )
 
-        optimization_log_file = f"{utils.create_timestamp()}_optimization.log"
+        optimization_log_file = f"{utils._create_timestamp()}_optimization.log"
         optimization_log_file_path = f"{self.name}/{optimization_log_file}"
         self._log(msg=f"Logging to: {optimization_log_file_path}", sub=True)
         with (
@@ -374,7 +360,7 @@ class DspyAiAssistant(AiAssistant):
             last_line = lines.pop().strip() if lines else "Empty log"
         self._log(msg=f"Last log: {last_line}", sub=True)
 
-        optimized_rag_file = f"{utils.create_timestamp()}_rag.json"
+        optimized_rag_file = f"{utils._create_timestamp()}_rag.json"
         optimized_rag_file_path = f"{self.name}/{optimized_rag_file}"
         self._log(msg=f"Saving to: {optimized_rag_file_path}", sub=True)
         optimized_rag.save(path=optimized_rag_file_path)
