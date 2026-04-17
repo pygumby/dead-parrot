@@ -39,7 +39,10 @@ app = FastAPI(lifespan=lifespan)
 @app.get("/card")
 async def card() -> dict[str, str]:
     """Get the AI assistant's card."""
-    return {"description": AI_ASSISTANT_DESCRIPTION}
+    return {
+        "name": AI_ASSISTANT_NAME,
+        "description": AI_ASSISTANT_DESCRIPTION,
+    }
 
 
 @app.post("/ask")
