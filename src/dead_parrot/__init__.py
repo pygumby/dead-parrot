@@ -1,6 +1,7 @@
 """dead-parrot."""
 
 from dead_parrot import metrics, utils
+from dead_parrot.ai_agent import AiAgent, AiAssistantClient
 from dead_parrot.ai_assistant import DspyAiAssistant
 from dead_parrot.protocols import (
     AiAssistant,
@@ -15,6 +16,8 @@ __all__ = [
     "AiAssistant",
     "AiAssistantClass",
     "DspyAiAssistant",
+    "AiAgent",
+    "AiAssistantClient",
     "Document",
     "Examples",
     "Metric",
