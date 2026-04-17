@@ -14,7 +14,7 @@ if not os.environ.get("OPENAI_API_KEY"):
 
 ai_agent = dp.AiAgent(
     name="ECB AI Agent",
-    task_model="openai/gpt-5-nano",
+    task_model="gpt-5-mini",
     ai_assistant_clients=[
         dp.AiAssistantClient(scheme="http", host="localhost", port=8001),
         dp.AiAssistantClient(scheme="http", host="localhost", port=8002),
