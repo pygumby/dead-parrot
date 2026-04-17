@@ -3,7 +3,6 @@
 import contextlib
 import os
 import random
-import textwrap
 from collections.abc import Callable
 from typing import TYPE_CHECKING, Any, Literal
 
@@ -11,8 +10,8 @@ import dspy
 from dspy_temporal import TemporalModule, TemporalTool
 
 from . import utils
+from .agent import Agent
 from .protocols import (
-    AiAssistant,
     AiAssistantClass,
     Document,
     Examples,
@@ -68,7 +67,7 @@ class _Rag(dspy.Module):
         )
 
 
-class DspyAiAssistant(AiAssistant):
+class DspyAiAssistant(Agent):
     """Implementation of the protocol for an AI assistant using dspy."""
 
     def __init__(
@@ -80,8 +79,7 @@ class DspyAiAssistant(AiAssistant):
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI assistant."""
-        self._name: str
-        self._init_name(name=name)
+        super().__init__(name=name)
 
         self._task_model: dspy.LM
         self._teacher_model: dspy.LM
@@ -106,9 +104,6 @@ class DspyAiAssistant(AiAssistant):
         self._init_rag()
 
         self._log(msg="Ready...")
-
-    def _init_name(self, name: str) -> None:
-        self._name = utils._normalize_name(name=name)
 
     def _init_models(
         self,
@@ -265,21 +260,6 @@ class DspyAiAssistant(AiAssistant):
             rag.save(path=new_rag_file_path)
 
         self._rag = rag
-
-    def _log(self, msg: str, sub: bool = False, indent: int = 2) -> None:
-        indent_str = " " * indent
-        if not sub:
-            text = f"[{self.name}] {msg}"
-            sub_indent_str = indent_str
-        else:
-            text = f"{indent_str}{msg}"
-            sub_indent_str = indent_str * 2
-        print(textwrap.fill(text=text, subsequent_indent=sub_indent_str))
-
-    @property
-    def name(self) -> str:
-        """Return the name of the AI assistant."""
-        return self._name
 
     def ask(self, question: str) -> dict[str, Any]:
         """Answer the question using the RAG pipeline."""
