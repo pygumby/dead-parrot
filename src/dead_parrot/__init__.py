@@ -1,11 +1,10 @@
 """dead-parrot."""
 
 from dead_parrot import metrics, utils
-from dead_parrot.ai_agent import AiAgent, AiAssistantClient
-from dead_parrot.ai_assistant import DspyAiAssistant
-from dead_parrot.protocols import (
-    AiAssistant,
-    AiAssistantClass,
+from dead_parrot.expert_agent import ExpertAgent
+from dead_parrot.expert_agent_client import ExpertAgentClient
+from dead_parrot.triage_agent import TriageAgent
+from dead_parrot.types import (
     Document,
     Examples,
     Metric,
@@ -13,11 +12,9 @@ from dead_parrot.protocols import (
 )
 
 __all__ = [
-    "AiAssistant",
-    "AiAssistantClass",
-    "DspyAiAssistant",
-    "AiAgent",
-    "AiAssistantClient",
+    "ExpertAgent",
+    "ExpertAgentClient",
+    "TriageAgent",
     "Document",
     "Examples",
     "Metric",

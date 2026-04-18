@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Protocol
 
 import dspy
 
-from dead_parrot.protocols import Metric, MetricResult
+from .types import Metric, MetricResult
 
 
 class _DspyMetric(Protocol):
@@ -19,9 +19,7 @@ class _DspyMetric(Protocol):
     ) -> MetricResult: ...
 
 
-def _as_metric[**P](
-    dspy_metric_class: Callable[P, _DspyMetric],
-) -> Callable[P, Metric]:
+def _as_metric[**P](dspy_metric_class: Callable[P, _DspyMetric]) -> Callable[P, Metric]:
     class WrappedMetric:
         def __init__(self, *args: P.args, **kwargs: P.kwargs) -> None:
             """Initialize the metric."""
@@ -145,7 +143,7 @@ class SimpleSourcesCoverage(dspy.Module):
         }
 
 
-# Verify that protocols are correctly implemented
+# Verify that protocols are correctly implemented.
 if TYPE_CHECKING:
     _1: Callable[..., _DspyMetric] = SimpleRecall.__wrapped__  # Not enforced by mypy.
     _2: Callable[..., Metric] = SimpleRecall

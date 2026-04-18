@@ -47,61 +47,61 @@ uv sync --all-packages
 subsection "Starting Temporal Service"
 temporal server start-dev &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-# Starting ecb_bs_ai_assistant
-section "Starting ecb_bs_ai_assistant"
+# Starting ecb_bs_expert_agent
+section "Starting ecb_bs_expert_agent"
 
-subsection "Starting ecb_bs_ai_assistant - Temporal worker"
-uv run --directory demos/ecb_bs_ai_assistant python -m ecb_bs_ai_assistant.temporal_worker &
+subsection "Starting ecb_bs_expert_agent - Temporal worker"
+uv run --directory demos/ecb_bs_expert_agent python -m ecb_bs_expert_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_bs_ai_assistant - REST server"
-uv run --directory demos/ecb_bs_ai_assistant python -m ecb_bs_ai_assistant.rest_server &
+subsection "Starting ecb_bs_expert_agent - REST server"
+uv run --directory demos/ecb_bs_expert_agent python -m ecb_bs_expert_agent.rest_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_bs_ai_assistant - MCP server"
-uv run --directory demos/ecb_bs_ai_assistant python -m ecb_bs_ai_assistant.mcp_server &
+subsection "Starting ecb_bs_expert_agent - MCP server"
+uv run --directory demos/ecb_bs_expert_agent python -m ecb_bs_expert_agent.mcp_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-# Starting ecb_hr_ai_assistant
-section "Starting ecb_hr_ai_assistant"
+# Starting ecb_hr_expert_agent
+section "Starting ecb_hr_expert_agent"
 
-subsection "Starting ecb_hr_ai_assistant - Temporal worker"
-uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.temporal_worker &
+subsection "Starting ecb_hr_expert_agent - Temporal worker"
+uv run --directory demos/ecb_hr_expert_agent python -m ecb_hr_expert_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_hr_ai_assistant - REST server"
-uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.rest_server &
+subsection "Starting ecb_hr_expert_agent - REST server"
+uv run --directory demos/ecb_hr_expert_agent python -m ecb_hr_expert_agent.rest_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_hr_ai_assistant - MCP server"
-uv run --directory demos/ecb_hr_ai_assistant python -m ecb_hr_ai_assistant.mcp_server &
+subsection "Starting ecb_hr_expert_agent - MCP server"
+uv run --directory demos/ecb_hr_expert_agent python -m ecb_hr_expert_agent.mcp_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-# Starting ecb_ai_agent
-section "Starting ecb_ai_agent"
+# Starting ecb_triage_agent
+section "Starting ecb_triage_agent"
 
-subsection "Starting ecb_ai_agent - Temporal worker"
-uv run --directory demos/ecb_ai_agent python -m ecb_ai_agent.temporal_worker &
+subsection "Starting ecb_triage_agent - Temporal worker"
+uv run --directory demos/ecb_triage_agent python -m ecb_triage_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_ai_agent - REST server"
-uv run --directory demos/ecb_ai_agent python -m ecb_ai_agent.rest_server &
+subsection "Starting ecb_triage_agent - REST server"
+uv run --directory demos/ecb_triage_agent python -m ecb_triage_agent.rest_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
-subsection "Starting ecb_ai_agent - MCP server"
-uv run --directory demos/ecb_ai_agent python -m ecb_ai_agent.mcp_server &
+subsection "Starting ecb_triage_agent - MCP server"
+uv run --directory demos/ecb_triage_agent python -m ecb_triage_agent.mcp_server &
 PIDS+=($!)
-sleep 3
+sleep 5
 
 # Summary
 section "${#PIDS[@]} processes started"

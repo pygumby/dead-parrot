@@ -10,11 +10,11 @@ from typing import Any
 import dspy
 
 from . import utils
-from .protocols import Examples, Metric
+from .types import Examples, Metric
 
 
 class Agent(ABC):
-    """Abstract base class for an agent."""
+    """Agent."""
 
     def __init__(
         self,
@@ -125,14 +125,10 @@ class Agent(ABC):
         print(textwrap.fill(text=text, subsequent_indent=sub_indent_str))
 
     @abstractmethod
-    def _get_task_model(self) -> dspy.LM:
-        """Return the task model of the agent."""
-        ...
+    def _get_task_model(self) -> dspy.LM: ...
 
     @abstractmethod
-    def _get_module(self) -> dspy.Module:
-        """Return the dspy.Module of the agent."""
-        ...
+    def _get_lm_program(self) -> dspy.Module: ...
 
     @property
     def name(self) -> str:
@@ -145,7 +141,9 @@ class Agent(ABC):
         self._log(msg=f"Question: {question}", sub=True)
 
         with dspy.context(lm=self._get_task_model()):
-            pred_dict: dict[str, Any] = self._get_module()(question=question).toDict()
+            pred_dict: dict[str, Any] = self._get_lm_program()(
+                question=question
+            ).toDict()
 
         self._log(msg=f"Answer: {pred_dict['answer']}", sub=True)
         return pred_dict
@@ -174,7 +172,9 @@ class Agent(ABC):
             contextlib.redirect_stderr(new_target=log),
             dspy.context(lm=self._get_task_model()),
         ):
-            result: dspy.EvaluationResult = dspy_evaluate(program=self._get_module())
+            result: dspy.EvaluationResult = dspy_evaluate(
+                program=self._get_lm_program()
+            )
 
         score = float(result.score)
         self._log(msg=f"Score: {score}", sub=True)

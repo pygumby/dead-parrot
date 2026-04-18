@@ -1,6 +1,6 @@
 [project]
 name = "dead-parrot"
-description = "A Framework for Scalable AI Assistants"
+description = "A Framework for Scalable AI Agents"
 authors = [
   {name = "Lucas Konstantin Bärenfänger"},
 ]

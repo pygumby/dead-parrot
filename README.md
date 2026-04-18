@@ -1,7 +1,7 @@
 <div align="center">
 
 # 😵🦜 dead-parrot
-## A Framework for Scalable AI Assistants
+## A Framework for Scalable AI Agents
 
 [🐱 GitHub](https://github.com/pygumby/dead-parrot/) |
 [🐍 PyPI](https://pypi.org/project/dead-parrot/)
@@ -9,7 +9,7 @@
 </div>
 
 dead-parrot is a Python package created by Lucas Konstantin Bärenfänger ([@pygumby](https://github.com/pygumby)) as part of his thesis for the master's program "Data Analytics & Management" at Frankfurt School of Finance & Management.
-The thesis addresses the challenges of maintaining AI assistants at scale, as experienced at the European Central Bank (ECB).
+The thesis addresses the challenges of maintaining AI agents at scale, as experienced at the European Central Bank (ECB).
 These challenges include heterogeneous technology stacks, sensitivity to the choice of underlying language models (LMs) and more.
 dead-parrot implements the approaches identified to address these challenges.
 

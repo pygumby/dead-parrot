@@ -13,9 +13,9 @@ resolution-markers = [
 [manifest]
 members = [
     "dead-parrot",
-    "ecb-ai-agent",
-    "ecb-bs-ai-assistant",
-    "ecb-hr-ai-assistant",
+    "ecb-bs-expert-agent",
+    "ecb-hr-expert-agent",
+    "ecb-triage-agent",
 ]
 
 [[package]]
@@ -559,9 +559,9 @@ wheels = [
 ]
 
 [[package]]
-name = "ecb-ai-agent"
+name = "ecb-bs-expert-agent"
 version = "0.0.0"
-source = { editable = "demos/ecb_ai_agent" }
+source = { editable = "demos/ecb_bs_expert_agent" }
 dependencies = [
     { name = "dead-parrot" },
     { name = "dspy" },
@@ -586,9 +586,9 @@ requires-dist = [
 ]
 
 [[package]]
-name = "ecb-bs-ai-assistant"
+name = "ecb-hr-expert-agent"
 version = "0.0.0"
-source = { editable = "demos/ecb_bs_ai_assistant" }
+source = { editable = "demos/ecb_hr_expert_agent" }
 dependencies = [
     { name = "dead-parrot" },
     { name = "dspy" },
@@ -613,9 +613,9 @@ requires-dist = [
 ]
 
 [[package]]
-name = "ecb-hr-ai-assistant"
+name = "ecb-triage-agent"
 version = "0.0.0"
-source = { editable = "demos/ecb_hr_ai_assistant" }
+source = { editable = "demos/ecb_triage_agent" }
 dependencies = [
     { name = "dead-parrot" },
     { name = "dspy" },
