@@ -9,6 +9,10 @@ from dspy_temporal import TemporalModule
 
 from . import utils
 from .agent import Agent
+from .protocols import (
+    Examples,
+    Metric,
+)
 
 
 class AiAssistantClient:
@@ -97,9 +101,15 @@ class AiAgent(Agent):
         name: str,
         task_model: str,
         ai_assistant_clients: list[AiAssistantClient],
+        dataset: Examples | list[Examples],
+        metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI agent."""
-        super().__init__(name=name)
+        super().__init__(
+            name=name,
+            dataset=dataset,
+            metrics=metrics,
+        )
 
         self._task_model: dspy.LM
         self._init_task_model(task_model=task_model)
@@ -131,21 +141,18 @@ class AiAgent(Agent):
         self._log(msg="Initializing ReAct pipeline")
         self._react = dspy.ReAct(signature="question -> answer", tools=self._tools)
 
-    def ask(self, question: str) -> dict[str, Any]:
-        """Answer the question using the ReAct pipeline."""
-        self._log(msg="Performing inference")
-        self._log(msg=f"Question: {question}", sub=True)
+    def _get_task_model(self) -> dspy.LM:
+        """Return the task model for the agent."""
+        return self._task_model
 
-        with dspy.context(lm=self._task_model):
-            pred_dict: dict[str, Any] = self._react(question=question).toDict()
-
-        self._log(msg=f"Answer: {pred_dict['answer']}", sub=True)
-        return pred_dict
+    def _get_module(self) -> dspy.ReAct:
+        """Return the dspy.Module of the agent."""
+        return self._react
 
     def to_temporal(self) -> TemporalModule[dspy.Prediction]:
         """Wrap the ReAct pipeline for use in Temporal workflows."""
         return TemporalModule(
             module=self._react,
-            name="react",
+            name=f"{self.name}_react",
             lm=self._task_model,
         )

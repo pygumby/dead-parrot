@@ -2,9 +2,8 @@
 
 import contextlib
 import os
-import random
 from collections.abc import Callable
-from typing import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Literal
 
 import dspy
 from dspy_temporal import TemporalModule, TemporalTool
@@ -33,11 +32,9 @@ class _Rag(dspy.Module):
     def __init__(
         self,
         name: str,
-        lm: dspy.LM,
         retriever: Callable[[str], list[str]],
     ) -> None:
         self._name: str = name
-        self._lm: dspy.LM = lm
         self._retriever: Callable[[str], list[str]] = retriever
         self._temporal_retriever: TemporalTool = TemporalTool(
             func=retriever,
@@ -53,11 +50,10 @@ class _Rag(dspy.Module):
 
     def forward(self, question: str) -> dspy.Prediction:
         context: list[str] = self._retriever(question)
-        with dspy.context(lm=self._lm):
-            return self._answer_grounded_in_context(
-                context=context,
-                question=question,
-            )
+        return self._answer_grounded_in_context(
+            context=context,
+            question=question,
+        )
 
     async def aforward(self, question: str) -> dspy.Prediction:
         context: list[str] = await self._temporal_retriever.run(question)
@@ -79,7 +75,7 @@ class DspyAiAssistant(Agent):
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the AI assistant."""
-        super().__init__(name=name)
+        super().__init__(name=name, dataset=dataset, metrics=metrics)
 
         self._task_model: dspy.LM
         self._teacher_model: dspy.LM
@@ -88,17 +84,6 @@ class DspyAiAssistant(Agent):
 
         self._embeddings: dspy.retrievers.Embeddings
         self._init_embeddings(corpus=corpus)
-
-        self._trainset: list[dspy.Example]
-        self._devset: list[dspy.Example]
-        self._testset: list[dspy.Example]
-        self._init_dataset(dataset=dataset)
-
-        self._metrics: dict[
-            str,
-            Callable[[dspy.Example, dspy.Prediction, Any], float | bool],
-        ]
-        self._init_metrics(metrics=metrics)
 
         self._rag: _Rag
         self._init_rag()
@@ -162,86 +147,11 @@ class DspyAiAssistant(Agent):
 
         self._embeddings = embeddings
 
-    def _init_dataset(self, dataset: Examples | list[Examples]) -> None:
-        self._log(msg="Initializing dataset")
-        dataset = dataset if isinstance(dataset, list) else [dataset]
-
-        self._trainset = []
-        self._devset = []
-        self._testset = []
-
-        for idx, examples in enumerate(dataset):
-            self._log(msg=f"Ingesting examples: Set {idx + 1}", sub=True)
-            n = len(examples.qa_pairs)
-
-            if n < 4:
-                raise ValueError(
-                    f"At least 4 examples are required, but only {n} were provided."
-                )
-
-            dspy_examples = [
-                dspy.Example(
-                    question=example[examples.question_key],
-                    answer=example[examples.answer_key],
-                ).with_inputs("question")
-                for example in examples.qa_pairs
-            ]
-            random.Random(self._name).shuffle(dspy_examples)
-
-            i = n // 2
-            j = n * 3 // 4
-            self._trainset.extend(dspy_examples[:i])
-            self._devset.extend(dspy_examples[i:j])
-            self._testset.extend(dspy_examples[j:])
-
-        n_train = len(self._trainset)
-        n_dev = len(self._devset)
-        n_test = len(self._testset)
-        n_total = n_train + n_dev + n_test
-        self._log(msg=f"Train examples: {n_train}", sub=True)
-        self._log(msg=f"Dev examples: {n_dev}", sub=True)
-        self._log(msg=f"Test examples: {n_test}", sub=True)
-        self._log(msg=f"Total examples: {n_total}", sub=True)
-
-    def _init_metrics(self, metrics: dict[str, Metric]) -> None:
-        self._log(msg="Initializing metrics")
-
-        def make_dspy_metric(
-            metric: Metric,
-        ) -> Callable[[dspy.Example, dspy.Prediction, Any], float | bool]:
-            def dspy_metric(
-                example: dspy.Example,
-                prediction: dspy.Prediction,
-                trace: Any = None,
-            ) -> float | bool:
-                result = metric.score(
-                    question=example.question,
-                    example_answer=example.answer,
-                    prediction_answer=prediction.answer,
-                )
-                score: float = result["score"]
-
-                if not 0 <= score <= 1:
-                    raise ValueError(f"Score must be between 0 and 1, but got {score}.")
-
-                if trace is not None:
-                    return score >= 0.95
-                else:
-                    return score
-
-            return dspy_metric
-
-        self._metrics = {}
-        for name, metric in metrics.items():
-            self._log(msg=f"Metric: {name}", sub=True)
-            self._metrics[name] = make_dspy_metric(metric=metric)
-
     def _init_rag(self) -> None:
         self._log(msg="Initializing RAG pipeline")
         assert os.path.exists(path=self.name)
         rag = _Rag(
             name=self.name,
-            lm=self._task_model,
             retriever=lambda query: self._embeddings(query=query).passages,
         )
 
@@ -261,43 +171,13 @@ class DspyAiAssistant(Agent):
 
         self._rag = rag
 
-    def ask(self, question: str) -> dict[str, Any]:
-        """Answer the question using the RAG pipeline."""
-        self._log(msg="Performing inference")
-        self._log(msg=f"Question: {question}", sub=True)
-        pred_dict: dict[str, Any] = self._rag(question=question).toDict()
-        self._log(msg=f"Answer: {pred_dict['answer']}", sub=True)
-        return pred_dict
+    def _get_task_model(self) -> dspy.LM:
+        """Return the task model of the agent."""
+        return self._task_model
 
-    def evaluate(self, metric: str, use_testset: bool = False) -> float:
-        """Evaluate the RAG pipeline based on the devset or testset."""
-        self._log(msg="Evaluating RAG pipeline")
-        self._log(msg=f"Metric: {metric}", sub=True)
-
-        if metric not in self._metrics:
-            raise ValueError(
-                f"Metric '{metric}' not found in metrics:\n{list(self._metrics.keys())}"
-            )
-
-        dspy_evaluate = dspy.Evaluate(
-            devset=self._devset if not use_testset else self._testset,
-            metric=self._metrics[metric],
-        )
-
-        evaluation_log_file = f"{utils._create_timestamp()}_evaluation.log"
-        evaluation_log_file_path = f"{self.name}/{evaluation_log_file}"
-        self._log(msg=f"Logging to: {evaluation_log_file_path}", sub=True)
-        with (
-            open(file=evaluation_log_file_path, mode="w") as log,
-            contextlib.redirect_stdout(new_target=log),
-            contextlib.redirect_stderr(new_target=log),
-        ):
-            result: dspy.EvaluationResult = dspy_evaluate(program=self._rag)
-
-        score = float(result.score)
-        self._log(msg=f"Score: {score}", sub=True)
-
-        return score
+    def _get_module(self) -> _Rag:
+        """Return the dspy.Module of the agent."""
+        return self._rag
 
     def optimize(
         self,

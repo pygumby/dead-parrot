@@ -19,9 +19,17 @@ ai_agent = dp.AiAgent(
         dp.AiAssistantClient(scheme="http", host="localhost", port=8001),
         dp.AiAssistantClient(scheme="http", host="localhost", port=8002),
     ],
+    dataset=dp.Examples(
+        qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
+    ),
+    metrics={
+        "recall": dp.metrics.SimpleRecall(judge_model="gpt-5"),
+        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="gpt-5"),
+    },
 )
 
 if __name__ == "__main__":
     ai_agent.ask(
         question="What does SSM stand for? How long is the probationary period?"
     )
+    ai_agent.evaluate(metric="recall")
