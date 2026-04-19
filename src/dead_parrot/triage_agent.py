@@ -11,6 +11,14 @@ from .expert_agent_client import ExpertAgentClient
 from .types import Examples, Metric
 
 
+class _AnswerBasedOnToolCalls(dspy.Signature):
+    # In DSPy, the signature docstring is used as the instruction for the LM.
+    """Answer the question solely based on information retrieved from tool calls."""
+
+    question: str = dspy.InputField()
+    answer: str = dspy.OutputField()
+
+
 class TriageAgent(Agent):
     """Triage agent."""
 
@@ -57,7 +65,10 @@ class TriageAgent(Agent):
 
     def _init_lm_program(self) -> None:
         self._log(msg="Initializing LM program")
-        self._lm_program = dspy.ReAct(signature="question -> answer", tools=self._tools)
+        self._lm_program = dspy.ReAct(
+            signature=_AnswerBasedOnToolCalls,
+            tools=self._tools,
+        )
 
     def _get_task_model(self) -> dspy.LM:
         return self._task_model
