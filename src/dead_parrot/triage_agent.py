@@ -69,6 +69,6 @@ class TriageAgent(Agent):
         """Wrap the LM program for use in Temporal workflows."""
         return TemporalModule(
             module=self._lm_program,
-            name=f"{self.name}_triage_agent",
+            name="triage_agent",
             lm=self._task_model,
         )

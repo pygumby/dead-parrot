@@ -28,7 +28,7 @@ class _Rag(dspy.Module):
         self._retriever: Callable[[str], list[str]] = retriever
         self._temporal_retriever: TemporalTool = TemporalTool(
             func=retriever,
-            name=f"{self._name}_retriever",
+            name="expert_agent_retriever",
         )
         self._answer_grounded_in_context: dspy.ChainOfThought = dspy.ChainOfThought(
             signature=_AnswerGroundedInContext,
@@ -216,7 +216,7 @@ class ExpertAgent(Agent):
         """Wrap the LM program for use in Temporal workflows."""
         temporal_lm_program: TemporalModule[dspy.Prediction] = TemporalModule(
             module=self._lm_program,
-            name=f"{self.name}_expert_agent",
+            name="expert_agent",
             lm=self._task_model,
         )
         return temporal_lm_program, self._lm_program.temporal_retriever
