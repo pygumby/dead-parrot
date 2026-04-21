@@ -1,11 +1,14 @@
 """Expert agent client."""
 
 from collections.abc import Callable
-from typing import Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 import httpx
 
 from . import utils
+
+if TYPE_CHECKING:
+    from .types import ExpertAgentClientClass
 
 
 class ExpertAgentClient:
@@ -84,3 +87,7 @@ class ExpertAgentClient:
         tool.__name__ = self.name
         tool.__doc__ = self.description
         return tool
+
+
+if TYPE_CHECKING:
+    _: ExpertAgentClientClass = ExpertAgentClient

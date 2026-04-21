@@ -3,7 +3,7 @@
 import contextlib
 import os
 from collections.abc import Callable
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 import dspy
 from dspy_temporal import TemporalModule, TemporalTool
@@ -11,6 +11,9 @@ from dspy_temporal import TemporalModule, TemporalTool
 from . import utils
 from .agent import Agent
 from .types import Document, Examples, Metric, Models
+
+if TYPE_CHECKING:
+    from .types import ExpertAgentClass
 
 
 class _AnswerGroundedInContext(dspy.Signature):
@@ -220,3 +223,7 @@ class ExpertAgent(Agent):
             lm=self._task_model,
         )
         return temporal_lm_program, self._lm_program.temporal_retriever
+
+
+if TYPE_CHECKING:
+    _: ExpertAgentClass = ExpertAgent

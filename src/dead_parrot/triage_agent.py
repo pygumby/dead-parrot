@@ -1,7 +1,7 @@
 """Triage agent."""
 
 from collections.abc import Callable
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import dspy
 from dspy_temporal import TemporalModule
@@ -9,6 +9,9 @@ from dspy_temporal import TemporalModule
 from .agent import Agent
 from .expert_agent_client import ExpertAgentClient
 from .types import Examples, Metric
+
+if TYPE_CHECKING:
+    from .types import TriageAgentClass
 
 
 class _AnswerBasedOnToolCalls(dspy.Signature):
@@ -83,3 +86,7 @@ class TriageAgent(Agent):
             name="triage_agent",
             lm=self._task_model,
         )
+
+
+if TYPE_CHECKING:
+    _: TriageAgentClass = TriageAgent

@@ -1,7 +1,14 @@
 """Types."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Protocol, TypedDict
+from typing import TYPE_CHECKING, Literal, Protocol, TypedDict
+
+if TYPE_CHECKING:
+    from .expert_agent import ExpertAgent
+    from .expert_agent_client import ExpertAgentClient
+    from .triage_agent import TriageAgent
 
 
 @dataclass
@@ -49,3 +56,43 @@ class Metric(Protocol):
     ) -> MetricResult:
         """Score the predicted answer given the question and example answer."""
         ...
+
+
+class ExpertAgentClass(Protocol):
+    """Protocol for the expert agent class."""
+
+    def __call__(  # noqa: D102
+        self,
+        name: str,
+        models: Models,
+        corpus: Document | list[Document],
+        dataset: Examples | list[Examples],
+        metrics: dict[str, Metric],
+    ) -> ExpertAgent: ...
+
+
+class ExpertAgentClientClass(Protocol):
+    """Protocol for the expert agent client class."""
+
+    def __call__(  # noqa: D102
+        self,
+        scheme: Literal["http", "https"],
+        host: str,
+        port: int,
+        ask_endpoint: str = "ask",
+        card_endpoint: str = "card",
+        timeout: int = 60,
+    ) -> ExpertAgentClient: ...
+
+
+class TriageAgentClass(Protocol):
+    """Protocol for the triage agent class."""
+
+    def __call__(  # noqa: D102
+        self,
+        name: str,
+        task_model: str,
+        expert_agent_clients: list[ExpertAgentClient],
+        dataset: Examples | list[Examples],
+        metrics: dict[str, Metric],
+    ) -> TriageAgent: ...
