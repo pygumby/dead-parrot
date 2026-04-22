@@ -17,9 +17,9 @@ if not os.environ.get("OPENAI_API_KEY"):
 expert_agent = dp.ExpertAgent(
     name=EXPERT_AGENT_NAME,
     models=dp.Models(
-        task="gpt-5-mini",
-        teacher="gpt-5",
-        embedding="text-embedding-3-small",
+        task="openai/gpt-5-mini",
+        teacher="openai/gpt-5",
+        embedding="openai/text-embedding-3-small",
     ),
     corpus=dp.Document(
         name="European Central Bank Supervisory Manual",
@@ -29,8 +29,8 @@ expert_agent = dp.ExpertAgent(
         qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
     ),
     metrics={
-        "recall": dp.metrics.SimpleRecall(judge_model="gpt-5"),
-        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="gpt-5"),
+        "recall": dp.metrics.Recall(judge_model="openai/gpt-5"),
+        "sources": dp.metrics.Sources(judge_model="openai/gpt-5"),
     },
 )
 

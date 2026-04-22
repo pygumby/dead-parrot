@@ -79,8 +79,8 @@ class _GetRecallScore(dspy.Signature):
 
 
 @_as_metric
-class SimpleRecall(dspy.Module):
-    """Simple recall metric."""
+class Recall(dspy.Module):
+    """Recall score metric."""
 
     def __init__(self, judge_model: str) -> None:
         """Initialize the metric."""
@@ -116,8 +116,8 @@ class _GetSourcesCoverage(dspy.Signature):
 
 
 @_as_metric
-class SimpleSourcesCoverage(dspy.Module):
-    """Simple sources coverage metric."""
+class Sources(dspy.Module):
+    """Sources coverage metric."""
 
     def __init__(self, judge_model: str) -> None:
         """Initialize the metric."""
@@ -145,5 +145,5 @@ class SimpleSourcesCoverage(dspy.Module):
 
 # Verify that protocols are correctly implemented.
 if TYPE_CHECKING:
-    _1: Callable[..., _DspyMetric] = SimpleRecall.__wrapped__  # Not enforced by mypy.
-    _2: Callable[..., Metric] = SimpleRecall
+    _1: Callable[..., _DspyMetric] = Recall.__wrapped__  # Not enforced by mypy.
+    _2: Callable[..., Metric] = Recall

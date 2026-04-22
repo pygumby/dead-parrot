@@ -16,7 +16,7 @@ if not os.environ.get("OPENAI_API_KEY"):
 
 triage_agent = dp.TriageAgent(
     name=TRIAGE_AGENT_NAME,
-    task_model="gpt-5-mini",
+    task_model="openai/gpt-5-mini",
     expert_agent_clients=[
         dp.ExpertAgentClient(scheme="http", host="localhost", port=8001),
         dp.ExpertAgentClient(scheme="http", host="localhost", port=8002),
@@ -25,8 +25,8 @@ triage_agent = dp.TriageAgent(
         qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
     ),
     metrics={
-        "recall": dp.metrics.SimpleRecall(judge_model="gpt-5"),
-        "sources": dp.metrics.SimpleSourcesCoverage(judge_model="gpt-5"),
+        "recall": dp.metrics.Recall(judge_model="openai/gpt-5"),
+        "sources": dp.metrics.Sources(judge_model="openai/gpt-5"),
     },
 )
 
