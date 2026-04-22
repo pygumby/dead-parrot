@@ -43,6 +43,7 @@ section "Setting up environment"
 
 subsection "Installing dependencies"
 uv sync --all-packages
+sleep 3
 
 subsection "Starting Temporal Service"
 temporal server start-dev &
@@ -55,7 +56,7 @@ section "Starting ecb_bs_expert_agent"
 subsection "Starting ecb_bs_expert_agent - Temporal worker"
 uv run --directory demos/ecb_bs_expert_agent python -m ecb_bs_expert_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 10
 
 subsection "Starting ecb_bs_expert_agent - REST server"
 uv run --directory demos/ecb_bs_expert_agent python -m ecb_bs_expert_agent.rest_server &
@@ -73,7 +74,7 @@ section "Starting ecb_hr_expert_agent"
 subsection "Starting ecb_hr_expert_agent - Temporal worker"
 uv run --directory demos/ecb_hr_expert_agent python -m ecb_hr_expert_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 10
 
 subsection "Starting ecb_hr_expert_agent - REST server"
 uv run --directory demos/ecb_hr_expert_agent python -m ecb_hr_expert_agent.rest_server &
@@ -91,7 +92,7 @@ section "Starting ecb_triage_agent"
 subsection "Starting ecb_triage_agent - Temporal worker"
 uv run --directory demos/ecb_triage_agent python -m ecb_triage_agent.temporal_worker &
 PIDS+=($!)
-sleep 3
+sleep 10
 
 subsection "Starting ecb_triage_agent - REST server"
 uv run --directory demos/ecb_triage_agent python -m ecb_triage_agent.rest_server &
