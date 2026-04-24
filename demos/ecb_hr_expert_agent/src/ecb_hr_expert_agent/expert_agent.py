@@ -36,12 +36,11 @@ expert_agent = dp.ExpertAgent(
         dp.Examples(qa_pairs=dp.utils.load_json(path="examples/ecb_conditions.json")),
     ],
     metrics={
-        "recall": dp.metrics.Recall(judge_model="openai/gpt-5"),
-        "sources": dp.metrics.Sources(judge_model="openai/gpt-5"),
+        "composite": dp.metrics.Composite(judge_model="openai/gpt-5"),
     },
 )
 
 if __name__ == "__main__":
     expert_agent.ask(question="How long is the probationary period?")
-    expert_agent.evaluate(metric="recall")
-    expert_agent.optimize(metric="recall", effort="light")
+    expert_agent.evaluate(metric="composite")
+    expert_agent.optimize(metric="composite", effort="light")

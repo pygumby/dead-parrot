@@ -103,7 +103,7 @@ class Agent(ABC):
                     raise ValueError(f"Score must be between 0 and 1, but got {score}.")
 
                 if trace is not None:
-                    return score >= 0.95
+                    return score >= 0.65
                 else:
                     return score
 
