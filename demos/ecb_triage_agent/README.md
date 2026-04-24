@@ -1,19 +1,20 @@
 # ecb-triage-agent
 
 This is a demo that showcases how to build a triage agent with [dead-parrot](https://github.com/pygumby/dead-parrot).
-It implements a triage agent that answers questions on ECB matters.
+It implements an triage agent that answers questions on European Central Bank (ECB) matters, by interacting with expert agents that are grounded in public ECB documents.
 At the same time, it is a template that serves as a starting point for building your own triage agent.
 
-The structure is simple:
-<!-- - [examples/](examples/) contains the dataset for evaluation and optimization. -->
+----
+
+### Overview
+
+Structure:
 - [constants.py](src/ecb_triage_agent/constants.py) defines names and other constants.
 - [triage_agent.py](src/ecb_triage_agent/triage_agent.py) defines the triage agent using dead-parrot.
 - [temporal_workflow.py](src/ecb_triage_agent/temporal_workflow.py) defines a Temporal workflow that calls the triage agent.
 - [temporal_worker.py](src/ecb_triage_agent/temporal_worker.py) defines and runs a Temporal worker for the Temporal workflow.
 - [rest_server.py](src/ecb_triage_agent/rest_server.py) defines and runs a REST server that exposes the Temporal workflow.
 - [mcp_server.py](src/ecb_triage_agent/rest_server.py) defines and runs an MCP server that exposes the Temporal workflow.
-
-----
 
 ### Usage
 

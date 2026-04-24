@@ -133,7 +133,7 @@
     {
       "doc_ref" : "C1EBE32B-D95E-4B58-B7FD-5D3CD6C7C012",
       "object_id" : "1B109187-2097-4A24-B165-19C003920DDE",
-      "text" : "Expert agent #1\n(RAG)",
+      "text" : "Expert agent #1\n(DSPy RAG)",
       "type_id" : 27
     },
     {
@@ -163,7 +163,7 @@
     {
       "doc_ref" : "C1EBE32B-D95E-4B58-B7FD-5D3CD6C7C012",
       "object_id" : "22A6056C-7D40-4F1B-9637-B2F2BE6EECA9",
-      "text" : "Expert agent #2\n(RAG)",
+      "text" : "Expert agent #2\n(DSPy RAG)",
       "type_id" : 27
     },
     {
@@ -295,7 +295,7 @@
       "frame_anchor_ref" : "11B9E067-FBA7-428A-8ABC-141AC6C7F706",
       "frame_size" : "19,4",
       "model_text" : "715A2BB1-6F59-4595-9ACF-9A66E9FA416F",
-      "name" : "Triage agent\n(ReAct)",
+      "name" : "Triage agent\n(DSPy ReAct)",
       "object_id" : "43CF91D9-5317-434F-84F6-035A6A597F57",
       "origin" : "26,-11",
       "position_refs" : [
@@ -400,7 +400,7 @@
       "frame_anchor_ref" : "CA46E970-B3DD-4DAE-9145-27C2B9946DBF",
       "frame_size" : "19,4",
       "model_text" : "63A52125-F5E0-496E-A352-04EE3BFA6FBF",
-      "name" : "Expert agent #n\n(RAG)",
+      "name" : "Expert agent #n\n(DSPy RAG)",
       "object_id" : "584D019A-3EF8-4F6C-8864-AFB931AE35B7",
       "origin" : "51,11",
       "position_refs" : [
@@ -445,7 +445,7 @@
     {
       "doc_ref" : "C1EBE32B-D95E-4B58-B7FD-5D3CD6C7C012",
       "object_id" : "63A52125-F5E0-496E-A352-04EE3BFA6FBF",
-      "text" : "Expert agent #n\n(RAG)",
+      "text" : "Expert agent #n\n(DSPy RAG)",
       "type_id" : 27
     },
     {
@@ -556,7 +556,7 @@
     {
       "doc_ref" : "C1EBE32B-D95E-4B58-B7FD-5D3CD6C7C012",
       "object_id" : "715A2BB1-6F59-4595-9ACF-9A66E9FA416F",
-      "text" : "Triage agent\n(ReAct)",
+      "text" : "Triage agent\n(DSPy ReAct)",
       "type_id" : 27
     },
     {
@@ -938,7 +938,7 @@
       "frame_anchor_ref" : "A2782430-14C9-4462-9140-14C8233A1435",
       "frame_size" : "19,4",
       "model_text" : "1B109187-2097-4A24-B165-19C003920DDE",
-      "name" : "Expert agent #1\n(RAG)",
+      "name" : "Expert agent #1\n(DSPy RAG)",
       "object_id" : "B4E3300D-994F-4998-860A-46B80D0984CC",
       "origin" : "1,11",
       "position_refs" : [
@@ -1366,7 +1366,7 @@
       "frame_anchor_ref" : "AB419D5E-2D79-4952-B132-0EE31FDEA486",
       "frame_size" : "19,4",
       "model_text" : "22A6056C-7D40-4F1B-9637-B2F2BE6EECA9",
-      "name" : "Expert agent #2\n(RAG)",
+      "name" : "Expert agent #2\n(DSPy RAG)",
       "object_id" : "FEB2AEBE-041E-424B-A926-5FCD1348A870",
       "origin" : "26,11",
       "position_refs" : [
