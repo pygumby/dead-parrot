@@ -22,6 +22,6 @@ wheels/
 .mypy_cache/
 
 # dead-parrot
-demos/ecb_triage_agent/ecb_triage_agent/
-demos/ecb_bs_expert_agent/ecb_bs_expert_agent/
-demos/ecb_hr_expert_agent/ecb_hr_expert_agent/
+demos/ecb_triage_agent/ecb_triage_agent*
+demos/ecb_bs_expert_agent/ecb_bs_expert_agent*
+demos/ecb_hr_expert_agent/ecb_hr_expert_agent*
