@@ -25,9 +25,12 @@ expert_agent = dp.ExpertAgent(
         name="ECB Supervisory Manual",
         pages=dp.utils.load_pdf(path="documents/ecb_supman.pdf"),
     ),
-    dataset=dp.Examples(
-        qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
-    ),
+    dataset=[
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/1_out_of_scope.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/2_unanswerable.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/3_sin_ecb_supman.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/4_mul_ecb_supman.json")),
+    ],
     metrics={
         "composite": dp.metrics.Composite(judge_model="openai/gpt-5"),
     },

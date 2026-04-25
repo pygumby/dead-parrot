@@ -1,0 +1,62 @@
+[
+    {
+        "question": "What is the ECB's current policy rate and when is the next monetary policy meeting?",
+        "answer": "This question concerns monetary policy, which falls outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "Can you help me reset my Outlook password? I keep getting locked out of my account.",
+        "answer": "IT support requests fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "How is the euro performing against the US dollar this week?",
+        "answer": "Foreign exchange and market commentary fall outside the scope of this assistant, which is dedicated exclusively to ECB Banking Supervision matters."
+    },
+    {
+        "question": "Could you draft a birthday message for a colleague who is retiring next month?",
+        "answer": "Personal correspondence falls outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "What are the latest inflation figures for the euro area?",
+        "answer": "Macroeconomic statistics and inflation data fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "How do I book a meeting room at the Eurotower for next Tuesday?",
+        "answer": "Internal facilities and administrative matters fall outside the scope of this assistant, which is dedicated exclusively to ECB Banking Supervision matters."
+    },
+    {
+        "question": "Can you summarise the most recent Governing Council decision on asset purchases?",
+        "answer": "Decisions of the Governing Council on monetary policy and asset purchase programmes fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "What is the procedure for submitting a travel expense claim?",
+        "answer": "Internal HR and administrative procedures fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "Could you recommend a good restaurant near the ECB premises in Frankfurt for a working lunch?",
+        "answer": "Personal recommendations of this nature fall outside the scope of this assistant, which is dedicated exclusively to ECB Banking Supervision matters."
+    },
+    {
+        "question": "What were the main outcomes of the latest G20 finance ministers' meeting?",
+        "answer": "International political and economic developments fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "Can you explain how the TARGET2 settlement system works in practice?",
+        "answer": "Payment systems and market infrastructures fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "I need to write a Python script to clean up a CSV file – can you help me with the code?",
+        "answer": "General programming assistance falls outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "What is the official position of the ECB on the introduction of a digital euro?",
+        "answer": "The digital euro project falls outside the scope of this assistant, which is dedicated exclusively to ECB Banking Supervision matters."
+    },
+    {
+        "question": "Could you translate this paragraph from German into English for me?",
+        "answer": "Translation services fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    },
+    {
+        "question": "What does the ECB forecast for euro area GDP growth over the next two years?",
+        "answer": "Macroeconomic projections fall outside the scope of this assistant. I am only able to address matters related to ECB Banking Supervision."
+    }
+]

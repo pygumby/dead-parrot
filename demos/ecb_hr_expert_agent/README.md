@@ -6,9 +6,8 @@ At the same time, it is a template that serves as a starting point for building 
 
 ----
 
-### Overview
+### Structure
 
-Structure:
 - [documents/](documents/) contains the corpus for context retrieval.
 - [examples/](examples/) contains the dataset for evaluation and optimization.
 - [constants.py](src/ecb_hr_expert_agent/constants.py) defines names and other constants.
@@ -17,6 +16,16 @@ Structure:
 - [temporal_worker.py](src/ecb_hr_expert_agent/temporal_worker.py) defines and runs a Temporal worker for the Temporal workflow.
 - [rest_server.py](src/ecb_hr_expert_agent/rest_server.py) defines and runs a REST server that exposes the Temporal workflow.
 - [mcp_server.py](src/ecb_hr_expert_agent/rest_server.py) defines and runs an MCP server that exposes the Temporal workflow.
+
+### Corpus
+
+- [ecb_rules.pdf](documents/ecb_rules.pdf): ECB Staff Rules
+- [ecb_conds.pdf](documents/ecb_conds.pdf): ECB Conditions of Employment
+
+### Dataset
+
+The [examples](examples) folder contains the dataset for evaluation and optimization as well as the prompts used to generate it.
+Both the dataset and the prompts have been initially generated using [Claude](https://claude.ai) Opus 4.7 and then manually edited.
 
 ### Usage
 

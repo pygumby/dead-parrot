@@ -32,8 +32,13 @@ expert_agent = dp.ExpertAgent(
         ),
     ],
     dataset=[
-        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/ecb_rules.json")),
-        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/ecb_conditions.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/1_out_of_scope.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/2_unanswerable.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/3_cross_doc.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/4_sin_ecb_rules.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/5_mul_ecb_rules.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/6_sin_ecb_conds.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/7_mul_ecb_conds.json")),
     ],
     metrics={
         "composite": dp.metrics.Composite(judge_model="openai/gpt-5"),
