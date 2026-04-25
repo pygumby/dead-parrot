@@ -11,8 +11,11 @@
         // Linting and formatting
         "charliermarsh.ruff",
 
-        // Various
-        "github.github-vscode-theme",
+        // Theme
+        //"github.github-vscode-theme",
+        "mohdzaid.kiro-theme",
+
+        // GitHub Copilot
         "github.copilot-chat",
     ]
 }

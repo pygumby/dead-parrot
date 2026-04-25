@@ -1,6 +1,7 @@
 {
     // Color theme
-    "workbench.colorTheme": "GitHub Dark Dimmed",
+    // "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.colorTheme": "Kiro Dark",
 
     // Font
     "editor.fontFamily": "JetBrains Mono, Menlo, Monaco",
