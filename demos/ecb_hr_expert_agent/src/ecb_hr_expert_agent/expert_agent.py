@@ -23,12 +23,12 @@ expert_agent = dp.ExpertAgent(
     ),
     corpus=[
         dp.Document(
-            name="European Central Bank Staff Rules",
+            name="ECB Staff Rules",
             pages=dp.utils.load_pdf(path="documents/ecb_rules.pdf"),
         ),
         dp.Document(
-            name="European Central Bank Conditions of Employment",
-            pages=dp.utils.load_pdf(path="documents/ecb_conditions.pdf"),
+            name="ECB Conditions of Employment",
+            pages=dp.utils.load_pdf(path="documents/ecb_conds.pdf"),
         ),
     ],
     dataset=[

@@ -22,8 +22,8 @@ expert_agent = dp.ExpertAgent(
         embedding="openai/text-embedding-3-small",
     ),
     corpus=dp.Document(
-        name="European Central Bank Supervisory Manual",
-        pages=dp.utils.load_pdf(path="documents/ecb_supervisory_manual.pdf"),
+        name="ECB Supervisory Manual",
+        pages=dp.utils.load_pdf(path="documents/ecb_supman.pdf"),
     ),
     dataset=dp.Examples(
         qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
