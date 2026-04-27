@@ -1,0 +1,342 @@
+Question: What is the confirmation period for an appointment to a managerial
+  position at a higher salary band?
+Example answer: The confirmation period shall be six months. Where the member of staff
+  is prevented by illness, accident, maternity or, in exceptional
+  circumstances, special leave from performing their duties for a
+  period of more than one month, the appointing authority may extend
+  the confirmation period accordingly. (ECB Staff Rules, page 43)
+Predicted answer: six months
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.04.
+Score: 0.51
+
+Question: What's the weather forecast for Frankfurt this weekend?
+Example answer: This agent is dedicated exclusively to ECB Human Resources topics and
+  cannot provide weather information.
+Predicted answer: The documents you provided do not include a weather forecast for
+  Frankfurt. Please check a weather service (e.g., a weather website
+  or app) for the latest forecast for this weekend.
+Rationale: Recall score: 0.5, sources score: 0.0, length score: 0.5.
+Score: 0.35
+
+Question: Can you summarise the key points of the latest ECB Economic Bulletin?
+Example answer: This agent is limited to ECB Human Resources matters. Economic
+  publications and analyses fall outside its scope.
+Predicted answer: The latest ECB Economic Bulletin isn’t included in the provided
+  documents (which cover the ECB’s Conditions of Employment and Staff
+  Rules). I can’t extract its key points from this material. If you
+  share the bulletin text or the specific sections you want
+  summarized, I’ll provide a concise summary. Alternatively, I can
+  give a generic overview of the usual content of ECB Economic
+  Bulletins (e.g., inflation outlook, growth, monetary policy stance,
+  risks) without current data.
+Rationale: Recall score: 0.35, sources score: 0.0, length score: 0.23.
+Score: 0.22
+
+Question: Does the ECB provide a subsidy or job ticket for my daily public
+  transport commute between my home in Frankfurt and the office?
+Example answer: This question cannot be answered on the basis of the available source
+  documents.
+Predicted answer: No. The ECB documents provided do not mention a daily commuting
+  subsidy or job ticket for regular public transport between a home in
+  Frankfurt and the office. They describe relocation travel allowances
+  (distance-based) for appointment/termination, potential
+  international travel reimbursements with prior approval, and other
+  non-commuting allowances, but not a daily commuter subsidy.
+Rationale: Recall score: 0.2, sources score: 0.0, length score: 0.25.
+Score: 0.15
+
+Question: What is the maximum number of consecutive working days I can telework?
+Example answer: Teleworking shall not exceed a maximum of 10 consecutive working days.
+  This limit applies both within and across calendar months, and also
+  applies where teleworking is combined with leave; leave shall not
+  interrupt the consecutiveness. (ECB Staff Rules, page 84)
+Predicted answer: 10 consecutive working days
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.1.
+Score: 0.52
+
+Question: How much advance notice must be given to the Executive Board before
+  staff can go on strike?
+Example answer: The organising body shall inform the Executive Board in writing of the
+  intention to strike at least ten working days before the first day
+  of the strike. The written notice shall state the precise nature of
+  the dispute, the precise nature of the proposed strike action, and
+  the period during which the strike is going to take place. (ECB
+  Staff Rules, page 31)
+Predicted answer: At least ten working days before the first day of the strike.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.19.
+Score: 0.54
+
+Question: Up to what age is a child considered a dependent child for the
+  purposes of the child allowance?
+Example answer: To qualify as a dependent child, the child must be under 26 years of
+  age, must reside in the member of staff’s household or be
+  financially supported by the member of staff, must not receive a
+  gross annual income above the prescribed threshold in the current
+  calendar year, must not be on military or alternative service, and
+  must not be married or in a registered partnership. (ECB Staff
+  Rules, pages 63–64)
+Predicted answer: 26 years of age.
+Rationale: Recall score: 0.6, sources score: 0.0, length score: 0.06.
+Score: 0.31
+
+Question: How do I connect my laptop to the meeting room projector?
+Example answer: This agent is restricted to ECB Human Resources matters and is not
+  able to assist with technical or IT-related queries.
+Predicted answer: Not specified in the ECB Staff Rules excerpt you provided. The
+  document discusses teleworking IT practices but does not include
+  instructions for connecting a laptop to a meeting room projector.
+  For the correct method, contact ECB IT support or the meeting room
+  administrator.
+Rationale: Recall score: 0.1, sources score: 0.0, length score: 0.47.
+Score: 0.14
+
+Question: What's the ECB's current outlook on inflation for the eurozone?
+Example answer: I am only able to assist with questions related to ECB Human Resources
+  matters. Monetary policy and economic outlook topics fall outside
+  the scope of this agent.
+Predicted answer: I can’t determine the ECB’s current inflation outlook for the eurozone
+  from the provided documents, as they only cover employment
+  conditions and related rules.
+Rationale: Recall score: 0.4, sources score: 0.0, length score: 0.89.
+Score: 0.38
+
+Question: My spouse earns income from freelance consulting and also receives a
+  pension. How do I assess whether her total income falls under the
+  threshold for me to remain entitled to the household allowance?
+Example answer: The household allowance is payable only where the gross annual income
+  of the member of staff's spouse or recognised partner does not
+  exceed EUR 71,764. For this purpose, "gross annual income" is
+  defined as income originating in the calendar year preceding that in
+  respect of which eligibility is assessed, from employment or self-
+  employment, from income replacement (e.g. maternity allowance,
+  parental allowance, social security benefits and unemployment
+  allowance, but not payments representing reimbursement of expenses),
+  or from a pension, before tax and before the deduction of social
+  security contributions; investment income and income from capital
+  gains are not considered. Both the freelance consulting income and
+  the pension would therefore count toward the threshold. (ECB
+  Conditions of Employment, page 9; ECB Staff Rules, page 63)
+Predicted answer: Here's how to assess it for your case:  - Identify gross annual income
+  of your spouse for the calendar year before eligibility: add
+  together income from freelance consulting (self-employment) and the
+  pension. Do not include investment income or capital gains. Include
+  any other applicable earnings from employment or self-employment or
+  pension as defined by the rule. - Compare the total to EUR 71,764
+  (the threshold for the household allowance).   - If the total is ≤
+  EUR 71,764: you remain entitled to the household allowance (subject
+  to the rule for two staff members: if both spouses are ECB staff and
+  both are under the limit, the allowance goes to the partner with the
+  higher salary).   - If the total is > EUR 71,764: you are not
+  entitled to the household allowance. - Provide evidence of income as
+  required (e.g., latest tax declaration and salary statements or
+  other ECB-acceptable documents).  Example: - Freelance consulting:
+  €40,000 - Pension: €25,000 - Total gross annual income: €65,000 → ≤
+  €71,764 → eligible (if you’re the head of household; if both are
+  staff and both under the limit, the higher-salary partner would
+  receive the allowance). - Freelance consulting: €60,000 - Pension:
+  €25,000 - Total: €85,000 → > €71,764 → not eligible.
+Rationale: Recall score: 0.9, sources score: 0.0, length score: 0.6.
+Score: 0.57
+
+Question: How many days of parental special leave am I entitled to per dependent
+  child, and within what timeframe must I use them?
+Example answer: A member of staff on a fixed-term or permanent contract who has passed
+  their probationary period and has completed at least one year of
+  service is entitled to parental special leave of 40 working days for
+  each dependent child. Parental special leave may only be used in the
+  first three years after the birth of the child or the date of
+  adoption. (ECB Staff Rules, page 99)
+Predicted answer: 40 working days per dependent child, to be used within the first three
+  years after the child’s birth or adoption.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.3.
+Score: 0.56
+
+Question: If a staff member dies, for how long does the ECB continue to pay
+  their salary and allowances?
+Example answer: In the event of the death of a member of staff, payment of his or her
+  salary and allowances shall be extended for three months. (ECB
+  Conditions of Employment, page 19)
+Predicted answer: Three months.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.06.
+Score: 0.51
+
+Question: I want to engage in unpaid volunteering work at a charity unrelated to
+  the ECB. Do I need authorisation?
+Example answer: No authorisation is required for external activities that are
+  unremunerated, in the domain of culture, science, education, sport,
+  charity, religion, social or other benevolent work, and not related
+  to the ECB or the member of staff’s professional duties at the ECB.
+  (ECB Staff Rules, pages 7–8)
+Predicted answer: No. Unpaid volunteering in a charity falls under the exception for
+  unremunerated external activities in the domain of charity, so you
+  do not need authorisation for this volunteering. However, be mindful
+  that the ECB may require you to terminate the activity if it would
+  impair your duties or create a conflict of interest.
+Rationale: Recall score: 0.97, sources score: 0.0, length score: 0.87.
+Score: 0.66
+
+Question: I joined the ECB four years ago and was placed under a convertible
+  contract. What is the minimum performance threshold to convert my
+  contract, and who decides on the conversion if I'm employed below
+  the I band?
+Example answer: Convertible contracts may be converted into an indefinite contract
+  subject to the interest of the service and at least overall
+  satisfactory performance of the member of staff over the period of
+  the convertible contract. For members of staff assigned to a post
+  below the I band, the conversion decision is taken by the Director
+  General Human Resources or their Deputy, after consulting the
+  Director General or Director of the business area in which the
+  member of staff is employed, at least six months prior to the expiry
+  of the convertible contract. (ECB Staff Rules, pages 44–45)
+Predicted answer: - Minimum performance threshold: overall satisfactory performance over
+  the period of the convertible contract. - Who decides on the
+  conversion if employed below the I band: the Director General Human
+  Resources (or their Deputy), after consulting the Director General
+  or Director of the business area in which the staff member is
+  employed.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.54.
+Score: 0.61
+
+Question: I'm a part-time staff member and I'd like to know whether my child
+  allowance is also pro-rated like my basic salary, and whether my
+  annual leave is.
+Example answer: For part-time staff, the basic salary is prorated to the time worked,
+  and the expatriation and household allowances and their minimum
+  amounts are calculated on the basis of the prorated salary; however,
+  the staff member shall continue to receive the full child allowance
+  and the full education allowance. Annual leave entitlement is
+  calculated on a pro-rata basis and rounded up to the nearest half
+  hour. (ECB Staff Rules, pages 88–89)
+Predicted answer: - Child allowance: Not prorated. You continue to receive the full
+  child allowance (and, separately, the full education allowance).
+  There is a related provision that education allowance can be
+  prorated if entitlement covers only part of the school year, but the
+  child allowance itself is described as full. - Annual leave: The
+  texts indicate that annual leave is not affected by parental special
+  leave, and staff must take at least 20 days of annual leave per
+  calendar year. The excerpts do not explicitly state that annual
+  leave is prorated for part-time staff. So, based on the provided
+  text, there is no explicit prorating of annual leave mentioned for
+  part-time status; the default statements apply (leave remains as
+  stated, with the 20-day requirement).
+Rationale: Recall score: 0.5, sources score: 0.0, length score: 0.57.
+Score: 0.36
+
+Question: Is there an income limit on my spouse's earnings that affects my
+  eligibility for the household allowance?
+Example answer: A head of household shall receive the household allowance only when
+  the gross annual income of his or her spouse or recognised partner
+  does not exceed EUR 71,764. (ECB Conditions of Employment, page 9)
+Predicted answer: Yes. There is an income limit. For a member of staff to be the head of
+  household and receive the household allowance, the gross annual
+  income of the spouse or recognised partner must not exceed EUR
+  71,764. If both spouses are staff and both earn under the limit, the
+  household allowance is awarded to the member of staff with the
+  higher salary. You will need to provide evidence of income as part
+  of the assessment (e.g., latest tax declaration and salary
+  statement). Note that gross annual income is defined as income from
+  employment or self-employment, income replacements, or a pension,
+  before tax and before deductions, and investments or capital gains
+  are not counted.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.3.
+Score: 0.56
+
+Question: I'm a salary band I staff member who was directly involved in
+  supervising a credit institution. If I want to leave the ECB to join
+  a direct competitor of that bank, how long is my cooling-off period,
+  and do I also have a notification obligation toward the ECB?
+Example answer: A cooling-off period of six months applies before starting work for a
+  direct competitor of a credit institution in whose supervision the
+  staff member at salary band I or above was directly involved,
+  running from the date direct involvement ceased. Separately, staff
+  at salary band I or above involved in supervisory activities must
+  notify the Compliance and Governance Office before accepting any
+  occupational activity for a period of two years from the date their
+  involvement in supervisory activities ceased. (ECB Staff Rules,
+  pages 9–10)
+Predicted answer: Cooling-off period: six months from the date your direct supervisory
+  involvement with the credit institution ceased, before you may join
+  a direct competitor of that bank.  Notification obligation: yes. You
+  must notify the Governance Office before accepting the new
+  occupational activity, and the notification period lasts two years
+  from the date your supervisory involvement ceased.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.65.
+Score: 0.63
+
+Question: I'd like to telework from a country outside the EU for a couple of
+  weeks. What is the annual cap on this, and within that period, what
+  is the maximum I can do consecutively?
+Example answer: Out of the maximum 90 working days per calendar year of teleworking
+  from a location within the Union, members of staff may telework from
+  a location outside the Union for up to 20 working days per calendar
+  year. In addition, teleworking shall not exceed a maximum of 10
+  consecutive working days, a limit that applies both within and
+  across calendar months and also where teleworking is combined with
+  leave, since leave does not interrupt the consecutiveness. (ECB
+  Staff Rules, pages 83–84)
+Predicted answer: - Annual cap for teleworking from a country outside the EU: 20 working
+  days per calendar year. - Maximum consecutive days within that
+  period: There is no general consecutive-day limit stated for normal
+  (non-exceptional) outside-EU telework; the 10 consecutive days limit
+  (and 10 per calendar month) only apply in exceptional circumstances
+  or force majeure. If teleworking due to exceptional circumstances,
+  the limit would be 10 consecutive days (and 10 days per calendar
+  month).
+Rationale: Recall score: 0.5, sources score: 0.0, length score: 0.9.
+Score: 0.43
+
+Question: What is the maximum total duration of unpaid parental leave I can take
+  across all my children?
+Example answer: Unpaid parental leave shall be granted for a maximum of three years
+  per child, which may be non-consecutive. The total unpaid parental
+  leave granted to a member of staff shall not exceed six years.
+  Notwithstanding this, two additional months of unpaid parental leave
+  may be granted beyond this limit for each new dependent child. (ECB
+  Staff Rules, page 100)
+Predicted answer: For N dependent children, the maximum total unpaid parental leave is
+  3N years plus 2(N−1) months. Examples: - 1 child: 3 years. - 2
+  children: 6 years and 2 months. - 3 children: 9 years and 4 months.
+  In general: maximum = 3N years + 2(N−1) months.
+Rationale: Recall score: 0.3, sources score: 0.0, length score: 0.8.
+Score: 0.31
+
+Question: I'm approaching the end of my ECB contract and have been notified that
+  a cooling-off period applies, which prevents me from taking up the
+  new role I had lined up. What financial support is available during
+  that period?
+Example answer: Certain staff intending to engage in a new occupational activity after
+  the end of their ECB employment must refrain, for a specified
+  cooling-off period, from any activity that could conflict with the
+  ECB's interests. Staff who are prohibited as a result of that
+  cooling-off period from undertaking a specific activity and who
+  cannot find a suitable alternative and are consequently unemployed
+  are entitled, for the duration of the prohibition, to a special
+  monthly allowance of 80% of the last basic salary for the first year
+  and 60% for the year thereafter, household and child allowances,
+  continued cover under the ECB health, long-term care and accident
+  insurance (subject to contributions), an education allowance capped
+  at EUR 393 per month (or EUR 764 for certified imperative
+  educational needs), and accrual of pensionable service. (ECB
+  Conditions of Employment, pages 3, 18–19)
+Predicted answer: During the cooling-off period, you may be entitled to the following
+  financial supports: - Unemployment allowance: 60% of your last basic
+  salary for the first six months, then 30% of your last basic salary
+  for the following six months, with possible extension for additional
+  months depending on years of service and age. - Household and child
+  allowances. - Continued cover under ECB health insurance, long-term
+  care insurance, and accident insurance (subject to payment of the
+  relevant contributions). - Education allowance for children (up to
+  EUR 393 per month, or up to EUR 764 per month in cases of certified
+  imperative educational needs). - A one-off payment equal to one
+  month’s salary at Band A, step 1 for each full year of service
+  completed, payable once you are registered as unemployed and seeking
+  employment, with a minimum of three months’ salary and a maximum of
+  twelve months’ salary. - If your contract is terminated during the
+  probationary period, an additional one-off payment of an extra
+  monthly basic salary. - Note: benefits from other sources must be
+  declared and may be deducted from amounts payable under this
+  article.
+Rationale: Recall score: 0.5, sources score: 0.0, length score: 0.74.
+Score: 0.4
+
+2026/04/27 17:41:37 INFO dspy.evaluate.evaluate: Average Metric: 8.72 / 20 (43.6%)

@@ -1,0 +1,62 @@
+{
+  "_answer_grounded_in_context.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "context": [
+          "Document: ECB Conditions of Employment\nPage: 16\nas follows: \n(i) in the event of death, payment of an indemnity equal to five times the deceased \nmember of staff’s annual basic salary. The indemnity shall be paid:  \n-  to the persons known to the ECB and designated by the deceased member \nof staff, \n-  where there are no persons in the category above, to their spouse and \nchildren, where applicable, in accordance with the law of succession \ngoverning the deceased member of staff’s estate, ",
+          "Document: ECB Staff Rules\nPage: 110\nsement. \n(c) Where, following payment of the indemnity provided for in Article 34(b)(ii) \nor (iii) of the Conditions of Employment, the member of staff dies as a result \nof the same accident or the same occupational disease which gave rise to \nthe entitlement to the indemnity, the indemnity referred to in Article 34(b)(i) \nof the Conditions of Employment shall be payable only if that indemnity \nexceeds the indemnity paid pursuant to Article 34(b)(ii) or (iii) of the \nConditions of Employment and only in respect of the difference. \n6.3.6 (a) Total or partial permanent invalidity shall be measured in terms of physical \nimpairment as laid down in the European disability rating scale in Annex I \nto the Staff Rules. \n(b) For the purposes of the indemnity provided for in Article 34(b)(ii) of the \nConditions of Employment, a member of staff shall be considered to have \nsustained total permanent invalidity as a result of an accident or an \noccupational disease when the resulting physical impai",
+          "Document: ECB Staff Rules\nPage: 110\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 110 \n6.3.5 (a) The indemnity provided for in Article 34(b)(i) of the Conditions of \nEmployment shall be paid also following the unexplained disappearance of \na member of staff if, on expiry of a period of one year and following an \ninvestigation into the circumstances of the disappearance, the member of \nstaff is presumed dead unless there are grounds for presuming that the \ndeath was not due to an accident. \n(b) Where a member of staff is found to be alive after all, or part of the \nindemnity under Article 34(b)(i) of the Conditions of Employment has been \npaid, all sums paid shall be reimbursed by the member of staff and those \nentitled under them. Special arrangeme nts may be made by the ECB to \neffect such reimbursement. \n(c) Where, following payment of the indemnity provided for in Article 34(b)(ii) \nor (iii) of the Conditions of Employment, the member of staff dies as a result \nof the same accident or the sa",
+          "Document: ECB Staff Rules\nPage: 112\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 112 \n• in the case of an accident, the monthly basic full -time salary paid in the 12 \nmonths preceding the date of the accident. \n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \nbe payable to a member of staff or those entitled under them whose accident or \noccupational disease arose from a situation in which they intentionally caused or \ncontributed to the death or injury of another person.  \n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \nunder them shall report it to the Directorate General Human Resources. \nWhere the alleged accident at work results in death or where it is impossible \nfor the member of staff or those entitled under them to report it, this may be \ndone by any member of their family or any other person with knowledge of \nthe facts.   \nThe report shall specify the date and time, the causes and the \ncircumstances of the a",
+          "Document: ECB Conditions of Employment\nPage: 16\nr the ECB long-term care insurance, for \nany of their children that are no longer dependent or for their former spouses  or former \nrecognised partners. In such cases, members of staff shall pay the full contribution.  \n34. (a) From the date of appointment, the ECB shall provide members of staff with full insurance \ncover against all reasonable and customary medical and dental expenses incurred as a \nresult of an occupational disease or accident at work in the manner provided for in the Staff \nRules. This insurance shall be provided free of charge to members of staff. Members of \nstaff may claim solely against the insurer on the basis of the ECB insurance policy.  \n(b) The benefits payable by the ECB as a result of an occupational disease or accident suffered \nby members of staff shall be as follows: \n(i) in the event of death, payment of an indemnity equal to five times the deceased \nmember of staff’s annual basic salary. The indemnity shall be paid:  \n-  to the persons known to the E"
+        ],
+        "question": "What indemnity is paid if a staff member dies as a result of an accident at work?",
+        "reasoning": "The context provided includes information on the indemnity provided by the European Central Bank (ECB) in the event of a staff member's death due to an accident at work. According to the ECB Conditions of Employment, an indemnity equal to five times the deceased member of staff’s annual basic salary is payable. This indemnity is directed to the persons known to the ECB and designated by the deceased member of staff. If no such persons are designated, the indemnity is paid to their spouse and children, in accordance with the law of succession governing the deceased member of staff’s estate.",
+        "answer": "If a staff member dies as a result of an accident at work, the indemnity paid is equal to five times the deceased member of staff’s annual basic salary. This indemnity is paid to the persons designated by the deceased or, if none, to their spouse and children according to the applicable law of succession. (ECB Conditions of Employment, Page 16)"
+      },
+      {
+        "question": "What installation allowance am I entitled to when I relocate to take up my appointment at the ECB?",
+        "answer": "Subject to the conditions laid down in the Staff Rules, the ECB grants an installation allowance equal to 200% of the basic monthly salary for members of staff entitled to a household allowance, or 100% of the basic monthly salary in other cases. (ECB Conditions of Employment, page 12)"
+      },
+      {
+        "question": "If I want to apply internally for another position at the ECB, am I eligible if I haven't yet completed my probationary period, and how long does my probationary period normally last?",
+        "answer": "Eligibility for internal selection procedures is reserved for members of staff with an indefinite or fixed-term contract, and graduate programme participants, who have successfully completed their probationary period at the closing date for applications. Appointments are subject to a probationary period of six months unless the Chief Services Officer, on behalf of the Executive Board, decides to waive it, although in exceptional circumstances a longer period may be determined. (ECB Staff Rules, pages 33, 47)"
+      },
+      {
+        "question": "What is the duration of the probationary period for new appointments?",
+        "answer": "Appointments are subject to a probationary period of six months unless the Chief Services Officer, on behalf of the Executive Board, decides to waive it. In exceptional circumstances, the Chief Services Officer may determine a probationary period longer than six months, which may in any case be extended up to a maximum of twelve months. (ECB Staff Rules, page 47)"
+      }
+    ],
+    "signature": {
+      "instructions": "Evaluate the question in relation to the context retrieved from the ECB policies, employing a step-by-step reasoning process similar to human thought, to formulate an accurate and contextually supported answer that adheres to the regulatory guidelines outlined in the provided documents.",
+      "fields": [
+        {
+          "prefix": "Context:",
+          "description": "${context}"
+        },
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.1.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}

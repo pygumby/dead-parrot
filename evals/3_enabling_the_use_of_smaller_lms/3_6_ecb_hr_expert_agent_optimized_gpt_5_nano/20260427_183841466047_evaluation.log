@@ -1,0 +1,433 @@
+Question: When I relocate to Frankfurt to take up my appointment, will the ECB
+  cover the costs of transporting my dog as part of the removal
+  expenses?
+Example answer: The available source documents do not address this matter, so I am
+  unable to provide an answer.
+Predicted answer: Transport of a dog is not covered as a removal expense under ECB Staff
+  Rules. Removal expenses cover furniture and personal effects
+  belonging to staff, their spouse/partner, and dependent children;
+  pets are not included. (ECB Staff Rules, 4.4.1, p. 73)
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.42.
+Score: 0.08
+
+Question: Could you translate this French document into English for me?
+Example answer: This agent is dedicated to ECB Human Resources topics and is not able
+  to provide general translation services.
+Predicted answer: Insufficient information: the retrieved ECB HR documents do not
+  specify this.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.61.
+Score: 0.12
+
+Question: Does the ECB offer an Employee Assistance Programme or confidential
+  psychological counselling service that staff members can access in
+  case of personal difficulties?
+Example answer: This information is not contained in the source documents that are
+  available to me.
+Predicted answer: Insufficient information: the retrieved ECB HR documents do not
+  specify this.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.79.
+Score: 0.66
+
+Question: What investment funds would you recommend for my personal savings?
+Example answer: I can only assist with ECB Human Resources matters. Personal financial
+  or investment advice is outside the scope of this agent.
+Predicted answer: Insufficient information: the retrieved ECB HR documents do not
+  specify this.
+Rationale: Recall score: 0.1, sources score: 0.0, length score: 0.52.
+Score: 0.15
+
+Question: What are the main responsibilities of the Single Supervisory
+  Mechanism?
+Example answer: I am limited to questions concerning ECB Human Resources. Topics
+  related to banking supervision fall outside the scope of this agent.
+Predicted answer: Insufficient information: the retrieved ECB HR documents do not
+  specify this.
+Rationale: Recall score: 0.35, sources score: 0.0, length score: 0.52.
+Score: 0.28
+
+Question: Could you write a Python script to clean up a CSV file I exported from
+  our internal system?
+Example answer: This agent is dedicated exclusively to ECB Human Resources matters and
+  cannot assist with coding or data processing tasks.
+Predicted answer: Out of scope: this assistant only addresses ECB HR policy and
+  employment matters.
+Rationale: Recall score: 0.6, sources score: 1.0, length score: 0.68.
+Score: 0.74
+
+Question: How long is a list of suitable candidates from a selection procedure
+  valid?
+Example answer: The list of suitable candidates shall be valid for a period of two
+  years from the date it is drawn up by the appointing authority. (ECB
+  Staff Rules, page 40)
+Predicted answer: The list of suitable candidates is valid for two years from the date
+  it is drawn up by the appointing authority. (ECB Staff Rules, p. 40)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.87.
+Score: 0.97
+
+Question: What is the reference period used for the regular performance
+  management and development process?
+Example answer: The reference period for the regular performance management and
+  development shall run from 1 September of each year until 31 August
+  of the following year. When a reviewee’s employment with the ECB
+  starts after 1 September, the reference period shall begin on the
+  first day of employment and end on the next 31 August. (ECB Staff
+  Rules, page 49)
+Predicted answer: The reference period is from 1 September of each year until 31 August
+  of the following year. If employment starts after 1 September, the
+  reference period begins on the employee’s first day of employment
+  and ends on 31 August of the following year. (ECB Staff Rules, p.
+  49)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.81.
+Score: 0.96
+
+Question: How many days of annual leave am I entitled to each year, and what are
+  the rules for carrying unused days over to the following year?
+Example answer: Members of staff are entitled to thirty and a half working days of
+  paid leave per annum, in addition to the public holidays observed by
+  the ECB. At least 20 days must be taken before the end of the
+  calendar year, and members of staff may carry over a maximum of 10.5
+  days of the annual leave entitlement to the following year. Where
+  the minimum 20 days have not been taken by year-end for business or
+  personal reasons, the Director General/Director may approve them
+  being taken until the end of March of the subsequent year, and the
+  Director General Human Resources or their Deputy may approve a
+  further unlimited carry-over in exceptional cases on local
+  management's justification. (ECB Conditions of Employment, page 13;
+  ECB Staff Rules, page 93)
+Predicted answer: - Annual leave entitlement: at least 20 days per year. (ECB Staff
+  Rules, p. 93)   - Carrying unused days over: a maximum of 10.5 days
+  of the annual leave entitlement may be carried over to the following
+  year. (ECB Staff Rules, p. 93)   - Exceptional carry over: in
+  exceptional circumstances, the Director General Human Resources or
+  their Deputy may approve a further unlimited carry over provided
+  exceptional reasons justify the member of staff’s inability to take
+  the minimum leave within the foreseen period. (ECB Staff Rules, p.
+  93)
+Rationale: Recall score: 0.4, sources score: 0.5, length score: 0.69.
+Score: 0.49
+
+Question: How long is my personal file kept after my employment with the ECB
+  ends?
+Example answer: Provided that there are no pending claims, the personal file shall be
+  retained for a maximum of 10 years. The retention period commences
+  either when the staff member’s employment with the ECB ceases or
+  following the last ECB pension payment to the pensioner or their
+  entitled dependants. (ECB Staff Rules, page 31)
+Predicted answer: The personal file shall be retained for a maximum of 10 years after
+  employment ends, with the retention period commencing either when
+  the staff member’s employment with the ECB ceases or following the
+  last ECB pension payment to the pensioner or their entitled
+  dependents, provided there are no pending claims. (ECB Staff Rules,
+  page 31)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.95.
+Score: 0.99
+
+Question: What is the mileage rate paid for daily local transportation between a
+  child's home and school under the education allowance?
+Example answer: Provided there is a distance of more than one kilometre between the
+  home closest to the school and the educational establishment
+  attended, the rate paid shall be EUR 0.40 per kilometre. The mileage
+  fee is paid monthly using the formula (km × 2 × 0.40 EUR × 180
+  school days) ÷ 12. (ECB Staff Rules, pages 67–68)
+Predicted answer: EUR 0.40 per kilometre.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.07.
+Score: 0.51
+
+Question: I'm in salary band C and my line manager asked me to work several
+  hours last Saturday because of a publication deadline. If I take
+  payment instead of compensatory leave, how is the amount calculated?
+Example answer: For members of staff with a basic salary up to step 59 of salary band
+  E, overtime worked on Saturdays, Sundays and public holidays is
+  compensated at two hours for each hour of overtime worked. Where
+  compensatory leave for overtime cannot be granted, the member of
+  staff may instead be granted overtime payment in lieu of leave, and
+  the standard hourly rate for such payment is 0.6% of the basic
+  monthly salary for the month in which the overtime was worked. (ECB
+  Conditions of Employment, page 13; ECB Staff Rules, pages 89–90)
+Predicted answer: The calculation is as follows: - Hourly rate for overtime paid in
+  cash: 0.6% of the basic monthly salary for the month in which the
+  overtime was worked (0.006 × BasicMonthlySalary) (ECB Staff Rules,
+  p. 90, 5.3.5). - For N overtime hours, gross overtime pay = N ×
+  0.006 × BasicMonthlySalary (i.e., N × hourly rate) (ECB Staff Rules,
+  p. 90, 5.3.5). - Details of payable overtime must be communicated to
+  HR by the third working day of the month following the overtime (ECB
+  Staff Rules, p. 90, 5.3.6); payments are included with the monthly
+  salary (ECB Staff Rules, p. 90, 5.3.6). - Tax: the applicable tax
+  rate is the rate for the highest taxable amount in that month (ECB
+  Staff Rules, p. 90, 5.3.7); such payments are not subject to any
+  other deductions (ECB Staff Rules, p. 90, 5.3.7).
+Rationale: Recall score: 0.6, sources score: 0.5, length score: 0.66.
+Score: 0.58
+
+Question: What is the maximum amount of overtime a staff member can be asked to
+  work in a four-month period?
+Example answer: The total overtime which a member of staff may be asked to work shall
+  not exceed 136 hours in any four-month period. The combined daily
+  working hours, including flexitime and overtime, may be extended to
+  a maximum of 13 hours in exceptional individual cases. (ECB Staff
+  Rules, page 89)
+Predicted answer: Not exceed 136 hours in any four-month period. (ECB Staff Rules, page
+  89)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.27.
+Score: 0.85
+
+Question: If I receive a gift from a colleague at another central bank, do I
+  need to register it with anyone?
+Example answer: Advantages offered by other central banks, national public bodies, or
+  European and international organisations may be accepted provided
+  they do not go beyond what is customary and considered appropriate,
+  and that they are neither frequent nor from the same source. (ECB
+  Staff Rules, page 6)
+Predicted answer: Yes. A gift received from a colleague at another central bank must be
+  registered with the Compliance and Governance Office without undue
+  delay, under the requirements that cover advantages accepted under
+  Article 0.2.2.3(c) and advantages whose value cannot be clearly
+  established to be under the relevant thresholds. (ECB Staff Rules,
+  page 6)
+Rationale: Recall score: 0.1, sources score: 1.0, length score: 0.87.
+Score: 0.52
+
+Question: When is a medical certificate required for sick leave?
+Example answer: A medical certificate is required when the absence is longer than two
+  consecutive working days per period of absence; when a member of
+  staff is unable to work the contractually agreed hours due to
+  medical reasons; when unable to attend a disciplinary or
+  underperformance hearing; when illness or accident occurs during
+  annual leave; or when uncertified absences exceed ten working days
+  per annum. A single medical certificate can certify an absence of up
+  to a maximum of six weeks. (ECB Staff Rules, page 105)
+Predicted answer: - A medical certificate must be posted if the absence is likely to be
+  longer than one week. (ECB Staff Rules, p. 106) - The medical
+  certificate must indicate the date on which the sickness commenced
+  and the date on which it is expected to end; a single medical
+  certificate can certify an absence of up to a maximum of six weeks.
+  (ECB Staff Rules, p. 105) - Extensions of sick leave require the
+  submission of a medical certificate. (ECB Staff Rules, p. 106) - The
+  ECB’s Medical Adviser may require a medical certificate for all
+  absences. (ECB Staff Rules, p. 106) - The medical certificate should
+  be sent to the Directorate General Human Resources as soon as
+  possible. (ECB Staff Rules, p. 106)
+Rationale: Recall score: 0.17, sources score: 1.0, length score: 0.68.
+Score: 0.52
+
+Question: What is the maximum number of teleworking days I can take per calendar
+  year, and how many of those can be from outside the EU?
+Example answer: Members of staff may telework for a maximum of 110 working days per
+  calendar year from their registered place of residence in the
+  country of their place of employment. Within those 110 days, up to
+  90 days may be from a location within the Union, and within those 90
+  days, up to 20 working days may be from a location outside the
+  Union. (ECB Staff Rules, pages 83–84)
+Predicted answer: Maximum 110 teleworking days per calendar year; up to 20 of those may
+  be from outside the Union (outside the EU). Within the Union, a
+  maximum of 90 days per calendar year. (ECB Staff Rules, p. 84)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.54.
+Score: 0.91
+
+Question: What language requirements must I meet to be eligible for appointment
+  at the ECB?
+Example answer: To be eligible for appointment, candidates must have a thorough
+  knowledge of English and a satisfactory knowledge of at least a
+  second official Union language, unless an exception is authorised in
+  accordance with the provisions laid down in the Staff Rules. (ECB
+  Conditions of Employment, page 4)
+Predicted answer: Insufficient information: the retrieved ECB HR documents do not
+  specify language requirements for appointment.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.3.
+Score: 0.06
+
+Question: Following the second consecutive annual review showing
+  underperformance, what may happen, and who acts as the second
+  reviewer in the annual review process?
+Example answer: Where a second consecutive annual review establishes underperformance,
+  an underperformance procedure may be initiated. The second reviewer
+  is the first reviewer's direct line manager, although upon a
+  proposal by the head of the relevant business area, the Director
+  General Human Resources or their Deputy (or the Chief Services
+  Officer for staff working in DG Human Resources) may decide that
+  another staff member shall be the second reviewer or, exceptionally,
+  that there shall be no second reviewer. (ECB Staff Rules, pages 48,
+  50)
+Predicted answer: - Following the second consecutive annual review showing
+  underperformance, an underperformance procedure may be initiated as
+  provided for in Article 8.5. (ECB Staff Rules, p. 48) - The second
+  reviewer is the first reviewer’s direct line manager. (ECB Staff
+  Rules, p. 48)
+Rationale: Recall score: 0.67, sources score: 0.5, length score: 0.51.
+Score: 0.59
+
+Question: I'm participating in a strike. Will my salary be deducted, and what is
+  the minimum lead time the organising body must give to the Executive
+  Board?
+Example answer: Unless the Executive Board decides otherwise, the total period of the
+  strike shall be deducted from the salary and salary-related payments
+  of the member of staff taking part. The organising body shall inform
+  the Executive Board in writing of the intention to strike at least
+  ten working days before the first day of the strike, stating the
+  precise nature of the dispute, the precise nature of the proposed
+  strike action, and the period during which the strike is going to
+  take place. (ECB Staff Rules, page 31)
+Predicted answer: - Salary deduction: Yes. The total period of the strike shall be
+  deducted from the salary and salary-related payments, unless the
+  Executive Board decides otherwise. (ECB Staff Rules, p. 31) - Lead
+  time: The organising body must inform the Executive Board in writing
+  of the intention to strike at least ten working days before the
+  first day of the strike. (ECB Staff Rules, p. 31)
+Rationale: Recall score: 0.95, sources score: 1.0, length score: 0.75.
+Score: 0.92
+
+Question: How long does the ECB have to request recovery of a sum that was
+  overpaid to me?
+Example answer: The request for recovery must be made no later than five years from
+  the date on which the sum was overpaid or unduly paid. Where the ECB
+  is able to establish that the recipient deliberately misled the
+  administration in order to obtain the sum, the request for recovery
+  shall not be invalidated even after this period has elapsed. (ECB
+  Conditions of Employment, page 11)
+Predicted answer: Not later than five years from the date on which the sum was overpaid
+  or unduly paid. (ECB Conditions of Employment, p. 11)
+Rationale: Recall score: 0.8, sources score: 1.0, length score: 0.36.
+Score: 0.77
+
+Question: I think I'm being targeted with inappropriate behaviour by a
+  colleague. What informal options do I have before formally
+  reporting, and how long do I have to request protection if I later
+  face retaliation for reporting?
+Example answer: Members of staff who consider themselves the target of inappropriate
+  behaviour, or who have witnessed it, may seek informal support from
+  a trusted person of their choice (including a staff representative
+  or a counterpart in DG Human Resources), a Social Counsellor, or the
+  Mediator, and shall not suffer any negative consequences for doing
+  so unless they are later found to have made deliberately false or
+  malicious statements. If retaliation occurs, whistleblowers and
+  witnesses may submit a request for protection from retaliation to
+  the Chief Compliance and Governance Officer within 24 months from
+  the time of the occurrence of the alleged retaliation. (ECB Staff
+  Rules, pages 22, 27)
+Predicted answer: Informal options before formal reporting: - Seek informal resolution
+  through a trusted person (including a staff representative or a
+  counterpart in the Directorate General Human Resources); a Social
+  Counsellor; or the Mediator. These options are available prior to
+  formal reporting, and pursuing informal resolution does not
+  automatically expose you to penalties. If informal options are
+  ineffective, you may use the reporting channels set out in Article
+  0.4bis.2.1. (ECB Staff Rules, p. 22)  Protection against retaliation
+  after reporting: - You may submit a request for protection within 24
+  months from the time of the alleged act or omission. The Chief
+  Compliance and Governance Officer will handle the request in strict
+  confidence, verify the conditions, and may implement protective or
+  corrective measures as appropriate. (ECB Staff Rules, p. 27)
+  Interim protective measures: - The Chief Compliance and Governance
+  Officer may recommend interim protective measures to safeguard the
+  whistleblower or witness against retaliation or the risk thereof.
+  (ECB Staff Rules, pp. 28–29)
+Rationale: Recall score: 0.93, sources score: 1.0, length score: 0.67.
+Score: 0.9
+
+Question: If I am suspended pending disciplinary proceedings and part of my
+  salary is withheld, when must any withheld amount be reimbursed?
+Example answer: If within nine months from the suspension no final decision has been
+  taken, or no measure other than a written warning or a written
+  reprimand has been adopted, the ECB shall reimburse the member of
+  staff the amount of salary withheld. (ECB Conditions of Employment,
+  page 23)
+Predicted answer: Any withheld amount must be reimbursed if, within nine months from the
+  date of suspension, no final decision has been taken and no
+  disciplinary measure other than a written warning or a written
+  reprimand has been adopted. In that case, the ECB shall reimburse
+  the amount of salary withheld. (ECB Conditions of Employment, p. 23)
+Rationale: Recall score: 0.7, sources score: 1.0, length score: 0.85.
+Score: 0.82
+
+Question: My ECB contract ended last month and I am now receiving the
+  unemployment allowance. I am pregnant and due in three months — does
+  this affect the duration of my entitlement?
+Example answer: The standard paid maternity leave for staff is 20 weeks, with four
+  additional weeks in case of multiple births. When a former staff
+  member in receipt of unemployment benefits gives birth during one of
+  the entitlement periods, or is expected to give birth within six
+  weeks of the end of such a period, that period is extended by 20
+  weeks, with an additional four weeks in the case of multiple births;
+  any maternity leave taken immediately preceding the termination of
+  the contract is deducted from this extension. (ECB Conditions of
+  Employment, pages 13, 18)
+Predicted answer: Yes. Under the ECB Conditions of Employment, if a former member of
+  staff on unemployment benefits gives birth during the unemployment
+  period (the six months referred to in paragraph (a)(i)) or is
+  expected to give birth within six weeks after the end of that
+  period, that period shall be extended by 20 weeks, with an
+  additional four weeks in the case of multiple births, subject to the
+  Staff Rules. Since the birth is due within three months, the
+  unemployment entitlement duration will be extended by 20 weeks (and
+  by 4 weeks if this is a multiple birth). (ECB Conditions of
+  Employment, p. 17–18)
+Rationale: Recall score: 0.85, sources score: 1.0, length score: 0.91.
+Score: 0.91
+
+Question: My spouse, who was an ECB staff member, recently passed away while in
+  service. What benefits apply with regard to salary continuation and
+  to our return to our country of origin?
+Example answer: In the event of the death of a staff member, payment of their salary
+  and allowances is extended for three months. Where termination of
+  service is caused by death, the resettlement benefits — coverage of
+  travel-related expenses and removal of personal belongings, together
+  with a resettlement allowance equal to 200% of the monthly basic
+  salary for staff entitled to a household allowance or 100% otherwise
+  — are paid, under the conditions laid down in the Staff Rules, to
+  the surviving spouse or recognised partner or, in their absence, to
+  the deceased staff member's dependent children. (ECB Conditions of
+  Employment, pages 12, 19)
+Predicted answer: - Salary continuation: Salary and allowances of the deceased member
+  shall be extended for three months. (ECB Staff Rules, p. 70)  -
+  Death indemnity: An indemnity equal to five times the deceased
+  member of staff’s annual basic salary shall be paid to designated
+  beneficiaries (survivors), in accordance with the applicable rules
+  governing designation and succession. (ECB Conditions of Employment,
+  p. 16)  - Repatriation of the body: The ECB shall reimburse the
+  costs involved in repatriating the body from the member of staff’s
+  place of employment to the original place of residence. If death
+  occurred during official business travel, the ECB shall bear the
+  costs to repatriate the body from the death location to the original
+  place of residence or to the place of employment. (ECB Staff Rules,
+  p. 116)  - Return/relocation of survivors (travel and removal
+  expenses): On termination of service, survivors who resettle more
+  than 50 kilometres from the ECB are entitled to benefits; if
+  relocation occurs outside the EU, reimbursement of travel and
+  removal expenses is limited to the capital of the EU Member State
+  furthest from the ECB, or the actual costs, whichever is lesser. If
+  the staff member’s place of recruitment is outside the EU, survivors
+  may be entitled to relocation to that place of recruitment. (ECB
+  Staff Rules, p. 70)
+Rationale: Recall score: 0.6, sources score: 1.0, length score: 0.47.
+Score: 0.69
+
+Question: If a colleague at salary band G has a child with a learning
+  disability, can the cost of additional specialised educational
+  support fall under "imperative educational needs", and what is the
+  role of the ECB Medical Adviser in confirming this?
+Example answer: A child with a learning disability or a neuro-behavioural
+  developmental disorder, requiring additional specialised educational
+  support suitable for their condition while attending a regular
+  school, is among the situations satisfying the condition of
+  imperative educational needs for the education allowance, where this
+  is certified by the ECB Medical Adviser. The Medical Adviser is
+  entitled to examine and periodically re-examine the child, refer the
+  child for a specialist opinion if required, and ask the child's
+  doctor for relevant information with the staff member's consent.
+  (ECB Staff Rules, pages 64–65, 68)
+Predicted answer: Yes. For a child with a learning disability, the costs of additional
+  specialised educational support can fall under disability-related
+  expenses within the child allowance framework, as direct costs
+  (e.g., special schooling fees) (ECB Staff Rules, p. 64–65). The
+  existence of the disability and the need for the additional
+  specialised educational support must be certified by the ECB Medical
+  Adviser in accordance with Article 3.6.4 procedures, and the
+  Director General Human Resources or their Deputy shall verify the
+  suitability and renew the Medical Adviser’s certificate (ECB Staff
+  Rules, p. 68). The material does not use the term “imperative
+  educational needs”; the applicable phrasing is “additional
+  specialised educational support” (ECB Staff Rules, p. 68).
+Rationale: Recall score: 0.3, sources score: 1.0, length score: 0.79.
+Score: 0.61
+
+2026/04/27 18:42:16 INFO dspy.evaluate.evaluate: Average Metric: 15.6 / 25 (62.4%)

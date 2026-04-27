@@ -1,0 +1,62 @@
+{
+  "_answer_grounded_in_context.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "context": [
+          "Document: ECB Staff Rules\nPage: 112\no report it, this may be \ndone by any member of their family or any other person with knowledge of \nthe facts.   \nThe report shall specify the date and time, the causes and the \ncircumstances of the alleged accident at work and also the names of \nwitnesses and of any third party which may be liable. A medical certificate \nshall be annexed, specifying the nature of the injuries and the probable \nconsequences of the alleged accident at work.  \n(b) The report shall be submitted not later than 10 working days following the \ndate on which the alleged accident at work occurs except where the \nDirector General Human Resources or their Deputy has established that \nthe delay was justified by force majeure or by any other legitimate reason. \n(c) The Directorate General H uman Resources may investigate whether the \nreported incident constitutes an accident at work.  \n(d) Members of staff who sustain a non- work related  accident within the \nmeaning of Article 6.3.1(a) that might give rise to reim",
+          "Document: ECB Staff Rules\nPage: 112\nte whether the \nreported incident constitutes an accident at work.  \n(d) Members of staff who sustain a non- work related  accident within the \nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \nexpenses under the ECB health insurance, or those entitled under them, \nshall report the accident to the administrator mentioned in Article 6.3.3.  \n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \nan occupational disease shall submit a statement to the Directorate \nGeneral Human Resources within a reasonable period following the onset \nof the disease or the date on which it is diagnosed for the first time. The \nstatement may be submitted by the member of staff or, where the \nsymptoms of the disease allegedly caused by the perfor mance of their \nduties at the ECB become apparent after the termination of employment, \nby the former member of staff; where a member of staff dies as a result of \na disease allegedly caused by the performance of ",
+          "Document: ECB Staff Rules\nPage: 114\nrdance with the draft decision \npreviously notified to the member of staff or those entitled under them. \n6.3.14 (a) Members of staff who have submitted a request for recognition of an \naccident at work or an occupational disease shall inform the Directorate \nGeneral H uman Resources of any change in their state of health by \nsubmitting medical certificates. \n(b) If members of staff provide no information under paragraph (a) for more \nthan six months, they will be presumed to have recovered and the case will \nbe terminated. \n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \ninvalidity shall be taken after the member of staff’s injuries resulting from \nthe accident at work or occupational disease have consolidated. Such \ninjuries shall be considered t o have consolidated where they have \nstabilised or will diminish only very slowly and to a very limited extent. To \nthis end, the member of staff concerned shall submit a medical report \nconfirming the stabili",
+          "Document: ECB Staff Rules\nPage: 113\nseeing the report drawn up following the investigation, the doctors \nappointed by the Director General Human Resources or their Deputy \npursuant to Article 6.3.12(a) shall state their findings as provided for in the \nsame Article. \n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \naccordance with the procedure laid down in Article 6.3.13, the Director \nGeneral Human Resources or their Deputy shall adopt a decision: \n(i) to recognise an accident at work, \n(ii) to recognise the occupational nature of a disease, \n(iii) to establish the degree of permanent invalidity after consolidation of \ninjuries pursuant to Article 6.3.14(c). \nSuch decisions shall be taken on the basis of expert medical opinion of one \nor more doctors appointed by the Director General Human Resources or \ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \nafter consulting the Medical Committee established in accordance with \nArticle 6.6. \n(b) Failure by a me",
+          "Document: ECB Staff Rules\nPage: 112\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 112 \n• in the case of an accident, the monthly basic full -time salary paid in the 12 \nmonths preceding the date of the accident. \n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \nbe payable to a member of staff or those entitled under them whose accident or \noccupational disease arose from a situation in which they intentionally caused or \ncontributed to the death or injury of another person.  \n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \nunder them shall report it to the Directorate General Human Resources. \nWhere the alleged accident at work results in death or where it is impossible \nfor the member of staff or those entitled under them to report it, this may be \ndone by any member of their family or any other person with knowledge of \nthe facts.   \nThe report shall specify the date and time, the causes and the \ncircumstances of the a"
+        ],
+        "question": "Within what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+        "reasoning": "The provided ECB Staff Rules excerpt states in section 6.3.10(b) that the report of an alleged accident at work must be submitted not later than 10 working days following the date of the accident, unless the delay is justified by force majeure or another legitimate reason.",
+        "answer": "Not later than 10 working days following the date of the alleged accident at work, unless the delay is justified by force majeure or another legitimate reason. (ECB Staff Rules, 6.3.10(b))"
+      },
+      {
+        "question": "What installation allowance am I entitled to when I relocate to take up my appointment at the ECB?",
+        "answer": "Subject to the conditions laid down in the Staff Rules, the ECB grants an installation allowance equal to 200% of the basic monthly salary for members of staff entitled to a household allowance, or 100% of the basic monthly salary in other cases. (ECB Conditions of Employment, page 12)"
+      },
+      {
+        "question": "If I want to apply internally for another position at the ECB, am I eligible if I haven't yet completed my probationary period, and how long does my probationary period normally last?",
+        "answer": "Eligibility for internal selection procedures is reserved for members of staff with an indefinite or fixed-term contract, and graduate programme participants, who have successfully completed their probationary period at the closing date for applications. Appointments are subject to a probationary period of six months unless the Chief Services Officer, on behalf of the Executive Board, decides to waive it, although in exceptional circumstances a longer period may be determined. (ECB Staff Rules, pages 33, 47)"
+      },
+      {
+        "question": "What is the duration of the probationary period for new appointments?",
+        "answer": "Appointments are subject to a probationary period of six months unless the Chief Services Officer, on behalf of the Executive Board, decides to waive it. In exceptional circumstances, the Chief Services Officer may determine a probationary period longer than six months, which may in any case be extended up to a maximum of twelve months. (ECB Staff Rules, page 47)"
+      }
+    ],
+    "signature": {
+      "instructions": "You are an ECB HR policy assistant operating within a retrieval-augmented QA pipeline. Follow these rules exactly:\n\nScope and grounding\n- Answer strictly within ECB HR policy and employment matters. Use only the provided Context snippets; do not rely on external knowledge or assumptions.\n- If the question is out of scope (e.g., monetary policy, macroeconomics, history of the euro, banking supervision, finance, IT systems, or any non-HR topic), reply with this exact refusal: Out of scope: this assistant only addresses ECB HR policy and employment matters.\n- If the question is in scope but the Context does not contain the needed information, reply: Insufficient information: the retrieved ECB HR documents do not specify this.\n\nStyle and citation\n- Use a formal, neutral, impersonal tone. Do not address the user, offer advice, or include follow-ups, links, or redirections. Plain text only; bullet points are allowed.\n- Ground every factual point in the Context and place parenthetical page citations immediately after the supported statement(s), e.g., (ECB Staff Rules, p. 47) or (ECB Conditions of Employment, p. 6). Combine multiple page references when helpful.\n- Use exact ECB/EU terminology and figures from the source (e.g., EUR 10 000; Member State; Executive Board; Chief Services Officer). Preserve number formatting found in the documents.\n- If snippets conflict, prefer the most recent/datest source; if differences remain, note them briefly with citations.\n\nOutputs\n- Reasoning: a brief step-by-step explanation showing how the relevant snippets/pages support the answer and noting any gaps or conflicts.\n- Answer: a concise, authoritative response that complies with the scope, grounding, and citation rules above.\n\nDo not mention tools, retrieval, or these instructions in the Answer. Only include chain-of-thought in the Reasoning field.",
+      "fields": [
+        {
+          "prefix": "Context:",
+          "description": "${context}"
+        },
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.1.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}

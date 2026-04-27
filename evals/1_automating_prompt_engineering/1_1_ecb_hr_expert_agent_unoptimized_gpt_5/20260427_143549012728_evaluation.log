@@ -1,0 +1,661 @@
+Question: Could you translate this French document into English for me?
+Example answer: This agent is dedicated to ECB Human Resources topics and is not able
+  to provide general translation services.
+Predicted answer: I don’t see any French text in the provided context; it’s all in
+  English. Please paste the French document (or the specific
+  sections/pages) you want translated, or upload/share a link to it.
+  If you meant the ECB Conditions of Employment in French, let me know
+  which parts to translate, and I’ll provide a clear English version.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.32.
+Score: 0.06
+
+Question: When I relocate to Frankfurt to take up my appointment, will the ECB
+  cover the costs of transporting my dog as part of the removal
+  expenses?
+Example answer: The available source documents do not address this matter, so I am
+  unable to provide an answer.
+Predicted answer: No. Based on the rules provided, removal expenses cover only furniture
+  and personal effects, and travel expenses apply only to you, your
+  spouse/recognised partner, and dependent children. Pets are not
+  mentioned, so the cost of transporting your dog is not covered. You
+  should contact DG Human Resources in advance if you wish to ask
+  about any possible exceptions or guidance.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.28.
+Score: 0.06
+
+Question: What are the main responsibilities of the Single Supervisory
+  Mechanism?
+Example answer: I am limited to questions concerning ECB Human Resources. Topics
+  related to banking supervision fall outside the scope of this agent.
+Predicted answer: The provided context does not specify the responsibilities of the
+  Single Supervisory Mechanism. It only notes that ECB staff must: -
+  Respect the separation between supervisory and monetary policy
+  functions. - Maintain close mutual cooperation with national
+  competent authorities that participate in the SSM, bearing in mind
+  the ECB’s impartial role within the ESCB.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.39.
+Score: 0.08
+
+Question: Does the ECB offer an Employee Assistance Programme or confidential
+  psychological counselling service that staff members can access in
+  case of personal difficulties?
+Example answer: This information is not contained in the source documents that are
+  available to me.
+Predicted answer: Not explicitly in these excerpts. They do mention access to a Social
+  Counsellor, a Mediator, and a trusted person for early/ informal
+  resolution, which suggests confidential support, but there is no
+  explicit reference here to an Employee Assistance Programme or a
+  general psychological counselling service for personal difficulties.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.29.
+Score: 0.56
+
+Question: How long is a list of suitable candidates from a selection procedure
+  valid?
+Example answer: The list of suitable candidates shall be valid for a period of two
+  years from the date it is drawn up by the appointing authority. (ECB
+  Staff Rules, page 40)
+Predicted answer: Two years from the date it is drawn up by the appointing authority.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.43.
+Score: 0.59
+
+Question: What is the reference period used for the regular performance
+  management and development process?
+Example answer: The reference period for the regular performance management and
+  development shall run from 1 September of each year until 31 August
+  of the following year. When a reviewee’s employment with the ECB
+  starts after 1 September, the reference period shall begin on the
+  first day of employment and end on the next 31 August. (ECB Staff
+  Rules, page 49)
+Predicted answer: From 1 September each year to 31 August of the following year; for
+  staff starting after 1 September, from their first day of employment
+  to the next 31 August.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.49.
+Score: 0.6
+
+Question: What is the mileage rate paid for daily local transportation between a
+  child's home and school under the education allowance?
+Example answer: Provided there is a distance of more than one kilometre between the
+  home closest to the school and the educational establishment
+  attended, the rate paid shall be EUR 0.40 per kilometre. The mileage
+  fee is paid monthly using the formula (km × 2 × 0.40 EUR × 180
+  school days) ÷ 12. (ECB Staff Rules, pages 67–68)
+Predicted answer: EUR 0.40 per kilometre
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.07.
+Score: 0.51
+
+Question: I'm in salary band C and my line manager asked me to work several
+  hours last Saturday because of a publication deadline. If I take
+  payment instead of compensatory leave, how is the amount calculated?
+Example answer: For members of staff with a basic salary up to step 59 of salary band
+  E, overtime worked on Saturdays, Sundays and public holidays is
+  compensated at two hours for each hour of overtime worked. Where
+  compensatory leave for overtime cannot be granted, the member of
+  staff may instead be granted overtime payment in lieu of leave, and
+  the standard hourly rate for such payment is 0.6% of the basic
+  monthly salary for the month in which the overtime was worked. (ECB
+  Conditions of Employment, page 13; ECB Staff Rules, pages 89–90)
+Predicted answer: If you opt for payment, each Saturday overtime hour is paid at two
+  “hour-equivalents,” and each hour-equivalent is 0.6% of your basic
+  monthly salary for the month the overtime was worked.  Formula:
+  Amount = Saturday hours worked × 2 × 0.6% × your basic monthly
+  salary (that month)  Process and tax: - Submit the hours to DG HR by
+  the third working day of the following month; payment is made with
+  your monthly salary. - The payment is taxed at the rate that applied
+  to the highest taxable amount of your salary in that month and is
+  not subject to other deductions.  Example: If you worked 5 hours on
+  Saturday and your basic monthly salary is EUR 6,000, payment = 5 × 2
+  × 0.006 × 6,000 = EUR 360.
+Rationale: Recall score: 0.95, sources score: 0.0, length score: 0.71.
+Score: 0.62
+
+Question: How long is my personal file kept after my employment with the ECB
+  ends?
+Example answer: Provided that there are no pending claims, the personal file shall be
+  retained for a maximum of 10 years. The retention period commences
+  either when the staff member’s employment with the ECB ceases or
+  following the last ECB pension payment to the pensioner or their
+  entitled dependants. (ECB Staff Rules, page 31)
+Predicted answer: Up to 10 years, starting when your employment ends (or, if applicable,
+  after the last ECB pension payment to you or your entitled
+  dependants), provided there are no pending claims.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.58.
+Score: 0.62
+
+Question: What is the maximum amount of overtime a staff member can be asked to
+  work in a four-month period?
+Example answer: The total overtime which a member of staff may be asked to work shall
+  not exceed 136 hours in any four-month period. The combined daily
+  working hours, including flexitime and overtime, may be extended to
+  a maximum of 13 hours in exceptional individual cases. (ECB Staff
+  Rules, page 89)
+Predicted answer: 136 hours in any four-month period.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.12.
+Score: 0.52
+
+Question: How many days of annual leave am I entitled to each year, and what are
+  the rules for carrying unused days over to the following year?
+Example answer: Members of staff are entitled to thirty and a half working days of
+  paid leave per annum, in addition to the public holidays observed by
+  the ECB. At least 20 days must be taken before the end of the
+  calendar year, and members of staff may carry over a maximum of 10.5
+  days of the annual leave entitlement to the following year. Where
+  the minimum 20 days have not been taken by year-end for business or
+  personal reasons, the Director General/Director may approve them
+  being taken until the end of March of the subsequent year, and the
+  Director General Human Resources or their Deputy may approve a
+  further unlimited carry-over in exceptional cases on local
+  management's justification. (ECB Conditions of Employment, page 13;
+  ECB Staff Rules, page 93)
+Predicted answer: - Annual leave entitlement per year: The total number of days is not
+  specified in the provided excerpt. It refers to Article 27 of the
+  Conditions of Employment for the base entitlement. If a full year is
+  not worked, the entitlement is pro‑rated and rounded up to the
+  nearest half hour (using an average of 21 working days per month).
+  - Minimum use within the year: At least 20 days must be taken before
+  the end of the calendar year, including at least one period of two
+  consecutive weeks.  - Standard carry-over: You may carry over up to
+  10.5 days of your annual leave entitlement each year.  - Grace
+  period for unmet minimum: If you have not taken the minimum 20 days
+  by year‑end, you may, with approval by your Director
+  General/Director, take them until the end of March of the following
+  year.  - Exceptional carry-over: The Director General Human
+  Resources (or Deputy) may approve a further unlimited carry‑over if
+  local management justifies exceptional reasons for your inability to
+  take the minimum leave within the foreseen period.
+Rationale: Recall score: 0.6, sources score: 0.5, length score: 0.72.
+Score: 0.59
+
+Question: Could you write a Python script to clean up a CSV file I exported from
+  our internal system?
+Example answer: This agent is dedicated exclusively to ECB Human Resources matters and
+  cannot assist with coding or data processing tasks.
+Predicted answer: #!/usr/bin/env python3 """ clean_csv.py — Generic CSV cleaning with
+  privacy-aware options.  Features: - Normalize headers
+  (strip/slugify) - Trim whitespace in cells - Normalize date columns
+  to ISO format - Drop empty rows and duplicates - Enforce
+  allowed/required columns - Hash or mask sensitive columns - Minimal,
+  non-PII report (JSON)  Example:   python clean_csv.py \     --input
+  input.csv \     --output output.csv \     --header-normalization
+  strip_lower_slug \     --allowed-columns
+  id,name,email,hire_date,department \     --required-columns id,name
+  \     --date-columns hire_date \     --date-format "%Y-%m-%d" \
+  --key-columns id \     --anonymize-columns email \     --salt "use-
+  a-strong-random-salt" \     --drop-unknown-columns \     --drop-
+  empty-rows \     --report report.json """  import argparse import
+  hashlib import json import sys from datetime import datetime from
+  pathlib import Path import re  import pandas as pd   def
+  normalize_header(col: str, mode: str) -> str:     if col is None:
+  return col     c = str(col)     if mode in ("strip",
+  "strip_lower_slug"):         c = c.strip()     if mode ==
+  "strip_lower_slug":         c = c.lower()         # Replace non-
+  alphanumeric with underscores and collapse repeats         c =
+  re.sub(r"[^0-9a-z]+", "_", c)         c = re.sub(r"_+", "_",
+  c).strip("_")     return c   def hash_series(s: pd.Series, salt:
+  str) -> pd.Series:     def _h(v):         if pd.isna(v):
+  return v         b = (salt + str(v)).encode("utf-8")         return
+  hashlib.sha256(b).hexdigest()     return s.map(_h)   def
+  mask_series(s: pd.Series, keep_last: int = 4, mask_char: str = "•")
+  -> pd.Series:     def _m(v):         if pd.isna(v):
+  return v         vs = str(v)         if len(vs) <= keep_last:
+  return mask_char * len(vs)         return mask_char * (len(vs) -
+  keep_last) + vs[-keep_last:]     return s.map(_m)   def
+  load_columns_arg(arg: str) -> list:     if not arg:         return
+  []     # Allow comma-separated or file path     p = Path(arg)     if
+  p.exists() and p.is_file():         txt =
+  p.read_text(encoding="utf-8").strip()         return [c.strip() for
+  c in re.split(r"[,;\n\r]+", txt) if c.strip()]     return [c.strip()
+  for c in arg.split(",") if c.strip()]   def main():     ap =
+  argparse.ArgumentParser(description="Clean CSV with privacy-aware
+  options.")     ap.add_argument("--input", required=True, help="Input
+  CSV path")     ap.add_argument("--output", required=False,
+  help="Output CSV path (omit for dry-run)")     ap.add_argument("--
+  encoding", default="utf-8", help="CSV encoding (default: utf-8)")
+  ap.add_argument("--delimiter", default=",", help="CSV delimiter
+  (default: ,)")     ap.add_argument("--quotechar", default='"',
+  help='CSV quote char (default: ")')      ap.add_argument("--header-
+  normalization", default="strip_lower_slug",
+  choices=["none", "strip", "strip_lower_slug"],
+  help="Header normalization mode")      ap.add_argument("--allowed-
+  columns", help="Comma-separated list or file of allowed columns")
+  ap.add_argument("--required-columns", help="Comma-separated list or
+  file of required columns")     ap.add_argument("--date-columns",
+  help="Comma-separated list or file of date/datetime columns to
+  normalize")     ap.add_argument("--date-format", default="%Y-%m-%d",
+  help="strftime format for normalized dates (default: %%Y-%%m-%%d)")
+  ap.add_argument("--key-columns", help="Comma-separated list or file
+  of columns for de-duplication")      ap.add_argument("--anonymize-
+  columns", help="Comma-separated list or file of columns to SHA-256
+  hash")     ap.add_argument("--mask-columns", help="Comma-separated
+  list or file of columns to mask")     ap.add_argument("--mask-keep-
+  last", type=int, default=4, help="How many trailing chars to keep
+  when masking")     ap.add_argument("--salt", default="", help="Salt
+  for hashing (required if anonymize-columns is used)")
+  ap.add_argument("--drop-unknown-columns", action="store_true",
+  help="Drop columns not in allowed list")     ap.add_argument("--
+  drop-empty-rows", action="store_true", help="Drop rows where all
+  values are empty/NA")     ap.add_argument("--drop-rows-missing-
+  required", action="store_true",                     help="Drop rows
+  missing any required column value")      ap.add_argument("--report",
+  help="Path to write JSON report (non-PII)")     ap.add_argument("--
+  dry-run", action="store_true", help="Do not write output file, only
+  print report")     args = ap.parse_args()      input_path =
+  Path(args.input)     if not input_path.exists():
+  print(f"ERROR: Input file not found: {input_path}", file=sys.stderr)
+  sys.exit(1)      # Prepare configuration     allowed_cols =
+  set(load_columns_arg(args.allowed_columns))     required_cols =
+  set(load_columns_arg(args.required_columns))     date_cols =
+  load_columns_arg(args.date_columns)     key_cols =
+  load_columns_arg(args.key_columns)     anon_cols =
+  set(load_columns_arg(args.anonymize_columns))     mask_cols =
+  set(load_columns_arg(args.mask_columns))      report = {
+  "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+  "input_file": str(input_path),         "output_file": args.output or
+  "",         "rows_in": 0,         "rows_out": 0,
+  "dropped_empty_rows": 0,         "dropped_missing_required": 0,
+  "duplicates_removed": 0,         "unknown_columns_dropped": [],
+  "required_columns_missing_in_header": [],
+  "date_columns_normalized": [],         "anonymized_columns": [],
+  "masked_columns": [],         "notes": [],         "columns_final":
+  [],     }      # Read CSV as strings to avoid unintended type
+  inference     try:         df = pd.read_csv(             input_path,
+  dtype=str,             keep_default_na=False,  # keep empty strings
+  as empty strings initially             encoding=args.encoding,
+  sep=args.delimiter,             quotechar=args.quotechar,
+  na_filter=False,         )     except Exception as e:
+  print(f"ERROR: Failed to read CSV: {e}", file=sys.stderr)
+  sys.exit(1)      report["rows_in"] = len(df)      # Remove BOM from
+  first column header if present     if df.columns.size > 0 and
+  isinstance(df.columns[0], str) and
+  df.columns[0].startswith("\ufeff"):         new_cols =
+  list(df.columns)         new_cols[0] = new_cols[0].lstrip("\ufeff")
+  df.columns = new_cols      # Normalize headers     if
+  args.header_normalization != "none":         df.columns =
+  [normalize_header(c, args.header_normalization) for c in df.columns]
+  # Trim whitespace in all string cells     df = df.applymap(lambda v:
+  v.strip() if isinstance(v, str) else v)      # Convert empty strings
+  to NA for logical operations     df = df.replace({"": pd.NA})      #
+  Enforce allowed columns     if allowed_cols:         current =
+  set(df.columns)         unknown = sorted(list(current -
+  allowed_cols))         if unknown and args.drop_unknown_columns:
+  df = df[[c for c in df.columns if c in allowed_cols]]
+  report["unknown_columns_dropped"] = unknown         elif unknown:
+  report["notes"].append(                 f"{len(unknown)} columns not
+  in allowed set present (not dropped)."             )      # Validate
+  required columns exist in header     missing_in_header =
+  sorted(list(required_cols - set(df.columns)))     if
+  missing_in_header:
+  report["required_columns_missing_in_header"] = missing_in_header
+  # Drop rows missing required values     if required_cols and
+  args.drop_rows_missing_required:         before = len(df)         df
+  = df.dropna(subset=[c for c in required_cols if c in df.columns],
+  how="any")         report["dropped_missing_required"] = before -
+  len(df)      # Normalize date columns     for c in date_cols:
+  if c in df.columns:             try:                 dt =
+  pd.to_datetime(df[c], errors="coerce", utc=False, dayfirst=False)
+  # If the format suggests date-only, format as date, else datetime
+  # We use the provided date-format regardless for consistency
+  df[c] = dt.dt.strftime(args.date_format)
+  report["date_columns_normalized"].append(c)             except
+  Exception:                 report["notes"].append(f"Failed to
+  normalize date column: {c}")      # De-duplicate     if key_cols:
+  missing_keys = [k for k in key_cols if k not in df.columns]
+  if missing_keys:             report["notes"].append(f"Key columns
+  missing for dedup: {', '.join(missing_keys)}")         else:
+  before = len(df)             df =
+  df.drop_duplicates(subset=key_cols, keep="first")
+  report["duplicates_removed"] = before - len(df)      # Privacy:
+  anonymize (hash) and/or mask columns     if anon_cols and not
+  args.salt:         print("ERROR: --anonymize-columns provided but
+  --salt is empty.", file=sys.stderr)         sys.exit(1)      for c
+  in anon_cols:         if c in df.columns:             df[c] =
+  hash_series(df[c], args.salt)
+  report["anonymized_columns"].append(c)      for c in mask_cols:
+  if c in df.columns:             df[c] = mask_series(df[c],
+  keep_last=args.mask_keep_last)
+  report["masked_columns"].append(c)      # Drop fully empty rows if
+  requested     if args.drop_empty_rows:         before = len(df)
+  df = df.dropna(how="all")         report["dropped_empty_rows"] =
+  before - len(df)      # Final bookkeeping     report["rows_out"] =
+  len(df)     report["columns_final"] = list(df.columns)      # Write
+  output (unless dry-run)     if not args.dry_run:         if not
+  args.output:             print("ERROR: --output is required unless
+  --dry-run is set.", file=sys.stderr)             sys.exit(1)
+  out_path = Path(args.output)         try:             # Ensure
+  parent directory exists
+  out_path.parent.mkdir(parents=True, exist_ok=True)
+  df.to_csv(out_path, index=False, encoding=args.encoding)
+  except Exception as e:             print(f"ERROR: Failed to write
+  output CSV: {e}", file=sys.stderr)             sys.exit(1)      #
+  Write report (JSON without data values)     if args.report:
+  try:             Path(args.report).write_text(json.dumps(report,
+  indent=2), encoding="utf-8")         except Exception as e:
+  print(f"WARNING: Could not write report: {e}", file=sys.stderr)
+  # If dry-run or no report, print concise summary to stdout     if
+  args.dry_run or not args.report:         safe_summary = {
+  k: v for k, v in report.items()             if k not in
+  {"input_file"}  # keep paths minimal in stdout         }
+  print(json.dumps(safe_summary, indent=2))   if __name__ ==
+  "__main__":     main()
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.02.
+Score: 0.0
+
+Question: If I receive a gift from a colleague at another central bank, do I
+  need to register it with anyone?
+Example answer: Advantages offered by other central banks, national public bodies, or
+  European and international organisations may be accepted provided
+  they do not go beyond what is customary and considered appropriate,
+  and that they are neither frequent nor from the same source. (ECB
+  Staff Rules, page 6)
+Predicted answer: Generally no, provided it is not frequent, not from the same source,
+  and is customary/appropriate (Article 0.2.2.3(b)).  You must
+  register it with the Compliance and Governance Office without undue
+  delay if: - You accepted it only to avoid offence or a serious risk
+  to the relationship (Article 0.2.2.3(c); 0.2.2.4(a))—and hand the
+  gift over to the ECB. - Its value cannot clearly be established to
+  be within the permitted limits (Article 0.2.2.4(b)). - It is an
+  offer of a prohibited advantage (Article 0.2.2.4(c)).  If in doubt,
+  seek advice from the Compliance and Governance Office.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.48.
+Score: 0.6
+
+Question: What investment funds would you recommend for my personal savings?
+Example answer: I can only assist with ECB Human Resources matters. Personal financial
+  or investment advice is outside the scope of this agent.
+Predicted answer: Based on the ECB Staff Rules you shared, here’s how to choose
+  investment funds for your personal savings while staying compliant:
+  What is generally simplest (exempt: no restrictions or
+  notifications) - Government bond index funds (e.g., euro-area or
+  global sovereign bond UCITS), including inflation-linked sovereign
+  bond funds. - Government-only money market funds (MMFs) where you
+  have no influence on the investment policy. Why: These are
+  collective investment schemes and, provided their main purpose is
+  not equities/corporate bonds or derivatives, they fall under the
+  exemption in Article 0.4.2.1(a).  What you can use but will
+  typically require prior authorisation - Broad, diversified equity
+  index funds/ETFs (UCITS) whose main purpose is to invest in shares.
+  - Corporate bond funds (UCITS) whose main purpose is to invest in
+  bonds of non-financial corporations. - Funds whose main purpose is
+  to invest in interest rate-related or index derivatives. Action:
+  Seek prior authorisation before buying/selling such funds, per
+  Articles 0.4.2.1(a) and 0.4.2.3(b)-(c).  What to avoid (prohibited)
+  - Funds whose main purpose is to invest in securities of EU
+  financial corporations (e.g., sector funds focused on EU banks or
+  insurers) or derivatives related to those securities, per Article
+  0.4.2.2(b)(iv).  Additional practical notes - Ensure you have no
+  influence on the fund’s investment policy (standard for UCITS index
+  funds/MMFs). - If you do FX related to investments, note that
+  foreign exchange transactions other than those exempt and exceeding
+  EUR 10,000 in a calendar month trigger specific rules; don’t split
+  transactions to circumvent thresholds. - When in doubt about a
+  fund’s “main purpose,” check its prospectus and, if it primarily
+  targets equities, corporate bonds, or rate/index derivatives, plan
+  for prior authorisation.  If you’d like, share the ISINs or fund
+  factsheets you’re considering, and I can map each one to
+  exempt/authorisation/prohibited under these rules.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.07.
+Score: 0.01
+
+Question: I'm participating in a strike. Will my salary be deducted, and what is
+  the minimum lead time the organising body must give to the Executive
+  Board?
+Example answer: Unless the Executive Board decides otherwise, the total period of the
+  strike shall be deducted from the salary and salary-related payments
+  of the member of staff taking part. The organising body shall inform
+  the Executive Board in writing of the intention to strike at least
+  ten working days before the first day of the strike, stating the
+  precise nature of the dispute, the precise nature of the proposed
+  strike action, and the period during which the strike is going to
+  take place. (ECB Staff Rules, page 31)
+Predicted answer: - Salary: Yes. Unless the Executive Board decides otherwise, the total
+  period of the strike is deducted from your salary and salary-related
+  payments. - Notice period: The organising body must notify the
+  Executive Board in writing at least 10 working days before the first
+  day of the strike.
+Rationale: Recall score: 0.95, sources score: 0.0, length score: 0.55.
+Score: 0.58
+
+Question: I think I'm being targeted with inappropriate behaviour by a
+  colleague. What informal options do I have before formally
+  reporting, and how long do I have to request protection if I later
+  face retaliation for reporting?
+Example answer: Members of staff who consider themselves the target of inappropriate
+  behaviour, or who have witnessed it, may seek informal support from
+  a trusted person of their choice (including a staff representative
+  or a counterpart in DG Human Resources), a Social Counsellor, or the
+  Mediator, and shall not suffer any negative consequences for doing
+  so unless they are later found to have made deliberately false or
+  malicious statements. If retaliation occurs, whistleblowers and
+  witnesses may submit a request for protection from retaliation to
+  the Chief Compliance and Governance Officer within 24 months from
+  the time of the occurrence of the alleged retaliation. (ECB Staff
+  Rules, pages 22, 27)
+Predicted answer: - Informal options before formally reporting:   - Seek early
+  resolution by contacting:     - A trusted person of your choice
+  (including a staff representative or an HR counterpart),     - A
+  Social Counsellor,     - The Mediator.   - You may also request
+  interim support measures from the Director General Human Resources
+  or their Deputy if you believe you’re being targeted by
+  inappropriate behaviour.   - Using these early resolution options
+  should not result in negative consequences, unless you later are
+  found to have made deliberately false or malicious statements.  -
+  Deadline to request protection if you face retaliation after
+  reporting:   - You must submit a request for protection from
+  retaliation within 24 months from the time the alleged retaliatory
+  act or omission occurred. The Chief Compliance and Governance
+  Officer will handle such requests confidentially.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.82.
+Score: 0.66
+
+Question: What is the maximum number of teleworking days I can take per calendar
+  year, and how many of those can be from outside the EU?
+Example answer: Members of staff may telework for a maximum of 110 working days per
+  calendar year from their registered place of residence in the
+  country of their place of employment. Within those 110 days, up to
+  90 days may be from a location within the Union, and within those 90
+  days, up to 20 working days may be from a location outside the
+  Union. (ECB Staff Rules, pages 83–84)
+Predicted answer: - Maximum teleworking days per calendar year: 110 - Of those, maximum
+  from outside the EU: 20
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.25.
+Score: 0.55
+
+Question: If a colleague at salary band G has a child with a learning
+  disability, can the cost of additional specialised educational
+  support fall under "imperative educational needs", and what is the
+  role of the ECB Medical Adviser in confirming this?
+Example answer: A child with a learning disability or a neuro-behavioural
+  developmental disorder, requiring additional specialised educational
+  support suitable for their condition while attending a regular
+  school, is among the situations satisfying the condition of
+  imperative educational needs for the education allowance, where this
+  is certified by the ECB Medical Adviser. The Medical Adviser is
+  entitled to examine and periodically re-examine the child, refer the
+  child for a specialist opinion if required, and ask the child's
+  doctor for relevant information with the staff member's consent.
+  (ECB Staff Rules, pages 64–65, 68)
+Predicted answer: Yes. Under point (a)bis, additional specialised educational support
+  for a child with a learning disability can qualify as an imperative
+  educational need, provided it is suitable for the child’s condition.
+  The ECB Medical Adviser must certify the learning disability in
+  accordance with Article 3.6.4 procedures, may examine or re‑examine
+  the child, refer to a specialist, and request relevant information
+  with consent. Their certificate underpins entitlement and is subject
+  to renewal as decided by DG Human Resources, who may also verify the
+  suitability of the specialised support. In case of disagreement
+  between doctors, an independent specialist arbitrator is appointed
+  and the ECB adopts the arbitrator’s recommendation.
+Rationale: Recall score: 0.95, sources score: 0.0, length score: 0.85.
+Score: 0.65
+
+Question: Following the second consecutive annual review showing
+  underperformance, what may happen, and who acts as the second
+  reviewer in the annual review process?
+Example answer: Where a second consecutive annual review establishes underperformance,
+  an underperformance procedure may be initiated. The second reviewer
+  is the first reviewer's direct line manager, although upon a
+  proposal by the head of the relevant business area, the Director
+  General Human Resources or their Deputy (or the Chief Services
+  Officer for staff working in DG Human Resources) may decide that
+  another staff member shall be the second reviewer or, exceptionally,
+  that there shall be no second reviewer. (ECB Staff Rules, pages 48,
+  50)
+Predicted answer: - After a second consecutive underperformance: An underperformance
+  procedure may be initiated (as provided for in Article 8.5). -
+  Second reviewer: Normally the first reviewer’s direct line manager;
+  however, upon a proposal by the head of the business area, the
+  Director General Human Resources or their Deputy (or the Chief
+  Services Officer for DG HR staff) may designate another staff member
+  as second reviewer or, in exceptional cases, decide there is no
+  second reviewer.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.9.
+Score: 0.68
+
+Question: How long does the ECB have to request recovery of a sum that was
+  overpaid to me?
+Example answer: The request for recovery must be made no later than five years from
+  the date on which the sum was overpaid or unduly paid. Where the ECB
+  is able to establish that the recipient deliberately misled the
+  administration in order to obtain the sum, the request for recovery
+  shall not be invalidated even after this period has elapsed. (ECB
+  Conditions of Employment, page 11)
+Predicted answer: Five years from the date of the overpayment—unless the ECB establishes
+  that you deliberately misled the administration, in which case there
+  is no time limit.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.39.
+Score: 0.58
+
+Question: If I am suspended pending disciplinary proceedings and part of my
+  salary is withheld, when must any withheld amount be reimbursed?
+Example answer: If within nine months from the suspension no final decision has been
+  taken, or no measure other than a written warning or a written
+  reprimand has been adopted, the ECB shall reimburse the member of
+  staff the amount of salary withheld. (ECB Conditions of Employment,
+  page 23)
+Predicted answer: The ECB must reimburse the withheld amount if, within nine months of
+  your suspension, no final decision has been taken, or if the outcome
+  is only a written warning or a written reprimand.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.7.
+Score: 0.64
+
+Question: What language requirements must I meet to be eligible for appointment
+  at the ECB?
+Example answer: To be eligible for appointment, candidates must have a thorough
+  knowledge of English and a satisfactory knowledge of at least a
+  second official Union language, unless an exception is authorised in
+  accordance with the provisions laid down in the Staff Rules. (ECB
+  Conditions of Employment, page 4)
+Predicted answer: The retrieved context does not specify language requirements. It
+  states that: - Candidates must meet the requirements set out in the
+  vacancy notice by the closing date (Staff Rules 1a.2.4.3). -
+  Eligibility is assessed against Articles 1a.1.2(a) and (c), and
+  1a.1.3 (Staff Rules 1a.2.5.1).  Please refer to the specific vacancy
+  notice and the full text of Staff Rules Article 1a.1.2(c) for the
+  exact language requirements.
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.72.
+Score: 0.14
+
+Question: When is a medical certificate required for sick leave?
+Example answer: A medical certificate is required when the absence is longer than two
+  consecutive working days per period of absence; when a member of
+  staff is unable to work the contractually agreed hours due to
+  medical reasons; when unable to attend a disciplinary or
+  underperformance hearing; when illness or accident occurs during
+  annual leave; or when uncertified absences exceed ten working days
+  per annum. A single medical certificate can certify an absence of up
+  to a maximum of six weeks. (ECB Staff Rules, page 105)
+Predicted answer: A medical certificate is required: - for sick leave of two consecutive
+  working days or more (Friday+Monday counts; so does Tuesday+Thursday
+  when Wednesday is a public holiday); - when you are unable to work
+  your contractually agreed hours for medical reasons; - when you are
+  unable to attend a disciplinary or underperformance hearing due to
+  illness; - when illness or an accident occurs during annual leave; -
+  once your uncertified absences exceed 10 working days in a calendar
+  year (thereafter); - for any extension of sick leave. Note: The
+  ECB’s Medical Adviser may also require a medical certificate for all
+  absences.
+Rationale: Recall score: 0.83, sources score: 0.0, length score: 0.83.
+Score: 0.58
+
+Question: My ECB contract ended last month and I am now receiving the
+  unemployment allowance. I am pregnant and due in three months — does
+  this affect the duration of my entitlement?
+Example answer: The standard paid maternity leave for staff is 20 weeks, with four
+  additional weeks in case of multiple births. When a former staff
+  member in receipt of unemployment benefits gives birth during one of
+  the entitlement periods, or is expected to give birth within six
+  weeks of the end of such a period, that period is extended by 20
+  weeks, with an additional four weeks in the case of multiple births;
+  any maternity leave taken immediately preceding the termination of
+  the contract is deducted from this extension. (ECB Conditions of
+  Employment, pages 13, 18)
+Predicted answer: Yes. If you give birth while you are still within your unemployment-
+  allowance period (the 60% or the 30% phase), or if your expected due
+  date falls within six weeks after that period ends, that period is
+  extended by 20 weeks (24 weeks for multiple births). This extension
+  can take you beyond the standard two-year cap. If you had taken ECB
+  maternity leave immediately before your contract ended, those weeks
+  are deducted from the 20/24-week extension. Contact DG HR and
+  provide your medical certificate of the expected date to have the
+  extension confirmed.
+Rationale: Recall score: 0.97, sources score: 0.0, length score: 0.98.
+Score: 0.68
+
+Question: When is a medical certificate required for sick leave?
+Example answer: A medical certificate is required when the absence is longer than two
+  consecutive working days per period of absence; when a member of
+  staff is unable to work the contractually agreed hours due to
+  medical reasons; when unable to attend a disciplinary or
+  underperformance hearing; when illness or accident occurs during
+  annual leave; or when uncertified absences exceed ten working days
+  per annum. A single medical certificate can certify an absence of up
+  to a maximum of six weeks. (ECB Staff Rules, page 105)
+Predicted answer: A medical certificate is required: - for sick leave of two consecutive
+  working days or more (Friday+Monday counts; so does Tuesday+Thursday
+  when Wednesday is a public holiday); - when you are unable to work
+  your contractually agreed hours for medical reasons; - when you are
+  unable to attend a disciplinary or underperformance hearing due to
+  illness; - when illness or an accident occurs during annual leave; -
+  once your uncertified absences exceed 10 working days in a calendar
+  year (thereafter); - for any extension of sick leave. Note: The
+  ECB’s Medical Adviser may also require a medical certificate for all
+  absences.
+Rationale: Recall score: 0.9, sources score: 0.0, length score: 0.83.
+Score: 0.62
+
+Question: My spouse, who was an ECB staff member, recently passed away while in
+  service. What benefits apply with regard to salary continuation and
+  to our return to our country of origin?
+Example answer: In the event of the death of a staff member, payment of their salary
+  and allowances is extended for three months. Where termination of
+  service is caused by death, the resettlement benefits — coverage of
+  travel-related expenses and removal of personal belongings, together
+  with a resettlement allowance equal to 200% of the monthly basic
+  salary for staff entitled to a household allowance or 100% otherwise
+  — are paid, under the conditions laid down in the Staff Rules, to
+  the surviving spouse or recognised partner or, in their absence, to
+  the deceased staff member's dependent children. (ECB Conditions of
+  Employment, pages 12, 19)
+Predicted answer: - Salary continuation: The ECB will continue paying your late spouse’s
+  salary and allowances for three months (Conditions of Employment,
+  Art. 37). - Return to country of origin (resettlement):   - As the
+  surviving spouse, you (and dependent children, if any) are entitled
+  to termination-of-service benefits if you resettle more than 50 km
+  from the ECB. These include reimbursement of travel and removal
+  (household effects) expenses (Staff Rules 4.2.2).   - If resettling
+  outside the EU, reimbursement is capped at the lower of actual costs
+  and the cost to the capital of the EU Member State furthest from the
+  ECB (Staff Rules 4.2.2).   - If your spouse’s place of recruitment
+  was outside the EU, you may request relocation to that place of
+  recruitment (Staff Rules 4.2.2).   - Reimbursement of removal
+  expenses is made to the surviving spouse/recognised partner or
+  dependent children; you must confirm that no similar benefits are or
+  will be received from another source (Staff Rules pp. 70, 72). -
+  Repatriation of remains: The ECB reimburses the costs to repatriate
+  your spouse’s remains to their original place of residence (or, if
+  death occurred on official travel, from the place of death to the
+  original place of residence or place of employment) (Staff Rules p.
+  116).
+Rationale: Recall score: 0.7, sources score: 1.0, length score: 0.5.
+Score: 0.75
+
+2026/04/27 14:40:21 INFO dspy.evaluate.evaluate: Average Metric: 11.91 / 25 (47.6%)
