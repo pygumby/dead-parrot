@@ -21,17 +21,13 @@ triage_agent = dp.TriageAgent(
         dp.ExpertAgentClient(scheme="http", host="localhost", port=8001),
         dp.ExpertAgentClient(scheme="http", host="localhost", port=8002),
     ],
-    dataset=dp.Examples(
-        qa_pairs=dp.utils.load_json(path="examples/ecb_supervisory_manual.json"),
-    ),
-    metrics={
-        "recall": dp.metrics.Recall(judge_model="openai/gpt-5"),
-        "sources": dp.metrics.Sources(judge_model="openai/gpt-5"),
-    },
+    dataset=[
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/3_sin_ecb_supman.json")),
+        dp.Examples(qa_pairs=dp.utils.load_json(path="examples/4_sin_ecb_rules.json")),
+    ],
+    metrics={"composite": dp.metrics.Composite(judge_model="openai/gpt-5")},
 )
 
 if __name__ == "__main__":
-    triage_agent.ask(
-        question="What does SSM stand for? How long is the probationary period?"
-    )
-    triage_agent.evaluate(metric="recall")
+    triage_agent.ask("What does SSM stand for? How long is the probationary period?")
+    triage_agent.evaluate(metric="composite")
