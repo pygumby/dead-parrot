@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T20:37:09.278104Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1048636",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbHrExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "What is the mileage rate paid for daily local transportation between a child's home and school under the education allowance? (Please include the current rate and any applicable conditions or limits.)"
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0a8-fe1e-7196-b3b8-b0ed13602455",
+        "identity": "52867@Mac",
+        "firstExecutionRunId": "019dd0a8-fe1e-7196-b3b8-b0ed13602455",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_hr_expert_agent-rest-c31488bd",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T20:37:09.278482Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048637",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T20:37:09.292098Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048648",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "52521@Mac",
+        "requestId": "6de3794b-98ac-4054-a4b5-b0cfd698d761",
+        "historySizeBytes": "522",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T20:37:09.315817Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048659",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            1,
+            2,
+            3
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T20:37:09.317693Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048660",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "What is the mileage rate paid for daily local transportation between a child's home and school under the education allowance? (Please include the current rate and any applicable conditions or limits.)"
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T20:37:09.322673Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048710",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "52521@Mac",
+        "requestId": "149dc350-2d27-44bf-adec-410d3b4273de",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T20:37:11.865957Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048711",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Staff Rules\nPage: 67\nage fee based on the distance between the child’s \nhome, closest to the school, and the educational establishment attended. \nProvided there is a distance of more than one kilometre between the home, \nclosest to the school, and the educational establishment attended, the rate ",
+                "Document: ECB Staff Rules\nPage: 68\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 68 \npaid shall be EUR 0.40 per kilometre. Members of staff requesting \nreimbursement of the costs of transportation shall use the form provided. \nThe mileage fee shall be paid on a monthly basis by application of the \nfollowing formula: (km*2*0.40 EUR*180 school days) /12. Whenever the \nschool attended or the child’s home changes, the mileage fee shall be \nrecalculated from the following month. \n3.8.4 With regard to Article 19 (i) (b) of the Conditions of Employment, the condition of \nimperative educational needs shall be fulfilled in the following situations:  \n(a) a child who suffers from a serious illness or disability, as certified by the \nECB Medical Adviser in accordance with paragraphs 2, 3 and 4 of \nArticle 3.6.4 of the present Staff Rules, and which requires the child to \nattend a school providing special education suitable for his/her conditions. \nThe Director General H uman Resources  or their  Deputy s",
+                "Document: ECB Staff Rules\nPage: 69\ntion allowance, payment of the education allowance will \nbe granted again subject to the usual conditions. \n3.8.9  When entitlement to the education allowance is for only a part of the school year, \nthe actual school year is used to calculate the prorated entitlement.  \n3.8.10  Where both parents are members of staff, the allowance is to be paid to the parent \nreceiving the child allowance.  \n3.8bis  Pre-school allowance \nThe provisions of Article 19bis of the Conditions of Employment shall apply as \nfollows: \nThe pre-school allowance shall commence in the month in which the dependent \nchild is born and shall be paid until the first day of month in which the child begins \nto attend a primary educational establishment and in any event no later than the \nlast day of the month in which the child reaches the age of seven.   \n ",
+                "Document: ECB Staff Rules\nPage: 67\nions of another kind on production of \nevidence that they are mandatory for admission or attendance to the \nschool. The actual costs of the tuition fees shall be evidenced by a detailed \ninvoice and proof of payment to the school; \n(b) ‘boarding fees ’: if it is a condition for attendance at an educational \nestablishment that a student resides in the educational establishment itself \nand a fee is charged for such residence, such fee shall be considered as \nboarding fees. The actual costs of the boarding fees shall be evidenced by \na detailed invoice, a statement of the condition of residence in the \neducational establishment, and proof of payment to the educational \nestablishment; \n(c) ‘costs of daily local transportation’: costs of daily local transportation shall \nbe reimbursed by a mileage fee based on the distance between the child’s \nhome, closest to the school, and the educational establishment attended. \nProvided there is a distance of more than one kilometre between the home, \n",
+                "Document: ECB Staff Rules\nPage: 69\ne year rather than making a single payment, or because of late payment, shall \nnot be considered for reimbursement. \n3.8.6 Where the allowance is stated as a monthly limit, the annual limit will be twelve \ntimes this amount. \n3.8.7  Entitlement to the education allowance shall commence on the first day of the \nmonth in which the conditions for the allowance are fulfilled. Entitlement to the \neducation allowance shall cease at the end of the month in which the conditions \nfor the allowance are no longer fulfilled. \n3.8.8  In the event of loss of dependent child status and thereby entitlement to the child \nallowance, payment of the education allowance shall cease. In the event of \nreversion to dependent child status after loss of entitlement to the child allowance \nand therefore to the education allowance, payment of the education allowance will \nbe granted again subject to the usual conditions. \n3.8.9  When entitlement to the education allowance is for only a part of the school year, \nt"
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T20:37:11.865969Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048712",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T20:37:11.868201Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048716",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "52521@Mac",
+        "requestId": "c06dd03a-d461-489a-990b-c9b54cd2f626",
+        "historySizeBytes": "6056",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T20:37:13.240817Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048763",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T20:37:13.240868Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048764",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB HR policy assistant. Use only the provided Context to answer. Produce two fields: \n        - Reasoning: a step-by-step synthesis of the relevant provisions you will use (identify the main rule, any exceptions, competent authorities, timelines, figures/thresholds, and the exact page numbers you will cite; reconcile overlaps/conflicts by preferring the most specific and most recent provision and noting this).\n        - Answer: a concise, impersonal, normative response grounded in the Context.\n        \n        Answer requirements:\n        - Lead with the main entitlement/obligation/rule that directly addresses the question.\n        - State precise figures, thresholds and formats as in source (e.g., EUR 764; six months; one month’s notice), and spell in British/European English (hyphenate terms like fixed-term; use ECB terminology).\n        - Make timelines explicit (start triggers, end conditions, cut-offs) and name the competent authority and their role when relevant (e.g., Chief Services Officer, on behalf of the Executive Board; Director General Human Resources or their Deputy).\n        - If the question has multiple parts, answer sequentially with numbered points (1., 2., …), stating defaults and consequences for each.\n        - End the Answer with parenthetical citations to every source used, giving exact page numbers and, where available, article/section markers. Use the documents’ canonical names: “ECB Staff Rules” and “ECB Conditions of Employment” (e.g., (ECB Staff Rules, §2.1.1–2.1.2, p.47; ECB Conditions of Employment, p.6)).\n        - Do not invent content or cite pages not present in the Context. If the Context is insufficient to answer reliably or lacks the precise page needed, provide a neutral fallback: “Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.” Do not add citations in this case.\n        \n        Style:\n        - Impersonal, concise, and prescriptive; avoid first person. Prefer “Members of staff/applicants/appointments are …” over “you,” unless the question explicitly asks about the user’s situation and the rule is universal.\n        - Avoid long quotations; summarise the rule precisely. \n        - Keep the Answer self-contained and limited to what is supported by the cited pages.",
+                    "role": "system"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nI want to do a transaction in euro-area government bonds worth EUR 15,000 in a single month. Do I need authorisation, and from whom, and how long before the order should I submit the request?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nTransactions exceeding EUR 10,000 within any given calendar month in government securities issued by euro area Member States are subject to prior authorisation by the Compliance and Governance Office. Any such request must be submitted at least five working days prior to the envisaged order date, and the Office shall decide on the request within five working days; if it does not react within five working days, the transaction is deemed authorised. (ECB Staff Rules, pages 15–17)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nHow long is the cooling-off period for staff at salary band I or above who were involved in supervising a credit institution before they can join that institution?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nMembers of staff at salary band I or above who were directly involved in the supervision of a credit institution may only start working for that credit institution after the expiry of one year from the date on which their direct involvement in the supervision ceased. In exceptional circumstances, this period may be increased up to two years. (ECB Staff Rules, page 10)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 112\\no report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the alleged accident at work and also the names of \\nwitnesses and of any third party which may be liable. A medical certificate \\nshall be annexed, specifying the nature of the injuries and the probable \\nconsequences of the alleged accident at work.  \\n(b) The report shall be submitted not later than 10 working days following the \\ndate on which the alleged accident at work occurs except where the \\nDirector General Human Resources or their Deputy has established that \\nthe delay was justified by force majeure or by any other legitimate reason. \\n(c) The Directorate General H uman Resources may investigate whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reim\", \"Document: ECB Staff Rules\\nPage: 112\\nte whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \\nexpenses under the ECB health insurance, or those entitled under them, \\nshall report the accident to the administrator mentioned in Article 6.3.3.  \\n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \\nan occupational disease shall submit a statement to the Directorate \\nGeneral Human Resources within a reasonable period following the onset \\nof the disease or the date on which it is diagnosed for the first time. The \\nstatement may be submitted by the member of staff or, where the \\nsymptoms of the disease allegedly caused by the perfor mance of their \\nduties at the ECB become apparent after the termination of employment, \\nby the former member of staff; where a member of staff dies as a result of \\na disease allegedly caused by the performance of \", \"Document: ECB Staff Rules\\nPage: 114\\nrdance with the draft decision \\npreviously notified to the member of staff or those entitled under them. \\n6.3.14 (a) Members of staff who have submitted a request for recognition of an \\naccident at work or an occupational disease shall inform the Directorate \\nGeneral H uman Resources of any change in their state of health by \\nsubmitting medical certificates. \\n(b) If members of staff provide no information under paragraph (a) for more \\nthan six months, they will be presumed to have recovered and the case will \\nbe terminated. \\n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \\ninvalidity shall be taken after the member of staff’s injuries resulting from \\nthe accident at work or occupational disease have consolidated. Such \\ninjuries shall be considered t o have consolidated where they have \\nstabilised or will diminish only very slowly and to a very limited extent. To \\nthis end, the member of staff concerned shall submit a medical report \\nconfirming the stabili\", \"Document: ECB Staff Rules\\nPage: 113\\nseeing the report drawn up following the investigation, the doctors \\nappointed by the Director General Human Resources or their Deputy \\npursuant to Article 6.3.12(a) shall state their findings as provided for in the \\nsame Article. \\n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \\naccordance with the procedure laid down in Article 6.3.13, the Director \\nGeneral Human Resources or their Deputy shall adopt a decision: \\n(i) to recognise an accident at work, \\n(ii) to recognise the occupational nature of a disease, \\n(iii) to establish the degree of permanent invalidity after consolidation of \\ninjuries pursuant to Article 6.3.14(c). \\nSuch decisions shall be taken on the basis of expert medical opinion of one \\nor more doctors appointed by the Director General Human Resources or \\ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \\nafter consulting the Medical Committee established in accordance with \\nArticle 6.6. \\n(b) Failure by a me\", \"Document: ECB Staff Rules\\nPage: 112\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 112 \\n• in the case of an accident, the monthly basic full -time salary paid in the 12 \\nmonths preceding the date of the accident. \\n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \\nbe payable to a member of staff or those entitled under them whose accident or \\noccupational disease arose from a situation in which they intentionally caused or \\ncontributed to the death or injury of another person.  \\n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \\nunder them shall report it to the Directorate General Human Resources. \\nWhere the alleged accident at work results in death or where it is impossible \\nfor the member of staff or those entitled under them to report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the a\"]\n\n[[ ## question ## ]]\nWithin what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided excerpt from the ECB Staff Rules (page 112) states the reporting deadline: \"The report shall be submitted not later than 10 working days following the date on which the alleged accident at work occurs except where the Director General Human Resources or their Deputy has established that the delay was justified by force majeure or by any other legitimate reason.\"\n\n[[ ## answer ## ]]\nAn alleged accident at work must be reported to the Directorate General Human Resources not later than 10 working days following the date on which the accident occurs, unless the Director General Human Resources or their Deputy accepts that the delay was justified by force majeure or another legitimate reason.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 74\\nff shall be refutably presumed having issued such evidence \\nprovided they have submitted a declaration of honour as received from the ECB.  \\nThe maximum period of entitlement to the subsistence allowance, which accrues \\non a daily basis, shall be three months. \\n4.5.2 In case of entitlement to a subsistence allowance for the entire period referred to \\nin Article 4.5.1, the member of staff shall be entitled to a subsistence allowance \\nof EUR 9 270 (hereinafter the ‘standard subsistence allowance’). This allowance \\nshall be increased by  a maximum supplement of  EUR 2 070 for any spouse/  \\nrecognised partner and dependent child accompanying them. \\n4.5.3 Subject to Article 4.5.1, a provisional payment equal to the standard subsistence \\nallowance shall be paid as a lump sum with the second monthly salary.  The \\nsupplement shall be paid following completion of the period referred to in \\nArticle 4.5.1. \\n4.5.4 Members of staff who have received the provisional payment and before the \\ncompletio\", \"Document: ECB Conditions of Employment\\nPage: 12\\nECB-PUBLIC \\nConditions of Employment for Staff of the European Central Bank \\nLatest amendments entered into force on 1 March 2026 \\nPage 12 \\n(ii) grant a subsistence allowance; \\n(iii) grant an installation allowance equal to 200% of the basic monthly salary in the case \\nof members of staff who are entitled to a household allowance or 100% of the basic \\nmonthly salary in other cases; \\n(iv) grant a one- off reimbursement of 50% of any estate agent’s fee for assistance in \\nfinding permanent rented accommodation. \\n23. Under the conditions laid down in the Staff Rules, for members of staff who resettle on \\ntermination of service the ECB shall:  \\n (i) cover travel related expenses and the expenses for the removal of their personal \\nbelongings;  \\n (ii) grant a resettlement allowance equal to 200 % of the monthly basic salary in the case \\nof members of staff who are entitled to a household allowance or 100 % of the basic \\nmonthly salary in other cases. \\nIf termination of service is caused by  t\", \"Document: ECB Staff Rules\\nPage: 117\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 117 \\n6.5.5 Entitlement to the household allowance shall be calculated on the basi s of the \\nunemployment allowance. \\n6.5.7 Extension of cover under the ECB accident insurance shall be for a maximum \\nperiod of six months subject to the payment of half of the premium based on the \\nunemployment benefit payable. \\n6.5.8 If the former member of staff ceases to fulfil the conditions of entitlement, the \\npayment of the benefits is suspended. Payment is resumed if, before the expiry \\nof the two-year period, the conditions are again fulfilled. \\n6.5.9 The above benefits\\n \\n(a) are paid monthly in arrears. When they are not due in respect of a whole \\nmonth, they shall be calculated on the basis of a 30-day month; \\n(b) are paid to the surviving dependents as appropriate in the case of death;  \\n6.5a. The provisions of Article 36a of the Conditions of Employment are applied as \\nfollows: \\n6.5a.1  Members of staff requesting the be\", \"Document: ECB Staff Rules\\nPage: 75\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 75 \\nis terminated by the ECB shall refund part of the provisional payment in proportion \\nto the unexpired portion of that three months’ period. \\n4.5.5 Where a member of staff and their spouse or recognised partner takes up \\nemployment with the ECB within a period of one year after each other, only one \\nsubsistence allowance shall be paid to the member of staff who first took up \\nemployment with the ECB. In case of resignation or termination under Article 4.5.4 \\nof the member of staff who first took up employment with the ECB, the spouse or \\nrecognised partner who joined the ECB later and maintains their employment \\nrelationship with the ECB shall become entitled to the subsistence allowance.  \\n4.6 Installation allowance \\nThe provisions of Article 22(iii) of the Conditions of Employment shall be applied \\nas follows: \\n4.6.1 On completion of the probationary period, members of staff shall be entitled to the \\ninstalla\", \"Document: ECB Conditions of Employment\\nPage: 17\\ners of staff who are unemployed \\nfollowing termination of their contract with the ECB shall be entitled to: \\n(i) a monthly unemployment allowance equal to: \\n• 60% of their last basic salary for six months; and \\n• 30% of their last basic salary for the subsequent six months and additional \\nmonths in relation to years of service and age; \\n(ii) household and child allowances; \\n(iii) continued cover under the ECB health insurance, long- term care insurance and \\naccident insurance scheme, subject to payment of the relevant contributions; and  \\n(iv) an education allowance in accordance with Article 19, limited to the reimbursement \\nof a maximum of EUR 393 per month, except for children with certified, imperative \\neducational needs as defined in the Staff Rules, in which case the reimbursement \\nshall be increased to a maximum of EUR 764.  The allowance shall be payable only \\nuntil the end of the academic year in which the member of staff becomes \\nunemployed and provided that the child remains\"]\n\n[[ ## question ## ]]\nWhat is the standard subsistence allowance amount and for how long can I receive it?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe information is in the ECB Staff Rules excerpt (pages 74–75): Article 4.5.2 defines the standard subsistence allowance and the supplement; Article 4.5.1/4.5.3 and surrounding text state the maximum entitlement period.\n\n[[ ## answer ## ]]\nThe standard subsistence allowance is EUR 9,270. The maximum period of entitlement to the subsistence allowance is three months (the allowance accrues on a daily basis). A supplement of up to EUR 2,070 may be added for a spouse/recognised partner and dependent child accompanying the staff member.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 67\\nage fee based on the distance between the child’s \\nhome, closest to the school, and the educational establishment attended. \\nProvided there is a distance of more than one kilometre between the home, \\nclosest to the school, and the educational establishment attended, the rate \", \"Document: ECB Staff Rules\\nPage: 68\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 68 \\npaid shall be EUR 0.40 per kilometre. Members of staff requesting \\nreimbursement of the costs of transportation shall use the form provided. \\nThe mileage fee shall be paid on a monthly basis by application of the \\nfollowing formula: (km*2*0.40 EUR*180 school days) /12. Whenever the \\nschool attended or the child’s home changes, the mileage fee shall be \\nrecalculated from the following month. \\n3.8.4 With regard to Article 19 (i) (b) of the Conditions of Employment, the condition of \\nimperative educational needs shall be fulfilled in the following situations:  \\n(a) a child who suffers from a serious illness or disability, as certified by the \\nECB Medical Adviser in accordance with paragraphs 2, 3 and 4 of \\nArticle 3.6.4 of the present Staff Rules, and which requires the child to \\nattend a school providing special education suitable for his/her conditions. \\nThe Director General H uman Resources  or their  Deputy s\", \"Document: ECB Staff Rules\\nPage: 69\\ntion allowance, payment of the education allowance will \\nbe granted again subject to the usual conditions. \\n3.8.9  When entitlement to the education allowance is for only a part of the school year, \\nthe actual school year is used to calculate the prorated entitlement.  \\n3.8.10  Where both parents are members of staff, the allowance is to be paid to the parent \\nreceiving the child allowance.  \\n3.8bis  Pre-school allowance \\nThe provisions of Article 19bis of the Conditions of Employment shall apply as \\nfollows: \\nThe pre-school allowance shall commence in the month in which the dependent \\nchild is born and shall be paid until the first day of month in which the child begins \\nto attend a primary educational establishment and in any event no later than the \\nlast day of the month in which the child reaches the age of seven.   \\n \", \"Document: ECB Staff Rules\\nPage: 67\\nions of another kind on production of \\nevidence that they are mandatory for admission or attendance to the \\nschool. The actual costs of the tuition fees shall be evidenced by a detailed \\ninvoice and proof of payment to the school; \\n(b) ‘boarding fees ’: if it is a condition for attendance at an educational \\nestablishment that a student resides in the educational establishment itself \\nand a fee is charged for such residence, such fee shall be considered as \\nboarding fees. The actual costs of the boarding fees shall be evidenced by \\na detailed invoice, a statement of the condition of residence in the \\neducational establishment, and proof of payment to the educational \\nestablishment; \\n(c) ‘costs of daily local transportation’: costs of daily local transportation shall \\nbe reimbursed by a mileage fee based on the distance between the child’s \\nhome, closest to the school, and the educational establishment attended. \\nProvided there is a distance of more than one kilometre between the home, \\n\", \"Document: ECB Staff Rules\\nPage: 69\\ne year rather than making a single payment, or because of late payment, shall \\nnot be considered for reimbursement. \\n3.8.6 Where the allowance is stated as a monthly limit, the annual limit will be twelve \\ntimes this amount. \\n3.8.7  Entitlement to the education allowance shall commence on the first day of the \\nmonth in which the conditions for the allowance are fulfilled. Entitlement to the \\neducation allowance shall cease at the end of the month in which the conditions \\nfor the allowance are no longer fulfilled. \\n3.8.8  In the event of loss of dependent child status and thereby entitlement to the child \\nallowance, payment of the education allowance shall cease. In the event of \\nreversion to dependent child status after loss of entitlement to the child allowance \\nand therefore to the education allowance, payment of the education allowance will \\nbe granted again subject to the usual conditions. \\n3.8.9  When entitlement to the education allowance is for only a part of the school year, \\nt\"]\n\n[[ ## question ## ]]\nWhat is the mileage rate paid for daily local transportation between a child's home and school under the education allowance? (Please include the current rate and any applicable conditions or limits.)\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T20:37:13.243084Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048948",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "52521@Mac",
+        "requestId": "a9f48fe7-37ef-4578-80d6-330e1bc1e411",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T20:37:43.617233Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048949",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n1. Identify main rule: The relevant provisions on the education allowance and costs of daily local transportation are in Article 3.8 of the ECB Staff Rules (pages 67–69). The specific rate language appears on p.68 and the eligibility/administration rules are on pp.67–69.  \n2. Main figure/threshold: The mileage rate is stated as EUR 0.40 per kilometre (p.68).  \n3. Conditions and limits: The rate is payable only \"provided there is a distance of more than one kilometre between the home, closest to the school, and the educational establishment attended\" (p.68). Reimbursement must be requested using the form provided (p.68).  \n4. Payment format and calculation: The mileage fee is paid monthly using the formula (km*2*0.40 EUR*180 school days)/12; the formula and the 180 school days factor are specified (p.68). Whenever the school attended or the child’s home changes, the mileage fee is recalculated from the following month (p.68).  \n5. Timelines/start‑stop of entitlement: Entitlement to the education allowance (and thus to related transport reimbursement) commences on the first day of the month in which the conditions are fulfilled and ceases at the end of the month in which they are no longer fulfilled (p.69). Prorating for part‑year entitlement is also referenced (p.69).  \n6. Competent authority/administration: No specific senior authority is specified for the mileage rate; administration is effected by payment on application and use of the provided form (p.68).  \n7. Sources and pages to cite: ECB Staff Rules, pages 67–69 (Article 3.8 and subparagraphs, as shown on the provided pages).\n\n[[ ## answer ## ]]\n1. Main entitlement: The mileage rate for daily local transportation between a child’s home and the school is EUR 0.40 per kilometre (payable provided the distance is more than one kilometre between the home, closest to the school, and the educational establishment attended). (ECB Staff Rules, Article 3.8, p.68)\n\n2. Conditions and limits:\n   - Eligibility: distance strictly greater than 1 kilometre between home (closest to the school) and the educational establishment. (ECB Staff Rules, Article 3.8, p.68)  \n   - Application: Members of staff requesting reimbursement must use the form provided. (ECB Staff Rules, p.68)  \n   - Calculation and payment: The mileage fee is paid monthly by applying the formula (km * 2 * 0.40 EUR * 180 school days) / 12 (the 180 school days factor is used in the formula). (ECB Staff Rules, p.68)  \n   - Changes and timing: If the school attended or the child’s home changes, the mileage fee is recalculated from the following month. Entitlement to the education allowance (and related transport reimbursement) starts on the first day of the month in which the conditions are met and ceases at the end of the month in which they cease to be met. (ECB Staff Rules, p.68–69)\n\n(ECB Staff Rules, Article 3.8 and subparagraphs, pp.67–69) \n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 2048,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 1344,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 4912,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 2816,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 6960
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T20:37:43.617246Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048950",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T20:37:43.618825Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048954",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "52521@Mac",
+        "requestId": "30c41d6d-fbbc-4f51-99f3-e62e9a533163",
+        "historySizeBytes": "32776",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T20:37:43.622640Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048958",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T20:37:43.622678Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1048959",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "1. Main entitlement: The mileage rate for daily local transportation between a child’s home and the school is EUR 0.40 per kilometre (payable provided the distance is more than one kilometre between the home, closest to the school, and the educational establishment attended). (ECB Staff Rules, Article 3.8, p.68)\n\n2. Conditions and limits:\n   - Eligibility: distance strictly greater than 1 kilometre between home (closest to the school) and the educational establishment. (ECB Staff Rules, Article 3.8, p.68)  \n   - Application: Members of staff requesting reimbursement must use the form provided. (ECB Staff Rules, p.68)  \n   - Calculation and payment: The mileage fee is paid monthly by applying the formula (km * 2 * 0.40 EUR * 180 school days) / 12 (the 180 school days factor is used in the formula). (ECB Staff Rules, p.68)  \n   - Changes and timing: If the school attended or the child’s home changes, the mileage fee is recalculated from the following month. Entitlement to the education allowance (and related transport reimbursement) starts on the first day of the month in which the conditions are met and ceases at the end of the month in which they cease to be met. (ECB Staff Rules, p.68–69)\n\n(ECB Staff Rules, Article 3.8 and subparagraphs, pp.67–69)",
+                "reasoning": "1. Identify main rule: The relevant provisions on the education allowance and costs of daily local transportation are in Article 3.8 of the ECB Staff Rules (pages 67–69). The specific rate language appears on p.68 and the eligibility/administration rules are on pp.67–69.  \n2. Main figure/threshold: The mileage rate is stated as EUR 0.40 per kilometre (p.68).  \n3. Conditions and limits: The rate is payable only \"provided there is a distance of more than one kilometre between the home, closest to the school, and the educational establishment attended\" (p.68). Reimbursement must be requested using the form provided (p.68).  \n4. Payment format and calculation: The mileage fee is paid monthly using the formula (km*2*0.40 EUR*180 school days)/12; the formula and the 180 school days factor are specified (p.68). Whenever the school attended or the child’s home changes, the mileage fee is recalculated from the following month (p.68).  \n5. Timelines/start‑stop of entitlement: Entitlement to the education allowance (and thus to related transport reimbursement) commences on the first day of the month in which the conditions are fulfilled and ceases at the end of the month in which they are no longer fulfilled (p.69). Prorating for part‑year entitlement is also referenced (p.69).  \n6. Competent authority/administration: No specific senior authority is specified for the mileage rate; administration is effected by payment on application and use of the provided form (p.68).  \n7. Sources and pages to cite: ECB Staff Rules, pages 67–69 (Article 3.8 and subparagraphs, as shown on the provided pages)."
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}

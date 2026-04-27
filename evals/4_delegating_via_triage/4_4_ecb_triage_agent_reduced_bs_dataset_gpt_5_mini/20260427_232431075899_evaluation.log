@@ -1,0 +1,732 @@
+Question: What are the upper limits on the pecuniary amounts the ECB can impose
+  by way of periodic penalty payments and by way of administrative
+  sanctions on a significant institution?
+Example answer: The upper limit on periodic penalty payments is 5% of the average
+  daily turnover of the supervised entity concerned per day of
+  infringement, and they may be imposed for a maximum period of six
+  months from the date stipulated in the relevant decision or
+  regulation. By contrast, administrative pecuniary penalties imposed
+  by the ECB may amount to up to twice the amount of the profits
+  gained or losses avoided because of the breach, or up to 10% of the
+  supervised entity's total annual turnover in the preceding business
+  year. (ECB Supervisory Manual, pages 105, 107)
+Predicted answer: Summary of upper limits and legal‑basis information (as retrieved from
+  the ECB Banking Supervision expert / ECB Supervisory Manual):  1)
+  Periodic penalty payments - Upper limit: 5% of the supervised
+  entity’s average daily turnover per day of infringement. - Maximum
+  duration: may be imposed for a maximum period of six months. -
+  Applicability: may be imposed on significant institutions; may be
+  imposed on less significant institutions only where an ECB decision
+  or regulation imposes obligations on LSIs vis‑à‑vis the ECB. - Legal
+  basis given in the retrieved material: descriptive provisions in the
+  ECB Supervisory Manual (referenced by the tool to pages c.105–106).
+  The expert tool did not provide the specific article number or the
+  formal regulation/decision title/number/date or verbatim legal text
+  that authorises these periodic penalty payments.  2) Administrative
+  pecuniary penalties - Upper limits applicable to significant
+  institutions (as stated in the retrieved material):   - Up to twice
+  the amount of the profits gained or losses avoided because of the
+  breach; or   - Up to 10% of the supervised entity’s total annual
+  turnover in the preceding business year. - Legal basis given in the
+  retrieved material: the ECB’s power to impose administrative
+  pecuniary penalties is exercised “by virtue of Article 18 of the SSM
+  Regulation” (referenced in the ECB Supervisory Manual, pages
+  c.107–108). - Applicability/allocation note: the Manual explains the
+  ECB may impose penalties on significant institutions for breaches of
+  directly applicable EU law; for certain other breaches (e.g.
+  national‑law breaches or some cases concerning natural persons) the
+  ECB may request the competent national authority to initiate
+  sanctioning proceedings.  Source and limitations - Source(s)
+  reported by the expert tool: ECB Supervisory Manual (citations in
+  the tool’s responses to pages ~105–108). - Limitation: the expert
+  tool repeatedly indicated it could not supply the precise formal
+  legal instrument citations (title/number/date) or verbatim article
+  text for the periodic penalty‑payment provision, and it did not
+  provide the full consolidated citation/wording of Article 18 of the
+  SSM Regulation beyond naming it. If you need the exact statutory
+  article text or Official Journal/regulation numbers and dates, you
+  will need to consult the consolidated legal texts (e.g. the SSM
+  Regulation) or request the expert/ source to provide the full
+  legal‑instrument citations and verbatim wording.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.26.
+Score: 0.85
+
+Question: What deadline applies to the ECB's final decision on a banking
+  authorisation application once the NCA's draft decision has been
+  submitted, and can it be extended?
+Example answer: The final decision by the ECB is to be taken within ten working days
+  of the submission of the NCA's draft decision, but this period can
+  be extended once by an additional period of ten working days. The
+  ECB notifies the NCA of the ECB decision on an application for
+  authorisation as a credit institution, and the EBA is notified too.
+  (ECB Supervisory Manual, page 52)
+Predicted answer: The ECB must take its final decision within 10 working days of the
+  NCA’s draft decision. This period may be extended once by an
+  additional 10 working days (i.e. a single extension).
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.48.
+Score: 0.6
+
+Question: What are the five criteria laid down in the SSMR and SSMFR for
+  assessing whether a bank is significant?
+Example answer: The SSMR and SSMFR provide five criteria for assessing the
+  significance of a bank: size; economic importance; significance of
+  cross-border activities; direct public financial assistance; and
+  whether the bank is one of the three most significant banks
+  established in its Member State. (ECB Supervisory Manual, page 60)
+Predicted answer: The five criteria (as given in the retrieved source) are: 1. Size. 2.
+  Economic importance. 3. Significance of cross‑border activities. 4.
+  Receipt of direct public financial assistance. 5. Whether the
+  institution is one of the three most significant banks established
+  in its Member State.  Note: The retrieved source (ECB Supervisory
+  Manual, p. 61) attributes these criteria to the SSMR and SSMFR but
+  did not provide the specific article(s) or provision references in
+  the pages returned.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.63.
+Score: 0.93
+
+Question: I'm drafting a follow-up letter on a bank's NPL ratio and would like
+  to cite our prudential provisioning expectations accurately — could
+  you summarise the minimum coverage calendar for the secured and
+  unsecured portions of new non-performing exposures?
+Example answer: Although the source material refers to an ECB guide on the treatment
+  of non-performing loans, it does not reproduce the prudential
+  provisioning expectations or the minimum coverage calendar
+  applicable to non-performing exposures. A substantive answer is
+  therefore not possible on the basis of the documents available.
+Predicted answer: I couldn't locate or retrieve the ECB prudential provisioning calendar
+  from the available resources. Please choose one of the options below
+  so I can produce the exact, citation‑ready summary you need:  1)
+  Upload the ECB guidance pages (PDF or screenshots) or paste the link
+  to the ECB document that contains the provisioning calendar. I will
+  extract the secured/unsecured percentage schedule, the
+  secured‑portion definition/valuation, and give the exact citation
+  (title, date, paragraph/table and URL) for your follow‑up letter.
+  2) If you know the exact guidance title and publication date (e.g.,
+  an ECB Guidance on NPLs or related communications), tell me that
+  title/date and I will extract the relevant passages if you upload
+  the pages or link.  3) If you prefer not to upload the source now, I
+  can draft suggested wording for your follow‑up letter that requests
+  the bank to confirm its provisioning against "ECB Banking
+  Supervision prudential provisioning expectations (ECB guidance)"
+  without quoting specific percentages. Example phrasing I can prepare
+  on request.  Tell me which option you want (and attach the document
+  or link if you choose 1 or 2), and I will proceed.
+Rationale: Recall score: 0.9, sources score: 1.0, length score: 0.25.
+Score: 0.8
+
+Question: By when must originator institutions notify the ECB of an intended
+  significant risk transfer in a securitisation transaction?
+Example answer: Originator institutions that have initiated or are considering
+  initiating the process of structuring a securitisation transaction
+  for which they intend to recognise a significant risk transfer or to
+  apply for permission under the CRR should notify the ECB at least
+  three months in advance of the expected closing date of the
+  transaction. Originator institutions should also provide the final
+  version of the documentation no later than 15 days after the closing
+  date of the transaction. (ECB Supervisory Manual, page 96)
+Predicted answer: Originators must notify the ECB at least three months before the
+  transaction’s expected closing date.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.19.
+Score: 0.54
+
+Question: For how long are JST coordinators appointed and what are the
+  expectations on rotation?
+Example answer: JST coordinators are appointed for a period of three to five years,
+  and JST coordinators and members are expected to rotate on a regular
+  basis, though not all JST members will be able to rotate at the same
+  time. (ECB Supervisory Manual, page 9)
+Predicted answer: - Appointment length: JST coordinators are appointed for a period of
+  three to five years. (ECB Supervisory Manual, p. 11) - Rotation
+  expectations: JST coordinators and members are expected to rotate on
+  a regular basis; however, not all JST members are expected to rotate
+  at the same time. No further detail on exact rotation frequency,
+  extension/renewal rules, or additional procedural guidance is
+  provided in the retrieved source.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.66.
+Score: 0.93
+
+Question: What dimensions does the ECB use to assess the quality of supervisory
+  data submitted by SIs, and what supervisory action can a JST take if
+  a quarterly data quality report flags significant issues?
+Example answer: The data quality assessment at the ECB is performed against five
+  dimensions: punctuality (lag between the required submission date
+  and the actual submission), accuracy (closeness of reported values
+  to the underlying supervisory concept), completeness (availability
+  of the required information), reliability (closeness of revised
+  values to the initially released ones) and plausibility (detection
+  of outliers via time-series and peer comparisons). If a quarterly
+  data quality report shows significant data quality issues and, after
+  a proportionate analysis, the JST detects violations of regulatory
+  requirements, the JST takes supervisory action, which may take the
+  form of an operational act addressed to the supervised entity,
+  arrangements to meet the institution's management, or a proposal to
+  use supervisory powers addressed to the Supervisory Board and the
+  Governing Council, with the results also likely to be fed into the
+  risk assessment of the supervised entity. (ECB Supervisory Manual,
+  pages 68, 69)
+Predicted answer: - Dimensions used to assess SI supervisory data quality:   1.
+  Punctuality   2. Accuracy   3. Completeness   4. Reliability   5.
+  Plausibility  - Supervisory action a JST can take if a quarterly
+  data‑quality report flags significant issues:   After a
+  proportionate analysis, if the JST finds violations of regulatory
+  requirements it may   - take supervisory action such as an
+  operational act addressed to the supervised entity or arrangements
+  to meet the institution’s management, or   - propose the use of
+  supervisory powers to the Supervisory Board and the Governing
+  Council.   Results may also be fed into the entity’s risk
+  assessment. (Source: ECB Supervisory Manual, pp. 68–70)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.7.
+Score: 0.94
+
+Question: How are the responsibilities for crisis management split between the
+  ECB and NCAs depending on whether the institution in difficulty is
+  significant or less significant?
+Example answer: For significant institutions, the JSTs in close cooperation with the
+  Business Model, Capital & Crisis Division are responsible for crisis
+  preparedness and management across different phases, with the Crisis
+  Team providing expert support to the JSTs on processes in the
+  applicable legal framework, the early identification of crisis
+  situations, the assessment and operationalisation of recovery plans
+  and resolution-related consultations. For less significant
+  institutions, the responsibility for managing crisis cases lies with
+  the NCAs and other relevant authorities at the national level, while
+  the ECB plays a coordinating role when the situation becomes
+  critical at the point of non-viability and remains the competent
+  authority for taking decisions on common procedures such as the
+  withdrawal of banking authorisations. (ECB Supervisory Manual, pages
+  99, 115)
+Predicted answer: - Significant institutions (SIs): the ECB is the direct supervisor and
+  is responsible for supervision‑side crisis management and related
+  supervisory actions.  - Less significant institutions (LSIs): the
+  NCA (and other national authorities) manage crises and take
+  supervisory decisions. The ECB nevertheless:   - exercises
+  supervisory oversight of NCAs’ handling of LSIs;   - coordinates
+  information exchange with national and resolution authorities;   -
+  is the competent authority for certain common procedures (e.g.
+  withdrawal of authorisation, qualifying‑holding decisions,
+  bridge‑bank licensing);   - can intensify oversight, participate in
+  inspections or become directly involved in specific cases or at an
+  NCA’s request, and will assume responsibility if the LSI is
+  reclassified as an SI.
+Rationale: Recall score: 0.55, sources score: 0.0, length score: 0.88.
+Score: 0.45
+
+Question: What is the scoring scale used by the JST for the overall SREP and
+  risk-level assessments?
+Example answer: The risk-level assessment considers any relevant materiality
+  assessment, any relevant automatic anchoring phase and a broad range
+  of qualitative and quantitative information, with the conclusion of
+  the assessment consisting of a summarising narrative and a score. A
+  score of 1 ('Low') indicates that there is no discernible risk of a
+  significant impact on the prudential elements of the group or its
+  entities, given the inherent risk level. (ECB Supervisory Manual,
+  page 86)
+Predicted answer: I could not find the exact scoring scale(s) in the retrieved ECB
+  Supervisory Manual excerpts. The retrieved context confirms that
+  JSTs use scores for individual elements and an overall SREP score,
+  that the JST can adjust an anchoring overall SREP score by
+  constrained judgement, and that qualifiers “+” and “-” exist for
+  Scores 2 and 3 — but it does not provide the numeric/categorical
+  scale or the meanings/definitions of each score/risk level.  If you
+  can provide the relevant Supervisory Manual pages (or permit
+  searching additional ECB materials), I will extract and quote the
+  exact scoring scale(s) and definitions.
+Rationale: Recall score: 0.0, sources score: 1.0, length score: 0.73.
+Score: 0.45
+
+Question: Under what circumstances may the ECB become directly involved in the
+  supervision of LSIs?
+Example answer: The ECB may become involved in the direct supervision of LSIs in some
+  specific cases as outlined in the SSM Framework Regulation,
+  including taking over supervisory activities to ensure the
+  consistent application of high supervisory standards or to follow up
+  on a specific request by the NCA. Ultimately, the ECB also becomes
+  responsible for direct supervision if the status of an institution
+  changes from being an LSI to an SI as a result of a significance
+  assessment. (ECB Supervisory Manual, page 115)
+Predicted answer: Circumstances in which the ECB may become directly involved in
+  supervision of LSIs (based on the ECB Supervisory Manual excerpts
+  and cited SSM legal provisions):  1. Reclassification from LSI to SI
+  - If an LSI is reclassified as a significant institution (SI)
+  following a significance assessment, the ECB becomes responsible for
+  direct supervision. - The significance assessment uses the SSM
+  significance criteria (one of which is the significance of
+  cross‑border activities). Significance assessments are carried out
+  regularly (annual) and on an ad hoc basis; the Authorisation
+  Division coordinates assessments with JSTs and NCAs. - Legal/desk
+  references in the retrieved material: SSMR (significance framework,
+  e.g. Articles 14–15 referenced), ECB Supervisory Manual pp. 61–62
+  and 116.  2. Deterioration, crisis or non‑viability situations - The
+  ECB’s involvement may intensify as an institution’s financial
+  situation deteriorates; in crisis or
+  non‑viability/failing‑or‑likely‑to‑fail cases the ECB can take over
+  direct supervision where necessary to manage the situation
+  (including early‑intervention and failing‑or‑likely‑to‑fail
+  decisions). - The ECB also takes decisions on LSI “common
+  procedures” in crisis contexts (e.g. qualifying holdings, withdrawal
+  of authorisation, licensing of a bridge bank). - Legal/desk
+  references in the retrieved material: SSMR Article 6 (notably 6(4),
+  6(5)(b) and 6(7)) and SSMFR Articles 67–69 and Part IV; ECB
+  Supervisory Manual pp. 114 and 116.  3. At the explicit request of
+  the NCA - The Manual excerpts state that in specific cases the ECB
+  may take over supervisory activities to ensure consistent
+  application of high supervisory standards or to follow up on a
+  specific request by the NCA. - Reference: ECB Supervisory Manual p.
+  116 (and summary references at pp. 6 and 112).  Other relevant
+  points from the retrieved material - Cross‑border
+  activity/membership: “Significance of cross‑border activities” is
+  one of the five significance criteria; meeting that criterion (by
+  itself) can trigger reclassification to SI and thus ECB
+  responsibility (Manual pp. 61–62, 114). - Operational coordination:
+  the Authorisation Division maintains the supervised‑entity list and
+  coordinates regular and ad hoc assessments in close collaboration
+  with JSTs and NCAs (Manual pp. 61–62).  Limitations / not provided
+  in the retrieved extracts - The supplied pages do not set out
+  detailed procedural handover steps, formal internal ECB
+  decision‑making or voting rules for takeover, required
+  notification/consultation mechanics or precise statutory timelines
+  for assuming direct supervision, nor do they include concrete
+  published examples/case studies of past ECB takeovers of LSIs. These
+  items were not present in the provided excerpts (see Manual pp. 112,
+  116 and surrounding text).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.2.
+Score: 0.84
+
+Question: Could you explain how the Pillar 2 Requirement add-on is
+  quantitatively calibrated at the individual bank level — in
+  particular, how findings on credit, market and operational risk
+  translate into a specific basis-point uplift?
+Example answer: The source material describes the SREP at a methodological and
+  procedural level but does not set out a quantitative calibration
+  framework for translating individual risk findings into a basis-
+  point Pillar 2 Requirement add-on. The information needed to answer
+  this question is not contained in the available documents.
+Predicted answer: Short answer: From the public ECB material retrieved in these queries
+  there is no published, numeric scoring→basis‑point mapping that
+  converts supervisory findings on credit, market and operational risk
+  into a specific P2R uplift in basis points. What the retrieved
+  ECB/SSM material does state (authoritative high‑level points from
+  the SREP/Supervisory Manual pages retrieved) is:   - P2R is set
+  through the SREP on a bank‑by‑bank basis. The SREP provides a
+  holistic assessment of an institution’s risk profile and formalises
+  supervisory measures in the SREP decision (ECB Supervisory Manual
+  references cited in retrievals: e.g. pp. 86, 89–91).   - Supervisory
+  judgement is applied. The SREP combines quantitative and qualitative
+  assessments, and the second‑line benchmarking/review process is used
+  to promote consistency and discuss/adjust supervisory outcomes with
+  Joint Supervisory Teams. This is described at a high level in the
+  retrieved pages, but no numeric conversion rules are given.   - P2R
+  can be expressed as a CET1 ratio add‑on and bank‑specific P2R
+  outcomes are published on the ECB banking supervision website
+  (publication is subject to institution consent). The retrieved pages
+  confirm publication of bank‑specific P2R values but do not show
+  conversion mechanics or mapping tables.   What is not available in
+  the retrieved public material (and therefore cannot be provided
+  here):   - No public tables, formulas or mapping rules that
+  translate specific credit/market/operational risk findings or SREP
+  risk scores into a concrete basis‑point uplift.  - No published
+  aggregation/weighting rules across risk types, no explicit rounding
+  or conservative‑buffer conventions described, and no worked numeric
+  examples or decision templates showing how risk findings map to bps.
+  Implication: If you need a rule‑based numeric conversion (e.g. "X
+  score in credit risk => Y bps add‑on"), that was not present in the
+  retrieved ECB public material. The available public information
+  indicates P2R calibration is case‑specific and judgement‑based
+  through the SREP, supported by benchmarking to promote
+  comparability, and outcomes are communicated (published) for each
+  bank.   Next steps I can take for you (pick one):  1) Request the
+  ECB agent to retrieve specific pages/sections of the ECB Supervisory
+  Manual or the SREP methodology (if you can point to particular
+  documents or provide access) in case the detailed material is
+  located elsewhere in those documents.  2) Ask the ECB agent to
+  confirm explicitly whether the detailed scoring→bps conversion
+  mechanics and internal templates are internal/non‑public.  3)
+  Retrieve examples of published bank‑specific P2R values from the ECB
+  banking supervision website (to show how outcomes are reported and
+  in what numeric form).   Tell me which of the above you prefer and I
+  will request it.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.11.
+Score: 0.52
+
+Question: Within what timeframe must the Administrative Board of Review issue
+  its opinion, and is that opinion binding?
+Example answer: The ABoR must adopt an opinion on the contested decision within two
+  months of receiving the request, and the opinion must be submitted
+  to the Supervisory Board without delay. The ABoR's opinion is not
+  binding on the Supervisory Board or on the Governing Council. (ECB
+  Supervisory Manual, page 28)
+Predicted answer: There is no "Administrative Board of Review" in the ECB Staff Rules /
+  Staff Regulations / Conditions of Employment texts examined, so no
+  timeframe for such a board to issue an opinion is specified and no
+  provision states that such an opinion would be binding.  Closest
+  relevant provisions: - Director General HR administrative review:
+  request within 2 months; DG HR must notify decision within 2 months
+  of the request (Art. 8.1.2–8.1.3, p.121). - Disciplinary Committee:
+  final opinion transmitted without undue delay, normally within 5
+  months of notification of composition (p.127).
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.54.
+Score: 0.11
+
+Question: If the Governing Council objects to a draft supervisory decision under
+  the non-objection procedure, what avenues exist to resolve the
+  disagreement, and how is the Mediation Panel composed?
+Example answer: If the Governing Council objects, three procedures may be followed: an
+  NCA concerned by the decision and with different views may request
+  mediation; if no request for mediation is submitted, the Supervisory
+  Board may amend the draft decision in order to incorporate the
+  comments of the Governing Council; or, if the Supervisory Board does
+  not submit a new draft decision, the objections are sent to the
+  responsible business areas. The Mediation Panel includes one member
+  per participating Member State, chosen from among the members of the
+  Governing Council and the Supervisory Board, and decides by simple
+  majority with each member having one vote. (ECB Supervisory Manual,
+  pages 17, 24)
+Predicted answer: Avenues to resolve a Governing Council objection under the
+  non‑objection procedure - Mediation request by the concerned NCA: an
+  NCA may request mediation so that the objection is dealt with by the
+  Mediation Panel.   - Supervisory Board amendment: if no mediation is
+  requested, the Supervisory Board may amend the draft decision to
+  incorporate the Governing Council’s comments.   - Referral back to
+  business areas: if the Supervisory Board does not submit a new
+  draft, the objections are sent back to the responsible business
+  areas.  Relevant timelines (as given) - Governing Council
+  non‑objection period: up to ten working days for the Governing
+  Council to object.   - Supervisory Board written procedure: standard
+  five working days for the Supervisory Board written procedure.   -
+  Emergency procedure: deadlines may be shortened in urgent cases.
+  Mediation Panel — composition and decision rule - Composition: one
+  member per participating Member State, chosen from among the members
+  of the Governing Council and the Supervisory Board.   - Decision
+  rule: the Mediation Panel decides by simple majority; each member
+  has one vote.  Notes/limitations from the source - The source did
+  not set out more detailed appointment mechanics or term lengths for
+  individual Mediation Panel members, nor a step‑by‑step description
+  of the internal mediation procedure beyond the Panel being the body
+  that deals with mediation requests.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.51.
+Score: 0.6
+
+Question: The Manual is described as non-binding, yet our internal review office
+  sometimes treats it as quasi-binding. On what legal basis can the
+  SSM depart from the Manual's policies, and how is this reflected in
+  the language regime applied to supervisory decisions?
+Example answer: The Manual is not a legally binding document and the SSM is empowered
+  to depart from the general policy established in it where factors in
+  specific cases justify doing so and sufficient rationale is
+  provided, with such divergent policy choices needing to be
+  compatible with the general principles of EU law, in particular
+  equal treatment, proportionality and the legitimate expectations of
+  supervised entities. As regards the language regime, although
+  English is the SSM's operational working language, documents sent by
+  the ECB to a Member State or to a person subject to the jurisdiction
+  of a Member State should in principle be drafted in the language of
+  such State, although most SIs have agreed to use English for
+  supervisory decisions and day-to-day communication. (ECB Supervisory
+  Manual, pages 3, 25)
+Predicted answer: Summary (based on the SSM Supervisory Manual excerpts provided by the
+  ECB Banking Supervision expert agent)  1) Legal basis and conditions
+  for departing from the Manual - The Manual is non‑binding. It
+  expressly states that the SSM is "empowered to depart from the
+  general policy established in this Manual if there are factors in
+  specific cases that justify doing so and if sufficient rationale is
+  provided." (Manual, p.4, as reported by the expert agent). - Any
+  departure from the Manual must be compatible with general principles
+  of EU law — in particular equal treatment, proportionality and the
+  legitimate expectations of supervised entities — and with the wider
+  SSM legal framework referenced in the Manual. - The Manual refers to
+  the SSM legal framework and certain ECB decisions as the surrounding
+  legal instruments (the agent reported the Manual cites instruments
+  such as Regulation (EU) No 1024/2013 (SSMR) — Article 7 — and SSMFR
+  Articles 118–119, plus relevant ECB decisions). In practice this
+  means departures should be justified on the facts of the case and
+  must have a legal basis consistent with those higher‑level rules and
+  principles (i.e. you cannot rely on the Manual to override or
+  contradict binding legal obligations).  2) How this is reflected in
+  practice (what supervisors should do) - If a supervisor departs from
+  a Manual policy they should record a sufficient rationale explaining
+  why the specific case justifies divergence and demonstrate
+  compatibility with the applicable legal principles and SSM legal
+  framework (as required by the Manual text cited). - The Manual
+  thereby functions as guidance that may be applied flexibly in
+  individual cases, but deviations must be reasoned and lawful.  3)
+  Language regime for supervisory decisions and communications - The
+  Manual states the EU language regime applies to communications with
+  national competent authorities, supervised entities and other EU
+  bodies (Manual, pp.26–27 as reported). - Documents sent to the ECB
+  may be drafted in any official EU language chosen by the sender; the
+  reply should be in the same language. - English is the operational
+  working language internally. Where addressees have agreed to use
+  English, supervisory decisions and day‑to‑day communications are
+  prepared in English. - Where addressees have not agreed to English,
+  the authentic version of a decision is adopted in the language
+  chosen by the addressee and the ECB is responsible for translation
+  (per the Manual text reported). - The Manual excerpt available did
+  not reproduce the full incoming‑communications rules and the expert
+  agent noted some parts were truncated, so further procedural detail
+  beyond these points was not provided in the retrieved material.
+  Sources relied on (as provided by the expert agent) - SSM
+  Supervisory Manual (explicitly cited pages: p.4 for
+  non‑binding/departure rules; pp.26–27 for language regime), and the
+  Manual’s references to SSM legal instruments and ECB decisions (e.g.
+  SSMR Article 7; SSMFR Articles 118–119; relevant ECB decisions) as
+  reported by the agent.  If you want, I can (a) fetch the exact
+  Manual passages cited, (b) retrieve the texts of the referenced
+  SSMR/SSMFR articles and ECB decisions for direct citation, or (c)
+  draft a short template justification that supervisors could use when
+  they decide to depart from a Manual policy.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.24.
+Score: 0.85
+
+Question: Why does the ECB maintain a separation between its monetary policy and
+  supervisory functions, and how is it implemented at Governing
+  Council level?
+Example answer: To prevent conflicts of interest between the ECB's monetary policy and
+  supervisory tasks, the ECB has to ensure a separation so that each
+  function is exercised in accordance with its applicable objectives.
+  The ECB has an independent Supervisory Board which proposes draft
+  supervisory decisions to the Governing Council, which may adopt or
+  object to the proposed decisions but cannot in principle modify
+  them, and the Governing Council's deliberations on supervisory
+  matters are kept strictly apart from those on other ECB functions,
+  with separate agendas and meetings. (ECB Supervisory Manual, page 7)
+Predicted answer: Short answer - Why: The ECB keeps monetary policy and banking
+  supervision separate to avoid conflicts of interest and to ensure
+  “each function is exercised in accordance with its applicable
+  objectives.” (ECB Supervisory Manual, p. 8; the Manual cites SSMR
+  Article 25 and ECB Decision ECB/2014/39 as the legal basis.) - How
+  at Governing Council level: supervisory decisions are prepared and
+  approved inside the ECB by the independent Supervisory Board and
+  submitted to the Governing Council under a non‑objection procedure —
+  the Governing Council “may adopt or object to the proposed decisions
+  but cannot in principle modify them.” (ECB Supervisory Manual, pp.
+  8, 16). Procedural safeguards keep supervisory deliberations
+  separate from other ECB business, limit information flows, and
+  require Executive Board approval for certain confidential transfers.
+  (ECB Supervisory Manual, p. 8.)  Key points and supporting extracts
+  (from the Supervisory Manual) 1) Rationale / mandate - Purpose:
+  separation is intended “to prevent conflicts of interest … so that
+  each function is exercised in accordance with its applicable
+  objectives.” (ECB Supervisory Manual, p. 8). - The Manual cites the
+  SSM Regulation (SSMR Article 25) and the “ECB Decision on the
+  implementation of separation between the monetary policy and
+  supervision functions of the ECB (ECB/2014/39)” as the
+  implementing/legal instruments (Manual references noted on pp. 8,
+  16).  2) Role of the Supervisory Board and Governing Council
+  procedure - Role: “The Supervisory Board is responsible for the
+  planning and execution of the ECB’s supervisory tasks” and “its
+  approval is required for draft supervisory decisions with legally
+  binding effect prior to their submission to the Governing Council.”
+  (ECB Supervisory Manual, p. 16). - Submission / non‑objection: the
+  Manual explains that the Supervisory Board “proposes draft
+  supervisory decisions to the Governing Council” and that the
+  Governing Council “may adopt or object to the proposed decisions but
+  cannot in principle modify them.” (ECB Supervisory Manual, pp. 8,
+  16).  3) Procedural safeguards at Governing Council level and
+  information‑sharing limits - Separate handling: supervisory
+  deliberations are “kept strictly apart from those on other ECB
+  functions, with separate agendas and meetings.” (ECB Supervisory
+  Manual, p. 8). - Information restrictions (exact wording from the
+  Manual): “The approval of the Executive Board is necessary for some
+  confidential information to flow from one function to another.
+  Confidential raw data can be shared upon request and on a
+  need‑to‑know basis. One of the ECB's policy functions should not
+  disclose confidential information containing assessments or policy
+  recommendations to the other, except upon request and on a
+  need‑to‑know basis.” (ECB Supervisory Manual, p. 8). -
+  Organisational/people safeguards: staff performing supervisory tasks
+  are organised in dedicated directorates reporting functionally to
+  the Chair and Vice‑Chair of the Supervisory Board; Supervisory Board
+  members make annual declarations of interest. (ECB Supervisory
+  Manual, p. 8). - Vice‑Chair link to Executive Board: the Manual
+  notes the Vice‑Chair of the Supervisory Board is a member of the
+  Executive Board (ECB Supervisory Manual, p. 16). - Observers: the
+  Manual notes a Commission representative may be invited as an
+  observer to Supervisory Board meetings. (ECB Supervisory Manual, p.
+  36).  What the supplied material explicitly cites but does not
+  reproduce - The Manual refers to SSMR Article 25 and to ECB Decision
+  ECB/2014/39 as the legal basis implementing separation (Manual
+  references, pp. 8, 16), but the verbatim text of those instruments
+  is not reproduced in the pages supplied.  What is not specified in
+  the retrieved pages (gaps) - Exact verbatim text of SSMR Article 25
+  or of ECB Decision ECB/2014/39 is not included in the retrieved
+  pages. - Detailed Governing Council mechanics for supervisory items
+  are not set out in the supplied excerpts: the pages do not specify
+  precise participation/voting/quorum/abstention or recusal rules for
+  Governing Council members when supervisory acts are considered. -
+  The Manual excerpts do not provide step‑by‑step operational
+  procedures (forms, templates or process flows) for Executive Board
+  approval of confidential information transfers beyond the quoted
+  high‑level rules (“approval … necessary”, “need‑to‑know basis”). -
+  The supplied pages do not state whether the Supervisory Board Chair
+  (or the Supervisory Board Vice‑Chair beyond being an Executive Board
+  member) physically attends Governing Council meetings for
+  supervisory items; they state only that the Supervisory Board
+  “proposes draft supervisory decisions” and describe the Vice‑Chair’s
+  Executive Board link (p. 16). - The terms “firewall” or “Chinese
+  wall” do not appear in the retrieved extracts; the Manual uses
+  “separation” and describes procedural safeguards instead (ECB
+  Supervisory Manual, p. 8).  If you need the exact statutory text
+  (e.g. full wording of SSMR Article 25), the full ECB Decision
+  ECB/2014/39, or the Governing Council/ECB Rules of Procedure
+  provisions (quorum, voting, recusal/abstention wording, or detailed
+  Executive Board information‑transfer protocols), I can fetch and
+  quote those primary texts on request.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.12.
+Score: 0.82
+
+Question: Why does the ECB maintain a separation between its monetary policy and
+  supervisory functions, and how is it implemented at Governing
+  Council level?
+Example answer: To prevent conflicts of interest between the ECB's monetary policy and
+  supervisory tasks, the ECB has to ensure a separation so that each
+  function is exercised in accordance with its applicable objectives.
+  The ECB has an independent Supervisory Board which proposes draft
+  supervisory decisions to the Governing Council, which may adopt or
+  object to the proposed decisions but cannot in principle modify
+  them, and the Governing Council's deliberations on supervisory
+  matters are kept strictly apart from those on other ECB functions,
+  with separate agendas and meetings. (ECB Supervisory Manual, page 7)
+Predicted answer: Concise answer (based only on the retrieved material)  Why the ECB
+  maintains separation - Rationale/mandate: When the ECB was given
+  supervisory tasks in addition to its monetary‑policy role,
+  separation was required to prevent conflicts of interest and “so
+  that each function is exercised in accordance with its applicable
+  objectives.” (ECB Supervisory Manual, p. 8). The Supervisory Manual
+  and cited instruments point to the SSM Regulation (Article 25) and
+  the ECB Decision on implementation of separation (ECB/2014/39) as
+  the legal basis for that separation (as referenced in the Manual).
+  How the separation is implemented at Governing Council level - Role
+  of the Supervisory Board: An independent Supervisory Board is
+  responsible for planning and executing the ECB’s supervisory tasks
+  and must approve draft supervisory decisions with legally binding
+  effect before they are submitted to the Governing Council (ECB
+  Supervisory Manual, p. 16). - Submission and the non‑objection
+  procedure: Draft supervisory decisions approved by the Supervisory
+  Board are submitted to the Governing Council for final decision
+  under the SSM non‑objection procedure. As described in the Manual,
+  the Governing Council “may adopt or object to the proposed decisions
+  but cannot in principle modify them.” (ECB Supervisory Manual, pp.
+  8, 16). - Procedural safeguards at Governing Council level:   -
+  Separate handling: Deliberations on supervisory matters are kept
+  “strictly apart from those on other ECB functions, with separate
+  agendas and meetings.” (ECB Supervisory Manual, p. 8).   - Limits on
+  information flows: “The approval of the Executive Board is necessary
+  for some confidential information to flow from one function to
+  another. Confidential raw data can be shared upon request and on a
+  need‑to‑know basis. One of the ECB's policy functions should not
+  disclose confidential information containing assessments or policy
+  recommendations to the other, except upon request and on a
+  need‑to‑know basis.” (ECB Supervisory Manual, p. 8).   -
+  Organizational separation and declarations: Supervisory work is
+  carried out in dedicated directorates (staff reporting functionally
+  to the Supervisory Board’s Chair and Vice‑Chair) and Supervisory
+  Board members declare their interests (ECB Supervisory Manual, p.
+  8). The Manual also notes a Commission representative may be invited
+  as an observer to Supervisory Board meetings (p. 36).   - Vice‑Chair
+  link to Executive Board: The Vice‑Chair of the Supervisory Board is
+  a member of the ECB Executive Board (ECB Supervisory Manual, p. 16),
+  which is relevant for the communication/approval channels between
+  functions. - Legal references cited by the Manual: SSM Regulation
+  Article 25 and the ECB Decision on implementation of separation
+  (ECB/2014/39) are identified in the Manual as the principal legal
+  instruments implementing the separation principle (ECB Supervisory
+  Manual, pp. 8, 16, 31).  Specific short quotes from the Supervisory
+  Manual (as retrieved) - “The approval of the Executive Board is
+  necessary for some confidential information to flow from one
+  function to another. Confidential raw data can be shared upon
+  request and on a need‑to‑know basis. One of the ECB's policy
+  functions should not disclose confidential information containing
+  assessments or policy recommendations to the other, except upon
+  request and on a need‑to‑know basis.” (ECB Supervisory Manual, p.
+  8). - The Governing Council “may adopt or object to the proposed
+  decisions but cannot in principle modify them.” (ECB Supervisory
+  Manual, pp. 8, 16). - “The Governing Council is the ultimate
+  decision‑making body… It is composed of the members of the ECB’s
+  Executive Board and the governors of the national central banks in
+  the euro area.” (ECB Supervisory Manual, p. 16).  Noted gaps in the
+  retrieved material (explicit) - The retrieved excerpts do not
+  provide verbatim text of SSMR Article 25 or of ECB Decision
+  ECB/2014/39; they cite those instruments but do not reproduce their
+  wording in the pages provided. - The retrieved material does not
+  specify exact Governing Council
+  participation/voting/quorum/abstention/recusal rules for supervisory
+  items (e.g. whether any members are excluded or must recuse
+  themselves on particular supervisory items, or the quorum/majority
+  mechanics for the non‑objection procedure). The Manual gives the
+  non‑objection outcome rule and timing but not detailed voting/quorum
+  formulas. - The retrieved material does not set out detailed,
+  step‑by‑step operational procedures for Executive Board approval
+  when confidential information is transferred between functions (it
+  states the approval requirement and need‑to‑know principle but does
+  not provide procedural templates or stepwise mechanics). - The
+  retrieved pages do not say explicitly whether the Supervisory Board
+  Chair (or Vice‑Chair) physically attends Governing Council meetings
+  for supervisory items; they state the Supervisory Board submits
+  drafts and note the Vice‑Chair is an Executive Board member, but
+  attendance/participation practice at the Council is not detailed in
+  the excerpts. - The terms “firewall” or “Chinese wall” do not appear
+  in the retrieved Manual excerpts; the Manual uses the terminology
+  “separation” and describes the related procedural safeguards.  If
+  you would like, I can (based on primary instruments rather than only
+  the Manual excerpts) retrieve and quote the exact SSM Regulation
+  text (Article 25), the ECB Decision ECB/2014/39 provisions and the
+  ECB Rules of Procedure to fill the gaps above
+  (voting/quorum/recusal/attendance and the Decision’s formal
+  wording).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.11.
+Score: 0.82
+
+Question: What are the specific timelines and templates that supervised banks
+  must use when notifying the ECB of major ICT-related incidents under
+  DORA? I need the details ahead of a JST meeting later this week.
+Example answer: The available source material does not address notification timelines
+  or templates for ICT-related incidents under the Digital Operational
+  Resilience Act. I cannot provide a reliable answer on this point
+  from the documents at my disposal.
+Predicted answer: Short answer for your JST meeting: I could not locate any ECB/SSM DORA
+  incident‑reporting materials in the Supervision Manual pages
+  available to me. The ECB‑expert agent consistently returned: "The
+  retrieved context does not contain the requested information; please
+  provide the relevant page(s) of the ECB Supervisory Manual."  What
+  this means for the JST pack: - I do not have authoritative ECB/SSM
+  timelines (initial notification hours; interim update frequency;
+  final report days), templates (names/filenames/links or required
+  fields), submission channel(s) (portal/mailbox/CASPER instructions),
+  or the ECB/SSM definition/thresholds of a "major" ICT incident from
+  the supplied material. - The only relevant items present in the
+  retrieved context were high‑level references to supervisory
+  reporting infrastructure (e.g., CASPER mentioned generically), and
+  to the ECB’s general ability to require additional supervisory
+  information. Those references do not substitute for the
+  DORA/EBA/ENISA requirements you requested.  Recommended next steps
+  (pick one): 1) Provide the ECB/SSM source pages or files    - Upload
+  the specific Supervisory Manual pages, ECB/SSM guidance PDFs, or
+  template files you have (or point me to them). If you upload those
+  pages/files I will extract the exact timelines, template
+  filenames/fields, submission channel addresses, thresholds, routing
+  rules and cite the page numbers for your JST pack.  2) Allow me to
+  retrieve EU sources (if you want me to fetch them)    - If you want
+  me to gather DORA, EBA and ENISA materials from the web, please
+  confirm you permit web access (or provide the links). I will then
+  fetch:      - the DORA Regulation (Regulation (EU) 2022/2554)
+  articles on incident reporting,      - any EBA ITS/guidelines on the
+  incident‑reporting template and timelines,      - ENISA guidance or
+  templates if applicable,      - the official incident template
+  file(s) and submission portal details,      - and produce a concise
+  briefing with exact citations and links for the JST.  3) If you
+  prefer, I can prepare an interim non‑authoritative checklist    - I
+  can draft a pragmatic checklist of typical items banks should
+  prepare for an ICT incident notification (what to have ready for
+  initial notification, typical interim update practices, common
+  required fields) — but this would not be an authoritative citation
+  to ECB/SSM or DORA and should be used only as operational guidance
+  until the official sources are provided.  Tell me which option you
+  prefer (1, 2 or 3). If you choose 1, please upload the relevant
+  Supervisory Manual pages, ECB/SSM templates or URLs. If you choose
+  2, confirm permission to fetch web sources and I will retrieve the
+  DORA/EBA/ENISA documents and return the exact timelines, templates,
+  submission channels and citations.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.08.
+Score: 0.52
+
+2026/04/27 23:33:01 INFO dspy.evaluate.evaluate: Average Metric: 9.1 / 14 (65.0%)

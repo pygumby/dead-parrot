@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T20:37:11.488462Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1048690",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbHrExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "How far in advance do I need to submit a request for prior authorisation for a private financial transaction?"
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0a9-06c0-7708-8d0a-0e966b1f1ad6",
+        "identity": "52867@Mac",
+        "firstExecutionRunId": "019dd0a9-06c0-7708-8d0a-0e966b1f1ad6",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_hr_expert_agent-rest-bafdfa63",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T20:37:11.488724Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048691",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T20:37:11.494998Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048696",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "52521@Mac",
+        "requestId": "ddcf181f-91e1-4f0c-9f42-618d0e543aa0",
+        "historySizeBytes": "430",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T20:37:11.874521Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048733",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            2,
+            1,
+            3
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T20:37:11.874562Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048734",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "How far in advance do I need to submit a request for prior authorisation for a private financial transaction?"
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T20:37:11.876954Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048800",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "52521@Mac",
+        "requestId": "e0a743c1-0cfc-4cf3-a167-6729a5b7753a",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T20:37:13.963037Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048801",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Staff Rules\nPage: 17\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 17 \n0.4.2.6 Request for authorisation \nAny request for authorisation in accordance with Article 0.4.2.3 or 0.4.2.5 shall be \nsubmitted to the Compliance and Governance Office at least five working days \nprior to the envisaged order date in the format specified by the Compliance and \nGovernance Office. The Compliance and Governance Office shall decide on the \nrequest within five working days considering in particular and where relevant: (a) \nthe professional duties of the member of staff and their access to relevant inside \ninformation; (b) the speculative/non-speculative nature of the transaction; (c) the \namounts involved, if indicated; (d) the reputational risk for the ECB; (e) the timing, \nin particular the proximity to a meeting of the ECB’s decision-making bodies. The \nCompliance and Governance Office may make an authorisation subject to certain \nconditions. If the Compliance and Governance Office does not re",
+                "Document: ECB Staff Rules\nPage: 15\nxcept central banks) established or having a \nbranch in the Union; (ii) derivative instruments related to such bonds and \nshares; (iii) combined instruments  if one of the components falls under (i) \nor (ii); and (iv) units in collective investment schemes whose main purpose \nis to invest in such bonds, shares or instruments.  \n0.4.2.3 Private financial transactions subject to prior authorisation \nMembers of staff shall request the authorisation of the Compliance and \nGovernance Office before making the following financial transactions:  \n(a) short-term trading, i.e. the sale or purchase of assets with the same \nInternational Securities Identification Number  (ISIN) which have been \npurchased or sold within the previous month. No authorisation is required \nif the subsequent sale is made in execution of a stop- loss order which the \nmember of staff has given to their broker; \n(b) transactions exceeding EUR 10 000 within any given calendar month in \n(i) government securities issued by eu",
+                "Document: ECB Staff Rules\nPage: 17\nty to a meeting of the ECB’s decision-making bodies. The \nCompliance and Governance Office may make an authorisation subject to certain \nconditions. If the Compliance and Governance Office does not react to a request \nfor authorisation within five working days, the transaction shall be deemed to be \nauthorised.  \n0.4.2.7 Discretionary asset management by a third party \nFinancial transactions shall be exempted from the restrictions laid down in Articles \n0.4.2.2 to 0.4.2.6 to the extent that they are made by a third party to whose \ndiscretion the member of staff has entrusted the management of their private \nfinancial transactions under a written asset management agreement. This \nexemption is subject to the authorisation by the Compliance and Governance \nOffice. The authorisation shall be granted if evidence is provided that the terms \nand conditions ensure that the member of st aff cannot directly or indirectly \ninfluence any management decision to be taken by the third party. The memb",
+                "Document: ECB Staff Rules\nPage: 14\nlicable to the following categories:  \n(a) exempt private financial transactions; \n(b) prohibited private financial transactions; \n(c) private financial transactions subject to prior authorisation;   \n(d) private financial transactions subject to ex-post reporting. \n0.4.2.1 Exempt private financial transactions \nWithout prejudice to the general obligations laid down in Articles 0.4.1 and 0.4.3, \nmembers of staff may make the following private financial transactions without \nbeing subject to any restrictions or notification obligations: \n(a) purchase or sale of units in a collective investment scheme in respect of \nwhich the member of staff has no influence on the investment policy, except \nschemes whose main purpose is to invest in assets falling under Articles \n0.4.2.2(b) and 0.4.2.3(b) and (c) , as well as funds transfers and foreign \nexchange transactions directly connected with such purchase or sale; \n(b) purchase or redemption of insurance policies or annuities; \n(c) purchase or s",
+                "Document: ECB Staff Rules\nPage: 16\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 16 \n0.4.2.4 Private financial transactions subject to ex-post reporting \nMembers of staff shall report to the Compliance and Governance Office any \nprivate financial transaction exceeding EUR 10 000 within any given calendar \nmonth which does not fall under one of the previous three categories within 30 \ncalendar days after its ex ecution. The Compliance and Governance Office shall \ndefine the information to be reported, the reporting format and the procedure.  \nThe obligation to report shall apply in particular to: \n(a) loans other than mortgages (including switching from a fixed to a floating \narrangement, or vice- versa, or extending an existing loan). Members of \nstaff shall indicate whether the loan is used for the acquisition of financial \ninstruments; \n(b) interest rate-related derivatives and derivatives based on indices;  \n(c) purchases or sales of shares of corporations other than the ones set out in \nAr"
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T20:37:13.963052Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048802",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T20:37:13.965456Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048810",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "52521@Mac",
+        "requestId": "4a335ee6-d4ab-4126-b42c-cacb3e096dde",
+        "historySizeBytes": "6757",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T20:37:13.989747Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048829",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T20:37:13.989771Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048830",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB HR policy assistant. Use only the provided Context to answer. Produce two fields: \n        - Reasoning: a step-by-step synthesis of the relevant provisions you will use (identify the main rule, any exceptions, competent authorities, timelines, figures/thresholds, and the exact page numbers you will cite; reconcile overlaps/conflicts by preferring the most specific and most recent provision and noting this).\n        - Answer: a concise, impersonal, normative response grounded in the Context.\n        \n        Answer requirements:\n        - Lead with the main entitlement/obligation/rule that directly addresses the question.\n        - State precise figures, thresholds and formats as in source (e.g., EUR 764; six months; one month’s notice), and spell in British/European English (hyphenate terms like fixed-term; use ECB terminology).\n        - Make timelines explicit (start triggers, end conditions, cut-offs) and name the competent authority and their role when relevant (e.g., Chief Services Officer, on behalf of the Executive Board; Director General Human Resources or their Deputy).\n        - If the question has multiple parts, answer sequentially with numbered points (1., 2., …), stating defaults and consequences for each.\n        - End the Answer with parenthetical citations to every source used, giving exact page numbers and, where available, article/section markers. Use the documents’ canonical names: “ECB Staff Rules” and “ECB Conditions of Employment” (e.g., (ECB Staff Rules, §2.1.1–2.1.2, p.47; ECB Conditions of Employment, p.6)).\n        - Do not invent content or cite pages not present in the Context. If the Context is insufficient to answer reliably or lacks the precise page needed, provide a neutral fallback: “Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.” Do not add citations in this case.\n        \n        Style:\n        - Impersonal, concise, and prescriptive; avoid first person. Prefer “Members of staff/applicants/appointments are …” over “you,” unless the question explicitly asks about the user’s situation and the rule is universal.\n        - Avoid long quotations; summarise the rule precisely. \n        - Keep the Answer self-contained and limited to what is supported by the cited pages.",
+                    "role": "system"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nI want to do a transaction in euro-area government bonds worth EUR 15,000 in a single month. Do I need authorisation, and from whom, and how long before the order should I submit the request?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nTransactions exceeding EUR 10,000 within any given calendar month in government securities issued by euro area Member States are subject to prior authorisation by the Compliance and Governance Office. Any such request must be submitted at least five working days prior to the envisaged order date, and the Office shall decide on the request within five working days; if it does not react within five working days, the transaction is deemed authorised. (ECB Staff Rules, pages 15–17)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nHow long is the cooling-off period for staff at salary band I or above who were involved in supervising a credit institution before they can join that institution?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nMembers of staff at salary band I or above who were directly involved in the supervision of a credit institution may only start working for that credit institution after the expiry of one year from the date on which their direct involvement in the supervision ceased. In exceptional circumstances, this period may be increased up to two years. (ECB Staff Rules, page 10)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 112\\no report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the alleged accident at work and also the names of \\nwitnesses and of any third party which may be liable. A medical certificate \\nshall be annexed, specifying the nature of the injuries and the probable \\nconsequences of the alleged accident at work.  \\n(b) The report shall be submitted not later than 10 working days following the \\ndate on which the alleged accident at work occurs except where the \\nDirector General Human Resources or their Deputy has established that \\nthe delay was justified by force majeure or by any other legitimate reason. \\n(c) The Directorate General H uman Resources may investigate whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reim\", \"Document: ECB Staff Rules\\nPage: 112\\nte whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \\nexpenses under the ECB health insurance, or those entitled under them, \\nshall report the accident to the administrator mentioned in Article 6.3.3.  \\n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \\nan occupational disease shall submit a statement to the Directorate \\nGeneral Human Resources within a reasonable period following the onset \\nof the disease or the date on which it is diagnosed for the first time. The \\nstatement may be submitted by the member of staff or, where the \\nsymptoms of the disease allegedly caused by the perfor mance of their \\nduties at the ECB become apparent after the termination of employment, \\nby the former member of staff; where a member of staff dies as a result of \\na disease allegedly caused by the performance of \", \"Document: ECB Staff Rules\\nPage: 114\\nrdance with the draft decision \\npreviously notified to the member of staff or those entitled under them. \\n6.3.14 (a) Members of staff who have submitted a request for recognition of an \\naccident at work or an occupational disease shall inform the Directorate \\nGeneral H uman Resources of any change in their state of health by \\nsubmitting medical certificates. \\n(b) If members of staff provide no information under paragraph (a) for more \\nthan six months, they will be presumed to have recovered and the case will \\nbe terminated. \\n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \\ninvalidity shall be taken after the member of staff’s injuries resulting from \\nthe accident at work or occupational disease have consolidated. Such \\ninjuries shall be considered t o have consolidated where they have \\nstabilised or will diminish only very slowly and to a very limited extent. To \\nthis end, the member of staff concerned shall submit a medical report \\nconfirming the stabili\", \"Document: ECB Staff Rules\\nPage: 113\\nseeing the report drawn up following the investigation, the doctors \\nappointed by the Director General Human Resources or their Deputy \\npursuant to Article 6.3.12(a) shall state their findings as provided for in the \\nsame Article. \\n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \\naccordance with the procedure laid down in Article 6.3.13, the Director \\nGeneral Human Resources or their Deputy shall adopt a decision: \\n(i) to recognise an accident at work, \\n(ii) to recognise the occupational nature of a disease, \\n(iii) to establish the degree of permanent invalidity after consolidation of \\ninjuries pursuant to Article 6.3.14(c). \\nSuch decisions shall be taken on the basis of expert medical opinion of one \\nor more doctors appointed by the Director General Human Resources or \\ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \\nafter consulting the Medical Committee established in accordance with \\nArticle 6.6. \\n(b) Failure by a me\", \"Document: ECB Staff Rules\\nPage: 112\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 112 \\n• in the case of an accident, the monthly basic full -time salary paid in the 12 \\nmonths preceding the date of the accident. \\n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \\nbe payable to a member of staff or those entitled under them whose accident or \\noccupational disease arose from a situation in which they intentionally caused or \\ncontributed to the death or injury of another person.  \\n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \\nunder them shall report it to the Directorate General Human Resources. \\nWhere the alleged accident at work results in death or where it is impossible \\nfor the member of staff or those entitled under them to report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the a\"]\n\n[[ ## question ## ]]\nWithin what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided excerpt from the ECB Staff Rules (page 112) states the reporting deadline: \"The report shall be submitted not later than 10 working days following the date on which the alleged accident at work occurs except where the Director General Human Resources or their Deputy has established that the delay was justified by force majeure or by any other legitimate reason.\"\n\n[[ ## answer ## ]]\nAn alleged accident at work must be reported to the Directorate General Human Resources not later than 10 working days following the date on which the accident occurs, unless the Director General Human Resources or their Deputy accepts that the delay was justified by force majeure or another legitimate reason.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 74\\nff shall be refutably presumed having issued such evidence \\nprovided they have submitted a declaration of honour as received from the ECB.  \\nThe maximum period of entitlement to the subsistence allowance, which accrues \\non a daily basis, shall be three months. \\n4.5.2 In case of entitlement to a subsistence allowance for the entire period referred to \\nin Article 4.5.1, the member of staff shall be entitled to a subsistence allowance \\nof EUR 9 270 (hereinafter the ‘standard subsistence allowance’). This allowance \\nshall be increased by  a maximum supplement of  EUR 2 070 for any spouse/  \\nrecognised partner and dependent child accompanying them. \\n4.5.3 Subject to Article 4.5.1, a provisional payment equal to the standard subsistence \\nallowance shall be paid as a lump sum with the second monthly salary.  The \\nsupplement shall be paid following completion of the period referred to in \\nArticle 4.5.1. \\n4.5.4 Members of staff who have received the provisional payment and before the \\ncompletio\", \"Document: ECB Conditions of Employment\\nPage: 12\\nECB-PUBLIC \\nConditions of Employment for Staff of the European Central Bank \\nLatest amendments entered into force on 1 March 2026 \\nPage 12 \\n(ii) grant a subsistence allowance; \\n(iii) grant an installation allowance equal to 200% of the basic monthly salary in the case \\nof members of staff who are entitled to a household allowance or 100% of the basic \\nmonthly salary in other cases; \\n(iv) grant a one- off reimbursement of 50% of any estate agent’s fee for assistance in \\nfinding permanent rented accommodation. \\n23. Under the conditions laid down in the Staff Rules, for members of staff who resettle on \\ntermination of service the ECB shall:  \\n (i) cover travel related expenses and the expenses for the removal of their personal \\nbelongings;  \\n (ii) grant a resettlement allowance equal to 200 % of the monthly basic salary in the case \\nof members of staff who are entitled to a household allowance or 100 % of the basic \\nmonthly salary in other cases. \\nIf termination of service is caused by  t\", \"Document: ECB Staff Rules\\nPage: 117\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 117 \\n6.5.5 Entitlement to the household allowance shall be calculated on the basi s of the \\nunemployment allowance. \\n6.5.7 Extension of cover under the ECB accident insurance shall be for a maximum \\nperiod of six months subject to the payment of half of the premium based on the \\nunemployment benefit payable. \\n6.5.8 If the former member of staff ceases to fulfil the conditions of entitlement, the \\npayment of the benefits is suspended. Payment is resumed if, before the expiry \\nof the two-year period, the conditions are again fulfilled. \\n6.5.9 The above benefits\\n \\n(a) are paid monthly in arrears. When they are not due in respect of a whole \\nmonth, they shall be calculated on the basis of a 30-day month; \\n(b) are paid to the surviving dependents as appropriate in the case of death;  \\n6.5a. The provisions of Article 36a of the Conditions of Employment are applied as \\nfollows: \\n6.5a.1  Members of staff requesting the be\", \"Document: ECB Staff Rules\\nPage: 75\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 75 \\nis terminated by the ECB shall refund part of the provisional payment in proportion \\nto the unexpired portion of that three months’ period. \\n4.5.5 Where a member of staff and their spouse or recognised partner takes up \\nemployment with the ECB within a period of one year after each other, only one \\nsubsistence allowance shall be paid to the member of staff who first took up \\nemployment with the ECB. In case of resignation or termination under Article 4.5.4 \\nof the member of staff who first took up employment with the ECB, the spouse or \\nrecognised partner who joined the ECB later and maintains their employment \\nrelationship with the ECB shall become entitled to the subsistence allowance.  \\n4.6 Installation allowance \\nThe provisions of Article 22(iii) of the Conditions of Employment shall be applied \\nas follows: \\n4.6.1 On completion of the probationary period, members of staff shall be entitled to the \\ninstalla\", \"Document: ECB Conditions of Employment\\nPage: 17\\ners of staff who are unemployed \\nfollowing termination of their contract with the ECB shall be entitled to: \\n(i) a monthly unemployment allowance equal to: \\n• 60% of their last basic salary for six months; and \\n• 30% of their last basic salary for the subsequent six months and additional \\nmonths in relation to years of service and age; \\n(ii) household and child allowances; \\n(iii) continued cover under the ECB health insurance, long- term care insurance and \\naccident insurance scheme, subject to payment of the relevant contributions; and  \\n(iv) an education allowance in accordance with Article 19, limited to the reimbursement \\nof a maximum of EUR 393 per month, except for children with certified, imperative \\neducational needs as defined in the Staff Rules, in which case the reimbursement \\nshall be increased to a maximum of EUR 764.  The allowance shall be payable only \\nuntil the end of the academic year in which the member of staff becomes \\nunemployed and provided that the child remains\"]\n\n[[ ## question ## ]]\nWhat is the standard subsistence allowance amount and for how long can I receive it?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe information is in the ECB Staff Rules excerpt (pages 74–75): Article 4.5.2 defines the standard subsistence allowance and the supplement; Article 4.5.1/4.5.3 and surrounding text state the maximum entitlement period.\n\n[[ ## answer ## ]]\nThe standard subsistence allowance is EUR 9,270. The maximum period of entitlement to the subsistence allowance is three months (the allowance accrues on a daily basis). A supplement of up to EUR 2,070 may be added for a spouse/recognised partner and dependent child accompanying the staff member.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 17\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 17 \\n0.4.2.6 Request for authorisation \\nAny request for authorisation in accordance with Article 0.4.2.3 or 0.4.2.5 shall be \\nsubmitted to the Compliance and Governance Office at least five working days \\nprior to the envisaged order date in the format specified by the Compliance and \\nGovernance Office. The Compliance and Governance Office shall decide on the \\nrequest within five working days considering in particular and where relevant: (a) \\nthe professional duties of the member of staff and their access to relevant inside \\ninformation; (b) the speculative/non-speculative nature of the transaction; (c) the \\namounts involved, if indicated; (d) the reputational risk for the ECB; (e) the timing, \\nin particular the proximity to a meeting of the ECB’s decision-making bodies. The \\nCompliance and Governance Office may make an authorisation subject to certain \\nconditions. If the Compliance and Governance Office does not re\", \"Document: ECB Staff Rules\\nPage: 15\\nxcept central banks) established or having a \\nbranch in the Union; (ii) derivative instruments related to such bonds and \\nshares; (iii) combined instruments  if one of the components falls under (i) \\nor (ii); and (iv) units in collective investment schemes whose main purpose \\nis to invest in such bonds, shares or instruments.  \\n0.4.2.3 Private financial transactions subject to prior authorisation \\nMembers of staff shall request the authorisation of the Compliance and \\nGovernance Office before making the following financial transactions:  \\n(a) short-term trading, i.e. the sale or purchase of assets with the same \\nInternational Securities Identification Number  (ISIN) which have been \\npurchased or sold within the previous month. No authorisation is required \\nif the subsequent sale is made in execution of a stop- loss order which the \\nmember of staff has given to their broker; \\n(b) transactions exceeding EUR 10 000 within any given calendar month in \\n(i) government securities issued by eu\", \"Document: ECB Staff Rules\\nPage: 17\\nty to a meeting of the ECB’s decision-making bodies. The \\nCompliance and Governance Office may make an authorisation subject to certain \\nconditions. If the Compliance and Governance Office does not react to a request \\nfor authorisation within five working days, the transaction shall be deemed to be \\nauthorised.  \\n0.4.2.7 Discretionary asset management by a third party \\nFinancial transactions shall be exempted from the restrictions laid down in Articles \\n0.4.2.2 to 0.4.2.6 to the extent that they are made by a third party to whose \\ndiscretion the member of staff has entrusted the management of their private \\nfinancial transactions under a written asset management agreement. This \\nexemption is subject to the authorisation by the Compliance and Governance \\nOffice. The authorisation shall be granted if evidence is provided that the terms \\nand conditions ensure that the member of st aff cannot directly or indirectly \\ninfluence any management decision to be taken by the third party. The memb\", \"Document: ECB Staff Rules\\nPage: 14\\nlicable to the following categories:  \\n(a) exempt private financial transactions; \\n(b) prohibited private financial transactions; \\n(c) private financial transactions subject to prior authorisation;   \\n(d) private financial transactions subject to ex-post reporting. \\n0.4.2.1 Exempt private financial transactions \\nWithout prejudice to the general obligations laid down in Articles 0.4.1 and 0.4.3, \\nmembers of staff may make the following private financial transactions without \\nbeing subject to any restrictions or notification obligations: \\n(a) purchase or sale of units in a collective investment scheme in respect of \\nwhich the member of staff has no influence on the investment policy, except \\nschemes whose main purpose is to invest in assets falling under Articles \\n0.4.2.2(b) and 0.4.2.3(b) and (c) , as well as funds transfers and foreign \\nexchange transactions directly connected with such purchase or sale; \\n(b) purchase or redemption of insurance policies or annuities; \\n(c) purchase or s\", \"Document: ECB Staff Rules\\nPage: 16\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 16 \\n0.4.2.4 Private financial transactions subject to ex-post reporting \\nMembers of staff shall report to the Compliance and Governance Office any \\nprivate financial transaction exceeding EUR 10 000 within any given calendar \\nmonth which does not fall under one of the previous three categories within 30 \\ncalendar days after its ex ecution. The Compliance and Governance Office shall \\ndefine the information to be reported, the reporting format and the procedure.  \\nThe obligation to report shall apply in particular to: \\n(a) loans other than mortgages (including switching from a fixed to a floating \\narrangement, or vice- versa, or extending an existing loan). Members of \\nstaff shall indicate whether the loan is used for the acquisition of financial \\ninstruments; \\n(b) interest rate-related derivatives and derivatives based on indices;  \\n(c) purchases or sales of shares of corporations other than the ones set out in \\nAr\"]\n\n[[ ## question ## ]]\nHow far in advance do I need to submit a request for prior authorisation for a private financial transaction?\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T20:37:13.990771Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048900",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "52521@Mac",
+        "requestId": "439d21df-4bd7-4297-bf21-42c6d3195a1c",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T20:37:34.219962Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048901",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n- Main rule: Article 0.4.2.6 requires that any request for authorisation under Articles 0.4.2.3 or 0.4.2.5 be submitted to the Compliance and Governance Office at least five working days prior to the envisaged order date, and in the format specified by the Compliance and Governance Office (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Competent authority and role: the Compliance and Governance Office receives requests, decides on them within five working days and may make an authorisation subject to conditions (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Timeline / consequences: the Compliance and Governance Office shall decide within five working days; if it does not react within five working days, the transaction is deemed authorised (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Scope reference: the authorisation obligation arises under Articles 0.4.2.3 / 0.4.2.5 (private financial transactions subject to prior authorisation) (ECB Staff Rules, Art. 0.4.2.3, p.15).\n- No conflicting provisions located in the retrieved context; the most specific, directly applicable provision is Art. 0.4.2.6 (p.17).\n\n[[ ## answer ## ]]\nRequests for prior authorisation must be submitted to the Compliance and Governance Office at least five working days prior to the envisaged order date, in the format specified by the Compliance and Governance Office. The Compliance and Governance Office will decide within five working days and may impose conditions; if it does not react within five working days the transaction is deemed authorised. (ECB Staff Rules, Art. 0.4.2.6, p.17; Art. 0.4.2.3, p.15)\n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 1373,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 960,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 5089,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 3712,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 6462
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T20:37:34.220001Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048902",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T20:37:34.222269Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048906",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "52521@Mac",
+        "requestId": "74d238b4-eb6c-488d-9929-53e16b920400",
+        "historySizeBytes": "32905",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T20:37:34.232765Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048910",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T20:37:34.232810Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1048911",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "Requests for prior authorisation must be submitted to the Compliance and Governance Office at least five working days prior to the envisaged order date, in the format specified by the Compliance and Governance Office. The Compliance and Governance Office will decide within five working days and may impose conditions; if it does not react within five working days the transaction is deemed authorised. (ECB Staff Rules, Art. 0.4.2.6, p.17; Art. 0.4.2.3, p.15)",
+                "reasoning": "- Main rule: Article 0.4.2.6 requires that any request for authorisation under Articles 0.4.2.3 or 0.4.2.5 be submitted to the Compliance and Governance Office at least five working days prior to the envisaged order date, and in the format specified by the Compliance and Governance Office (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Competent authority and role: the Compliance and Governance Office receives requests, decides on them within five working days and may make an authorisation subject to conditions (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Timeline / consequences: the Compliance and Governance Office shall decide within five working days; if it does not react within five working days, the transaction is deemed authorised (ECB Staff Rules, Art. 0.4.2.6, p.17).\n- Scope reference: the authorisation obligation arises under Articles 0.4.2.3 / 0.4.2.5 (private financial transactions subject to prior authorisation) (ECB Staff Rules, Art. 0.4.2.3, p.15).\n- No conflicting provisions located in the retrieved context; the most specific, directly applicable provision is Art. 0.4.2.6 (p.17)."
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}

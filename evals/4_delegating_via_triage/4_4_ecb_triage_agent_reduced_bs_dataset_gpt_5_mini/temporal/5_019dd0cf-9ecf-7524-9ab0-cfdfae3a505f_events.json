@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T21:19:20.783338Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1048619",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbBsExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_bs_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "Please provide the official description of a Joint Supervisory Team (JST): who are its members (roles and typical participating institutions/authorities) and how the size of a JST is determined (including factors considered and any rules/guidance on composition and staffing levels). Cite relevant SSM/ECB guidance if applicable."
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0cf-9ecf-7524-9ab0-cfdfae3a505f",
+        "identity": "55202@Mac",
+        "firstExecutionRunId": "019dd0cf-9ecf-7524-9ab0-cfdfae3a505f",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_bs_expert_agent-rest-135e2239",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T21:19:20.783365Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048620",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_bs_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T21:19:20.788488Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048630",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "55035@Mac",
+        "requestId": "cc431431-e0c1-484f-bdea-384dccfe0c67",
+        "historySizeBytes": "651",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T21:19:21.741325Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048677",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "55035@Mac",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            3,
+            1,
+            2
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T21:19:21.741340Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048678",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_bs_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "Please provide the official description of a Joint Supervisory Team (JST): who are its members (roles and typical participating institutions/authorities) and how the size of a JST is determined (including factors considered and any rules/guidance on composition and staffing levels). Cite relevant SSM/ECB guidance if applicable."
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T21:19:21.743303Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048735",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "55035@Mac",
+        "requestId": "f14ae901-de17-4a0c-a89d-33eacc6c1712",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T21:19:24.177667Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048736",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Supervisory Manual\nPage: 10\nness model and risk \nprofile of the supervised entity. \nFigure 2 \nFunctioning of the Joint Supervisory Teams \n \n \nThe JST is responsible for drafting and organising the Supervisory Examination \nProgramme and for conducting ongoing supervisory work at the consolidated, sub- \nconsolidated and solo levels. These tasks encompass assessments of an \ninstitution’s risk profile, business model and strategy, risk management systems, \nSupervisory Board\nApproval/validation\nJST coordinator\nCore JST sub-coordinators\n(support JST coordinator) \nTeam of experts \nfrom NCAs and ECB\nECB intermediate \nstructures \n(DGs)\nGoverning Council\nsupport JSTs\nHorizontal divisions\nSSMFR Articles 3, 4, 5 and 6  ",
+                "Document: ECB Supervisory Manual\nPage: 10\n \nSupervisory Manual – Functioning of the Single Supervisory Mechanism \n \n9 \ninformation on banks designated as SIs and LSIs, covering aspects such as banks’ \nbalance sheet composition, profitability, capital adequacy, leverage, funding, liquidity \nand the quality of their assets.  \n1.2.2 Joint Supervisory Teams \nThe day-to-day supervision of SIs is conducted by JSTs working in DG/SIB, DG/UDI \nand DG/SPL. As shown in Figure 2, the JSTs comprise staff from both the ECB and \nthe NCAs of the countries in which the SIs, including their banking subsidiaries or \nsignificant cross-border branches, are established. A JST is established for each SI \nat the highest level of consolidation. The size, overall composition and organisation \nof a JST varies depending on the nature, complexity, scale, business model and risk \nprofile of the supervised entity. \nFigure 2 \nFunctioning of the Joint Supervisory Teams \n \n \nThe JST is responsible for drafting and organising the Supervisory Examination \nProgra",
+                "Document: ECB Supervisory Manual\nPage: 46\nthe management bodies of all \nentities directly supervised by the ECB, both in their management function and their \nsupervisory function. \nIn order to ensure all supervisory duties are properly carried out, the Technology & \nInnovation Division and the SSM Secretariat Division have been established, the \nlatter of which supports the Supervisory Board and its structures, particularly in the \nquality and efficiency of their decision-making processes. \n2.3 Day-to-day supervision \nJSTs carry out key supervisory tasks in coordination with the horizontal functions of \nthe ECB. This can involve on-site interventions at supervised institutions, if needed. \nDepending on a specific bank’s risk profile assessment, the ECB may impose a wide \nrange of supervisory measures. \n2.3.1 Joint Supervisory Teams \nThe day-to-day supervision of SIs is primarily conducted off-site by the JSTs, which \ncomprise staff from NCAs and the ECB and are supported by the horizontal and \nspecialised expertise divisions o",
+                "Document: ECB Supervisory Manual\nPage: 11\n the ECB. NCA local coordinators support the \nJST coordinator in the day-to-day supervision of SIs while also reflecting the views of \nthe relevant NCAs. For instance, they contribute to the preparation and revision of \nthe Supervisory Examination Programme. \nJST coordinators are appointed for a period of three to five years. JST coordinators \nand members are expected to rotate on a regular basis, though not all JST members \nwill be able to rotate at the same time. \nCore JST \nThe JSTs of banks operating with a significant presence in more than one \nparticipating Member State establish a core JST. The core JST is chaired by the JST \ncoordinator and is composed of the local coordinators of the relevant NCAs \ndepending on the materiality of the local subsidiary or branch. The core JST is \nresponsible for organising the allocation of tasks among JST members, preparing \nand revising the Supervisory Examination Programme, monitoring its implementation \nand reviewing the assessment. \n1.2.3 Or",
+                "Document: ECB Supervisory Manual\nPage: 71\nasis and that are aimed at assessing the suitability of members of \nmanagement bodies, checking compliance with prudential regulation, assessing the \nrisk profile and performing the Supervisory Review and Evaluation Process (SREP). \nFor significant institutions that fall under European banking supervision, these tasks \nfall under the remit of the JSTs. In addition to ongoing supervision, it may be \nnecessary to conduct in-depth reviews on certain topics by organising a dedicated \non-site mission (e.g. an inspection or an internal model investigation). The on-site \ninspections are typically carried out by an inspection team, which – while \norganisationally independent – works in close cooperation with the respective JST. \nThe various supervisory activities typically result in supervisory measures addressed \nto the supervised entity. Supervisory activities and decisions are typically followed by \na number of routine steps such as the monitoring of compliance and, if necessary, \nenforceme"
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "55035@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T21:19:24.177689Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048737",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "55035@Mac-749fca03c4054568b4435af70e9f02c1",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_bs_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T21:19:24.180611Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048741",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "55035@Mac",
+        "requestId": "2b64fb43-8b8c-473d-88c3-65fdb6490b1e",
+        "historySizeBytes": "6939",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T21:19:24.857932Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048776",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "55035@Mac",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T21:19:24.857949Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048777",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_bs_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB SSM citation‑first RAG assistant. Use only the supplied Context (no external knowledge or links) to answer factual governance and operational questions from the ECB Supervisory Manual.\n        \n        Produce:\n        - Reasoning: Step‑by‑step mapping from the question to specific context snippets/pages; extract the relevant rules, thresholds, timelines and sanctions; note explicitly if any required element is missing. Do not fabricate content or citations.\n        - Answer: 1–3 sentences, concise, formal EU‑legal style; use acronyms (e.g. ECB, NCA, SSMR, SSMFR) and inline enumerations (i), (ii), (iii); address multi‑part queries in order; include exact figures/conditions as stated (no rounding/speculation).\n        \n        Citations:\n        - Always end the Answer with exact page‑level parenthetical citations in this uniform format: (ECB Supervisory Manual, p. X) or (ECB Supervisory Manual, pp. X–Y, A, B). List only pages present in the Context, ordered ascending; include all pages that support the claims; cross‑page synthesis is allowed.\n        - Do not place citations in the Reasoning.\n        \n        If the Context does not contain the necessary information, provide a single‑sentence, non‑speculative refusal: “The retrieved context does not contain the requested information; please provide the relevant page(s) of the ECB Supervisory Manual.” End it with: (no relevant pages in retrieved context).",
+                    "role": "system"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Supervisory Manual\\nPage: 50\\n 4(1)(1) of \\nthe Capital Requirements Regulation (CRR) in a participating Member State, \\ninstitutions need to apply for a banking authorisation. \\nAn application for a banking authorisation has to be submitted to the national \\ncompetent authority (NCA) of the Member State in which the institution is to be \\nestablished and must be in accordance with the requirements set out in the relevant \\nnational legislation. This application is assessed to ensure that only entities that fulfil \\nthe applicable national and EU legal requirements enter the market as credit \\ninstitutions. \\nThere are several circumstances under which institutions apply for banking \\nauthorisations. \\nSSMR Articles 4(1)(a), 4(1)(c), 14 \\nand 15  \\nCRD Articles 8, 18, 20, 22 and 45  \\nSSMFR Articles 73, 79, 80 and 85 \\nand Part V  \", \"Document: ECB Supervisory Manual\\nPage: 50\\ne procedures for \\nproviding applicants with a new, or extended, banking authorisation or for the \\nwithdrawal of an authorisation (see Section 3.1.1). The remainder of the common \\nprocedures (see Section 3.1.2) cover the procedures for approving proposed \\nacquisitions or further increases of qualifying holdings in credit institutions. This \\nsection also describes passporting, the procedure whereby an institution that has \\nbeen granted a banking authorisation in one Member State may make use of the \\nright of establishment and the freedom to provide services within the Member States \\nof the European Union (see Section 3.1.3). \\n3.1.1 Granting, withdrawal and lapsing of authorisations \\nGranting banking authorisation \\nIn order to take up the business of a credit institution as defined in Article 4(1)(1) of \\nthe Capital Requirements Regulation (CRR) in a participating Member State, \\ninstitutions need to apply for a banking authorisation. \\nAn application for a banking authorisation has to be s\", \"Document: ECB Supervisory Manual\\nPage: 52\\nnvestment firms, though \\nwith some specificities. For example, Article 8a(5) of the CRD provides that “In cases \\nof re-authorisation, the authorising authority shall ensure that the process is as \\nstreamlined as possible and that information from existing authorisations is taken \\ninto account”. If the applicant complies with all requirements for authorisation as \\nprovided for in national law, the NCA shares its final assessment with the ECB and \\nproposes that the ECB grants the authorisation. If the NCA finds during its \\nassessment that the Class 1 investment firm does not meet the requirements for \\nauthorisation as provided for in national law, it rejects the application. \\nThe ECB may agree with or object to the NCA’s draft decision. The ECB decision \\nmay include conditions, obligations and recommendations for the applicant. If the \\napplication is rejected by the ECB or if a positive decision is subject to conditions or \\nobligations not previously agreed with the applicant, the applic\", \"Document: ECB Supervisory Manual\\nPage: 51\\n \\nSupervisory Manual – Supervision of all supervised entities \\n \\n50 \\nFigure 10 \\nOverview of authorisation process \\n \\n \\nScope \\nThe Investment Firm Regulation6 has amended the definition of credit institution \\nprovided in the CRR. Following these amendments, the CRR definition of credit \\ninstitution now encompasses two categories: \\n• credit institutions that are authorised to take deposits or other repayable funds \\nfrom the public and grant credits for their own accounts, hereafter referred to as \\n“classic credit institutions” (Article 4(1)(1)(a) of the CRR); \\n• investment firms that provide specific investment services and meet certain \\nthresholds in terms of size at the individual or group level, hereafter referred to \\nas “Class 1 investment firms” (Article 4(1)(1)(b) of the CRR).7 \\nIf the applicant is a classic credit institution, as defined by Article 4(1)(1)(a) of the \\nCRR, the procedure for authorisation to take up the business of a credit institution as \\nentrusted to the ECB appli\", \"Document: ECB Supervisory Manual\\nPage: 94\\n \\nSupervisory Manual – Supervision of significant institutions \\n \\n93 \\n4.7 Conducting on-site inspections \\nPlease refer to the Guide to on-site inspections and internal model investigations. \\n4.8 Assessing ad hoc requests, notifications and applications \\nThis section describes the processes through which certain permissions can be \\ngranted to significant institutions by a supervisory authority upon their request. The \\nsignificant institutions need to submit all of the relevant information. The requests \\nneed to meet the supervisory requirements set out in the relevant legislation (i.e. EU \\nlaws or their national transposition). \\n4.8.1 Capital instruments \\nIssuance of CET1 instruments \\nSupervised entities may classify capital instruments as Common Equity Tier 1 \\n(CET1) instruments only after permission is granted by the competent authority. \\nUpon the request of a significant institution, an individual ECB supervisory decision \\nis adopted either by (conditionally) granting or denying the \"]\n\n[[ ## question ## ]]\nWhen a credit institution intends to issue asset-referenced tokens under MiCA, in which cases is ECB authorisation required, and which division within Banking Supervision is responsible for processing those applications?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided context excerpts cover general rules on banking authorisations, the NCA/ECB roles in authorisation decisions, and related procedures, but they do not mention MiCA, asset-referenced tokens (ART), or which internal Banking Supervision division handles MiCA/crypto-related authorisation applications. Because the required specifics (when MiCA authorisation is needed for a credit institution issuing ART, and the exact ECB division responsible) are not present in the retrieved text, I cannot reliably answer from the supplied context.\n\n[[ ## answer ## ]]\nThe supplied context does not include information about MiCA, asset-referenced tokens, or which Banking Supervision division handles those authorisation applications. Please provide the relevant pages or excerpts that cover MiCA/crypto-asset authorisations (or point to the section of the Supervisory Manual dealing with crypto-assets/MiCA), and I will answer precisely.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Supervisory Manual\\nPage: 8\\nfferent elements of banking \\nsupervision across six directorates general and one directorate, each of which report \\nfunctionally to the Chair and Vice-Chair of the Supervisory Board. \\nSSMR Article 25  \\nECB Decision on the \\nimplementation of separation \\nbetween the monetary policy and \\nsupervision functions of the ECB \\n(ECB/2014/39) \\n \", \"Document: ECB Supervisory Manual\\nPage: 8\\nt or object to \\nthe proposed decisions but cannot in principle modify them. Moreover, the \\nGoverning Council’s deliberations on supervisory matters are kept strictly apart from \\nthose on other ECB functions, with separate agendas and meetings. \\nThe separation principle also encompasses rules on information-sharing between \\nthe ECB’s two functions. The approval of the Executive Board is necessary for some \\nconfidential information to flow from one function to another. Confidential raw data \\ncan be shared upon request and on a need-to-know basis. One of the ECB's policy \\nfunctions should not disclose confidential information containing assessments or \\npolicy recommendations to the other, except upon request and on a need-to-know \\nbasis. \\nSeparation at the staff level is ensured by sharing different elements of banking \\nsupervision across six directorates general and one directorate, each of which report \\nfunctionally to the Chair and Vice-Chair of the Supervisory Board. \\nSSMR Article 25 \", \"Document: ECB Supervisory Manual\\nPage: 8\\nell as information about any \\ngainful occupational activity of their spouse or partner that could raise concerns of a \\nconflict of interest. \\n1.2 Operating structure of the SSM \\n1.2.1 Organisation of ECB Banking Supervision \\nSeparation principle \\nIn response to the financial crisis, the EU Council and the European Parliament \\nentrusted the ECB with supervisory tasks. The ECB acquired these tasks in addition \\nto its monetary policy function. To prevent conflicts of interest between the ECB’s \\nmonetary policy and supervisory tasks, the ECB has to ensure a separation so that \\neach function is exercised in accordance with its applicable objectives. \\nThe ECB has an independent Supervisory Board, which proposes draft supervisory \\ndecisions to the Governing Council. The Governing Council may adopt or object to \\nthe proposed decisions but cannot in principle modify them. Moreover, the \\nGoverning Council’s deliberations on supervisory matters are kept strictly apart from \\nthose on other ECB fun\", \"Document: ECB Supervisory Manual\\nPage: 16\\n \\nSupervisory Manual – Functioning of the Single Supervisory Mechanism \\n \\n15 \\ndecision-making powers for certain types of supervisory decisions has been put in \\nplace, e.g. for some decisions on the assessment of fit and proper requirements and \\namendments to significance decisions. Supervisory actions other than decisions are \\ndescribed in Section 1.3.2. \\n1.3.1 Decision-making within the SSM \\nThe following paragraphs describe the parties involved and their respective \\nresponsibilities in the decision-making process. \\nGoverning Council \\nThe Governing Council is the ultimate decision-making body in the exercise of the \\nECB’s tasks, including supervisory tasks. It is composed of the members of the \\nECB’s Executive Board and the governors of the national central banks in the euro \\narea. \\nAs a rule, legal acts pertaining to banking supervision are adopted under the non-\\nobjection procedure. This procedure is established by the SSM Regulation and gives \\ndue weight to the role of the Supervi\", \"Document: ECB Supervisory Manual\\nPage: 9\\ney allow the ECB to exploit operational synergies while \\nrespecting the required separation between monetary policy and banking \\nsupervision. Directorate General Statistics, for example, regularly publishes a \\ncomprehensive set of supervisory banking statistics on the ECB’s banking \\nsupervision website. The dataset is updated on a quarterly basis and includes \"]\n\n[[ ## question ## ]]\nWhy does the ECB maintain a separation between its monetary policy and supervisory functions, and how is it implemented at Governing Council level?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nContext states the ECB was given supervisory tasks in addition to its monetary policy function and must ensure separation \"to prevent conflicts of interest\" so each function is exercised according to its objectives. Implementation details in the context: an independent Supervisory Board proposes draft supervisory decisions to the Governing Council; the Governing Council may adopt or object but cannot modify those proposals (non‑objection procedure); Governing Council deliberations on supervisory matters are kept strictly apart from other ECB functions with separate agendas and meetings; rules control information‑sharing (Executive Board approval required for some flows, confidential data shared only on a need‑to‑know basis); and staff separation is ensured by assigning supervision across specific directorates reporting functionally to the Supervisory Board leadership.\n\n[[ ## answer ## ]]\nWhy: To prevent conflicts of interest arising from the ECB performing both monetary policy and banking supervision, ensuring each function is exercised in accordance with its own objectives.\n\nHow at Governing Council level:\n- Supervisory decisions are prepared by an independent Supervisory Board which proposes draft decisions to the Governing Council.\n- The Governing Council decides under a non‑objection procedure: it may adopt or object to proposed supervisory decisions but cannot in principle modify them, which gives due weight to the Supervisory Board.\n- Deliberations on supervisory matters are kept strictly apart from other ECB business (separate agendas and meetings).\n- Information flows between the ECB’s functions are tightly controlled (Executive Board approval for some transfers; confidential information shared only on a need‑to‑know basis).\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Supervisory Manual\\nPage: 61\\nith the JSTs and NCAs. \\n3.2.1 Criteria for assessing significance \\nThe SSMR and SSMFR provide five criteria for assessing the significance of a bank: \\n(i) size, (ii) economic importance, (iii) significance of cross-border activities, (iv) direct \\npublic financial assistance, and (v) whether the bank is one of the three most \\nsignificant banks established in its Member State.  \\nA bank changes status from LSI to SI when at least one of the above criteria is met. \\nIn contrast, migration from SI to LSI status is not triggered by a one-time failure to \\nmeet any of the significance criteria. Instead, according to SSMFR, the bank must \\nfall short of the relevant criteria for three consecutive calendar years in order to \\nqualify for reclassification. This three-year rule seeks to avoid rapid or repeated shifts \\nof supervisory responsibilities between NCAs and the ECB. However, it is possible to \\ndiverge from this rule if it is justified by exceptional circumstances stipulated in \\nSSMFR.  \\nFina\", \"Document: ECB Supervisory Manual\\nPage: 62\\n \\nSupervisory Manual – Supervision of all supervised entities \\n \\n61 \\nthe NCA is deemed to be better able to directly supervise the bank than the ECB, \\neven if the bank in question meets the significance criteria.  \\n3.2.2 Procedure for assessing significance \\nThe process of assessing the significance of banks against the criteria laid down in \\nthe SSMR and SSMFR is performed by the ECB both on a regular and an ad hoc \\nbasis. \\nThe regular or annual significance assessment involves the assessment of all \\nentities under European banking supervision and is performed once a year. Each \\ninstitution is assessed at the highest level of consolidation within European banking \\nsupervision to establish whether it fulfils any of the significance criteria as a result of \\nits normal business activity. JSTs assess SIs to determine whether they continue to \\nfulfil any of the significance criteria, while LSIs are assessed by the respective NCA \\nto determine whether they meet any of the criteria. This pro\", \"Document: ECB Supervisory Manual\\nPage: 61\\non in \\nthe participating Member States. The ECB has processes in place to assess the \\nsignificance of supervised entities on the basis of the criteria laid down in the SSM \\nRegulation (SSMR) and to identify any migration of a supervised entity from SI to LSI \\nand vice versa. If such a migration from one status to the other occurs, the \\nsupervisory responsibilities need to be properly handed over from the ECB to NCAs \\nor vice versa, safeguarding the continuous and effective supervision of the \\ninstitution. Under the SSM Framework Regulation (SSMFR), the ECB is obliged to \\npublish and maintain a list of supervised entities. The list is maintained by the \\nAuthorisation Division, which also coordinates regular and ad hoc significance \\nassessments of supervised entities in close collaboration with the JSTs and NCAs. \\n3.2.1 Criteria for assessing significance \\nThe SSMR and SSMFR provide five criteria for assessing the significance of a bank: \\n(i) size, (ii) economic importance, (iii) signifi\", \"Document: ECB Supervisory Manual\\nPage: 61\\n \\nSupervisory Manual – Supervision of all supervised entities \\n \\n60 \\nMember State where the SI has its headquarters has to send a notification to the \\nhost NCA and the ECB. \\nChanges in the services provided by SIs under the freedom to provide services have \\nto be notified to the ECB when they occur. Notification of the host NCA remains at \\nthe NCA level. No notification of the ECB is required in the case of changes in LSI \\nbranches and services provided under the freedom to provide services in non- \\nparticipating Member States; this procedure also remains at the NCA level. \\n3.2 Assessing the significance of institutions \\nThe ECB’s degree of responsibility for the supervision of a credit institution depends \\non its significance status, which is determined at the highest level of consolidation in \\nthe participating Member States. The ECB has processes in place to assess the \\nsignificance of supervised entities on the basis of the criteria laid down in the SSM \\nRegulation (SSMR) and to id\", \"Document: ECB Supervisory Manual\\nPage: 114\\n crisis situations (further details in Section 5.1.4) or the ECB’s direct takeover \\nof supervision (further details in Section 5.1.5). \\nBox 1  \\nLSI classification framework \\nAs previously mentioned, the ECB oversight function is guided, among others, by the proportionality \\nprinciple. The intensity of the oversight is determined, by the level of priority attributed to each \\ninstitution, its riskiness and relevance for and within the SSM. The process of assigning a rank to \\nindividual LSIs is based on the classification framework and is driven by two key factors: (i) the \\npotential impact of the failure of an LSI on the stability of the domestic or area-wide financial \\nsystem, and (ii) the intrinsic riskiness of the institution. The ECB performs the impact assessment \\non a yearly basis and assesses several indicators for each institution, such as size, importance for \\nthe local economy, cross-border activities and the business model. LSIs with the highest potential \\nimpact on the system\"]\n\n[[ ## question ## ]]\nWhat are the five criteria laid down in the SSMR and SSMFR for assessing whether a bank is significant?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided context (ECB Supervisory Manual, section 3.2.1) explicitly lists the five criteria used by the SSMR and SSMFR to assess a bank's significance. I extracted and restated those criteria directly from the text.\n\n[[ ## answer ## ]]\nThe five criteria are:\n1. Size\n2. Economic importance\n3. Significance of cross-border activities\n4. Receipt of direct public financial assistance\n5. Whether the bank is one of the three most significant banks established in its Member State\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Supervisory Manual\\nPage: 47\\nhrough various channels, \\nincluding European banking supervision’s participation in international and European \\nfora and the experience gained from the practical implementation of the \\nmethodologies and standards. \\n2.4.1 Defining supervisory priorities \\nThe outcome of the risk identification and monitoring serves as a basis for setting the \\nsupervisory priorities. The priorities identify the strategic objectives and key \\nsupervisory activities for the next supervisory cycle, with the intention of addressing \\nthe vulnerabilities of supervised entities and mitigating the effects of potential risks. \\nThey are reviewed on an annual basis but can be adjusted over the course of the \\nyear to address changes in the risk landscape, if needed. \\nWhen updating the supervisory policies, European banking supervision considers \\nwhether there has been progress in addressing past vulnerabilities, and whether \", \"Document: ECB Supervisory Manual\\nPage: 42\\n \\nSupervisory Manual – Supervisory cycle \\n \\n41 \\n2 Supervisory cycle \\nThe conduct of banking supervision can be viewed as a cycle, as shown in Figure 9. \\nThe separate elements of the supervisory cycle are explained in this chapter. \\nThe supervisory priorities (see Section 2.1) are the key focus areas for the next three \\nyears ahead and are set out by the Supervisory Board. They are defined annually \\nbased on the assessment of the key risks and vulnerabilities faced by supervised \\nentities, though they can be reviewed at any time to reflect new risk developments. \\nFigure 9 \\nSupervisory cycle \\n \\n \\nThe defined priorities determine how supervisory methodologies and processes, \\nsuch as the Supervisory Review and Evaluation Process (SREP), are executed and \\nhow horizontal ad hoc activities are set up (see Section 2.2). This feeds into day-to-\\nday supervision (see Section 2.3), which encompasses all interactions with \\nsupervised entities and the continuous oversight of their activities. The ex\", \"Document: ECB Supervisory Manual\\nPage: 43\\n \\nSupervisory Manual – Supervisory cycle \\n \\n42 \\ngained from the practical application of the supervisory standards and methodologies \\nthen informs the planning of supervisory activities for the forthcoming cycle, and an \\nanalysis of key risks and vulnerabilities determines the future supervisory priorities \\n(see Section 2.4.1). In the context of ensuring the effectiveness, quality and \\nconsistency of supervisory outcomes, the Directorate Supervisory Strategy & Risk \\n(D/SSR) acts as a second line of defence (see Section 2.4.2). This Directorate is \\nresponsible for discussing supervisory outcomes with the JSTs as well as suggesting \\npossible improvements of supervisory policies, methodology and standards. \\n2.1 Supervisory priorities and strategic planning \\nThe setting of supervisory priorities and the related strategic planning are crucial to \\nensure effective supervision. ECB Banking Supervision identifies and monitors the \\nrisks faced by supervised entities and their vulnerabilities on\", \"Document: ECB Supervisory Manual\\nPage: 42\\nt up (see Section 2.2). This feeds into day-to-\\nday supervision (see Section 2.3), which encompasses all interactions with \\nsupervised entities and the continuous oversight of their activities. The experience \\nSetting up supervisory \\npriorities and strategic \\nplanning\\nSupervisory Board\\nSetting up policies, \\nmethodologies, expert groups, \\nhorizontal activities, \\nsupervisory operations\\nSecond line of defence review\\nEvolving supervisory priorities \\nand strategic planning\\nDay-to-day supervision \\nconducted off-site (JSTs) and \\non-site (inspectors) \", \"Document: ECB Supervisory Manual\\nPage: 82\\nsis are \\ntaken into account in the annual SREP. \\nThe topics for the thematic reviews are set by the Supervisory Board, which \\napproves the supervisory priorities for the coming year, thereby identifying the topics \\nto be assessed in depth. The identification of potential topics for a thematic review is \\ncoordinated by the Directorate Supervisory Strategy and Risk in liaison with other \\nSSM stakeholders, such as DGs, JSTs or other ECB business areas, NCA horizontal \\ndivisions and international bodies (e.g. the EBA and the BCBS) and is to be in line \\nwith the supervisory priorities defined by the Supervisory Board. \\nThe JSTs communicate the observed findings or areas for improvement through \\ndedicated follow-up letters or supervisory decisions. Depending on the severity of \\nany deficiencies detected, an action plan or specific remedial actions may be \\nrequired. Aggregated outcomes of thematic reviews may also be communicated to \\nthe industry by issuing supervisory expectations. \\n4.4.4 Pe\"]\n\n[[ ## question ## ]]\nHow are the supervisory priorities defined and how often are they reviewed?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe context states that supervisory priorities are set by the Supervisory Board based on risk identification and monitoring and an assessment of key risks and vulnerabilities. They define strategic objectives and key supervisory activities for the next supervisory cycle (next three years). The documents also say the priorities are defined annually and reviewed on an annual basis, but may be adjusted during the year to reflect changes in the risk landscape.\n\n[[ ## answer ## ]]\nSupervisory priorities are set by the Supervisory Board annually, drawing on risk identification and monitoring and an assessment of the key risks and vulnerabilities facing supervised entities. They define the strategic objectives and key supervisory activities for the next supervisory cycle (covering the coming three years). The priorities are reviewed each year but can be adjusted at any time during the year to reflect changes in the risk landscape.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Supervisory Manual\\nPage: 10\\nness model and risk \\nprofile of the supervised entity. \\nFigure 2 \\nFunctioning of the Joint Supervisory Teams \\n \\n \\nThe JST is responsible for drafting and organising the Supervisory Examination \\nProgramme and for conducting ongoing supervisory work at the consolidated, sub- \\nconsolidated and solo levels. These tasks encompass assessments of an \\ninstitution’s risk profile, business model and strategy, risk management systems, \\nSupervisory Board\\nApproval/validation\\nJST coordinator\\nCore JST sub-coordinators\\n(support JST coordinator) \\nTeam of experts \\nfrom NCAs and ECB\\nECB intermediate \\nstructures \\n(DGs)\\nGoverning Council\\nsupport JSTs\\nHorizontal divisions\\nSSMFR Articles 3, 4, 5 and 6  \", \"Document: ECB Supervisory Manual\\nPage: 10\\n \\nSupervisory Manual – Functioning of the Single Supervisory Mechanism \\n \\n9 \\ninformation on banks designated as SIs and LSIs, covering aspects such as banks’ \\nbalance sheet composition, profitability, capital adequacy, leverage, funding, liquidity \\nand the quality of their assets.  \\n1.2.2 Joint Supervisory Teams \\nThe day-to-day supervision of SIs is conducted by JSTs working in DG/SIB, DG/UDI \\nand DG/SPL. As shown in Figure 2, the JSTs comprise staff from both the ECB and \\nthe NCAs of the countries in which the SIs, including their banking subsidiaries or \\nsignificant cross-border branches, are established. A JST is established for each SI \\nat the highest level of consolidation. The size, overall composition and organisation \\nof a JST varies depending on the nature, complexity, scale, business model and risk \\nprofile of the supervised entity. \\nFigure 2 \\nFunctioning of the Joint Supervisory Teams \\n \\n \\nThe JST is responsible for drafting and organising the Supervisory Examination \\nProgra\", \"Document: ECB Supervisory Manual\\nPage: 46\\nthe management bodies of all \\nentities directly supervised by the ECB, both in their management function and their \\nsupervisory function. \\nIn order to ensure all supervisory duties are properly carried out, the Technology & \\nInnovation Division and the SSM Secretariat Division have been established, the \\nlatter of which supports the Supervisory Board and its structures, particularly in the \\nquality and efficiency of their decision-making processes. \\n2.3 Day-to-day supervision \\nJSTs carry out key supervisory tasks in coordination with the horizontal functions of \\nthe ECB. This can involve on-site interventions at supervised institutions, if needed. \\nDepending on a specific bank’s risk profile assessment, the ECB may impose a wide \\nrange of supervisory measures. \\n2.3.1 Joint Supervisory Teams \\nThe day-to-day supervision of SIs is primarily conducted off-site by the JSTs, which \\ncomprise staff from NCAs and the ECB and are supported by the horizontal and \\nspecialised expertise divisions o\", \"Document: ECB Supervisory Manual\\nPage: 11\\n the ECB. NCA local coordinators support the \\nJST coordinator in the day-to-day supervision of SIs while also reflecting the views of \\nthe relevant NCAs. For instance, they contribute to the preparation and revision of \\nthe Supervisory Examination Programme. \\nJST coordinators are appointed for a period of three to five years. JST coordinators \\nand members are expected to rotate on a regular basis, though not all JST members \\nwill be able to rotate at the same time. \\nCore JST \\nThe JSTs of banks operating with a significant presence in more than one \\nparticipating Member State establish a core JST. The core JST is chaired by the JST \\ncoordinator and is composed of the local coordinators of the relevant NCAs \\ndepending on the materiality of the local subsidiary or branch. The core JST is \\nresponsible for organising the allocation of tasks among JST members, preparing \\nand revising the Supervisory Examination Programme, monitoring its implementation \\nand reviewing the assessment. \\n1.2.3 Or\", \"Document: ECB Supervisory Manual\\nPage: 71\\nasis and that are aimed at assessing the suitability of members of \\nmanagement bodies, checking compliance with prudential regulation, assessing the \\nrisk profile and performing the Supervisory Review and Evaluation Process (SREP). \\nFor significant institutions that fall under European banking supervision, these tasks \\nfall under the remit of the JSTs. In addition to ongoing supervision, it may be \\nnecessary to conduct in-depth reviews on certain topics by organising a dedicated \\non-site mission (e.g. an inspection or an internal model investigation). The on-site \\ninspections are typically carried out by an inspection team, which – while \\norganisationally independent – works in close cooperation with the respective JST. \\nThe various supervisory activities typically result in supervisory measures addressed \\nto the supervised entity. Supervisory activities and decisions are typically followed by \\na number of routine steps such as the monitoring of compliance and, if necessary, \\nenforceme\"]\n\n[[ ## question ## ]]\nPlease provide the official description of a Joint Supervisory Team (JST): who are its members (roles and typical participating institutions/authorities) and how the size of a JST is determined (including factors considered and any rules/guidance on composition and staffing levels). Cite relevant SSM/ECB guidance if applicable.\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T21:19:24.860412Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048964",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "55035@Mac",
+        "requestId": "3b878685-a029-4274-8668-a1b7b50d6f7d",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T21:20:03.143983Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048965",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n- Question asks for the “official description” of a JST: (i) who its members are (roles and participating institutions/authorities) and (ii) how the JST size is determined (factors and any rules/guidance on composition/staffing).\n- Source material:\n  - Page 10: states JSTs “comprise staff from both the ECB and the NCAs” of countries where SIs (and their subsidiaries/branches) are established; JSTs are responsible for drafting/organising the Supervisory Examination Programme and conducting ongoing supervisory work at consolidated, sub-consolidated and solo levels; day-to-day supervision of SIs is conducted by JSTs working in DG/SIB, DG/UDI and DG/SPL; JSTs are established for each SI at the highest level of consolidation; “size, overall composition and organisation of a JST varies depending on the nature, complexity, scale, business model and risk profile of the supervised entity.”\n  - Page 11: adds that NCA local coordinators support the JST coordinator and reflect NCA views; JST coordinators are appointed for a period of three to five years and JST members are expected to rotate on a regular basis; describes the core JST for banks with significant presence in more than one participating Member State, chaired by the JST coordinator and composed of the local coordinators of the relevant NCAs, and lists core JST responsibilities (allocation of tasks, preparing/revising the Supervisory Examination Programme, monitoring implementation).\n  - Page 46: reiterates that JSTs carry out key supervisory tasks in coordination with ECB horizontal functions and that day-to-day supervision is primarily conducted off-site by JSTs comprising staff from NCAs and the ECB, supported by horizontal and specialised expertise divisions.\n  - Page 71: confirms JSTs perform suitability assessments, SREP and on-site coordination; on-site inspection teams are organisationally independent but work closely with the respective JST.\n- Extracted rules/figures/timelines: JST coordinator appointment term (3–5 years); rotation expectation for members; JST established at highest consolidation level.\n- Missing elements: the context does not provide numerical staffing levels, minimum/maximum headcounts, formal composition quotas, or detailed staffing‑level rules beyond the qualitative factors and rotation/appointment guidance.\n\n[[ ## answer ## ]]\nA Joint Supervisory Team (JST) is the off‑site day‑to‑day supervisory team established at the highest level of consolidation for each significant institution (SI) and comprises staff from both the ECB and the relevant national competent authorities (NCAs), including a JST coordinator, NCA local coordinators and a team of experts; core JSTs (for banks with a significant multi‑Member‑State presence) are chaired by the JST coordinator and composed of the local coordinators of the relevant NCAs (i) JST responsibilities include drafting and organising the Supervisory Examination Programme and conducting consolidated, sub‑consolidated and solo supervisory work; (ii) JSTs operate in DG/SIB, DG/UDI and DG/SPL and are supported by horizontal and specialised ECB divisions. The size, overall composition and organisation of a JST “varies depending on the nature, complexity, scale, business model and risk profile” of the supervised entity; JST coordinators are appointed for three to five years and members are expected to rotate regularly; no numeric staffing minima/maxima or fixed composition quotas are provided in the retrieved text. (ECB Supervisory Manual, pp. 10–11, 46, 71)\n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 2139,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 1408,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 6904,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 5632,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 9043
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "55035@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T21:20:03.143999Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048966",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "55035@Mac-749fca03c4054568b4435af70e9f02c1",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_bs_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T21:20:03.145789Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048970",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "55035@Mac",
+        "requestId": "576eb2ae-1e42-47c7-b0d8-deb9c277f855",
+        "historySizeBytes": "44770",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T21:20:03.150466Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048974",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "55035@Mac",
+        "workerVersion": {
+          "buildId": "bc2d607b0d4d7c066900ba2396751876"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T21:20:03.150512Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1048975",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "A Joint Supervisory Team (JST) is the off‑site day‑to‑day supervisory team established at the highest level of consolidation for each significant institution (SI) and comprises staff from both the ECB and the relevant national competent authorities (NCAs), including a JST coordinator, NCA local coordinators and a team of experts; core JSTs (for banks with a significant multi‑Member‑State presence) are chaired by the JST coordinator and composed of the local coordinators of the relevant NCAs (i) JST responsibilities include drafting and organising the Supervisory Examination Programme and conducting consolidated, sub‑consolidated and solo supervisory work; (ii) JSTs operate in DG/SIB, DG/UDI and DG/SPL and are supported by horizontal and specialised ECB divisions. The size, overall composition and organisation of a JST “varies depending on the nature, complexity, scale, business model and risk profile” of the supervised entity; JST coordinators are appointed for three to five years and members are expected to rotate regularly; no numeric staffing minima/maxima or fixed composition quotas are provided in the retrieved text. (ECB Supervisory Manual, pp. 10–11, 46, 71)",
+                "reasoning": "- Question asks for the “official description” of a JST: (i) who its members are (roles and participating institutions/authorities) and (ii) how the JST size is determined (factors and any rules/guidance on composition/staffing).\n- Source material:\n  - Page 10: states JSTs “comprise staff from both the ECB and the NCAs” of countries where SIs (and their subsidiaries/branches) are established; JSTs are responsible for drafting/organising the Supervisory Examination Programme and conducting ongoing supervisory work at consolidated, sub-consolidated and solo levels; day-to-day supervision of SIs is conducted by JSTs working in DG/SIB, DG/UDI and DG/SPL; JSTs are established for each SI at the highest level of consolidation; “size, overall composition and organisation of a JST varies depending on the nature, complexity, scale, business model and risk profile of the supervised entity.”\n  - Page 11: adds that NCA local coordinators support the JST coordinator and reflect NCA views; JST coordinators are appointed for a period of three to five years and JST members are expected to rotate on a regular basis; describes the core JST for banks with significant presence in more than one participating Member State, chaired by the JST coordinator and composed of the local coordinators of the relevant NCAs, and lists core JST responsibilities (allocation of tasks, preparing/revising the Supervisory Examination Programme, monitoring implementation).\n  - Page 46: reiterates that JSTs carry out key supervisory tasks in coordination with ECB horizontal functions and that day-to-day supervision is primarily conducted off-site by JSTs comprising staff from NCAs and the ECB, supported by horizontal and specialised expertise divisions.\n  - Page 71: confirms JSTs perform suitability assessments, SREP and on-site coordination; on-site inspection teams are organisationally independent but work closely with the respective JST.\n- Extracted rules/figures/timelines: JST coordinator appointment term (3–5 years); rotation expectation for members; JST established at highest consolidation level.\n- Missing elements: the context does not provide numerical staffing levels, minimum/maximum headcounts, formal composition quotas, or detailed staffing‑level rules beyond the qualitative factors and rotation/appointment guidance."
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}

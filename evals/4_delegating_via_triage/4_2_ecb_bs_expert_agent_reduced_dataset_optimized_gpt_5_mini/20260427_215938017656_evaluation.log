@@ -1,0 +1,289 @@
+Question: Which non-euro area Member States have so far entered into close
+  cooperation with the SSM?
+Example answer: The SSM has entered into two close cooperation agreements with
+  Bulgaria and Croatia, whose authorities now participate in the SSM,
+  and since the establishment of the SSM, Member States that are
+  joining the European exchange rate mechanism (ERM II) are also
+  expected to enter into close cooperation with the SSM. (ECB
+  Supervisory Manual, page 30)
+Predicted answer: The non‑euro area Member States that have so far entered into close
+  cooperation with the SSM are (i) Bulgaria and (ii) Croatia. (ECB
+  Supervisory Manual, p. 31)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.49.
+Score: 0.9
+
+Question: For how long are JST coordinators appointed and what are the
+  expectations on rotation?
+Example answer: JST coordinators are appointed for a period of three to five years,
+  and JST coordinators and members are expected to rotate on a regular
+  basis, though not all JST members will be able to rotate at the same
+  time. (ECB Supervisory Manual, page 9)
+Predicted answer: (i) JST coordinators are appointed for a period of three to five
+  years; (ii) JST coordinators and members are expected to rotate on a
+  regular basis, although not all JST members are expected to rotate
+  simultaneously. (ECB Supervisory Manual, p. 11)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.93.
+Score: 0.99
+
+Question: What are the four key elements that the JST assesses in the SREP for
+  each supervised entity?
+Example answer: The methodology consists of an assessment carried out by each JST on
+  its own supervised entity based on four key elements: business model
+  analysis, internal governance, risks to capital and risks to
+  liquidity and funding. This assessment is generally based on year-
+  end data from the previous year, meaning that the SREP 2023
+  assessment cycle is based on year-end data for 2022, with the
+  outcomes formalised in SREP decisions applicable to the following
+  year. (ECB Supervisory Manual, page 82)
+Predicted answer: The JST’s SREP assessment covers (i) business model analysis, (ii)
+  internal governance and risk management, (iii) risks to capital, and
+  (iv) risks to liquidity and funding. (ECB Supervisory Manual, pp.
+  45, 83–85, 89)
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.42.
+Score: 0.58
+
+Question: I'm drafting a follow-up letter on a bank's NPL ratio and would like
+  to cite our prudential provisioning expectations accurately — could
+  you summarise the minimum coverage calendar for the secured and
+  unsecured portions of new non-performing exposures?
+Example answer: Although the source material refers to an ECB guide on the treatment
+  of non-performing loans, it does not reproduce the prudential
+  provisioning expectations or the minimum coverage calendar
+  applicable to non-performing exposures. A substantive answer is
+  therefore not possible on the basis of the documents available.
+Predicted answer: The retrieved context does not contain the requested information;
+  please provide the relevant page(s) of the ECB Supervisory Manual.
+  (no relevant pages in retrieved context)
+Rationale: Recall score: 0.95, sources score: 0.0, length score: 0.54.
+Score: 0.58
+
+Question: Within what timeframe must the Administrative Board of Review issue
+  its opinion, and is that opinion binding?
+Example answer: The ABoR must adopt an opinion on the contested decision within two
+  months of receiving the request, and the opinion must be submitted
+  to the Supervisory Board without delay. The ABoR's opinion is not
+  binding on the Supervisory Board or on the Governing Council. (ECB
+  Supervisory Manual, page 28)
+Predicted answer: The ABoR must adopt and submit its opinion within two months of
+  receiving the request; that opinion is not binding on the
+  Supervisory Board or the Governing Council. (ECB Supervisory Manual,
+  pp. 28–29)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.67.
+Score: 0.93
+
+Question: What is the deadline for the Governing Council to object to a draft
+  supervisory decision under the non-objection procedure?
+Example answer: Draft decisions are deemed adopted if the Governing Council does not
+  object within a maximum period of ten working days. The non-
+  objection procedure is not only applied for individual supervisory
+  decisions but is also used for ECB legal acts concerning the
+  performance of supervisory tasks, policy documents or other forms of
+  communication committing the ECB externally in the exercise of its
+  supervisory tasks. (ECB Supervisory Manual, page 14)
+Predicted answer: The Governing Council must object within a maximum of ten working days
+  under the non‑objection procedure; if it does not object within that
+  period, the draft decision is deemed adopted. (ECB Supervisory
+  Manual, pp. 15, 22, 24)
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.54.
+Score: 0.61
+
+Question: By when must originator institutions notify the ECB of an intended
+  significant risk transfer in a securitisation transaction?
+Example answer: Originator institutions that have initiated or are considering
+  initiating the process of structuring a securitisation transaction
+  for which they intend to recognise a significant risk transfer or to
+  apply for permission under the CRR should notify the ECB at least
+  three months in advance of the expected closing date of the
+  transaction. Originator institutions should also provide the final
+  version of the documentation no later than 15 days after the closing
+  date of the transaction. (ECB Supervisory Manual, page 96)
+Predicted answer: Originator institutions must notify the ECB of their intention to seek
+  recognition or permission for a significant risk transfer at least
+  three months in advance of the expected closing date of the
+  securitisation transaction (ECB Supervisory Manual, p. 97).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.49.
+Score: 0.9
+
+Question: What are the specific timelines and templates that supervised banks
+  must use when notifying the ECB of major ICT-related incidents under
+  DORA? I need the details ahead of a JST meeting later this week.
+Example answer: The available source material does not address notification timelines
+  or templates for ICT-related incidents under the Digital Operational
+  Resilience Act. I cannot provide a reliable answer on this point
+  from the documents at my disposal.
+Predicted answer: The retrieved context does not contain the requested information;
+  please provide the relevant page(s) of the ECB Supervisory Manual.
+  (no relevant pages in retrieved context)
+Rationale: Recall score: 0.97, sources score: 0.0, length score: 0.71.
+Score: 0.63
+
+Question: When are NCAs expected to submit notifications to the ECB regarding
+  LSIs, particularly high-impact or high-risk ones?
+Example answer: Notifications are official, written documentation formally submitted
+  by the NCAs to the ECB when specific circumstances arise, and in
+  relation to high-impact and/or high-risk LSIs, NCAs are expected to
+  submit a notification to the ECB at the early stages of any material
+  supervisory procedures and/or material draft supervisory decisions.
+  In accordance with predefined criteria, NCAs must also notify the
+  ECB in the event of any financial deterioration in individual LSIs,
+  regardless of their classification, and for the annual and semi-
+  annual ex post reporting. (ECB Supervisory Manual, pages 113–114)
+Predicted answer: NCAs must submit notifications to the ECB: (i) at the early stages of
+  any material supervisory procedures and/or material draft
+  supervisory decisions concerning high‑impact and/or high‑risk LSIs;
+  (ii) in the event of any financial deterioration in individual LSIs
+  (regardless of classification); and (iii) for the annual and
+  semi‑annual ex post reporting (ECB Supervisory Manual, pp. 113–115).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.64.
+Score: 0.93
+
+Question: What activities, at a minimum, must the ongoing monitoring of internal
+  models include each year?
+Example answer: At a minimum, ongoing model monitoring should include on an annual
+  basis: an assessment of the institution's compliance with the legal
+  requirements, supervisory conditions, limitations and obligations
+  imposed in ECB decisions on model approvals, as well as compliance
+  with implementation plans and other supervisory measures; where
+  appropriate, an analysis of back-testing results and time-series
+  analysis for institutions authorised to use internal models for
+  market risk; an analysis of internal model validations; where
+  appropriate, an assessment of the outcomes of the annual
+  benchmarking process; an assessment of non-material model changes
+  and extensions; and where appropriate, an assessment of other
+  internal reports on the internal model, with at least one
+  supervisory meeting per institution per year included. (ECB
+  Supervisory Manual, page 92)
+Predicted answer: On an annual basis, ongoing model monitoring must at minimum include:
+  (i) an assessment of the significant institution’s compliance with
+  legal requirements, supervisory conditions, limitations, obligations
+  (including remedial actions) and implementation plans relating to
+  ECB model‑approval decisions; (ii) where appropriate, analysis of
+  back‑testing results and time‑series analysis for institutions
+  authorised to use internal models for market risk; (iii) analysis of
+  the institution’s internal model validations; (iv) where
+  appropriate, assessment of outcomes of the annual benchmarking
+  process; (v) assessment of non‑material model changes and
+  extensions; (vi) where appropriate, assessment of other internal
+  reports on the internal model; and (vii) at least one supervisory
+  meeting per institution per year (ECB Supervisory Manual, pp.
+  92–93).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.93.
+Score: 0.99
+
+Question: The Manual is described as non-binding, yet our internal review office
+  sometimes treats it as quasi-binding. On what legal basis can the
+  SSM depart from the Manual's policies, and how is this reflected in
+  the language regime applied to supervisory decisions?
+Example answer: The Manual is not a legally binding document and the SSM is empowered
+  to depart from the general policy established in it where factors in
+  specific cases justify doing so and sufficient rationale is
+  provided, with such divergent policy choices needing to be
+  compatible with the general principles of EU law, in particular
+  equal treatment, proportionality and the legitimate expectations of
+  supervised entities. As regards the language regime, although
+  English is the SSM's operational working language, documents sent by
+  the ECB to a Member State or to a person subject to the jurisdiction
+  of a Member State should in principle be drafted in the language of
+  such State, although most SIs have agreed to use English for
+  supervisory decisions and day-to-day communication. (ECB Supervisory
+  Manual, pages 3, 25)
+Predicted answer: The retrieved context does not contain the requested information;
+  please provide the relevant page(s) of the ECB Supervisory Manual.
+  (no relevant pages in retrieved context)
+Rationale: Recall score: 0.0, sources score: 0.0, length score: 0.2.
+Score: 0.04
+
+Question: Who decides which topics are covered by SSM thematic reviews of
+  significant institutions, and how is the Directorate Supervisory
+  Strategy & Risk involved both in setting topics and in conducting
+  thematic work as part of the second line of defence?
+Example answer: The topics for thematic reviews are set by the Supervisory Board,
+  which approves the supervisory priorities for the coming year, while
+  the identification of potential topics is coordinated by the
+  Directorate Supervisory Strategy and Risk in liaison with other SSM
+  stakeholders such as DGs, JSTs, NCA horizontal divisions and
+  international bodies. As the second line of defence, D/SSR conducts
+  thematic reviews that aim to support the Supervisory Board to steer
+  European banking supervision in line with the agreed risk priorities
+  and to monitor the quality and effects of supervisory activities,
+  whether at the JST or horizontal level. (ECB Supervisory Manual,
+  pages 47, 81)
+Predicted answer: (i) The Supervisory Board decides which topics are covered by SSM
+  thematic reviews by approving the supervisory priorities for the
+  coming year. (ii) The Directorate Supervisory Strategy & Risk
+  (D/SSR) (i) coordinates the identification of potential thematic
+  topics in liaison with JSTs, DGs, NCAs and other stakeholders, and
+  (ii) as the second line of defence implements thematic work via an
+  annual work plan and recurrent/thematic assessments, including
+  horizontal analyses, SREP benchmarking and monitoring of follow‑up.
+  (ECB Supervisory Manual, pp. 9, 42, 48, 82)
+Rationale: Recall score: 0.93, sources score: 1.0, length score: 0.81.
+Score: 0.93
+
+Question: Through which channels can a whistleblower submit a breach report to
+  European banking supervision, and what role does the Independent
+  Investigating Unit play once a suspected breach has been referred to
+  it?
+Example answer: Reports may be submitted via an ECB reporting channel implemented as a
+  web form on the ECB's banking supervision website, which directly
+  forwards the report to the Enforcement and Sanctions Division, by
+  other means such as letters, or via mechanisms in place at NCAs to
+  receive reports from whistleblowers. Once a suspected breach is
+  referred to the Independent Investigating Unit, the unit may
+  exercise the powers granted to the ECB by the SSM Regulation to
+  request documents, examine relevant books and records, request
+  explanations, conduct interviews and on-site inspections, and assess
+  on the basis of the evidence whether there is reasonable suspicion
+  of possible breaches; if so, it may initiate sanctioning proceedings
+  by addressing a statement of objections to the supervised entity.
+  (ECB Supervisory Manual, pages 106, 108)
+Predicted answer: Whistle‑blower channels: (i) an ECB reporting channel via a web form
+  on the ECB banking supervision website that directly forwards
+  reports to the Enforcement and Sanctions Division; (ii) other means
+  of reporting to the ECB (e.g. letters); and (iii) reporting
+  mechanisms operated by NCAs.    Role of the Independent
+  Investigating Unit: upon referral the IU may initiate an
+  investigation, exercise investigatory powers under the SSMR (request
+  documents, examine books and records, obtain explanations, hold
+  interviews and conduct on‑site inspections), instruct NCAs to use
+  national investigatory powers, assess the available evidence and
+  grant the right to be heard, and, where appropriate, prepare a
+  proposal to the Supervisory Board for a draft decision imposing
+  administrative penalties or request the relevant NCA to open
+  national sanctioning or criminal referral proceedings (ECB
+  Supervisory Manual, pp. 107–110).
+Rationale: Recall score: 0.84, sources score: 1.0, length score: 0.98.
+Score: 0.92
+
+Question: How are the responsibilities for crisis management split between the
+  ECB and NCAs depending on whether the institution in difficulty is
+  significant or less significant?
+Example answer: For significant institutions, the JSTs in close cooperation with the
+  Business Model, Capital & Crisis Division are responsible for crisis
+  preparedness and management across different phases, with the Crisis
+  Team providing expert support to the JSTs on processes in the
+  applicable legal framework, the early identification of crisis
+  situations, the assessment and operationalisation of recovery plans
+  and resolution-related consultations. For less significant
+  institutions, the responsibility for managing crisis cases lies with
+  the NCAs and other relevant authorities at the national level, while
+  the ECB plays a coordinating role when the situation becomes
+  critical at the point of non-viability and remains the competent
+  authority for taking decisions on common procedures such as the
+  withdrawal of banking authorisations. (ECB Supervisory Manual, pages
+  99, 115)
+Predicted answer: (i) For significant institutions (SIs): the ECB is the direct
+  supervisor and thus is responsible for their supervision and crisis
+  management. (ii) For less significant institutions (LSIs): NCAs
+  retain responsibility for managing crisis cases (including
+  supervisory decisions, early‑intervention and
+  failing‑or‑likely‑to‑fail decisions), while the ECB exercises
+  oversight, coordinates when situations become critical and may take
+  decisions on common procedures (e.g. qualifying holdings, withdrawal
+  of authorisation, licensing of a bridge bank) or, in specific cases
+  (including at NCA request or if the institution becomes an SI), take
+  over direct supervision. (ECB Supervisory Manual, pp. 6, 112, 116)
+Rationale: Recall score: 0.8, sources score: 1.0, length score: 0.78.
+Score: 0.86
+
+2026/04/27 22:01:37 INFO dspy.evaluate.evaluate: Average Metric: 10.790000000000001 / 14 (77.1%)

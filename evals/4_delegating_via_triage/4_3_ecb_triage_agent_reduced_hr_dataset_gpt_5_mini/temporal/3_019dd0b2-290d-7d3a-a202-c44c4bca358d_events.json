@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T20:47:10.093869Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1051811",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbHrExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "I still need the definitive verbatim clauses to complete the answer. Please provide the exact text (word‑for‑word) and full citation (document name, article number, page, version/date) for the following from the ECB HR documents: 1) The clause that states the annual leave entitlement in number of days per year for full‑time staff (e.g. Article 27 of the Conditions of Employment) — include any variations by grade, length of service or staff category. 2) Any text that explicitly confirms that the “maximum of 10.5 days carry‑over” in Staff Rules Art. 5.7.2 is 10.5 days of that annual‑entitlement (quote the exact wording if present). 3) The full verbatim carry‑over and deadline/expiry rules (including text on taking at least 20 days in year, carry‑over ceiling, deadline to use carried days, whether unused days expire automatically, and which authorities may approve extensions/further carry‑over). 4) Any verbatim clauses creating exceptions to carry‑over or extending deadlines because of long‑term sickness, maternity/paternity/parental leave, unpaid leave or operational reasons (quote exact text and article numbers). 5) The verbatim clause(s) on settlement of outstanding annual leave on termination (payment, calculation method such as the 21 working‑day month, and any limits). 6) For every quoted clause, state the document name (Staff Rules or Conditions of Employment), exact version/date and page number, and whether there have been any recent amendments or temporary arrangements affecting these provisions (with dates). If any requested clause is not in the Staff Rules but in the Conditions of Employment (or another HR instrument), please quote that clause and give its exact location. If a clause does not exist, say so explicitly."
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0b2-290d-7d3a-a202-c44c4bca358d",
+        "identity": "52867@Mac",
+        "firstExecutionRunId": "019dd0b2-290d-7d3a-a202-c44c4bca358d",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_hr_expert_agent-rest-93b04374",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T20:47:10.093991Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1051812",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T20:47:10.097211Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1051817",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "52521@Mac",
+        "requestId": "af74bbb5-153d-41b8-b130-6578cf17f700",
+        "historySizeBytes": "2145",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T20:47:10.103641Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1051821",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            1,
+            3,
+            2
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T20:47:10.103707Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1051822",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "I still need the definitive verbatim clauses to complete the answer. Please provide the exact text (word‑for‑word) and full citation (document name, article number, page, version/date) for the following from the ECB HR documents: 1) The clause that states the annual leave entitlement in number of days per year for full‑time staff (e.g. Article 27 of the Conditions of Employment) — include any variations by grade, length of service or staff category. 2) Any text that explicitly confirms that the “maximum of 10.5 days carry‑over” in Staff Rules Art. 5.7.2 is 10.5 days of that annual‑entitlement (quote the exact wording if present). 3) The full verbatim carry‑over and deadline/expiry rules (including text on taking at least 20 days in year, carry‑over ceiling, deadline to use carried days, whether unused days expire automatically, and which authorities may approve extensions/further carry‑over). 4) Any verbatim clauses creating exceptions to carry‑over or extending deadlines because of long‑term sickness, maternity/paternity/parental leave, unpaid leave or operational reasons (quote exact text and article numbers). 5) The verbatim clause(s) on settlement of outstanding annual leave on termination (payment, calculation method such as the 21 working‑day month, and any limits). 6) For every quoted clause, state the document name (Staff Rules or Conditions of Employment), exact version/date and page number, and whether there have been any recent amendments or temporary arrangements affecting these provisions (with dates). If any requested clause is not in the Staff Rules but in the Conditions of Employment (or another HR instrument), please quote that clause and give its exact location. If a clause does not exist, say so explicitly."
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T20:47:10.105420Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1051828",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "52521@Mac",
+        "requestId": "355e6837-8406-4b2c-ac0a-bad17f9b2232",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T20:47:10.633985Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1051829",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Staff Rules\nPage: 93\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 93 \n5.7 Annual leave \nThe provisions of Article 27 of the Conditions of Employment are applied as \nfollows: \n5.7.1 If a full year is not worked, the leave entitlement shall be calculated on a pro rata \nbasis taking into account an average of 21 working days per month and rounded \nup to the nearest half hour. \n5.7.2 Annual leave may be taken from date of appointment. Except for urgent family \nreasons caused by sickness or accident it must be approved in advance by the \nHead of Division or, from this grade, by the next higher manager. In any event a \ncompleted leave form must be sent to the Directorate General Human Resources. \nAnnual leave may be taken all at once or in several periods as desired by the \nmember of staff and subject to business requirements. At least 20 days shall be \ntaken before the end of the calendar year. This minimum of 20 days shall include \nat least one peri od of two consecutive weeks. Memb",
+                "Document: ECB Staff Rules\nPage: 94\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 94 \n5.7.6 Conversely, leave taken in excess of entitlement will result in a deduction being \nmade from the salary on the basis of one day’s salary for each day’s leave taken \nin excess of the leave entitlement. \n5.7.7 In calculating the amount for settling outstanding annual leave or annual leave \ntaken in excess, a standard 21 working day month shall be used and one day’s \nannual leave shall be equivalent to one day’s payment. The period of leave \noutstanding will not cou nt as service with the ECB and therefore no deductions \nfor pension, ECB health insurance or accident insurance will be levied in respect \nof this period. Tax for the benefit of the European Communities will be deducted \nfrom these payments. The same method shall be applied to calculations in respect \nof annual leave overtaken. \n5.8 Public holidays \nThe provisions of Article 27 of the Conditions of Employment are applied as \nfollows: \nThe follow",
+                "Document: ECB Staff Rules\nPage: 3\n................. 90 \n5.5 Shift work duties .................................................................................... 91 \n5.6 On-call duties ......................................................................................... 92 \n5.7 Annual leave ........................................................................................... 93 \n5.8 Public holidays ....................................................................................... 94 \n5.9 Maternity and adoptive leave ................................................................ 94 \n5.10 Special leave........................................................................................... 96 \n5.11 Unpaid parental leave .......................................................................... 100 \n5.12 Unpaid leave ......................................................................................... 101 \n5.13 Sick leave .............................................................................",
+                "Document: ECB Conditions of Employment\nPage: 13\nuties may be granted an \nallowance under the conditions laid down in the Staff Rules. \n27. Members of staff shall be entitled to thirty and a half working days of paid leave per annum. \nPublic holidays observed by the ECB shall be additional to this leave entitlement.  \n28. Subject to the conditions laid down in the Staff Rules, members of staff shall be entitled to: \n(i) paid maternity or adoptive leave of 20 weeks; \n(ii) in the event of multiple birth an additional four weeks paid maternity leave; \n(iia) paid parental special leave of 40 days. Members of staff shall be entitled to additional \nworking days of paid parental special leave in each of the following cases, for the \nperiod indicated: \n- in the event of premature birth, which, for the purpose of this provision, is a birth \ntaking place before the end of the 37\nth week of pregnancy, 20 working days; \n- in the event of the birth of a child with a serious illness or disability, recognised in \naccordance with Article 3.6.4 of th",
+                "Document: ECB Conditions of Employment\nPage: 12\nsame nature provided \nby other sources. Members of staff shall claim and declare such benefits, which shall be \ndeducted from those payable by the ECB. \n \nPART 5 WORKING HOURS AND LEAVE \n \n25. The standard working week shall be forty hours excluding lunch breaks, unless otherwise \nagreed. Under the conditions laid down in the Staff Rules, members of staff may be \nauthorised to telework. Under the conditions laid down in the Staff Rules, members of staff \nmay be allowed to work part -time. The entitlements of members of staff working part time \nshall be prorated in line with their working time. However, such members of staff shall be \nentitled to the full child and education allowances. \n26. (a) In accordance with the conditions laid down in the Staff Rules, all members of staff may be \nrequired to work overtime in addition to their normal working hours in cases of urgency or \nexceptional pressure of work. "
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T20:47:10.634787Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1051830",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T20:47:10.637547Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1051834",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "52521@Mac",
+        "requestId": "58db4259-69a3-4732-90f1-ed8fc6d29445",
+        "historySizeBytes": "10136",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T20:47:10.646814Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1051838",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T20:47:10.646848Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1051839",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB HR policy assistant. Use only the provided Context to answer. Produce two fields: \n        - Reasoning: a step-by-step synthesis of the relevant provisions you will use (identify the main rule, any exceptions, competent authorities, timelines, figures/thresholds, and the exact page numbers you will cite; reconcile overlaps/conflicts by preferring the most specific and most recent provision and noting this).\n        - Answer: a concise, impersonal, normative response grounded in the Context.\n        \n        Answer requirements:\n        - Lead with the main entitlement/obligation/rule that directly addresses the question.\n        - State precise figures, thresholds and formats as in source (e.g., EUR 764; six months; one month’s notice), and spell in British/European English (hyphenate terms like fixed-term; use ECB terminology).\n        - Make timelines explicit (start triggers, end conditions, cut-offs) and name the competent authority and their role when relevant (e.g., Chief Services Officer, on behalf of the Executive Board; Director General Human Resources or their Deputy).\n        - If the question has multiple parts, answer sequentially with numbered points (1., 2., …), stating defaults and consequences for each.\n        - End the Answer with parenthetical citations to every source used, giving exact page numbers and, where available, article/section markers. Use the documents’ canonical names: “ECB Staff Rules” and “ECB Conditions of Employment” (e.g., (ECB Staff Rules, §2.1.1–2.1.2, p.47; ECB Conditions of Employment, p.6)).\n        - Do not invent content or cite pages not present in the Context. If the Context is insufficient to answer reliably or lacks the precise page needed, provide a neutral fallback: “Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.” Do not add citations in this case.\n        \n        Style:\n        - Impersonal, concise, and prescriptive; avoid first person. Prefer “Members of staff/applicants/appointments are …” over “you,” unless the question explicitly asks about the user’s situation and the rule is universal.\n        - Avoid long quotations; summarise the rule precisely. \n        - Keep the Answer self-contained and limited to what is supported by the cited pages.",
+                    "role": "system"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nI want to do a transaction in euro-area government bonds worth EUR 15,000 in a single month. Do I need authorisation, and from whom, and how long before the order should I submit the request?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nTransactions exceeding EUR 10,000 within any given calendar month in government securities issued by euro area Member States are subject to prior authorisation by the Compliance and Governance Office. Any such request must be submitted at least five working days prior to the envisaged order date, and the Office shall decide on the request within five working days; if it does not react within five working days, the transaction is deemed authorised. (ECB Staff Rules, pages 15–17)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nHow long is the cooling-off period for staff at salary band I or above who were involved in supervising a credit institution before they can join that institution?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nMembers of staff at salary band I or above who were directly involved in the supervision of a credit institution may only start working for that credit institution after the expiry of one year from the date on which their direct involvement in the supervision ceased. In exceptional circumstances, this period may be increased up to two years. (ECB Staff Rules, page 10)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 112\\no report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the alleged accident at work and also the names of \\nwitnesses and of any third party which may be liable. A medical certificate \\nshall be annexed, specifying the nature of the injuries and the probable \\nconsequences of the alleged accident at work.  \\n(b) The report shall be submitted not later than 10 working days following the \\ndate on which the alleged accident at work occurs except where the \\nDirector General Human Resources or their Deputy has established that \\nthe delay was justified by force majeure or by any other legitimate reason. \\n(c) The Directorate General H uman Resources may investigate whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reim\", \"Document: ECB Staff Rules\\nPage: 112\\nte whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \\nexpenses under the ECB health insurance, or those entitled under them, \\nshall report the accident to the administrator mentioned in Article 6.3.3.  \\n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \\nan occupational disease shall submit a statement to the Directorate \\nGeneral Human Resources within a reasonable period following the onset \\nof the disease or the date on which it is diagnosed for the first time. The \\nstatement may be submitted by the member of staff or, where the \\nsymptoms of the disease allegedly caused by the perfor mance of their \\nduties at the ECB become apparent after the termination of employment, \\nby the former member of staff; where a member of staff dies as a result of \\na disease allegedly caused by the performance of \", \"Document: ECB Staff Rules\\nPage: 114\\nrdance with the draft decision \\npreviously notified to the member of staff or those entitled under them. \\n6.3.14 (a) Members of staff who have submitted a request for recognition of an \\naccident at work or an occupational disease shall inform the Directorate \\nGeneral H uman Resources of any change in their state of health by \\nsubmitting medical certificates. \\n(b) If members of staff provide no information under paragraph (a) for more \\nthan six months, they will be presumed to have recovered and the case will \\nbe terminated. \\n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \\ninvalidity shall be taken after the member of staff’s injuries resulting from \\nthe accident at work or occupational disease have consolidated. Such \\ninjuries shall be considered t o have consolidated where they have \\nstabilised or will diminish only very slowly and to a very limited extent. To \\nthis end, the member of staff concerned shall submit a medical report \\nconfirming the stabili\", \"Document: ECB Staff Rules\\nPage: 113\\nseeing the report drawn up following the investigation, the doctors \\nappointed by the Director General Human Resources or their Deputy \\npursuant to Article 6.3.12(a) shall state their findings as provided for in the \\nsame Article. \\n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \\naccordance with the procedure laid down in Article 6.3.13, the Director \\nGeneral Human Resources or their Deputy shall adopt a decision: \\n(i) to recognise an accident at work, \\n(ii) to recognise the occupational nature of a disease, \\n(iii) to establish the degree of permanent invalidity after consolidation of \\ninjuries pursuant to Article 6.3.14(c). \\nSuch decisions shall be taken on the basis of expert medical opinion of one \\nor more doctors appointed by the Director General Human Resources or \\ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \\nafter consulting the Medical Committee established in accordance with \\nArticle 6.6. \\n(b) Failure by a me\", \"Document: ECB Staff Rules\\nPage: 112\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 112 \\n• in the case of an accident, the monthly basic full -time salary paid in the 12 \\nmonths preceding the date of the accident. \\n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \\nbe payable to a member of staff or those entitled under them whose accident or \\noccupational disease arose from a situation in which they intentionally caused or \\ncontributed to the death or injury of another person.  \\n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \\nunder them shall report it to the Directorate General Human Resources. \\nWhere the alleged accident at work results in death or where it is impossible \\nfor the member of staff or those entitled under them to report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the a\"]\n\n[[ ## question ## ]]\nWithin what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided excerpt from the ECB Staff Rules (page 112) states the reporting deadline: \"The report shall be submitted not later than 10 working days following the date on which the alleged accident at work occurs except where the Director General Human Resources or their Deputy has established that the delay was justified by force majeure or by any other legitimate reason.\"\n\n[[ ## answer ## ]]\nAn alleged accident at work must be reported to the Directorate General Human Resources not later than 10 working days following the date on which the accident occurs, unless the Director General Human Resources or their Deputy accepts that the delay was justified by force majeure or another legitimate reason.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 74\\nff shall be refutably presumed having issued such evidence \\nprovided they have submitted a declaration of honour as received from the ECB.  \\nThe maximum period of entitlement to the subsistence allowance, which accrues \\non a daily basis, shall be three months. \\n4.5.2 In case of entitlement to a subsistence allowance for the entire period referred to \\nin Article 4.5.1, the member of staff shall be entitled to a subsistence allowance \\nof EUR 9 270 (hereinafter the ‘standard subsistence allowance’). This allowance \\nshall be increased by  a maximum supplement of  EUR 2 070 for any spouse/  \\nrecognised partner and dependent child accompanying them. \\n4.5.3 Subject to Article 4.5.1, a provisional payment equal to the standard subsistence \\nallowance shall be paid as a lump sum with the second monthly salary.  The \\nsupplement shall be paid following completion of the period referred to in \\nArticle 4.5.1. \\n4.5.4 Members of staff who have received the provisional payment and before the \\ncompletio\", \"Document: ECB Conditions of Employment\\nPage: 12\\nECB-PUBLIC \\nConditions of Employment for Staff of the European Central Bank \\nLatest amendments entered into force on 1 March 2026 \\nPage 12 \\n(ii) grant a subsistence allowance; \\n(iii) grant an installation allowance equal to 200% of the basic monthly salary in the case \\nof members of staff who are entitled to a household allowance or 100% of the basic \\nmonthly salary in other cases; \\n(iv) grant a one- off reimbursement of 50% of any estate agent’s fee for assistance in \\nfinding permanent rented accommodation. \\n23. Under the conditions laid down in the Staff Rules, for members of staff who resettle on \\ntermination of service the ECB shall:  \\n (i) cover travel related expenses and the expenses for the removal of their personal \\nbelongings;  \\n (ii) grant a resettlement allowance equal to 200 % of the monthly basic salary in the case \\nof members of staff who are entitled to a household allowance or 100 % of the basic \\nmonthly salary in other cases. \\nIf termination of service is caused by  t\", \"Document: ECB Staff Rules\\nPage: 117\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 117 \\n6.5.5 Entitlement to the household allowance shall be calculated on the basi s of the \\nunemployment allowance. \\n6.5.7 Extension of cover under the ECB accident insurance shall be for a maximum \\nperiod of six months subject to the payment of half of the premium based on the \\nunemployment benefit payable. \\n6.5.8 If the former member of staff ceases to fulfil the conditions of entitlement, the \\npayment of the benefits is suspended. Payment is resumed if, before the expiry \\nof the two-year period, the conditions are again fulfilled. \\n6.5.9 The above benefits\\n \\n(a) are paid monthly in arrears. When they are not due in respect of a whole \\nmonth, they shall be calculated on the basis of a 30-day month; \\n(b) are paid to the surviving dependents as appropriate in the case of death;  \\n6.5a. The provisions of Article 36a of the Conditions of Employment are applied as \\nfollows: \\n6.5a.1  Members of staff requesting the be\", \"Document: ECB Staff Rules\\nPage: 75\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 75 \\nis terminated by the ECB shall refund part of the provisional payment in proportion \\nto the unexpired portion of that three months’ period. \\n4.5.5 Where a member of staff and their spouse or recognised partner takes up \\nemployment with the ECB within a period of one year after each other, only one \\nsubsistence allowance shall be paid to the member of staff who first took up \\nemployment with the ECB. In case of resignation or termination under Article 4.5.4 \\nof the member of staff who first took up employment with the ECB, the spouse or \\nrecognised partner who joined the ECB later and maintains their employment \\nrelationship with the ECB shall become entitled to the subsistence allowance.  \\n4.6 Installation allowance \\nThe provisions of Article 22(iii) of the Conditions of Employment shall be applied \\nas follows: \\n4.6.1 On completion of the probationary period, members of staff shall be entitled to the \\ninstalla\", \"Document: ECB Conditions of Employment\\nPage: 17\\ners of staff who are unemployed \\nfollowing termination of their contract with the ECB shall be entitled to: \\n(i) a monthly unemployment allowance equal to: \\n• 60% of their last basic salary for six months; and \\n• 30% of their last basic salary for the subsequent six months and additional \\nmonths in relation to years of service and age; \\n(ii) household and child allowances; \\n(iii) continued cover under the ECB health insurance, long- term care insurance and \\naccident insurance scheme, subject to payment of the relevant contributions; and  \\n(iv) an education allowance in accordance with Article 19, limited to the reimbursement \\nof a maximum of EUR 393 per month, except for children with certified, imperative \\neducational needs as defined in the Staff Rules, in which case the reimbursement \\nshall be increased to a maximum of EUR 764.  The allowance shall be payable only \\nuntil the end of the academic year in which the member of staff becomes \\nunemployed and provided that the child remains\"]\n\n[[ ## question ## ]]\nWhat is the standard subsistence allowance amount and for how long can I receive it?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe information is in the ECB Staff Rules excerpt (pages 74–75): Article 4.5.2 defines the standard subsistence allowance and the supplement; Article 4.5.1/4.5.3 and surrounding text state the maximum entitlement period.\n\n[[ ## answer ## ]]\nThe standard subsistence allowance is EUR 9,270. The maximum period of entitlement to the subsistence allowance is three months (the allowance accrues on a daily basis). A supplement of up to EUR 2,070 may be added for a spouse/recognised partner and dependent child accompanying the staff member.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 93\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 93 \\n5.7 Annual leave \\nThe provisions of Article 27 of the Conditions of Employment are applied as \\nfollows: \\n5.7.1 If a full year is not worked, the leave entitlement shall be calculated on a pro rata \\nbasis taking into account an average of 21 working days per month and rounded \\nup to the nearest half hour. \\n5.7.2 Annual leave may be taken from date of appointment. Except for urgent family \\nreasons caused by sickness or accident it must be approved in advance by the \\nHead of Division or, from this grade, by the next higher manager. In any event a \\ncompleted leave form must be sent to the Directorate General Human Resources. \\nAnnual leave may be taken all at once or in several periods as desired by the \\nmember of staff and subject to business requirements. At least 20 days shall be \\ntaken before the end of the calendar year. This minimum of 20 days shall include \\nat least one peri od of two consecutive weeks. Memb\", \"Document: ECB Staff Rules\\nPage: 94\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 94 \\n5.7.6 Conversely, leave taken in excess of entitlement will result in a deduction being \\nmade from the salary on the basis of one day’s salary for each day’s leave taken \\nin excess of the leave entitlement. \\n5.7.7 In calculating the amount for settling outstanding annual leave or annual leave \\ntaken in excess, a standard 21 working day month shall be used and one day’s \\nannual leave shall be equivalent to one day’s payment. The period of leave \\noutstanding will not cou nt as service with the ECB and therefore no deductions \\nfor pension, ECB health insurance or accident insurance will be levied in respect \\nof this period. Tax for the benefit of the European Communities will be deducted \\nfrom these payments. The same method shall be applied to calculations in respect \\nof annual leave overtaken. \\n5.8 Public holidays \\nThe provisions of Article 27 of the Conditions of Employment are applied as \\nfollows: \\nThe follow\", \"Document: ECB Staff Rules\\nPage: 3\\n................. 90 \\n5.5 Shift work duties .................................................................................... 91 \\n5.6 On-call duties ......................................................................................... 92 \\n5.7 Annual leave ........................................................................................... 93 \\n5.8 Public holidays ....................................................................................... 94 \\n5.9 Maternity and adoptive leave ................................................................ 94 \\n5.10 Special leave........................................................................................... 96 \\n5.11 Unpaid parental leave .......................................................................... 100 \\n5.12 Unpaid leave ......................................................................................... 101 \\n5.13 Sick leave .............................................................................\", \"Document: ECB Conditions of Employment\\nPage: 13\\nuties may be granted an \\nallowance under the conditions laid down in the Staff Rules. \\n27. Members of staff shall be entitled to thirty and a half working days of paid leave per annum. \\nPublic holidays observed by the ECB shall be additional to this leave entitlement.  \\n28. Subject to the conditions laid down in the Staff Rules, members of staff shall be entitled to: \\n(i) paid maternity or adoptive leave of 20 weeks; \\n(ii) in the event of multiple birth an additional four weeks paid maternity leave; \\n(iia) paid parental special leave of 40 days. Members of staff shall be entitled to additional \\nworking days of paid parental special leave in each of the following cases, for the \\nperiod indicated: \\n- in the event of premature birth, which, for the purpose of this provision, is a birth \\ntaking place before the end of the 37\\nth week of pregnancy, 20 working days; \\n- in the event of the birth of a child with a serious illness or disability, recognised in \\naccordance with Article 3.6.4 of th\", \"Document: ECB Conditions of Employment\\nPage: 12\\nsame nature provided \\nby other sources. Members of staff shall claim and declare such benefits, which shall be \\ndeducted from those payable by the ECB. \\n \\nPART 5 WORKING HOURS AND LEAVE \\n \\n25. The standard working week shall be forty hours excluding lunch breaks, unless otherwise \\nagreed. Under the conditions laid down in the Staff Rules, members of staff may be \\nauthorised to telework. Under the conditions laid down in the Staff Rules, members of staff \\nmay be allowed to work part -time. The entitlements of members of staff working part time \\nshall be prorated in line with their working time. However, such members of staff shall be \\nentitled to the full child and education allowances. \\n26. (a) In accordance with the conditions laid down in the Staff Rules, all members of staff may be \\nrequired to work overtime in addition to their normal working hours in cases of urgency or \\nexceptional pressure of work. \"]\n\n[[ ## question ## ]]\nI still need the definitive verbatim clauses to complete the answer. Please provide the exact text (word‑for‑word) and full citation (document name, article number, page, version/date) for the following from the ECB HR documents: 1) The clause that states the annual leave entitlement in number of days per year for full‑time staff (e.g. Article 27 of the Conditions of Employment) — include any variations by grade, length of service or staff category. 2) Any text that explicitly confirms that the “maximum of 10.5 days carry‑over” in Staff Rules Art. 5.7.2 is 10.5 days of that annual‑entitlement (quote the exact wording if present). 3) The full verbatim carry‑over and deadline/expiry rules (including text on taking at least 20 days in year, carry‑over ceiling, deadline to use carried days, whether unused days expire automatically, and which authorities may approve extensions/further carry‑over). 4) Any verbatim clauses creating exceptions to carry‑over or extending deadlines because of long‑term sickness, maternity/paternity/parental leave, unpaid leave or operational reasons (quote exact text and article numbers). 5) The verbatim clause(s) on settlement of outstanding annual leave on termination (payment, calculation method such as the 21 working‑day month, and any limits). 6) For every quoted clause, state the document name (Staff Rules or Conditions of Employment), exact version/date and page number, and whether there have been any recent amendments or temporary arrangements affecting these provisions (with dates). If any requested clause is not in the Staff Rules but in the Conditions of Employment (or another HR instrument), please quote that clause and give its exact location. If a clause does not exist, say so explicitly.\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T20:47:10.648213Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1052008",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "52521@Mac",
+        "requestId": "18ee60c4-cd29-47e2-94a8-5f6fb0be4571",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T20:47:52.025712Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1052009",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n- Main rule: Annual leave entitlement is set out in Article 27 of the Conditions of Employment; procedural and settlement details are in the Staff Rules, Part 5, Article 5.7. Relevant text fragments in the retrieved Context and their locations:\n  - Conditions of Employment, Article 27 — explicit entitlement figure (Page 13, Conditions of Employment, latest amendments entered into force 1 March 2026).\n  - Staff Rules, Article 5.7.1–5.7.2 — pro rata calculation, approval authority (Head of Division / next higher manager), requirement to take at least 20 days within the calendar year and one two‑week period (Page 93, Staff Rules, 1 February 2026).\n  - Staff Rules, Article 5.7.6–5.7.7 — consequences of leave in excess and settlement calculation using a standard 21 working‑day month; treatment of outstanding leave for service and deductions (Page 94, Staff Rules, 1 February 2026).\n- Exceptions / variations requested (by grade, length of service, staff category; explicit “10.5 days carry‑over” wording; full carry‑over/expiry rules; exceptions for long‑term sickness, parental leave; full settlement limits) are not fully present in the retrieved Context. Only the passages above are available verbatim. Where the requested clause is absent from the provided excerpts, the response will state that the clause is not present in the supplied Context.\n- Authorities: Head of Division or, from that grade, the next higher manager must approve leave (Staff Rules, Art. 5.7.2, p.93). Directorate General Human Resources is the recipient of completed leave forms (Art. 5.7.2, p.93). No other authority for carry‑over extensions appears in the retrieved excerpts.\n- Timelines/figures in the retrieved Context: 30.5 working days per annum (Article 27, Conditions of Employment, p.13); pro rata calculation using 21 working days per month (Staff Rules, Art.5.7.1, p.93); at least 20 days to be taken before year‑end and one period of two consecutive weeks (Staff Rules, Art.5.7.2, p.93); settlement uses a 21 working‑day month and one day’s annual leave = one day’s payment (Staff Rules, Art.5.7.7, p.94).\n- Reconciliation: Where both instruments appear, the Conditions of Employment provide the entitlement figure (most specific rule on entitlement) and the Staff Rules provide procedural application and calculation details (more specific for implementation). The most recent dates available in the retrieved Context are: Staff Rules version dated 1 February 2026; Conditions of Employment latest amendments entered into force 1 March 2026. No other amendment or temporary arrangement information is present in the retrieved Context.\n\n[[ ## answer ## ]]\n1) Annual leave entitlement (verbatim)\n- \"27. Members of staff shall be entitled to thirty and a half working days of paid leave per annum. Public holidays observed by the ECB shall be additional to this leave entitlement.\" \n  - Source: ECB Conditions of Employment, Article 27; Latest amendments entered into force on 1 March 2026; p.13. (ECB Conditions of Employment, Art. 27, p.13)\n\n2) Text confirming a \"maximum of 10.5 days carry‑over\"\n- The requested exact wording confirming a \"maximum of 10.5 days carry‑over\" is not present in the retrieved Context. Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.\n\n3) Carry‑over and deadline/expiry rules (verbatim material available)\n- Available verbatim procedural rules in the retrieved Context:\n  - \"5.7 Annual leave \n    The provisions of Article 27 of the Conditions of Employment are applied as follows: \n    5.7.1 If a full year is not worked, the leave entitlement shall be calculated on a pro rata basis taking into account an average of 21 working days per month and rounded up to the nearest half hour.\" \n    - Source: ECB Staff Rules, Art. 5.7.1; 1 February 2026; p.93. (ECB Staff Rules, Art. 5.7.1, p.93)\n  - \"5.7.2 Annual leave may be taken from date of appointment. Except for urgent family reasons caused by sickness or accident it must be approved in advance by the Head of Division or, from this grade, by the next higher manager. In any event a completed leave form must be sent to the Directorate General Human Resources. Annual leave may be taken all at once or in several periods as desired by the member of staff and subject to business requirements. At least 20 days shall be taken before the end of the calendar year. This minimum of 20 days shall include at least one period of two consecutive weeks.\" \n    - Source: ECB Staff Rules, Art. 5.7.2; 1 February 2026; p.93. (ECB Staff Rules, Art. 5.7.2, p.93)\n- The retrieved Context does not contain the full carry‑over ceiling, deadline to use carried days, explicit expiry wording for unused carried days, nor text on which authority may approve extensions beyond the carry‑over (other than the leave approval authority cited above). Insufficient retrieved source detail to provide the missing verbatim clauses. Please provide the relevant Staff Rules/Conditions pages if available.\n\n4) Exceptions extending carry‑over or deadlines because of long‑term sickness, parental or unpaid leave, or operational reasons (verbatim)\n- The retrieved Context does not contain verbatim clauses explicitly creating exceptions to carry‑over or extensions of deadlines for long‑term sickness, maternity/paternity/parental leave, unpaid leave or operational reasons. Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s).\n\n5) Settlement of outstanding annual leave on termination (verbatim)\n- Available verbatim clauses in the retrieved Context:\n  - \"5.7.6 Conversely, leave taken in excess of entitlement will result in a deduction being made from the salary on the basis of one day’s salary for each day’s leave taken in excess of the leave entitlement.\" \n    - Source: ECB Staff Rules, Art. 5.7.6; 1 February 2026; p.94. (ECB Staff Rules, Art. 5.7.6, p.94)\n  - \"5.7.7 In calculating the amount for settling outstanding annual leave or annual leave taken in excess, a standard 21 working day month shall be used and one day’s annual leave shall be equivalent to one day’s payment. The period of leave outstanding will not count as service with the ECB and therefore no deductions for pension, ECB health insurance or accident insurance will be levied in respect of this period. Tax for the benefit of the European Communities will be deducted from these payments. The same method shall be applied to calculations in respect of annual leave overtaken.\" \n    - Source: ECB Staff Rules, Art. 5.7.7; 1 February 2026; p.94. (ECB Staff Rules, Art. 5.7.7, p.94)\n- No additional verbatim limits or monetary ceilings for settlement on termination are present in the retrieved Context. Insufficient retrieved source detail to provide further verbatim clauses or limits; please supply the relevant pages if required.\n\n6) Document/version/page references and amendment notes (for quoted clauses)\n- ECB Conditions of Employment — \"Latest amendments entered into force on 1 March 2026.\" Quoted: Art. 27, p.13. (ECB Conditions of Employment, Art. 27, p.13; latest amendments entered into force on 1 March 2026)\n- ECB Staff Rules — version header in retrieved Context dated \"1 February 2026.\" Quoted: Art. 5.7.1–5.7.2, p.93; Art. 5.7.6–5.7.7, p.94. (ECB Staff Rules, Arts. 5.7.1–5.7.2, p.93; Arts. 5.7.6–5.7.7, p.94; Staff Rules dated 1 February 2026)\n- No other amendment dates or temporary arrangements affecting these specific quoted provisions are present in the retrieved Context.\n\nIf fuller verbatim clauses for carry‑over ceilings, expiry rules, exceptions, or any explicit \"10.5 days\" wording are required, please provide the relevant ECB Staff Rules or Conditions of Employment page(s) (including article numbers and page numbers) absent from the current Context so that the exact text can be quoted. \n\n(ECB Conditions of Employment, Art. 27, p.13; ECB Staff Rules, Arts. 5.7.1–5.7.2, p.93; ECB Staff Rules, Arts. 5.7.6–5.7.7, p.94) \n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 4171,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 2240,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 5354,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 3840,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 9525
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T20:47:52.025737Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1052010",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T20:47:52.029173Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1052014",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "52521@Mac",
+        "requestId": "115b3631-8764-4865-8c8a-314900214c15",
+        "historySizeBytes": "44687",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T20:47:52.036051Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1052018",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T20:47:52.036102Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1052019",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "1) Annual leave entitlement (verbatim)\n- \"27. Members of staff shall be entitled to thirty and a half working days of paid leave per annum. Public holidays observed by the ECB shall be additional to this leave entitlement.\" \n  - Source: ECB Conditions of Employment, Article 27; Latest amendments entered into force on 1 March 2026; p.13. (ECB Conditions of Employment, Art. 27, p.13)\n\n2) Text confirming a \"maximum of 10.5 days carry‑over\"\n- The requested exact wording confirming a \"maximum of 10.5 days carry‑over\" is not present in the retrieved Context. Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.\n\n3) Carry‑over and deadline/expiry rules (verbatim material available)\n- Available verbatim procedural rules in the retrieved Context:\n  - \"5.7 Annual leave \n    The provisions of Article 27 of the Conditions of Employment are applied as follows: \n    5.7.1 If a full year is not worked, the leave entitlement shall be calculated on a pro rata basis taking into account an average of 21 working days per month and rounded up to the nearest half hour.\" \n    - Source: ECB Staff Rules, Art. 5.7.1; 1 February 2026; p.93. (ECB Staff Rules, Art. 5.7.1, p.93)\n  - \"5.7.2 Annual leave may be taken from date of appointment. Except for urgent family reasons caused by sickness or accident it must be approved in advance by the Head of Division or, from this grade, by the next higher manager. In any event a completed leave form must be sent to the Directorate General Human Resources. Annual leave may be taken all at once or in several periods as desired by the member of staff and subject to business requirements. At least 20 days shall be taken before the end of the calendar year. This minimum of 20 days shall include at least one period of two consecutive weeks.\" \n    - Source: ECB Staff Rules, Art. 5.7.2; 1 February 2026; p.93. (ECB Staff Rules, Art. 5.7.2, p.93)\n- The retrieved Context does not contain the full carry‑over ceiling, deadline to use carried days, explicit expiry wording for unused carried days, nor text on which authority may approve extensions beyond the carry‑over (other than the leave approval authority cited above). Insufficient retrieved source detail to provide the missing verbatim clauses. Please provide the relevant Staff Rules/Conditions pages if available.\n\n4) Exceptions extending carry‑over or deadlines because of long‑term sickness, parental or unpaid leave, or operational reasons (verbatim)\n- The retrieved Context does not contain verbatim clauses explicitly creating exceptions to carry‑over or extensions of deadlines for long‑term sickness, maternity/paternity/parental leave, unpaid leave or operational reasons. Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s).\n\n5) Settlement of outstanding annual leave on termination (verbatim)\n- Available verbatim clauses in the retrieved Context:\n  - \"5.7.6 Conversely, leave taken in excess of entitlement will result in a deduction being made from the salary on the basis of one day’s salary for each day’s leave taken in excess of the leave entitlement.\" \n    - Source: ECB Staff Rules, Art. 5.7.6; 1 February 2026; p.94. (ECB Staff Rules, Art. 5.7.6, p.94)\n  - \"5.7.7 In calculating the amount for settling outstanding annual leave or annual leave taken in excess, a standard 21 working day month shall be used and one day’s annual leave shall be equivalent to one day’s payment. The period of leave outstanding will not count as service with the ECB and therefore no deductions for pension, ECB health insurance or accident insurance will be levied in respect of this period. Tax for the benefit of the European Communities will be deducted from these payments. The same method shall be applied to calculations in respect of annual leave overtaken.\" \n    - Source: ECB Staff Rules, Art. 5.7.7; 1 February 2026; p.94. (ECB Staff Rules, Art. 5.7.7, p.94)\n- No additional verbatim limits or monetary ceilings for settlement on termination are present in the retrieved Context. Insufficient retrieved source detail to provide further verbatim clauses or limits; please supply the relevant pages if required.\n\n6) Document/version/page references and amendment notes (for quoted clauses)\n- ECB Conditions of Employment — \"Latest amendments entered into force on 1 March 2026.\" Quoted: Art. 27, p.13. (ECB Conditions of Employment, Art. 27, p.13; latest amendments entered into force on 1 March 2026)\n- ECB Staff Rules — version header in retrieved Context dated \"1 February 2026.\" Quoted: Art. 5.7.1–5.7.2, p.93; Art. 5.7.6–5.7.7, p.94. (ECB Staff Rules, Arts. 5.7.1–5.7.2, p.93; Arts. 5.7.6–5.7.7, p.94; Staff Rules dated 1 February 2026)\n- No other amendment dates or temporary arrangements affecting these specific quoted provisions are present in the retrieved Context.\n\nIf fuller verbatim clauses for carry‑over ceilings, expiry rules, exceptions, or any explicit \"10.5 days\" wording are required, please provide the relevant ECB Staff Rules or Conditions of Employment page(s) (including article numbers and page numbers) absent from the current Context so that the exact text can be quoted. \n\n(ECB Conditions of Employment, Art. 27, p.13; ECB Staff Rules, Arts. 5.7.1–5.7.2, p.93; ECB Staff Rules, Arts. 5.7.6–5.7.7, p.94)",
+                "reasoning": "- Main rule: Annual leave entitlement is set out in Article 27 of the Conditions of Employment; procedural and settlement details are in the Staff Rules, Part 5, Article 5.7. Relevant text fragments in the retrieved Context and their locations:\n  - Conditions of Employment, Article 27 — explicit entitlement figure (Page 13, Conditions of Employment, latest amendments entered into force 1 March 2026).\n  - Staff Rules, Article 5.7.1–5.7.2 — pro rata calculation, approval authority (Head of Division / next higher manager), requirement to take at least 20 days within the calendar year and one two‑week period (Page 93, Staff Rules, 1 February 2026).\n  - Staff Rules, Article 5.7.6–5.7.7 — consequences of leave in excess and settlement calculation using a standard 21 working‑day month; treatment of outstanding leave for service and deductions (Page 94, Staff Rules, 1 February 2026).\n- Exceptions / variations requested (by grade, length of service, staff category; explicit “10.5 days carry‑over” wording; full carry‑over/expiry rules; exceptions for long‑term sickness, parental leave; full settlement limits) are not fully present in the retrieved Context. Only the passages above are available verbatim. Where the requested clause is absent from the provided excerpts, the response will state that the clause is not present in the supplied Context.\n- Authorities: Head of Division or, from that grade, the next higher manager must approve leave (Staff Rules, Art. 5.7.2, p.93). Directorate General Human Resources is the recipient of completed leave forms (Art. 5.7.2, p.93). No other authority for carry‑over extensions appears in the retrieved excerpts.\n- Timelines/figures in the retrieved Context: 30.5 working days per annum (Article 27, Conditions of Employment, p.13); pro rata calculation using 21 working days per month (Staff Rules, Art.5.7.1, p.93); at least 20 days to be taken before year‑end and one period of two consecutive weeks (Staff Rules, Art.5.7.2, p.93); settlement uses a 21 working‑day month and one day’s annual leave = one day’s payment (Staff Rules, Art.5.7.7, p.94).\n- Reconciliation: Where both instruments appear, the Conditions of Employment provide the entitlement figure (most specific rule on entitlement) and the Staff Rules provide procedural application and calculation details (more specific for implementation). The most recent dates available in the retrieved Context are: Staff Rules version dated 1 February 2026; Conditions of Employment latest amendments entered into force 1 March 2026. No other amendment or temporary arrangement information is present in the retrieved Context."
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}

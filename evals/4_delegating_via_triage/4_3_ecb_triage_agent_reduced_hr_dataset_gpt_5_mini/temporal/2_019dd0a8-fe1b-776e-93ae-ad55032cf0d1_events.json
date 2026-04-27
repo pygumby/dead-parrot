@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T20:37:09.275488Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1048639",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbHrExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "Under ECB HR policy, how many days of parental special leave am an employee entitled to per dependent child, and within what timeframe (e.g., child's age or years from birth/adoption) must these days be used?"
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0a8-fe1b-776e-93ae-ad55032cf0d1",
+        "identity": "52867@Mac",
+        "firstExecutionRunId": "019dd0a8-fe1b-776e-93ae-ad55032cf0d1",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_hr_expert_agent-rest-c7b0ec39",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T20:37:09.278482Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048640",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T20:37:09.296111Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048652",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "52521@Mac",
+        "requestId": "9709603e-4aab-48ef-9c8a-e68d3825d64c",
+        "historySizeBytes": "530",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T20:37:09.315818Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048656",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            3,
+            2,
+            1
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T20:37:09.317680Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048657",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "Under ECB HR policy, how many days of parental special leave am an employee entitled to per dependent child, and within what timeframe (e.g., child's age or years from birth/adoption) must these days be used?"
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T20:37:09.319944Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048700",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "52521@Mac",
+        "requestId": "4cbeeb29-b9cb-4501-83ac-30db92956a72",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T20:37:11.529704Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048701",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Staff Rules\nPage: 99\ng the member of staff’s \nspecial leave: \n(a) one day for travel by air, where the one-way flight time is up to four hours;  \n(b) one day for travel by other means than air travel over a distance between 200 \nand 400 km;  \n(c) two days where a combination of travel according to (a) and (b) is required, as \nwell as for any travel of a longer duration or over a longer distance.  \nThe days of special leave for travelling time shall be calculated on the basis of the \nquickest means of travel. \n5.10.7 [deleted] \n5.10.8 \n A member of staff on a fixed- term or permanent contract who has passed their \nprobationary period and has completed at least one year of service is entitled to \nparental special leave of 40 working days for each dependent child and for each \nchild living in the  same household where the member of staff has a primary \ncaregiver role due to adoption of a child. Parental special leave may only be used \nin the first three years after the birth of the child or the date of adopti",
+                "Document: ECB Staff Rules\nPage: 99\nwhere the member of staff has a primary \ncaregiver role due to adoption of a child. Parental special leave may only be used \nin the first three years after the birth of the child or the date of adoption. ",
+                "Document: ECB Staff Rules\nPage: 97\ner child. In the event that \nboth adoptive parents are members of staff or short -term contract \nemployees, this entitlement shall be granted only once and may be divided \nbetween both adoptive parents. If an a doption fails, special leave already \ntaken under this paragraph shall not be revoked; \n(d)  change of residence of the member of staff \n• on taking up appointment with the ECB: two days, \n• other: one day; \n(e) termination of contract, excluding resignation or a refusal by the Member of \nStaff to have their contract extended: to facilitate the search for a job, up to \n5 days shall be granted. \nSpecial leave under paragraphs (a), (b) and (d) shall be granted for the day of the \nevent and/or the days immediately before or following the event that gives rise to \nthe special leave. Special leave under paragraphs (c), (ca), and (cc) shall be \ngranted wi thin a timeframe starting two months before the projected birth or \nadoption date and ending six months after the actual date of bi",
+                "Document: ECB Staff Rules\nPage: 100\nollows: \n5.11.1 A member of staff is entitled to unpaid parental leave to take care of each of \nhis/her dependent children until the child reaches the age of ten years. Parental \nleave may also be taken for a child who needs constant care because of a serious \nillness or disability. \n5.11.2 Unpaid parental leave shall be granted for a maximum of three years per child, \nwhich may be non- consecutive. The total unpaid parental leave granted to a \nmember of staff shall not exceed six years. Notwithstanding this, a member of \nstaff may still be granted two additional months of unpaid parental leave beyond \nthis limit for each new dependent child . Parents who are both members of staff \nshall both be entitled to unpaid parental leave. \n \n*  In respect of children of members of staff born or adopted on or after 1 August 2022 and \nbefore 1 January 2025, the rights set out in Article 5.10.8 shall apply, with the exception \nof the entitlement to parental special leave which shall be limited to ",
+                "Document: ECB Staff Rules\nPage: 97\ncial leave under paragraphs (c), (ca), and (cc) shall be \ngranted wi thin a timeframe starting two months before the projected birth or \nadoption date and ending six months after the actual date of birth or adoption. \nSpecial leave under paragraph (e) shall be granted within the three months \npreceding the end of the contract. \n5.10.2 On application by a member of staff, the Head of Division in charge of leave \nmatters in Directorate General Human Resources or their D eputy, and in their \nabsence, any other Head of Division in Directorate General Human Resources  \nshall grant special leave of up to five days per calendar year  for the medically \ncertified illness of a dependent child under the age of 18, where the certificate \ndemonstrates that the illness requires the presence of the member of staff. \nOn application by a member of staff, the Head of Division in charge of leave \nmatters in Directorate General Human Resources or their Deputy, and in their \nabsence, any other Head of Div"
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T20:37:11.529938Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048702",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T20:37:11.535767Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048706",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "52521@Mac",
+        "requestId": "c24e4fb4-8988-4393-9442-65443078793f",
+        "historySizeBytes": "6140",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T20:37:11.879577Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048741",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T20:37:11.879851Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048742",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB HR policy assistant. Use only the provided Context to answer. Produce two fields: \n        - Reasoning: a step-by-step synthesis of the relevant provisions you will use (identify the main rule, any exceptions, competent authorities, timelines, figures/thresholds, and the exact page numbers you will cite; reconcile overlaps/conflicts by preferring the most specific and most recent provision and noting this).\n        - Answer: a concise, impersonal, normative response grounded in the Context.\n        \n        Answer requirements:\n        - Lead with the main entitlement/obligation/rule that directly addresses the question.\n        - State precise figures, thresholds and formats as in source (e.g., EUR 764; six months; one month’s notice), and spell in British/European English (hyphenate terms like fixed-term; use ECB terminology).\n        - Make timelines explicit (start triggers, end conditions, cut-offs) and name the competent authority and their role when relevant (e.g., Chief Services Officer, on behalf of the Executive Board; Director General Human Resources or their Deputy).\n        - If the question has multiple parts, answer sequentially with numbered points (1., 2., …), stating defaults and consequences for each.\n        - End the Answer with parenthetical citations to every source used, giving exact page numbers and, where available, article/section markers. Use the documents’ canonical names: “ECB Staff Rules” and “ECB Conditions of Employment” (e.g., (ECB Staff Rules, §2.1.1–2.1.2, p.47; ECB Conditions of Employment, p.6)).\n        - Do not invent content or cite pages not present in the Context. If the Context is insufficient to answer reliably or lacks the precise page needed, provide a neutral fallback: “Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.” Do not add citations in this case.\n        \n        Style:\n        - Impersonal, concise, and prescriptive; avoid first person. Prefer “Members of staff/applicants/appointments are …” over “you,” unless the question explicitly asks about the user’s situation and the rule is universal.\n        - Avoid long quotations; summarise the rule precisely. \n        - Keep the Answer self-contained and limited to what is supported by the cited pages.",
+                    "role": "system"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nI want to do a transaction in euro-area government bonds worth EUR 15,000 in a single month. Do I need authorisation, and from whom, and how long before the order should I submit the request?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nTransactions exceeding EUR 10,000 within any given calendar month in government securities issued by euro area Member States are subject to prior authorisation by the Compliance and Governance Office. Any such request must be submitted at least five working days prior to the envisaged order date, and the Office shall decide on the request within five working days; if it does not react within five working days, the transaction is deemed authorised. (ECB Staff Rules, pages 15–17)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nHow long is the cooling-off period for staff at salary band I or above who were involved in supervising a credit institution before they can join that institution?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nMembers of staff at salary band I or above who were directly involved in the supervision of a credit institution may only start working for that credit institution after the expiry of one year from the date on which their direct involvement in the supervision ceased. In exceptional circumstances, this period may be increased up to two years. (ECB Staff Rules, page 10)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 112\\no report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the alleged accident at work and also the names of \\nwitnesses and of any third party which may be liable. A medical certificate \\nshall be annexed, specifying the nature of the injuries and the probable \\nconsequences of the alleged accident at work.  \\n(b) The report shall be submitted not later than 10 working days following the \\ndate on which the alleged accident at work occurs except where the \\nDirector General Human Resources or their Deputy has established that \\nthe delay was justified by force majeure or by any other legitimate reason. \\n(c) The Directorate General H uman Resources may investigate whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reim\", \"Document: ECB Staff Rules\\nPage: 112\\nte whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \\nexpenses under the ECB health insurance, or those entitled under them, \\nshall report the accident to the administrator mentioned in Article 6.3.3.  \\n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \\nan occupational disease shall submit a statement to the Directorate \\nGeneral Human Resources within a reasonable period following the onset \\nof the disease or the date on which it is diagnosed for the first time. The \\nstatement may be submitted by the member of staff or, where the \\nsymptoms of the disease allegedly caused by the perfor mance of their \\nduties at the ECB become apparent after the termination of employment, \\nby the former member of staff; where a member of staff dies as a result of \\na disease allegedly caused by the performance of \", \"Document: ECB Staff Rules\\nPage: 114\\nrdance with the draft decision \\npreviously notified to the member of staff or those entitled under them. \\n6.3.14 (a) Members of staff who have submitted a request for recognition of an \\naccident at work or an occupational disease shall inform the Directorate \\nGeneral H uman Resources of any change in their state of health by \\nsubmitting medical certificates. \\n(b) If members of staff provide no information under paragraph (a) for more \\nthan six months, they will be presumed to have recovered and the case will \\nbe terminated. \\n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \\ninvalidity shall be taken after the member of staff’s injuries resulting from \\nthe accident at work or occupational disease have consolidated. Such \\ninjuries shall be considered t o have consolidated where they have \\nstabilised or will diminish only very slowly and to a very limited extent. To \\nthis end, the member of staff concerned shall submit a medical report \\nconfirming the stabili\", \"Document: ECB Staff Rules\\nPage: 113\\nseeing the report drawn up following the investigation, the doctors \\nappointed by the Director General Human Resources or their Deputy \\npursuant to Article 6.3.12(a) shall state their findings as provided for in the \\nsame Article. \\n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \\naccordance with the procedure laid down in Article 6.3.13, the Director \\nGeneral Human Resources or their Deputy shall adopt a decision: \\n(i) to recognise an accident at work, \\n(ii) to recognise the occupational nature of a disease, \\n(iii) to establish the degree of permanent invalidity after consolidation of \\ninjuries pursuant to Article 6.3.14(c). \\nSuch decisions shall be taken on the basis of expert medical opinion of one \\nor more doctors appointed by the Director General Human Resources or \\ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \\nafter consulting the Medical Committee established in accordance with \\nArticle 6.6. \\n(b) Failure by a me\", \"Document: ECB Staff Rules\\nPage: 112\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 112 \\n• in the case of an accident, the monthly basic full -time salary paid in the 12 \\nmonths preceding the date of the accident. \\n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \\nbe payable to a member of staff or those entitled under them whose accident or \\noccupational disease arose from a situation in which they intentionally caused or \\ncontributed to the death or injury of another person.  \\n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \\nunder them shall report it to the Directorate General Human Resources. \\nWhere the alleged accident at work results in death or where it is impossible \\nfor the member of staff or those entitled under them to report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the a\"]\n\n[[ ## question ## ]]\nWithin what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided excerpt from the ECB Staff Rules (page 112) states the reporting deadline: \"The report shall be submitted not later than 10 working days following the date on which the alleged accident at work occurs except where the Director General Human Resources or their Deputy has established that the delay was justified by force majeure or by any other legitimate reason.\"\n\n[[ ## answer ## ]]\nAn alleged accident at work must be reported to the Directorate General Human Resources not later than 10 working days following the date on which the accident occurs, unless the Director General Human Resources or their Deputy accepts that the delay was justified by force majeure or another legitimate reason.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 74\\nff shall be refutably presumed having issued such evidence \\nprovided they have submitted a declaration of honour as received from the ECB.  \\nThe maximum period of entitlement to the subsistence allowance, which accrues \\non a daily basis, shall be three months. \\n4.5.2 In case of entitlement to a subsistence allowance for the entire period referred to \\nin Article 4.5.1, the member of staff shall be entitled to a subsistence allowance \\nof EUR 9 270 (hereinafter the ‘standard subsistence allowance’). This allowance \\nshall be increased by  a maximum supplement of  EUR 2 070 for any spouse/  \\nrecognised partner and dependent child accompanying them. \\n4.5.3 Subject to Article 4.5.1, a provisional payment equal to the standard subsistence \\nallowance shall be paid as a lump sum with the second monthly salary.  The \\nsupplement shall be paid following completion of the period referred to in \\nArticle 4.5.1. \\n4.5.4 Members of staff who have received the provisional payment and before the \\ncompletio\", \"Document: ECB Conditions of Employment\\nPage: 12\\nECB-PUBLIC \\nConditions of Employment for Staff of the European Central Bank \\nLatest amendments entered into force on 1 March 2026 \\nPage 12 \\n(ii) grant a subsistence allowance; \\n(iii) grant an installation allowance equal to 200% of the basic monthly salary in the case \\nof members of staff who are entitled to a household allowance or 100% of the basic \\nmonthly salary in other cases; \\n(iv) grant a one- off reimbursement of 50% of any estate agent’s fee for assistance in \\nfinding permanent rented accommodation. \\n23. Under the conditions laid down in the Staff Rules, for members of staff who resettle on \\ntermination of service the ECB shall:  \\n (i) cover travel related expenses and the expenses for the removal of their personal \\nbelongings;  \\n (ii) grant a resettlement allowance equal to 200 % of the monthly basic salary in the case \\nof members of staff who are entitled to a household allowance or 100 % of the basic \\nmonthly salary in other cases. \\nIf termination of service is caused by  t\", \"Document: ECB Staff Rules\\nPage: 117\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 117 \\n6.5.5 Entitlement to the household allowance shall be calculated on the basi s of the \\nunemployment allowance. \\n6.5.7 Extension of cover under the ECB accident insurance shall be for a maximum \\nperiod of six months subject to the payment of half of the premium based on the \\nunemployment benefit payable. \\n6.5.8 If the former member of staff ceases to fulfil the conditions of entitlement, the \\npayment of the benefits is suspended. Payment is resumed if, before the expiry \\nof the two-year period, the conditions are again fulfilled. \\n6.5.9 The above benefits\\n \\n(a) are paid monthly in arrears. When they are not due in respect of a whole \\nmonth, they shall be calculated on the basis of a 30-day month; \\n(b) are paid to the surviving dependents as appropriate in the case of death;  \\n6.5a. The provisions of Article 36a of the Conditions of Employment are applied as \\nfollows: \\n6.5a.1  Members of staff requesting the be\", \"Document: ECB Staff Rules\\nPage: 75\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 75 \\nis terminated by the ECB shall refund part of the provisional payment in proportion \\nto the unexpired portion of that three months’ period. \\n4.5.5 Where a member of staff and their spouse or recognised partner takes up \\nemployment with the ECB within a period of one year after each other, only one \\nsubsistence allowance shall be paid to the member of staff who first took up \\nemployment with the ECB. In case of resignation or termination under Article 4.5.4 \\nof the member of staff who first took up employment with the ECB, the spouse or \\nrecognised partner who joined the ECB later and maintains their employment \\nrelationship with the ECB shall become entitled to the subsistence allowance.  \\n4.6 Installation allowance \\nThe provisions of Article 22(iii) of the Conditions of Employment shall be applied \\nas follows: \\n4.6.1 On completion of the probationary period, members of staff shall be entitled to the \\ninstalla\", \"Document: ECB Conditions of Employment\\nPage: 17\\ners of staff who are unemployed \\nfollowing termination of their contract with the ECB shall be entitled to: \\n(i) a monthly unemployment allowance equal to: \\n• 60% of their last basic salary for six months; and \\n• 30% of their last basic salary for the subsequent six months and additional \\nmonths in relation to years of service and age; \\n(ii) household and child allowances; \\n(iii) continued cover under the ECB health insurance, long- term care insurance and \\naccident insurance scheme, subject to payment of the relevant contributions; and  \\n(iv) an education allowance in accordance with Article 19, limited to the reimbursement \\nof a maximum of EUR 393 per month, except for children with certified, imperative \\neducational needs as defined in the Staff Rules, in which case the reimbursement \\nshall be increased to a maximum of EUR 764.  The allowance shall be payable only \\nuntil the end of the academic year in which the member of staff becomes \\nunemployed and provided that the child remains\"]\n\n[[ ## question ## ]]\nWhat is the standard subsistence allowance amount and for how long can I receive it?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe information is in the ECB Staff Rules excerpt (pages 74–75): Article 4.5.2 defines the standard subsistence allowance and the supplement; Article 4.5.1/4.5.3 and surrounding text state the maximum entitlement period.\n\n[[ ## answer ## ]]\nThe standard subsistence allowance is EUR 9,270. The maximum period of entitlement to the subsistence allowance is three months (the allowance accrues on a daily basis). A supplement of up to EUR 2,070 may be added for a spouse/recognised partner and dependent child accompanying the staff member.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 99\\ng the member of staff’s \\nspecial leave: \\n(a) one day for travel by air, where the one-way flight time is up to four hours;  \\n(b) one day for travel by other means than air travel over a distance between 200 \\nand 400 km;  \\n(c) two days where a combination of travel according to (a) and (b) is required, as \\nwell as for any travel of a longer duration or over a longer distance.  \\nThe days of special leave for travelling time shall be calculated on the basis of the \\nquickest means of travel. \\n5.10.7 [deleted] \\n5.10.8 \\n A member of staff on a fixed- term or permanent contract who has passed their \\nprobationary period and has completed at least one year of service is entitled to \\nparental special leave of 40 working days for each dependent child and for each \\nchild living in the  same household where the member of staff has a primary \\ncaregiver role due to adoption of a child. Parental special leave may only be used \\nin the first three years after the birth of the child or the date of adopti\", \"Document: ECB Staff Rules\\nPage: 99\\nwhere the member of staff has a primary \\ncaregiver role due to adoption of a child. Parental special leave may only be used \\nin the first three years after the birth of the child or the date of adoption. \", \"Document: ECB Staff Rules\\nPage: 97\\ner child. In the event that \\nboth adoptive parents are members of staff or short -term contract \\nemployees, this entitlement shall be granted only once and may be divided \\nbetween both adoptive parents. If an a doption fails, special leave already \\ntaken under this paragraph shall not be revoked; \\n(d)  change of residence of the member of staff \\n• on taking up appointment with the ECB: two days, \\n• other: one day; \\n(e) termination of contract, excluding resignation or a refusal by the Member of \\nStaff to have their contract extended: to facilitate the search for a job, up to \\n5 days shall be granted. \\nSpecial leave under paragraphs (a), (b) and (d) shall be granted for the day of the \\nevent and/or the days immediately before or following the event that gives rise to \\nthe special leave. Special leave under paragraphs (c), (ca), and (cc) shall be \\ngranted wi thin a timeframe starting two months before the projected birth or \\nadoption date and ending six months after the actual date of bi\", \"Document: ECB Staff Rules\\nPage: 100\\nollows: \\n5.11.1 A member of staff is entitled to unpaid parental leave to take care of each of \\nhis/her dependent children until the child reaches the age of ten years. Parental \\nleave may also be taken for a child who needs constant care because of a serious \\nillness or disability. \\n5.11.2 Unpaid parental leave shall be granted for a maximum of three years per child, \\nwhich may be non- consecutive. The total unpaid parental leave granted to a \\nmember of staff shall not exceed six years. Notwithstanding this, a member of \\nstaff may still be granted two additional months of unpaid parental leave beyond \\nthis limit for each new dependent child . Parents who are both members of staff \\nshall both be entitled to unpaid parental leave. \\n \\n*  In respect of children of members of staff born or adopted on or after 1 August 2022 and \\nbefore 1 January 2025, the rights set out in Article 5.10.8 shall apply, with the exception \\nof the entitlement to parental special leave which shall be limited to \", \"Document: ECB Staff Rules\\nPage: 97\\ncial leave under paragraphs (c), (ca), and (cc) shall be \\ngranted wi thin a timeframe starting two months before the projected birth or \\nadoption date and ending six months after the actual date of birth or adoption. \\nSpecial leave under paragraph (e) shall be granted within the three months \\npreceding the end of the contract. \\n5.10.2 On application by a member of staff, the Head of Division in charge of leave \\nmatters in Directorate General Human Resources or their D eputy, and in their \\nabsence, any other Head of Division in Directorate General Human Resources  \\nshall grant special leave of up to five days per calendar year  for the medically \\ncertified illness of a dependent child under the age of 18, where the certificate \\ndemonstrates that the illness requires the presence of the member of staff. \\nOn application by a member of staff, the Head of Division in charge of leave \\nmatters in Directorate General Human Resources or their Deputy, and in their \\nabsence, any other Head of Div\"]\n\n[[ ## question ## ]]\nUnder ECB HR policy, how many days of parental special leave am an employee entitled to per dependent child, and within what timeframe (e.g., child's age or years from birth/adoption) must these days be used?\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T20:37:11.880873Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048916",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "52521@Mac",
+        "requestId": "1db1a0b9-c976-44b1-b5d5-68943641aa41",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T20:37:40.334679Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048917",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n- Main rule: Article 5.10.8 in the provided extract sets the parental special leave entitlement: 40 working days per dependent child and per child in the same household where the member has a primary caregiver role due to adoption; must be used within the first three years after birth or adoption (p.99).  \n- Eligibility/conditions: Entitlement applies to a member of staff on a fixed-term or permanent contract who has passed their probationary period and has completed at least one year of service (Art. 5.10.8, p.99).  \n- Exception/interaction: Where both adoptive parents are members of staff, the entitlement is granted only once and may be divided between them (provision shown on p.97). Special leave is granted on application by the member of staff and, generally, is authorised by the Head of Division in charge of leave matters in Directorate General Human Resources or their Deputy (Art. 5.10.2, p.97).  \n- Competent authority and action: The Head of Division in charge of leave matters in Directorate General Human Resources (or their Deputy) grants special leave on application (Art. 5.10.2, p.97).  \n- Timelines/figures: 40 working days per dependent child; usable only within first three years after birth or date of adoption (Art. 5.10.8, p.99).  \n- Sources and pages used: ECB Staff Rules, Art. 5.10.8 (p.99) for entitlement, eligibility and timeframe; Art. 5.10.2 (p.97) for who grants special leave; adoptive-parents division rule on p.97.\n\n[[ ## answer ## ]]\n1. Entitlement: A member of staff who is on a fixed-term or permanent contract, has passed their probationary period and has completed at least one year of service is entitled to 40 working days of parental special leave for each dependent child (Art. 5.10.8).  \n2. Timeframe for use: Parental special leave may only be used in the first three years after the birth of the child or the date of adoption (Art. 5.10.8).  \n3. Adoption and co-parents: Where both adoptive parents are members of staff, the entitlement is granted only once and may be divided between them (p.97).  \n4. Granting authority: Special leave is granted on application and, in general, is authorised by the Head of Division in charge of leave matters in Directorate General Human Resources or their Deputy (Art. 5.10.2, p.97). (ECB Staff Rules, Art. 5.10.8, p.99; Art. 5.10.2 and related provisions, p.97)\n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 1814,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 1216,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 4980,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 0,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 6794
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T20:37:40.334725Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048918",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T20:37:40.337544Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048922",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "52521@Mac",
+        "requestId": "40413bb2-89d4-49e8-9dfc-53e36a2c4c30",
+        "historySizeBytes": "32334",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T20:37:40.357896Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048926",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T20:37:40.357983Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1048927",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "1. Entitlement: A member of staff who is on a fixed-term or permanent contract, has passed their probationary period and has completed at least one year of service is entitled to 40 working days of parental special leave for each dependent child (Art. 5.10.8).  \n2. Timeframe for use: Parental special leave may only be used in the first three years after the birth of the child or the date of adoption (Art. 5.10.8).  \n3. Adoption and co-parents: Where both adoptive parents are members of staff, the entitlement is granted only once and may be divided between them (p.97).  \n4. Granting authority: Special leave is granted on application and, in general, is authorised by the Head of Division in charge of leave matters in Directorate General Human Resources or their Deputy (Art. 5.10.2, p.97). (ECB Staff Rules, Art. 5.10.8, p.99; Art. 5.10.2 and related provisions, p.97)",
+                "reasoning": "- Main rule: Article 5.10.8 in the provided extract sets the parental special leave entitlement: 40 working days per dependent child and per child in the same household where the member has a primary caregiver role due to adoption; must be used within the first three years after birth or adoption (p.99).  \n- Eligibility/conditions: Entitlement applies to a member of staff on a fixed-term or permanent contract who has passed their probationary period and has completed at least one year of service (Art. 5.10.8, p.99).  \n- Exception/interaction: Where both adoptive parents are members of staff, the entitlement is granted only once and may be divided between them (provision shown on p.97). Special leave is granted on application by the member of staff and, generally, is authorised by the Head of Division in charge of leave matters in Directorate General Human Resources or their Deputy (Art. 5.10.2, p.97).  \n- Competent authority and action: The Head of Division in charge of leave matters in Directorate General Human Resources (or their Deputy) grants special leave on application (Art. 5.10.2, p.97).  \n- Timelines/figures: 40 working days per dependent child; usable only within first three years after birth or date of adoption (Art. 5.10.8, p.99).  \n- Sources and pages used: ECB Staff Rules, Art. 5.10.8 (p.99) for entitlement, eligibility and timeframe; Art. 5.10.2 (p.97) for who grants special leave; adoptive-parents division rule on p.97."
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}

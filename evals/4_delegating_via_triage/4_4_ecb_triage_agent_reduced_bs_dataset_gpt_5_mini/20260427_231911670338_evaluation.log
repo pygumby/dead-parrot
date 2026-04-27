@@ -1,0 +1,379 @@
+Question: What is the precondition for the ECB to invite a non-EU country
+  authority to a college of supervisors or enter into an MoU with it?
+Example answer: A positive equivalence assessment of the confidentiality regime is a
+  pre-condition for the ECB to invite a non-EU country authority to a
+  college or enter into an MoU with it, and confidential supervisory
+  information is shared on a need-to-know basis. (ECB Supervisory
+  Manual, page 30)
+Predicted answer: The precondition is a positive equivalence assessment of the non‑EU
+  authority’s confidentiality regime. Confidential supervisory
+  information may then be shared on a need‑to‑know basis.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.53.
+Score: 0.61
+
+Question: What is the maximum amount of pecuniary penalties the ECB may impose
+  on a supervised entity for a breach?
+Example answer: The ECB may impose pecuniary penalties of up to twice the amount of
+  the profits gained or losses avoided because of the breach, or up to
+  10% of the supervised entity's total annual turnover in the
+  preceding business year. When deciding on the amount of the penalty,
+  the ECB applies its Guide to the method of setting administrative
+  pecuniary penalties, and the penalties imposed must be effective,
+  proportionate and dissuasive. (ECB Supervisory Manual, page 107)
+Predicted answer: The maximum pecuniary penalty is either: - up to twice the amount of
+  the profits gained or losses avoided because of the breach, or - up
+  to 10% of the supervised entity’s total annual turnover in the
+  preceding business year.  Legal basis cited: Article 18 of the SSM
+  Regulation (source: ECB Supervisory Manual, pp. 106–108).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.73.
+Score: 0.95
+
+Question: What are the four key elements that the JST assesses in the SREP for
+  each supervised entity?
+Example answer: The methodology consists of an assessment carried out by each JST on
+  its own supervised entity based on four key elements: business model
+  analysis, internal governance, risks to capital and risks to
+  liquidity and funding. This assessment is generally based on year-
+  end data from the previous year, meaning that the SREP 2023
+  assessment cycle is based on year-end data for 2022, with the
+  outcomes formalised in SREP decisions applicable to the following
+  year. (ECB Supervisory Manual, page 82)
+Predicted answer: The four key elements are: 1. Business model (business model analysis)
+  2. Internal governance and risk management 3. Risks to capital 4.
+  Risks to liquidity and funding
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.35.
+Score: 0.57
+
+Question: Under what condition does a bank migrate from SI to LSI status, and is
+  one-time non-fulfilment of the criteria sufficient?
+Example answer: A bank changes status from LSI to SI when at least one of the
+  significance criteria is met, but migration from SI to LSI status is
+  not triggered by a one-time failure to meet any of the significance
+  criteria. According to the SSMFR, the bank must fall short of the
+  relevant criteria for three consecutive calendar years in order to
+  qualify for reclassification, although it is possible to diverge
+  from this rule if justified by exceptional circumstances stipulated
+  in the SSMFR. (ECB Supervisory Manual, page 60)
+Predicted answer: Condition for migration: an institution migrates from Significant
+  Institution (SI) to Less Significant Institution (LSI) only if it
+  falls short of the relevant significance criteria for three
+  consecutive calendar years (the "three‑year rule") (ECB Supervisory
+  Manual, pp. 61–62).  Is one‑time non‑fulfilment sufficient? No — a
+  one‑time or non‑persistent failure to meet the criteria is
+  insufficient to trigger migration. A departure from the three‑year
+  requirement is only possible in exceptional circumstances as set out
+  in the SSM Framework Regulation (SSMFR).
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.92.
+Score: 0.98
+
+Question: Who are the members of a Joint Supervisory Team and how is its size
+  determined?
+Example answer: JSTs comprise staff from both the ECB and the NCAs of the countries in
+  which the SIs, including their banking subsidiaries or significant
+  cross-border branches, are established, and a JST is established for
+  each SI at the highest level of consolidation. The size, overall
+  composition and organisation of a JST varies depending on the
+  nature, complexity, scale, business model and risk profile of the
+  supervised entity. (ECB Supervisory Manual, page 9)
+Predicted answer: Who the JST members are - JSTs comprise staff from both the ECB and
+  the relevant national competent authorities (NCAs) for the
+  jurisdictions where the significant institution (SI) and its
+  subsidiaries/branches are established. - Key roles within a JST:   -
+  JST coordinator (ECB-appointed).   - NCA local coordinators
+  (representing and reflecting their NCA views).   - A team of experts
+  (ECB and NCA specialists assigned to the JST). - For banks with a
+  significant multi‑Member‑State presence there is a “core JST”
+  chaired by the JST coordinator and composed of the local
+  coordinators of the relevant NCAs. - On‑site inspection teams are
+  organisationally independent but work closely with the relevant JST.
+  What JSTs do (relevant to membership) - Day‑to‑day off‑site
+  supervision at consolidated, sub‑consolidated and solo levels. -
+  Drafting and organising the Supervisory Examination Programme and
+  allocating tasks. - Carrying out SREP, suitability assessments and
+  coordinating on‑site activity. - JSTs operate within ECB supervisory
+  directorates (DG/SIB, DG/UDI and DG/SPL) and are supported by ECB
+  horizontal and specialised divisions.  How JST size and composition
+  are determined - The size, overall composition and organisation of a
+  JST “varies depending on the nature, complexity, scale, business
+  model and risk profile” of the supervised entity. - JST coordinators
+  are appointed for three to five years; JST members are expected to
+  rotate regularly. - No numeric staffing minima/maxima, fixed quotas
+  or detailed headcount rules were provided in the retrieved text —
+  composition/staffing is determined on a case‑by‑case basis in light
+  of the qualitative factors above.  Source - ECB Supervisory Manual
+  (as cited in the expert agent response), pp. 10–11, 46, 71.
+Rationale: Recall score: 0.9, sources score: 1.0, length score: 0.27.
+Score: 0.8
+
+Question: Is the Supervisory Manual a legally binding document, and can the SSM
+  depart from the policies it sets out?
+Example answer: The Supervisory Manual is not a legally binding document, does not
+  establish new regulatory requirements and cannot replace the legal
+  requirements laid down in applicable EU law. The SSM is empowered to
+  depart from the general policy established in the Manual where
+  factors in specific cases justify doing so and a sufficient
+  rationale is provided, with the divergent policy choice remaining
+  compatible with the general principles of EU law, in particular
+  equal treatment, proportionality and the legitimate expectations of
+  supervised entities. (ECB Supervisory Manual, page 3)
+Predicted answer: No — the Supervisory Manual is not legally binding and does not create
+  new regulatory obligations or replace applicable EU law. The SSM may
+  depart from the Manual’s general policy in specific cases where
+  justification is provided, but any departure must be supported by
+  sufficient rationale and be compatible with general principles of EU
+  law (notably equal treatment, proportionality and legitimate
+  expectations of supervised entities). (ECB Supervisory Manual, p. 4)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.81.
+Score: 0.96
+
+Question: Who decides which topics are covered by SSM thematic reviews of
+  significant institutions, and how is the Directorate Supervisory
+  Strategy & Risk involved both in setting topics and in conducting
+  thematic work as part of the second line of defence?
+Example answer: The topics for thematic reviews are set by the Supervisory Board,
+  which approves the supervisory priorities for the coming year, while
+  the identification of potential topics is coordinated by the
+  Directorate Supervisory Strategy and Risk in liaison with other SSM
+  stakeholders such as DGs, JSTs, NCA horizontal divisions and
+  international bodies. As the second line of defence, D/SSR conducts
+  thematic reviews that aim to support the Supervisory Board to steer
+  European banking supervision in line with the agreed risk priorities
+  and to monitor the quality and effects of supervisory activities,
+  whether at the JST or horizontal level. (ECB Supervisory Manual,
+  pages 47, 81)
+Predicted answer: - Decision on topics: The Supervisory Board decides which topics are
+  covered by SSM thematic reviews of significant institutions. -
+  D/SSR’s involvement:   - In setting topics: D/SSR coordinates the
+  identification of potential thematic review topics in liaison with
+  JSTs, directorates‑general, national competent authorities and other
+  stakeholders, and ensures those topics align with the Supervisory
+  Board’s priorities.   - In conducting thematic work (second line of
+  defence): D/SSR performs horizontal analyses and SREP benchmarking,
+  coordinates thematic work, monitors follow‑up on supervisory
+  findings and measures, and proposes improvements to supervisory
+  policies and methodologies.
+Rationale: Recall score: 0.9, sources score: 0.0, length score: 0.87.
+Score: 0.62
+
+Question: How does the ECB cooperate with the EBA on EU-wide stress tests, and
+  what kind of stress-testing exercises does ECB Banking Supervision
+  run in years where no EU-wide stress test takes place?
+Example answer: In cooperation with the ESRB, the EBA is responsible for the
+  initiation and overall coordination of EU-wide assessments of the
+  resilience of credit institutions, while the ECB is in charge of
+  carrying out the assessments within the participating Member States
+  with the support of the NCAs. In years when there are no EU-wide
+  stress tests, ECB Banking Supervision conducts thematic stress tests
+  focusing on specific supervisory priorities, such as interest rate
+  risk in the banking book in 2017, liquidity risk in 2019, climate
+  risk in 2022, and cyber resilience in 2024. (ECB Supervisory Manual,
+  pages 36, 72)
+Predicted answer: 1) Cooperation with the EBA on EU‑wide stress tests - The EBA, in
+  cooperation with the ESRB, initiates and overall coordinates the
+  two‑yearly EU‑wide stress‑test exercises. - The ECB contributes to
+  these system‑wide exercises via its Stress Test Experts Division,
+  which performs horizontal microprudential tasks: designing
+  methodology and templates, quality assurance, challenging banks’
+  projections, and supervising models and IT. - The ECB cooperates
+  with the EBA and national competent authorities (NCAs) where
+  appropriate, and the stress‑test results feed into the ECB’s SREP
+  (supervisory review and evaluation process).  2) What the ECB runs
+  in years without an EU‑wide EBA exercise - In non‑EBA years the ECB
+  conducts thematic stress tests focused on supervisory priorities.
+  Examples given: interest‑rate‑risk in the banking book (2017);
+  liquidity risk (2019); climate risk (2022); cyber resilience (2024).
+  - The ECB also runs targeted desk‑top vulnerability analyses in
+  response to unforeseen developments (examples: 2020 and 2022). -
+  Microprudential stress‑testing exercises are often complemented by
+  top‑down macroprudential extensions when needed.
+Rationale: Recall score: 0.9, sources score: 0.0, length score: 0.6.
+Score: 0.57
+
+Question: Could you clarify the conceptual difference between supervisory
+  enforcement measures and sanctions, and which ECB body is
+  responsible for investigating suspected breaches by significant
+  institutions?
+Example answer: Enforcement measures aim to compel supervised entities to comply with
+  prudential requirements laid down in regulation, national law
+  implementing an EU directive or a decision, while sanctions aim to
+  punish supervised entities for failing to comply with prudential
+  requirements and to deter future breaches. The Independent
+  Investigating Unit, whose tasks fall under the remit of the
+  Enforcement and Sanctions Division, is responsible for investigating
+  alleged breaches of directly applicable EU law, including ECB
+  supervisory decisions or regulations, committed by significant
+  institutions. (ECB Supervisory Manual, pages 104, 106)
+Predicted answer: - Conceptual difference   - Supervisory enforcement measures:
+  remedial/preventive supervisory acts intended to secure compliance
+  (e.g., require an institution to take specified measures). They are
+  aimed at remedying or preventing breaches and can be effected
+  directly by the ECB or by instructing national competent authorities
+  (NCAs) to use their national enforcement powers. Typical triggers
+  include an existing breach, evidence that a breach will occur within
+  the next 12 months, or other supervisory triggers.   - Sanctions:
+  punitive administrative penalties whose purpose is to punish
+  failures and deter future breaches. Sanctioning proceedings may be
+  brought by the ECB or through NCAs; they can be initiated even after
+  the underlying breach has ceased, subject to applicable limitation
+  periods.  - Investigation responsibility   - Investigations of
+  alleged breaches by significant institutions are carried out by the
+  Independent Investigating Unit (IU) within the Enforcement and
+  Sanctions Division. The IU investigates, grants the right to be
+  heard, and prepares proposals (draft decisions) for the Supervisory
+  Board.  - Applicable framework (as cited)   - SSM Regulation:
+  Articles 9 and 18   - SSM Framework Regulation (SSMFR): Articles
+  120–137   - Council Regulation on the ECB’s sanctioning powers   -
+  ECB Supervisory Manual (pp. 103–107)
+Rationale: Recall score: 0.95, sources score: 1.0, length score: 0.46.
+Score: 0.87
+
+Question: To which authority must an institution apply for a banking
+  authorisation in a participating Member State, and on what basis is
+  the application assessed?
+Example answer: An application for a banking authorisation has to be submitted to the
+  national competent authority of the Member State in which the
+  institution is to be established and must be in accordance with the
+  requirements set out in the relevant national legislation. This
+  application is assessed to ensure that only entities that fulfil the
+  applicable national and EU legal requirements enter the market as
+  credit institutions. (ECB Supervisory Manual, page 49)
+Predicted answer: - To whom to apply: the institution must apply to the national
+  competent authority (NCA) of the Member State in which it is to be
+  established.  - Who decides:   - Significant institutions (SIs): the
+  ECB (direct supervision/authorisation responsibility).   - Less
+  significant institutions (LSIs): the relevant NCA (NCAs retain
+  direct responsibility).  - Legal basis and assessment:   -
+  Applications are assessed under the applicable national legislation
+  and EU law, notably the SSM legal framework (SSM Regulation/SSMFR)
+  together with CRD IV/CRR.   - Typical assessment criteria include
+  compliance with initial capital requirements, the fitness and
+  propriety of the management and key function holders, the adequacy
+  and viability of the business plan, and compliance with prudential
+  requirements (capital, liquidity, governance, organizational
+  arrangements, etc.).  Note: the retrieved excerpts confirm these
+  allocation and high-level assessment principles but do not provide
+  detailed numeric thresholds or a complete, itemized checklist of all
+  authorisation requirements.
+Rationale: Recall score: 1.0, sources score: 0.0, length score: 0.49.
+Score: 0.6
+
+Question: To which authority must an institution apply for a banking
+  authorisation in a participating Member State, and on what basis is
+  the application assessed?
+Example answer: An application for a banking authorisation has to be submitted to the
+  national competent authority of the Member State in which the
+  institution is to be established and must be in accordance with the
+  requirements set out in the relevant national legislation. This
+  application is assessed to ensure that only entities that fulfil the
+  applicable national and EU legal requirements enter the market as
+  credit institutions. (ECB Supervisory Manual, page 49)
+Predicted answer: - To whom to apply   - The banking‑authorisation application must be
+  submitted to the national competent authority (NCA) of the Member
+  State in which the institution is to be established.  - Who decides
+  / which authority is competent   - The authorisation procedure is a
+  “common procedure” ultimately decided by the ECB — the ECB is
+  competent for authorisations regardless of an institution’s
+  significance.   - Separate supervisory responsibilities apply: the
+  ECB exercises direct supervision of significant institutions (SIs);
+  NCAs retain direct supervision of less significant institutions
+  (LSIs), with the ECB exercising supervisory oversight.  - Legal
+  basis and assessment criteria   - Applications are assessed against
+  applicable EU and national law to ensure the applicant meets the
+  legal requirements to operate as a credit institution. The material
+  cited includes the SSM Regulation / SSM Framework Regulation,
+  CRD/CRR provisions and the relevant national legislation (the expert
+  output cites specific provisions referenced in the ECB Supervisory
+  Manual).   - Typical assessment elements (as identified in the
+  retrieved text) include initial capital and other prudential
+  requirements, fitness and propriety of management, and the business
+  plan — assessed in line with the applicable EU rules (e.g. CRD/CRR,
+  SSMR/SSMFR) and national law.   - The retrieved source notes that
+  detailed/quantitative specifics (exact capital thresholds, detailed
+  test contents) are not set out on the cited pages but are provided
+  in the applicable EU and national rules.   (References in the expert
+  output: ECB Supervisory Manual, pp. 49–51, 112, with cited legal
+  instruments including SSMR/SSMFR and CRD/CRR provisions.)
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.29.
+Score: 0.86
+
+Question: I'm drafting a follow-up letter on a bank's NPL ratio and would like
+  to cite our prudential provisioning expectations accurately — could
+  you summarise the minimum coverage calendar for the secured and
+  unsecured portions of new non-performing exposures?
+Example answer: Although the source material refers to an ECB guide on the treatment
+  of non-performing loans, it does not reproduce the prudential
+  provisioning expectations or the minimum coverage calendar
+  applicable to non-performing exposures. A substantive answer is
+  therefore not possible on the basis of the documents available.
+Predicted answer: I could not retrieve the ECB prudential provisioning (minimum
+  coverage) calendar or the official citation: repeated queries to the
+  ECB Banking Supervision expert returned "no relevant pages in
+  retrieved context" and did not produce the percentages,
+  secured/unsecured definitions, timeline, or guidance citation you
+  requested.  Next steps I can take (choose one): - You upload the
+  relevant ECB document or the pages (PDF) that contain the
+  provisioning calendar (or at least provide the exact ECB guidance
+  title and publication date). I will extract the coverage percentages
+  for secured and unsecured portions at each milestone, state the
+  secured‑portion valuation/definition, confirm applicability to "new
+  NPEs" versus stock NPLs, and produce a citation‑ready summary/table
+  with the paragraph/table reference and link (if present). - If you
+  want me to retrieve the source directly, confirm that I may access
+  the ECB public guidance online (or indicate you want me to attempt a
+  web search). If web access is not available here, please supply the
+  document/pages.  Tell me which option you prefer and, if uploading,
+  please attach the relevant ECB guidance pages or give the exact
+  guidance title and date. I will then produce the precise,
+  citation‑ready calendar for your follow‑up letter.
+Rationale: Recall score: 0.9, sources score: 0.0, length score: 0.24.
+Score: 0.5
+
+Question: What are the upper limits on the pecuniary amounts the ECB can impose
+  by way of periodic penalty payments and by way of administrative
+  sanctions on a significant institution?
+Example answer: The upper limit on periodic penalty payments is 5% of the average
+  daily turnover of the supervised entity concerned per day of
+  infringement, and they may be imposed for a maximum period of six
+  months from the date stipulated in the relevant decision or
+  regulation. By contrast, administrative pecuniary penalties imposed
+  by the ECB may amount to up to twice the amount of the profits
+  gained or losses avoided because of the breach, or up to 10% of the
+  supervised entity's total annual turnover in the preceding business
+  year. (ECB Supervisory Manual, pages 105, 107)
+Predicted answer: Summary of upper limits (from the ECB Supervisory Manual, pp. 105–108,
+  as returned in the tool responses):  1) Periodic penalty payments -
+  Upper monetary limit: up to 5% of the supervised entity’s average
+  daily turnover per day of infringement. - Maximum duration: may be
+  imposed for up to six months. - Applicability: may be imposed on
+  significant institutions; may also be imposed on less‑significant
+  institutions where an ECB decision/regulation imposes obligations on
+  LSIs. - Legal basis: the Supervisory Manual describes this measure
+  and its limits, but the retrieved context did not provide a specific
+  primary‑law article or formal instrument citation
+  (title/number/date) authorising periodic penalty payments.  2)
+  Administrative pecuniary penalties (for significant institutions) -
+  Upper monetary limits: up to twice the amount of the profits gained
+  or losses avoided because of the breach, or up to 10% of the
+  supervised entity’s total annual turnover in the preceding business
+  year. - Legal basis: the retrieved material states that the ECB’s
+  power to impose administrative pecuniary penalties is exercised "by
+  virtue of Article 18 of the SSM Regulation." - Allocation/
+  distinctions: the Supervisory Manual notes the ECB may impose
+  penalties on significant institutions for breaches of directly
+  applicable EU law; for breaches of national law implementing EU
+  directives or in certain other cases, the ECB may request the
+  competent national authority to conduct sanctioning proceedings.
+  Notes/qualification - The numeric ceilings and the distinctions
+  above are taken from the ECB Supervisory Manual excerpts returned by
+  the expert (pp. 105–108). The retrieved context explicitly cites
+  Article 18 SSM Regulation as the legal basis for administrative
+  pecuniary penalties but does not furnish a formal citation
+  (title/number/date) or verbatim statutory text for the periodic
+  penalty‑payment authorising provision. If you need the primary‑law
+  article text or the formal regulation/decision citation that
+  specifically authorises periodic penalty payments, I can retrieve
+  the exact legal instrument/article on request.
+Rationale: Recall score: 1.0, sources score: 1.0, length score: 0.31.
+Score: 0.86
+
+2026/04/27 23:24:31 INFO dspy.evaluate.evaluate: Average Metric: 8.89 / 12 (74.1%)

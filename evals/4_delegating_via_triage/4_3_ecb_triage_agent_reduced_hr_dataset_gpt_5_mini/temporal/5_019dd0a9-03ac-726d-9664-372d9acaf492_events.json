@@ -1,0 +1,453 @@
+{
+  "events": [
+    {
+      "eventId": "1",
+      "eventTime": "2026-04-27T20:37:10.700160Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "taskId": "1048680",
+      "workflowExecutionStartedEventAttributes": {
+        "workflowType": {
+          "name": "EcbHrExpertAgentWorkflow"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": "If I receive a gift from a colleague at another central bank, do I need to register it with anyone? Please state whether registration is required, any value thresholds or exceptions, and which office or register (if any) I should notify and how."
+            }
+          ]
+        },
+        "workflowTaskTimeout": "10s",
+        "originalExecutionRunId": "019dd0a9-03ac-726d-9664-372d9acaf492",
+        "identity": "52867@Mac",
+        "firstExecutionRunId": "019dd0a9-03ac-726d-9664-372d9acaf492",
+        "attempt": 1,
+        "firstWorkflowTaskBackoff": "0s",
+        "workflowId": "ecb_hr_expert_agent-rest-f6dcc5ad",
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "2",
+      "eventTime": "2026-04-27T20:37:10.700244Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048681",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "3",
+      "eventTime": "2026-04-27T20:37:10.702672Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048686",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "2",
+        "identity": "52521@Mac",
+        "requestId": "668a331a-dcd0-4427-9e1b-a05071c48760",
+        "historySizeBytes": "567",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "4",
+      "eventTime": "2026-04-27T20:37:11.870021Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048725",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "2",
+        "startedEventId": "3",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {
+          "coreUsedFlags": [
+            3,
+            1,
+            2
+          ],
+          "sdkName": "temporal-python",
+          "sdkVersion": "1.25.0"
+        },
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "5",
+      "eventTime": "2026-04-27T20:37:11.870056Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048726",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "1",
+        "activityType": {
+          "name": "dspy__tool__expert_agent_retriever"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "args": [
+                  "If I receive a gift from a colleague at another central bank, do I need to register it with anyone? Please state whether registration is required, any value thresholds or exceptions, and which office or register (if any) I should notify and how."
+                ],
+                "kwargs": {}
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "4",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "6",
+      "eventTime": "2026-04-27T20:37:11.872268Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048773",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "5",
+        "identity": "52521@Mac",
+        "requestId": "a43cdb83-2ec0-4129-9aa7-e4c0e168f35c",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "7",
+      "eventTime": "2026-04-27T20:37:13.619802Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048774",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": [
+                "Document: ECB Staff Rules\nPage: 6\n considered connected with a recipient’s \nemployment with the ECB if it is offered on the basis of the recipient’s position \nwith the ECB, rather than on a personal basis. \n0.2.2.3 As an exception to Article 0.2.2.1, and provided they are not frequent and not from \nthe same source, the following may be accepted: \n(a) hospitality offered by the private sector with a value of up to EUR 50 if it is \noffered in the context of a work -related occasion. This exception shall not \napply to hospitality offered by current or potential suppliers or by credit \ninstitutions in the context of on-site inspections or audits undertaken by the \nECB, in which cases no hospitality may be accepted; \n(b) advantages offered by other central banks, national public bodies or \nEuropean and international organisations which do not go beyond what is \ncustomary and considered appropriate; \n(c) advantages offered in specific circumstances in which their rejection would \nhave caused an offence or put the professiona",
+                "Document: ECB Staff Rules\nPage: 6\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 6 \nbodies of the ECB. The appointing authority shall seek the advice of the \nCompliance and Governance Office if they identify a conflict of interest. \n0.2.2 Gifts and hospitality \n0.2.2.1 Members of staff may neither solicit nor accept for themselves or any other person \nany advantage connected in any way with their employment with the ECB.  \n0.2.2.2 An ‘advantage’ is any gift, hospitality or other benefit of a financial or non-financial \nnature which objectively improves the financial, legal or personal situation of the \nrecipient or any other person and to which the recipient is not entitled by  law. \nMinor hospitality offered during a work-related meeting shall not be considered as \nan advantage. An ‘advantage’ is considered connected with a recipient’s \nemployment with the ECB if it is offered on the basis of the recipient’s position \nwith the ECB, rather than on a personal basis. \n0.2.2.3 As an exception to ",
+                "Document: ECB Staff Rules\nPage: 6\nns which do not go beyond what is \ncustomary and considered appropriate; \n(c) advantages offered in specific circumstances in which their rejection would \nhave caused an offence or put the professional relationship at serious risk. \n0.2.2.4 Members of staff shall register with the Compliance and Governance Office \nwithout undue delay \n(a) any advantage accepted in accordance with Article 0.2.2.3(c); \n(b) any advantage whose value cannot be clearly established to be under the \nthresholds provided for in Article 0.2.2.3; \n(c) any offer of third parties of advantages the acceptance of which is \nprohibited.  \nMembers of staff shall hand over to the ECB any gifts accepted in ac cordance \nwith Article 0.2.2.3(c). Such gifts shall become the ECB’s property.  \n0.2.2.5  The acceptance of an advantage shall not, in any event, impair or influence the \nobjectivity and freedom of action of staff.  \n0.2.3 Procurement  ",
+                "Document: ECB Staff Rules\nPage: 17\nrney for third party bank \naccounts where they are allowed to make available to the ECB the relevant \nrecords in line with Article 0.4.3.2. \nMembers of staff shall keep this list up-to-date. \n0.4.3.2 In view of their reporting obligations under Article 0.4.3, members of staff shall \nkeep records for the previous and current calendar years of all of the following:  ",
+                "Document: ECB Staff Rules\nPage: 16\nECB-PUBLIC \nEuropean Central Bank – Staff Rules \n1 February 2026 \n \nPage 16 \n0.4.2.4 Private financial transactions subject to ex-post reporting \nMembers of staff shall report to the Compliance and Governance Office any \nprivate financial transaction exceeding EUR 10 000 within any given calendar \nmonth which does not fall under one of the previous three categories within 30 \ncalendar days after its ex ecution. The Compliance and Governance Office shall \ndefine the information to be reported, the reporting format and the procedure.  \nThe obligation to report shall apply in particular to: \n(a) loans other than mortgages (including switching from a fixed to a floating \narrangement, or vice- versa, or extending an existing loan). Members of \nstaff shall indicate whether the loan is used for the acquisition of financial \ninstruments; \n(b) interest rate-related derivatives and derivatives based on indices;  \n(c) purchases or sales of shares of corporations other than the ones set out in \nAr"
+              ]
+            }
+          ]
+        },
+        "scheduledEventId": "5",
+        "startedEventId": "6",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "8",
+      "eventTime": "2026-04-27T20:37:13.619812Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048775",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "9",
+      "eventTime": "2026-04-27T20:37:13.622017Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048779",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "8",
+        "identity": "52521@Mac",
+        "requestId": "c02b12cf-f544-44ca-b5c8-c5ca6d35c4d3",
+        "historySizeBytes": "6340",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "10",
+      "eventTime": "2026-04-27T20:37:13.976473Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048816",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "8",
+        "startedEventId": "9",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "11",
+      "eventTime": "2026-04-27T20:37:13.976518Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "taskId": "1048817",
+      "activityTaskScheduledEventAttributes": {
+        "activityId": "2",
+        "activityType": {
+          "name": "dspy__expert_agent___answer_grounded_in_context__lm_call"
+        },
+        "taskQueue": {
+          "name": "ecb_hr_expert_agent-queue",
+          "kind": "TASK_QUEUE_KIND_NORMAL"
+        },
+        "header": {},
+        "input": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "kwargs": {},
+                "messages": [
+                  {
+                    "content": "Your input fields are:\n1. `context` (list[str]): \n2. `question` (str):\nYour output fields are:\n1. `reasoning` (str): \n2. `answer` (str):\nAll interactions will be structured in the following way, with the appropriate values filled in.\n\n[[ ## context ## ]]\n{context}\n\n[[ ## question ## ]]\n{question}\n\n[[ ## reasoning ## ]]\n{reasoning}\n\n[[ ## answer ## ]]\n{answer}\n\n[[ ## completed ## ]]\nIn adhering to this structure, your objective is: \n        You are an ECB HR policy assistant. Use only the provided Context to answer. Produce two fields: \n        - Reasoning: a step-by-step synthesis of the relevant provisions you will use (identify the main rule, any exceptions, competent authorities, timelines, figures/thresholds, and the exact page numbers you will cite; reconcile overlaps/conflicts by preferring the most specific and most recent provision and noting this).\n        - Answer: a concise, impersonal, normative response grounded in the Context.\n        \n        Answer requirements:\n        - Lead with the main entitlement/obligation/rule that directly addresses the question.\n        - State precise figures, thresholds and formats as in source (e.g., EUR 764; six months; one month’s notice), and spell in British/European English (hyphenate terms like fixed-term; use ECB terminology).\n        - Make timelines explicit (start triggers, end conditions, cut-offs) and name the competent authority and their role when relevant (e.g., Chief Services Officer, on behalf of the Executive Board; Director General Human Resources or their Deputy).\n        - If the question has multiple parts, answer sequentially with numbered points (1., 2., …), stating defaults and consequences for each.\n        - End the Answer with parenthetical citations to every source used, giving exact page numbers and, where available, article/section markers. Use the documents’ canonical names: “ECB Staff Rules” and “ECB Conditions of Employment” (e.g., (ECB Staff Rules, §2.1.1–2.1.2, p.47; ECB Conditions of Employment, p.6)).\n        - Do not invent content or cite pages not present in the Context. If the Context is insufficient to answer reliably or lacks the precise page needed, provide a neutral fallback: “Insufficient retrieved source detail to answer reliably. Please provide the relevant provision and page number(s) from the ECB Staff Rules or Conditions of Employment.” Do not add citations in this case.\n        \n        Style:\n        - Impersonal, concise, and prescriptive; avoid first person. Prefer “Members of staff/applicants/appointments are …” over “you,” unless the question explicitly asks about the user’s situation and the rule is universal.\n        - Avoid long quotations; summarise the rule precisely. \n        - Keep the Answer self-contained and limited to what is supported by the cited pages.",
+                    "role": "system"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nI want to do a transaction in euro-area government bonds worth EUR 15,000 in a single month. Do I need authorisation, and from whom, and how long before the order should I submit the request?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nTransactions exceeding EUR 10,000 within any given calendar month in government securities issued by euro area Member States are subject to prior authorisation by the Compliance and Governance Office. Any such request must be submitted at least five working days prior to the envisaged order date, and the Office shall decide on the request within five working days; if it does not react within five working days, the transaction is deemed authorised. (ECB Staff Rules, pages 15–17)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "This is an example of the task, though some input or output fields are not supplied.\n\n[[ ## question ## ]]\nHow long is the cooling-off period for staff at salary band I or above who were involved in supervising a credit institution before they can join that institution?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nNot supplied for this particular example. \n\n[[ ## answer ## ]]\nMembers of staff at salary band I or above who were directly involved in the supervision of a credit institution may only start working for that credit institution after the expiry of one year from the date on which their direct involvement in the supervision ceased. In exceptional circumstances, this period may be increased up to two years. (ECB Staff Rules, page 10)\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 112\\no report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the alleged accident at work and also the names of \\nwitnesses and of any third party which may be liable. A medical certificate \\nshall be annexed, specifying the nature of the injuries and the probable \\nconsequences of the alleged accident at work.  \\n(b) The report shall be submitted not later than 10 working days following the \\ndate on which the alleged accident at work occurs except where the \\nDirector General Human Resources or their Deputy has established that \\nthe delay was justified by force majeure or by any other legitimate reason. \\n(c) The Directorate General H uman Resources may investigate whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reim\", \"Document: ECB Staff Rules\\nPage: 112\\nte whether the \\nreported incident constitutes an accident at work.  \\n(d) Members of staff who sustain a non- work related  accident within the \\nmeaning of Article 6.3.1(a) that might give rise to reimbursement of \\nexpenses under the ECB health insurance, or those entitled under them, \\nshall report the accident to the administrator mentioned in Article 6.3.3.  \\n6.3.11 (a) Members of staff who request the application of Article 6.3 on grounds of \\nan occupational disease shall submit a statement to the Directorate \\nGeneral Human Resources within a reasonable period following the onset \\nof the disease or the date on which it is diagnosed for the first time. The \\nstatement may be submitted by the member of staff or, where the \\nsymptoms of the disease allegedly caused by the perfor mance of their \\nduties at the ECB become apparent after the termination of employment, \\nby the former member of staff; where a member of staff dies as a result of \\na disease allegedly caused by the performance of \", \"Document: ECB Staff Rules\\nPage: 114\\nrdance with the draft decision \\npreviously notified to the member of staff or those entitled under them. \\n6.3.14 (a) Members of staff who have submitted a request for recognition of an \\naccident at work or an occupational disease shall inform the Directorate \\nGeneral H uman Resources of any change in their state of health by \\nsubmitting medical certificates. \\n(b) If members of staff provide no information under paragraph (a) for more \\nthan six months, they will be presumed to have recovered and the case will \\nbe terminated. \\n(c) The decision pursuant to Article 6.3.12(a)(iii) to establish the degree of \\ninvalidity shall be taken after the member of staff’s injuries resulting from \\nthe accident at work or occupational disease have consolidated. Such \\ninjuries shall be considered t o have consolidated where they have \\nstabilised or will diminish only very slowly and to a very limited extent. To \\nthis end, the member of staff concerned shall submit a medical report \\nconfirming the stabili\", \"Document: ECB Staff Rules\\nPage: 113\\nseeing the report drawn up following the investigation, the doctors \\nappointed by the Director General Human Resources or their Deputy \\npursuant to Article 6.3.12(a) shall state their findings as provided for in the \\nsame Article. \\n6.3.12 (a) On the initiative of a member of staff or those entitled under them and in \\naccordance with the procedure laid down in Article 6.3.13, the Director \\nGeneral Human Resources or their Deputy shall adopt a decision: \\n(i) to recognise an accident at work, \\n(ii) to recognise the occupational nature of a disease, \\n(iii) to establish the degree of permanent invalidity after consolidation of \\ninjuries pursuant to Article 6.3.14(c). \\nSuch decisions shall be taken on the basis of expert medical opinion of one \\nor more doctors appointed by the Director General Human Resources or \\ntheir Deputy and, in the event of an appeal pursuant to Article  6.3.13(b), \\nafter consulting the Medical Committee established in accordance with \\nArticle 6.6. \\n(b) Failure by a me\", \"Document: ECB Staff Rules\\nPage: 112\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 112 \\n• in the case of an accident, the monthly basic full -time salary paid in the 12 \\nmonths preceding the date of the accident. \\n6.3.9 No reimbursement of expenses, indemnity or allowance under Article 6.3.7 shall \\nbe payable to a member of staff or those entitled under them whose accident or \\noccupational disease arose from a situation in which they intentionally caused or \\ncontributed to the death or injury of another person.  \\n6.3.10 (a) Members of staff who suffer an alleged accident at work or those entitled \\nunder them shall report it to the Directorate General Human Resources. \\nWhere the alleged accident at work results in death or where it is impossible \\nfor the member of staff or those entitled under them to report it, this may be \\ndone by any member of their family or any other person with knowledge of \\nthe facts.   \\nThe report shall specify the date and time, the causes and the \\ncircumstances of the a\"]\n\n[[ ## question ## ]]\nWithin what timeframe must an alleged accident at work be reported to the Directorate General Human Resources?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe provided excerpt from the ECB Staff Rules (page 112) states the reporting deadline: \"The report shall be submitted not later than 10 working days following the date on which the alleged accident at work occurs except where the Director General Human Resources or their Deputy has established that the delay was justified by force majeure or by any other legitimate reason.\"\n\n[[ ## answer ## ]]\nAn alleged accident at work must be reported to the Directorate General Human Resources not later than 10 working days following the date on which the accident occurs, unless the Director General Human Resources or their Deputy accepts that the delay was justified by force majeure or another legitimate reason.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 74\\nff shall be refutably presumed having issued such evidence \\nprovided they have submitted a declaration of honour as received from the ECB.  \\nThe maximum period of entitlement to the subsistence allowance, which accrues \\non a daily basis, shall be three months. \\n4.5.2 In case of entitlement to a subsistence allowance for the entire period referred to \\nin Article 4.5.1, the member of staff shall be entitled to a subsistence allowance \\nof EUR 9 270 (hereinafter the ‘standard subsistence allowance’). This allowance \\nshall be increased by  a maximum supplement of  EUR 2 070 for any spouse/  \\nrecognised partner and dependent child accompanying them. \\n4.5.3 Subject to Article 4.5.1, a provisional payment equal to the standard subsistence \\nallowance shall be paid as a lump sum with the second monthly salary.  The \\nsupplement shall be paid following completion of the period referred to in \\nArticle 4.5.1. \\n4.5.4 Members of staff who have received the provisional payment and before the \\ncompletio\", \"Document: ECB Conditions of Employment\\nPage: 12\\nECB-PUBLIC \\nConditions of Employment for Staff of the European Central Bank \\nLatest amendments entered into force on 1 March 2026 \\nPage 12 \\n(ii) grant a subsistence allowance; \\n(iii) grant an installation allowance equal to 200% of the basic monthly salary in the case \\nof members of staff who are entitled to a household allowance or 100% of the basic \\nmonthly salary in other cases; \\n(iv) grant a one- off reimbursement of 50% of any estate agent’s fee for assistance in \\nfinding permanent rented accommodation. \\n23. Under the conditions laid down in the Staff Rules, for members of staff who resettle on \\ntermination of service the ECB shall:  \\n (i) cover travel related expenses and the expenses for the removal of their personal \\nbelongings;  \\n (ii) grant a resettlement allowance equal to 200 % of the monthly basic salary in the case \\nof members of staff who are entitled to a household allowance or 100 % of the basic \\nmonthly salary in other cases. \\nIf termination of service is caused by  t\", \"Document: ECB Staff Rules\\nPage: 117\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 117 \\n6.5.5 Entitlement to the household allowance shall be calculated on the basi s of the \\nunemployment allowance. \\n6.5.7 Extension of cover under the ECB accident insurance shall be for a maximum \\nperiod of six months subject to the payment of half of the premium based on the \\nunemployment benefit payable. \\n6.5.8 If the former member of staff ceases to fulfil the conditions of entitlement, the \\npayment of the benefits is suspended. Payment is resumed if, before the expiry \\nof the two-year period, the conditions are again fulfilled. \\n6.5.9 The above benefits\\n \\n(a) are paid monthly in arrears. When they are not due in respect of a whole \\nmonth, they shall be calculated on the basis of a 30-day month; \\n(b) are paid to the surviving dependents as appropriate in the case of death;  \\n6.5a. The provisions of Article 36a of the Conditions of Employment are applied as \\nfollows: \\n6.5a.1  Members of staff requesting the be\", \"Document: ECB Staff Rules\\nPage: 75\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 75 \\nis terminated by the ECB shall refund part of the provisional payment in proportion \\nto the unexpired portion of that three months’ period. \\n4.5.5 Where a member of staff and their spouse or recognised partner takes up \\nemployment with the ECB within a period of one year after each other, only one \\nsubsistence allowance shall be paid to the member of staff who first took up \\nemployment with the ECB. In case of resignation or termination under Article 4.5.4 \\nof the member of staff who first took up employment with the ECB, the spouse or \\nrecognised partner who joined the ECB later and maintains their employment \\nrelationship with the ECB shall become entitled to the subsistence allowance.  \\n4.6 Installation allowance \\nThe provisions of Article 22(iii) of the Conditions of Employment shall be applied \\nas follows: \\n4.6.1 On completion of the probationary period, members of staff shall be entitled to the \\ninstalla\", \"Document: ECB Conditions of Employment\\nPage: 17\\ners of staff who are unemployed \\nfollowing termination of their contract with the ECB shall be entitled to: \\n(i) a monthly unemployment allowance equal to: \\n• 60% of their last basic salary for six months; and \\n• 30% of their last basic salary for the subsequent six months and additional \\nmonths in relation to years of service and age; \\n(ii) household and child allowances; \\n(iii) continued cover under the ECB health insurance, long- term care insurance and \\naccident insurance scheme, subject to payment of the relevant contributions; and  \\n(iv) an education allowance in accordance with Article 19, limited to the reimbursement \\nof a maximum of EUR 393 per month, except for children with certified, imperative \\neducational needs as defined in the Staff Rules, in which case the reimbursement \\nshall be increased to a maximum of EUR 764.  The allowance shall be payable only \\nuntil the end of the academic year in which the member of staff becomes \\nunemployed and provided that the child remains\"]\n\n[[ ## question ## ]]\nWhat is the standard subsistence allowance amount and for how long can I receive it?",
+                    "role": "user"
+                  },
+                  {
+                    "content": "[[ ## reasoning ## ]]\nThe information is in the ECB Staff Rules excerpt (pages 74–75): Article 4.5.2 defines the standard subsistence allowance and the supplement; Article 4.5.1/4.5.3 and surrounding text state the maximum entitlement period.\n\n[[ ## answer ## ]]\nThe standard subsistence allowance is EUR 9,270. The maximum period of entitlement to the subsistence allowance is three months (the allowance accrues on a daily basis). A supplement of up to EUR 2,070 may be added for a spouse/recognised partner and dependent child accompanying the staff member.\n\n[[ ## completed ## ]]\n",
+                    "role": "assistant"
+                  },
+                  {
+                    "content": "[[ ## context ## ]]\n[\"Document: ECB Staff Rules\\nPage: 6\\n considered connected with a recipient’s \\nemployment with the ECB if it is offered on the basis of the recipient’s position \\nwith the ECB, rather than on a personal basis. \\n0.2.2.3 As an exception to Article 0.2.2.1, and provided they are not frequent and not from \\nthe same source, the following may be accepted: \\n(a) hospitality offered by the private sector with a value of up to EUR 50 if it is \\noffered in the context of a work -related occasion. This exception shall not \\napply to hospitality offered by current or potential suppliers or by credit \\ninstitutions in the context of on-site inspections or audits undertaken by the \\nECB, in which cases no hospitality may be accepted; \\n(b) advantages offered by other central banks, national public bodies or \\nEuropean and international organisations which do not go beyond what is \\ncustomary and considered appropriate; \\n(c) advantages offered in specific circumstances in which their rejection would \\nhave caused an offence or put the professiona\", \"Document: ECB Staff Rules\\nPage: 6\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 6 \\nbodies of the ECB. The appointing authority shall seek the advice of the \\nCompliance and Governance Office if they identify a conflict of interest. \\n0.2.2 Gifts and hospitality \\n0.2.2.1 Members of staff may neither solicit nor accept for themselves or any other person \\nany advantage connected in any way with their employment with the ECB.  \\n0.2.2.2 An ‘advantage’ is any gift, hospitality or other benefit of a financial or non-financial \\nnature which objectively improves the financial, legal or personal situation of the \\nrecipient or any other person and to which the recipient is not entitled by  law. \\nMinor hospitality offered during a work-related meeting shall not be considered as \\nan advantage. An ‘advantage’ is considered connected with a recipient’s \\nemployment with the ECB if it is offered on the basis of the recipient’s position \\nwith the ECB, rather than on a personal basis. \\n0.2.2.3 As an exception to \", \"Document: ECB Staff Rules\\nPage: 6\\nns which do not go beyond what is \\ncustomary and considered appropriate; \\n(c) advantages offered in specific circumstances in which their rejection would \\nhave caused an offence or put the professional relationship at serious risk. \\n0.2.2.4 Members of staff shall register with the Compliance and Governance Office \\nwithout undue delay \\n(a) any advantage accepted in accordance with Article 0.2.2.3(c); \\n(b) any advantage whose value cannot be clearly established to be under the \\nthresholds provided for in Article 0.2.2.3; \\n(c) any offer of third parties of advantages the acceptance of which is \\nprohibited.  \\nMembers of staff shall hand over to the ECB any gifts accepted in ac cordance \\nwith Article 0.2.2.3(c). Such gifts shall become the ECB’s property.  \\n0.2.2.5  The acceptance of an advantage shall not, in any event, impair or influence the \\nobjectivity and freedom of action of staff.  \\n0.2.3 Procurement  \", \"Document: ECB Staff Rules\\nPage: 17\\nrney for third party bank \\naccounts where they are allowed to make available to the ECB the relevant \\nrecords in line with Article 0.4.3.2. \\nMembers of staff shall keep this list up-to-date. \\n0.4.3.2 In view of their reporting obligations under Article 0.4.3, members of staff shall \\nkeep records for the previous and current calendar years of all of the following:  \", \"Document: ECB Staff Rules\\nPage: 16\\nECB-PUBLIC \\nEuropean Central Bank – Staff Rules \\n1 February 2026 \\n \\nPage 16 \\n0.4.2.4 Private financial transactions subject to ex-post reporting \\nMembers of staff shall report to the Compliance and Governance Office any \\nprivate financial transaction exceeding EUR 10 000 within any given calendar \\nmonth which does not fall under one of the previous three categories within 30 \\ncalendar days after its ex ecution. The Compliance and Governance Office shall \\ndefine the information to be reported, the reporting format and the procedure.  \\nThe obligation to report shall apply in particular to: \\n(a) loans other than mortgages (including switching from a fixed to a floating \\narrangement, or vice- versa, or extending an existing loan). Members of \\nstaff shall indicate whether the loan is used for the acquisition of financial \\ninstruments; \\n(b) interest rate-related derivatives and derivatives based on indices;  \\n(c) purchases or sales of shares of corporations other than the ones set out in \\nAr\"]\n\n[[ ## question ## ]]\nIf I receive a gift from a colleague at another central bank, do I need to register it with anyone? Please state whether registration is required, any value thresholds or exceptions, and which office or register (if any) I should notify and how.\n\nRespond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.",
+                    "role": "user"
+                  }
+                ],
+                "model": "openai/gpt-5-mini"
+              }
+            }
+          ]
+        },
+        "scheduleToCloseTimeout": "0s",
+        "scheduleToStartTimeout": "0s",
+        "startToCloseTimeout": "60s",
+        "heartbeatTimeout": "0s",
+        "workflowTaskCompletedEventId": "10",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "30s",
+          "maximumAttempts": 3,
+          "nonRetryableErrorTypes": [
+            "dspy.primitives.assertions.DSPyAssertionError",
+            "pydantic.ValidationError",
+            "pydantic_core._pydantic_core.ValidationError",
+            "litellm.BadRequestError",
+            "litellm.AuthenticationError",
+            "litellm.NotFoundError"
+          ]
+        },
+        "useWorkflowBuildId": true,
+        "priority": {}
+      }
+    },
+    {
+      "eventId": "12",
+      "eventTime": "2026-04-27T20:37:13.977760Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "taskId": "1048964",
+      "activityTaskStartedEventAttributes": {
+        "scheduledEventId": "11",
+        "identity": "52521@Mac",
+        "requestId": "29a24699-91ab-4629-988b-724b3e3b16ee",
+        "attempt": 1,
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "13",
+      "eventTime": "2026-04-27T20:37:48.434852Z",
+      "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "taskId": "1048965",
+      "activityTaskCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "outputs": [
+                  "[[ ## reasoning ## ]]\n- Main rule: Members of staff may neither solicit nor accept any advantage connected with their employment; minor hospitality during work-related meetings is not an advantage (Article 0.2.2.1–0.2.2.2). Competent authority: Compliance and Governance Office. (ECB Staff Rules, p.6)\n- Exceptions: Article 0.2.2.3 permits, as exceptions (provided they are not frequent and not from the same source):  \n  (a) private-sector hospitality up to EUR 50 in a work-related context (explicit monetary threshold);  \n  (b) advantages offered by other central banks, national public bodies or European and international organisations which do not go beyond what is customary and considered appropriate (no monetary threshold set in the excerpt);  \n  (c) advantages offered in specific circumstances where refusal would cause offence or put the professional relationship at serious risk. (ECB Staff Rules, p.6)\n- Registration obligation: Article 0.2.2.4 requires members of staff to register with the Compliance and Governance Office \"without undue delay\" in three cases:  \n  (a) any advantage accepted under 0.2.2.3(c);  \n  (b) any advantage whose value cannot be clearly established to be under the thresholds provided for in Article 0.2.2.3;  \n  (c) any offer by third parties of advantages the acceptance of which is prohibited. (ECB Staff Rules, p.6)\n- Hand-over rule: Gifts accepted under 0.2.2.3(c) must be handed over to the ECB and become ECB property. (ECB Staff Rules, p.6)\n- Reconciliation for a gift from a colleague at another central bank: such an advantage falls under the exception in 0.2.2.3(b) if it \"does not go beyond what is customary and considered appropriate\" — in that case the exception allows acceptance and 0.2.2.4 does not automatically require registration. However, if the value cannot be clearly established to be under applicable thresholds (noting EUR 50 applies to the private-sector hospitality exception only) or the circumstances fall within 0.2.2.3(c), registration with the Compliance and Governance Office is required. (ECB Staff Rules, p.6)\n- Timelines/format: The rule uses the timeline \"without undue delay\" for registration. The provided excerpt does not specify the registration format or the precise procedural channel beyond naming the Compliance and Governance Office. (ECB Staff Rules, p.6)\n\n[[ ## answer ## ]]\n1. Main rule: Gifts from another central bank may be accepted as an exception only if they \"do not go beyond what is customary and considered appropriate\"; such an exception is set out in Article 0.2.2.3(b). No automatic requirement to register arises from that exception alone. (ECB Staff Rules, p.6)\n\n2. Registration required (three situations): Register with the Compliance and Governance Office without undue delay if any of the following apply:  \n   a. the gift was accepted under Article 0.2.2.3(c) (accepted because refusal would cause offence or put the professional relationship at serious risk);  \n   b. the value of the advantage cannot be clearly established to be under the thresholds provided for in Article 0.2.2.3 (note: Article 0.2.2.3(a) contains the only explicit monetary threshold in the excerpt: EUR 50 for private-sector hospitality); or  \n   c. the offer is from a third party of an advantage the acceptance of which is prohibited. (ECB Staff Rules, p.6)\n\n3. Office and timing: Notify/register with the Compliance and Governance Office \"without undue delay\". The excerpt does not specify the registration format or exact procedural steps beyond this requirement. (ECB Staff Rules, p.6)\n\n4. Hand-over: If the gift is accepted under Article 0.2.2.3(c), it must be handed over to the ECB and becomes ECB property. (ECB Staff Rules, p.6)\n\n(ECB Staff Rules, p.6)\n\n[[ ## completed ## ]]"
+                ],
+                "usage": {
+                  "completion_tokens": 2404,
+                  "completion_tokens_details": {
+                    "accepted_prediction_tokens": 0,
+                    "audio_tokens": 0,
+                    "image_tokens": null,
+                    "reasoning_tokens": 1536,
+                    "rejected_prediction_tokens": 0,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "prompt_tokens": 5004,
+                  "prompt_tokens_details": {
+                    "audio_tokens": 0,
+                    "cached_tokens": 2816,
+                    "image_tokens": null,
+                    "text_tokens": null,
+                    "video_tokens": null
+                  },
+                  "total_tokens": 7408
+                }
+              }
+            }
+          ]
+        },
+        "scheduledEventId": "11",
+        "startedEventId": "12",
+        "identity": "52521@Mac"
+      }
+    },
+    {
+      "eventId": "14",
+      "eventTime": "2026-04-27T20:37:48.434870Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "taskId": "1048966",
+      "workflowTaskScheduledEventAttributes": {
+        "taskQueue": {
+          "name": "52521@Mac-a1758fec063a4c8ca35383018d470940",
+          "kind": "TASK_QUEUE_KIND_STICKY",
+          "normalName": "ecb_hr_expert_agent-queue"
+        },
+        "startToCloseTimeout": "10s",
+        "attempt": 1
+      }
+    },
+    {
+      "eventId": "15",
+      "eventTime": "2026-04-27T20:37:48.436898Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "taskId": "1048970",
+      "workflowTaskStartedEventAttributes": {
+        "scheduledEventId": "14",
+        "identity": "52521@Mac",
+        "requestId": "78ffd25f-2f6a-402d-979b-2ffb07a4faad",
+        "historySizeBytes": "34114",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        }
+      }
+    },
+    {
+      "eventId": "16",
+      "eventTime": "2026-04-27T20:37:48.441614Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "taskId": "1048974",
+      "workflowTaskCompletedEventAttributes": {
+        "scheduledEventId": "14",
+        "startedEventId": "15",
+        "identity": "52521@Mac",
+        "workerVersion": {
+          "buildId": "801b25f4b7904ec6ce93d50678052c0c"
+        },
+        "sdkMetadata": {},
+        "meteringMetadata": {}
+      }
+    },
+    {
+      "eventId": "17",
+      "eventTime": "2026-04-27T20:37:48.441650Z",
+      "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+      "taskId": "1048975",
+      "workflowExecutionCompletedEventAttributes": {
+        "result": {
+          "payloads": [
+            {
+              "metadata": {
+                "encoding": "json/plain"
+              },
+              "data": {
+                "answer": "1. Main rule: Gifts from another central bank may be accepted as an exception only if they \"do not go beyond what is customary and considered appropriate\"; such an exception is set out in Article 0.2.2.3(b). No automatic requirement to register arises from that exception alone. (ECB Staff Rules, p.6)\n\n2. Registration required (three situations): Register with the Compliance and Governance Office without undue delay if any of the following apply:  \n   a. the gift was accepted under Article 0.2.2.3(c) (accepted because refusal would cause offence or put the professional relationship at serious risk);  \n   b. the value of the advantage cannot be clearly established to be under the thresholds provided for in Article 0.2.2.3 (note: Article 0.2.2.3(a) contains the only explicit monetary threshold in the excerpt: EUR 50 for private-sector hospitality); or  \n   c. the offer is from a third party of an advantage the acceptance of which is prohibited. (ECB Staff Rules, p.6)\n\n3. Office and timing: Notify/register with the Compliance and Governance Office \"without undue delay\". The excerpt does not specify the registration format or exact procedural steps beyond this requirement. (ECB Staff Rules, p.6)\n\n4. Hand-over: If the gift is accepted under Article 0.2.2.3(c), it must be handed over to the ECB and becomes ECB property. (ECB Staff Rules, p.6)\n\n(ECB Staff Rules, p.6)",
+                "reasoning": "- Main rule: Members of staff may neither solicit nor accept any advantage connected with their employment; minor hospitality during work-related meetings is not an advantage (Article 0.2.2.1–0.2.2.2). Competent authority: Compliance and Governance Office. (ECB Staff Rules, p.6)\n- Exceptions: Article 0.2.2.3 permits, as exceptions (provided they are not frequent and not from the same source):  \n  (a) private-sector hospitality up to EUR 50 in a work-related context (explicit monetary threshold);  \n  (b) advantages offered by other central banks, national public bodies or European and international organisations which do not go beyond what is customary and considered appropriate (no monetary threshold set in the excerpt);  \n  (c) advantages offered in specific circumstances where refusal would cause offence or put the professional relationship at serious risk. (ECB Staff Rules, p.6)\n- Registration obligation: Article 0.2.2.4 requires members of staff to register with the Compliance and Governance Office \"without undue delay\" in three cases:  \n  (a) any advantage accepted under 0.2.2.3(c);  \n  (b) any advantage whose value cannot be clearly established to be under the thresholds provided for in Article 0.2.2.3;  \n  (c) any offer by third parties of advantages the acceptance of which is prohibited. (ECB Staff Rules, p.6)\n- Hand-over rule: Gifts accepted under 0.2.2.3(c) must be handed over to the ECB and become ECB property. (ECB Staff Rules, p.6)\n- Reconciliation for a gift from a colleague at another central bank: such an advantage falls under the exception in 0.2.2.3(b) if it \"does not go beyond what is customary and considered appropriate\" — in that case the exception allows acceptance and 0.2.2.4 does not automatically require registration. However, if the value cannot be clearly established to be under applicable thresholds (noting EUR 50 applies to the private-sector hospitality exception only) or the circumstances fall within 0.2.2.3(c), registration with the Compliance and Governance Office is required. (ECB Staff Rules, p.6)\n- Timelines/format: The rule uses the timeline \"without undue delay\" for registration. The provided excerpt does not specify the registration format or the precise procedural channel beyond naming the Compliance and Governance Office. (ECB Staff Rules, p.6)"
+              }
+            }
+          ]
+        },
+        "workflowTaskCompletedEventId": "16"
+      }
+    }
+  ]
+}
