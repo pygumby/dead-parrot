@@ -34,11 +34,7 @@ class TriageAgent(Agent):
         metrics: dict[str, Metric],
     ) -> None:
         """Initialize the triage agent."""
-        super().__init__(
-            name=name,
-            dataset=dataset,
-            metrics=metrics,
-        )
+        super().__init__(name=name, dataset=dataset, metrics=metrics)
 
         self._task_model: dspy.LM
         self._init_models(task_model=task_model)
