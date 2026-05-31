@@ -1,6 +1,7 @@
 """Agent."""
 
 import contextlib
+import os
 import random
 import textwrap
 from abc import ABC, abstractmethod
@@ -24,7 +25,7 @@ class Agent(ABC):
     ) -> None:
         """Initialize the agent."""
         self._name: str
-        self._init_name(name=name)
+        self._init_name_and_dir(name=name)
 
         self._trainset: list[dspy.Example]
         self._devset: list[dspy.Example]
@@ -37,8 +38,9 @@ class Agent(ABC):
         ]
         self._init_metrics(metrics=metrics)
 
-    def _init_name(self, name: str) -> None:
+    def _init_name_and_dir(self, name: str) -> None:
         self._name = utils._normalize_name(name)
+        os.makedirs(self.name, exist_ok=True)
 
     def _init_dataset(self, dataset: Examples | list[Examples]) -> None:
         self._log(msg="Initializing dataset")

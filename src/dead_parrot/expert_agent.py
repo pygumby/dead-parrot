@@ -1,7 +1,6 @@
 """Expert agent."""
 
 import contextlib
-import os
 from collections.abc import Callable
 from typing import TYPE_CHECKING, Literal
 
@@ -110,12 +109,11 @@ class ExpertAgent(Agent):
                 chunks.extend(doc_chunks)
             return chunks
 
-        if os.path.exists(path=self.name):
-            latest_embeddings_dir: str | None = utils._get_latest_subpath(
-                path=self.name,
-                suffix="_embeddings",
-            )
-            assert latest_embeddings_dir is not None
+        latest_embeddings_dir: str | None = utils._get_latest_subpath(
+            path=self.name,
+            suffix="_embeddings",
+        )
+        if latest_embeddings_dir is not None:
             latest_embeddings_dir_path = f"{self.name}/{latest_embeddings_dir}"
             self._log(msg=f"Loading from: {latest_embeddings_dir_path}", sub=True)
             embeddings = dspy.retrievers.Embeddings.from_saved(
@@ -132,14 +130,12 @@ class ExpertAgent(Agent):
             new_embeddings_dir = f"{utils._create_timestamp()}_embeddings"
             new_embeddings_dir_path = f"{self.name}/{new_embeddings_dir}"
             self._log(msg=f"Saving to: {new_embeddings_dir_path}", sub=True)
-            os.makedirs(name=self.name)
             embeddings.save(path=new_embeddings_dir_path)
 
         self._embeddings = embeddings
 
     def _init_lm_program(self) -> None:
         self._log(msg="Initializing LM program")
-        assert os.path.exists(path=self.name)
         lm_program = _Rag(
             name=self.name,
             retriever=lambda query: self._embeddings(query=query).passages,
