@@ -35,4 +35,3 @@
 | 4.2 | [ecb_bs_expert_agent, reduced bs dataset, optimized, gpt-5-mini](./4_delegating_via_triage/4_2_ecb_bs_expert_agent_reduced_bs_dataset_optimized_gpt_5_mini/) | composite | gpt-5    | gpt-5      | gpt-5-mini | 79.08          | 77.07           |
 | 4.3 | [ecb_triage_agent, reduced hr dataset, gpt-5-mini](./4_delegating_via_triage/4_3_ecb_triage_agent_reduced_hr_dataset_gpt_5_mini/)                            | composite | gpt-5    | n/a        | gpt-5-mini | 68.81          | 74.10           |
 | 4.4 | [ecb_triage_agent, reduced bs dataset, gpt-5-mini](./4_delegating_via_triage/4_4_ecb_triage_agent_reduced_bs_dataset_gpt_5_mini/)                            | composite | gpt-5    | n/a        | gpt-5-mini | 74.08          | 65.00           |
-
